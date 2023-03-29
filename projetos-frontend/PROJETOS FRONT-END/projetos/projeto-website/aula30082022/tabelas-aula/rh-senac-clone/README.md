@@ -1,1 +1,0 @@
-# rh-senac-clone
