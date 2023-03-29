@@ -1,7 +1,0 @@
-
-$(document).ready(function(){
-	
-	//galeria de imagens
-	$('.fancybox').fancybox();	
-		
-});

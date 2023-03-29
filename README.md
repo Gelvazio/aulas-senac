@@ -19,4 +19,4 @@ Mas como a Yasmim so aprendeu java ainda, devera ser java então.
 * Pasta '6-atividade-senac' e 'EXERCICIOS LOGICA DE PROGRAMACAO'
 
 # Atividades PHP E HTML,CSS E JAVASCRIPT
-* projetos de exemplo na pasta de nome 'projetos-frontend'
+* projetos de exemplo na pasta de nome 'projetos-frontend' e 'projetos-frontend-templates'
