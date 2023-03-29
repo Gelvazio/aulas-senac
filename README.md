@@ -1,4 +1,3 @@
-# Material apoio novos professores Senac
 # Aulas Lógica Programação 
 * Ferramentas de Desenvolvimento
 vscode, usar a extensão 'Live Server'
@@ -13,7 +12,8 @@ Mas como a Yasmim so aprendeu java ainda, devera ser java então.
 
 * Passo 04 - Em conjunto com as matérias, ir fazendo o projeto integrador.
 
-* Passo 05 - SEGUNDA PARTE DO CURSO PHP E HTML,CSS E JAVASCRIPT.
+# Aulas Curso PHP, CSS e Javascript
+* Pasta 3-apostilas-php-senac'
 
 # Atividades em Geral - Logica e JAVA
 * Pasta '6-atividade-senac' e 'EXERCICIOS LOGICA DE PROGRAMACAO'
