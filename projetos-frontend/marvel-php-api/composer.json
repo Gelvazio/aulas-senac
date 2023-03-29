@@ -1,0 +1,9 @@
+{
+  "require" : {
+    "slim/slim":"3.12.3",
+    "vlucas/phpdotenv":"*"
+  },
+  "require-dev": {
+    "heroku/heroku-buildpack-php": "*"
+  }
+}

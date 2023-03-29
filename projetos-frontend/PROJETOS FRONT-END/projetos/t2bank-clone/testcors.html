@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    var httpRequest = new XMLHttpRequest();
+    var url = "http://bar.other/resources/post-here/";
+    var body = "<?xml version='1.0'?><person><name>Arun</name></person>";
+
+    function handler(){
+        try {
+            if (httpRequest.readyState === XMLHttpRequest.DONE) {
+                if (httpRequest.status === 200) {
+                    alert(httpRequest.responseText);
+                } else {
+                    alert("There was a problem with the request.");
+                }
+            }
+        } catch (e) {
+            alert(`Caught Exception: ${e.description}`);
+        }
+    }
+    
+    function callOtherDomain(){
+        if(httpRequest){
+            httpRequest.open("POST", url, true);
+            httpRequest.setRequestHeader("X-PINGOTHER", "pingpong");
+            httpRequest.setRequestHeader("Content-Type", "application/xml");
+            httpRequest.onreadystatechange = handler;
+            httpRequest.send(body);
+        } else {      
+            alert("Giving up :( Cannot create an XMLHTTP instance");
+            return false;      
+        }
+    }
+
+    async function testFetchAPI(){
+        // postData('https://api.themoviedb.org/3/movie/550?', { answer: 42 })
+        //     .then((data) => {
+        //         console.log(JSON.parse(data)); // JSON data parsed by `data.json()` call
+        // });
+
+        // api de cartas
+        getData('https://www.deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1', { answer: 42 })
+            .then((data) => {
+                console.log(data); // JSON data parsed by `data.json()` call
+        });
+    }
+
+        // const responseData = await fetch("http://example.com/movies.json")
+        // Example POST method implementation:
+    async function postData(url = '', data = {}) {
+        // Default options are marked with *
+        const response = await fetch(url, {
+            method: 'POST', // *GET, POST, PUT, DELETE, etc.
+            mode: 'cors', // no-cors, *cors, same-origin
+            cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+            credentials: 'same-origin', // include, *same-origin, omit
+            headers: {
+                'Content-Type': 'application/json'
+                // 'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            redirect: 'follow', // manual, *follow, error
+            referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+            body: JSON.stringify(data) // body data type must match "Content-Type" header
+        });
+        return response.json(); // parses JSON response into native JavaScript objects
+    }
+
+    async function getData(url = '', data = {}) {
+        // Default options are marked with *
+        const response = await fetch(url, {
+            method: 'GET', // *GET, POST, PUT, DELETE, etc.
+            mode: 'no-cors', // no-cors, *cors, same-origin
+            cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+            //credentials: 'same-origin', // include, *same-origin, omit
+            headers: {
+                'Content-Type': 'application/json'
+                // 'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            redirect: 'follow', // manual, *follow, error
+            referrerPolicy: 'no-referrer'            
+        });
+        return response.json(); // parses JSON response into native JavaScript objects
+    }
+
+    // CARD API
+    var API_URL = "https://www.deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1";
+    
+    function dealCards (cardDeck) {
+        console.log(cardDeck);
+    }
+
+    function fetchCardDeck () {
+        fetch(API_URL)
+        .then(response => response.json())
+        .then(cardDeck => dealCards(cardDeck));
+    }
+
+    // PROJETOS WEB SENAC - Funcionando, falta chamar uma url quye retorna JSON com api em php....
+    function callApi(){
+        const url = 'https://projetos-web-senac.herokuapp.com/';
+        fetch(url,{
+            headers : getHeaders(),
+            mode:"no-cors"
+        })
+        .then(response => response)
+        .then(data => dealCards(data));
+    }
+
+    function getHeaders(){
+        const headers = {
+            "Access-Control-Allow-Origin" : "*"
+        };
+
+        return headers;
+    }
+
+</script>
+<body>
+    <h1>Teste Cors</h1>
+    <button onclick="callOtherDomain()">Testa Cors</button>
+    <button onclick="testFetchAPI()">Test Fetch API</button>
+
+    <h1>Tutorials</h1>
+    <a href="https://javascript.plainenglish.io/how-to-program-a-card-game-971bb69a7283">How to fetch API</a>
+
+    <h1>Tests Card API</h1>
+    <button onclick="fetchCardDeck()">Test Card API</button>
+    <h1>Tests API Projetos WEB</h1>
+    <button onclick="callApi()">Test API Projetos WEB</button>
+
+    <h1>Testar a opcao de cors com slim do github abaixo</h1>
+    https://github.com/palanik/CorsSlim
+</body>
+</html>

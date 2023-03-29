@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desenvolvimento - Tech</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/atividades.css">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+</head>
+
+<style>
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .centro {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    a {
+        color: yellow;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    
+    .lista-exercicio img {
+        width: 400px;
+        height: 400px;
+    }
+</style>
+
+<body>
+    <div class="container-principal">
+        <!-- Inclui o Menu Unico Atraves de JavaScript -->
+        <div include-html-menu="menu.html"></div>
+
+        <div class="menu">
+            <a href="#" alt="" onclick="loadAllExercises('CONDICIONAIS')">Condicionais</a>
+            <a href="#" alt="" onclick="loadAllExercises('REPETICAO')">Repeticao</a>
+            <a href="#" alt="" onclick="loadAllExercises('VETORES')">Vetores</a>
+            <a href="#" alt="" onclick="loadAllExercises('MATRIZES')">Matrizes</a>
+            <a href="#" alt="" onclick="loadAllProvas()">Atividades</a>
+        </div>
+        <div class="container" style="display: none;" id="CONDICIONAIS">
+            <div class="lista-exercicio" id="lista1">
+                <h1 href="#">Exercicios 26-07-2022 - LISTA 0 - SEQUENCIAIS</h1>
+                <ol style="color:white; padding-top: 10px; display:flex;flex-direction: column;gap:10px;">
+                    <li>
+                        <strong class="titulo-exercicio">Exercicios</strong> </br>
+                        Lista de exercicios do 1.1.1 ate o 1.1.15 da apostila de nome "300 ideias para programar.pdf" que esta no Teams.
+                    </li>
+                </ol>
+            </div>
+
+            <div class="lista-exercicio" id="lista2">
+                <h1 href="#">Exercicios 27-07-2022 - LISTA 1 - CONDICIONAIS</h1>
+                <ol style="color:white; padding-top: 10px; display:flex;flex-direction: column;gap:10px;">
+                    <li>
+                        <strong class="titulo-exercicio">Exercicio 01</strong>
+                        </br> Faça um algoritmo que leia os valores A, B, C e imprima na tela se a soma de A + B é menor que C.
+                    </li>
+                    <li>
+                        <strong class="titulo-exercicio">Exercicio 02</strong>
+                        </br> Faça um algoritmo que leia o nome, o sexo("F" ou "M") e o estado civil de uma pessoa.
+                        </br> Caso sexo seja “F” e estado civil seja “CASADA”, solicitar o tempo de casada (anos).
+                        </br> Ao final do algoritmo imprima os dados lidos.
+                    </li>
+                    <li>
+                        <strong class="titulo-exercicio">Exercicio 03</strong>
+                        </br>Faça um algoritmo para receber um número qualquer e informar na tela se é par ou ímpar.
+                    </li>
+                    <li>
+                        <strong class="titulo-exercicio">Exercicio 04</strong></br> Faça um algoritmo que leia dois valores inteiros A e B, e se os valores forem iguais deverá se somar os dois, caso contrário multiplique A por B. Ao final de qualquer
+                        um dos cálculos deve-se atribuir o resultado para uma variável C e mostrar seu conteúdo na tela.
+                    </li>
+                    <li>
+                        <strong class="titulo-exercicio">Exercicio 05</strong></br> Encontrar o dobro de um número caso ele seja positivo e o seu triplo caso seja negativo, imprimindo o resultado.
+                    </li>
+                    <li>
+                        <strong class="titulo-exercicio">Exercicio 06</strong></br> Escreva um algoritmo que lê dois valores booleanos (lógicos) e então determina se ambos são VERDADEIROS ou FALSOS.Obs:Faça uma pergunta por exemplo:Você é maior de idade?Responda
+                        SIM ou NAO. Atribua o valor conforme o caso e no final mostre a resposta: A pessoa é maior de idade, se a resposta for SIM A pessoa é menor de idade, se a resposta for NAO
+                    </li>
+                    <li>
+                        <strong class="titulo-exercicio">Exercicio 07</strong></br>Faça um algoritmo que leia uma variável e some 5 caso seja par ou some 8 caso seja ímpar, imprimir o resultado desta operação.
+                    </li>
+                    <li>
+                        <strong class="titulo-exercicio">Exercicio 08</strong></br> Escreva um algoritmo que leia três valores inteiros e diferentes e mostre-os em ordem decrescente.
+                    </li>
+                    <li>
+                        <strong class="titulo-exercicio">Exercicio 09</strong></br> Escreva um algoritmo que leia três valores inteiros e diferentes e mostre-os em ordem crescente.
+                    </li>
+                    <li>
+                        <strong class="titulo-exercicio">Exercicio 10</strong></br> Tendo como dados de entrada a altura e o sexo de uma pessoa, construa um algoritmo que calcule seu peso ideal, utilizando as seguintes fórmulas:
+                        <ul>
+                            <li>
+                                ● para homens: (72.7 * h) – 58;
+                            </li>
+                            <li>
+                                ● para mulheres: (62.1 * h) – 44.7.
+                            </li>
+                        </ul>
+
+                        Ao final do mesmo, informe se a pessoa tem peso ideal ou não.
+                    </li>
+                    <li>
+                        <strong class="titulo-exercicio">Exercicio 11</strong></br> O IMC – Indice de Massa Corporal é um critério da Organização Mundial de Saúde para dar umaindicação sobre a condição de peso de uma pessoa adulta. A fórmula é IMC = peso
+                        / ( altura )2 Elabore um algoritmo que leia o peso e a altura de um adulto e mostre sua condição de acordo com a tabela abaixo. IMC em adultos Condição Abaixo de 18,5 Abaixo do peso Entre 18,5 e 25 Peso normal Entre 25 e 30 Acima
+                        do peso Acima de 30 obeso
+                    </li>
+                </ol>
+            </div>
+
+            <div class="lista-exercicio" id="lista3">
+                <h1 href="#">Exercicios 28-07-2022 - LISTA 2 - CONDICIONAIS</h1>
+                <ol>
+                    <li><strong class="titulo-exercicio">Exercicio 01 </strong> </br> Faca um algoritmo que leia o nome e as tres notas de um aluno e ao final, escreva o seu nome, sua media e se ele foi aprovado. Media de aprovacao igual a 8.
+
+                    </li>
+                    <li><strong class="titulo-exercicio">Exercicio 02 </strong> </br> Faca um algoritmo que leia tres numeros digitados, e os coloque em ordem crescente.
+
+                    </li>
+                    <li><strong class="titulo-exercicio">Exercicio 03 </strong> </br> Faca um algoritmo que leia o menor numero de tres digitados.
+
+                    </li>
+                    <li><strong class="titulo-exercicio">Exercicio 04 </strong> </br> Faca um algoritmo que leia o maior numero de tres digitados.
+
+                    </li>
+                    <li><strong class="titulo-exercicio">Exercicio 05 </strong> </br> Faca um algoritmo que leia o numero intermediario de tres digitados.
+
+                    </li>
+                    <li><strong class="titulo-exercicio">Exercicio 06 </strong> </br> Faca um algoritmo que leia o maior, o menor e o intermediario de tres numeros digitados.
+
+                    </li>
+                    <li><strong class="titulo-exercicio">Exercicio 07 </strong> </br> Faca um algoritmo que leia um numero e apos imprima o numero lido, o seu antecessor e o seu sucessor na tela;
+                    </li>
+                </ol>
+            </div>
+
+            <div class="lista-exercicio" id="lista4">
+                <h1 href="#">Exercicios 01-08-2022 - LISTA 3 - CONDICIONAIS</h1>
+                <ol>
+                    <li><strong class="titulo-exercicio">Exercicio 01 </strong> </br> Conta telefônica - Uma conta telefônica é composta dos seguintes custos: assinatura: R$ 17,90 impulsos: R$ 0,04 por impulso que exceder a 90 interurbanos chamadas p/ celular:
+                        R$0,20 por impulso Monte a fórmula para calcular o valor da conta para 254 impulsos, R$34,29 de interurbanos e 23 chamadas para celular. Elabore um programa que mostra os custos, calcula e mostra o valor total.
+                    </li>
+
+                    <li><strong class="titulo-exercicio">Exercicio 02 </strong> </br> Uma pessoa com pouco tempo disponível lê um livro por 5 minutos a cada dia, 6 dias por semana. Monte a fórmula e escreva um programa que calcula e mostra na tela quanto
+                        tempo, em horas, a pessoa terá dedicado ao livro ao final de um ano.
+                    </li>
+
+                    <li><strong class="titulo-exercicio">Exercicio 03 </strong> </br> Vou e volto diariamente a pé para o trabalho, que dista aproximadamente 800 m de minha casa. Supondo que trabalho 5 dias por semana, 45 semanas por ano, "bole" a operação
+                        matemática que deve ser efetuada para calcular quantos quilômetros, aproximadamente, terei andado ao final de um ano. Elabore um programa que faça as contas e mostre o resultado
+                    </li>
+
+                    <li><strong class="titulo-exercicio">Exercicio 04 </strong> </br> Faça um algoritmo para verificar se um aluno esta APROVADO ou REPROVADO, lendo 3 notas e calculando sua media que deve ser maior ou igual a 7.
+                    </li>
+
+                    <li><strong class="titulo-exercicio">Exercicio 05 </strong> </br> Faça um algoritmo para verificar se uma pessoa ja pode tirar carteira de motorista considerando a idade >= 18 anos e mostre na tela uma mensagem: JA POSSO TIRAR A CARTEIRA
+                        DE MOTORISTA, se for o caso AINDA NÃO POSSO TIRAR A CARTEIRA DE MOTORISTA, se for o caso
+
+                    </li>
+                    <li><strong class="titulo-exercicio">Exercicio 06 </strong> </br> Faça um algoritmo para verificar se uma pessoa ja atingiu a maioridade. algoritmo deve receber como entrada apenas o ano de nascimento e considerar o ano atual para calculo
+                        e 18 anos para maioridade.
+                    </li>
+
+                    <li><strong class="titulo-exercicio">Exercicio 07 </strong> </br> Faça um algoritmo para verificar se um valor e PAR ou IMPAR;
+                    </li>
+
+                    <li><strong class="titulo-exercicio">Exercicio 08 </strong> </br> Faça um algoritmo para calcular o Indice de Massa Corporal de uma pessoa, considerando a seguinte formula: IMC = PESO / (ALTURA AO QUADRADO) Se a pessoa tiver IMC MENOR
+                        OU IGUAL A 18.5, mostre a mensagem abaixo: "Parabens! Voce esta no seu peso ideal" Senão mostre a mensagem abaixo: "Voce nao esta na faixa de peso ideal" </li>
+                    <li><strong class="titulo-exercicio">Exercicio 09 </strong> </br> Um estudante muito metódico estava matriculado em 6 disciplinas, e dispunha de 1 hora e 40 minutos para estudar. Sua intenção era dividir o tempo disponível igualmente para
+                        as 6 disciplinas, e descansar livremente o tempo restante. Faça um programa que calcule o tempo que ele deve dedicar para cada disciplina e o tempo livre.
+                    </li>
+
+                    <li><strong class="titulo-exercicio">Exercicio 11 </strong> </br> Determine a velocidade de um automovel que percorreu uma distancia S em km, * em um intervalo de tempo T,informando em horas.
+                    </li>
+                    <li>
+                        <strong class="titulo-exercicio">Exercicio 12 </strong> </br> Faça um algoritmo que leia dois numeros inteiros (n1 e n2) * calcule a divisão de n1/n2, e informe o resto desta divisão. * Não pode ser usado funções pre-programadas(mod
+                        em VisualG e % em JAVA).
+                    </li>
+                    <li>
+                        <strong class="titulo-exercicio">Exercicio 13 </strong> </br> Faça um algoritmo para ler uma temperatura em graus Celsius, e transforme * para graus Farenheidt e Kelvin. * OBS: * C = 5 (F - 32)/9; * K = C + 273;
+                    </li>
+                    <li>
+                        <strong class="titulo-exercicio">Exercicio 14 </strong> </br> Desenvolva um algoritmo para identificar se um determinado numero inteiro, * é positivo,negativo,ou nulo.
+                    </li>
+                    <li>
+                        <strong class="titulo-exercicio">Exercicio 15 </strong> </br> Calcule o salario do mes de um funcionario. * O funcionario ganha 3000, mais 500 reais por carro vendido, * mais 5% do valor total de cada carro vendido. * Quanto o
+                        funcionario ganha ao fim do mes?
+                    </li>
+                    <li>
+                        <strong class="titulo-exercicio">Exercicio 16 </strong> </br> Fornecido os coeficientes de uma equação do 2 grau,(a,b,c - ler do teclado) * faça um algoritmo que calcule as raizes se houverem * Validar se o numero e negativo, pois
+                        não existe raiz de numero negativo!
+                    </li>
+                    <li>
+                        <strong class="titulo-exercicio">Exercicio 17 </strong> </br> Suponha que voce foi ao supermercado e comprou: n Kg de café á x reais; k litros de leite á y reais; m Kg de farinha a z reais; Faça um algoritmo que imprima o ticket
+                        de compra. Primeiro produto: R$ 0,00 Segundo // : R$ 0.00
+                    </li>
+                    <li>
+                        <strong class="titulo-exercicio">Exercicio 18 </strong>
+                        </br> Faça um algoritmo que receba do usuario o raio em cm e calcule o volume de uma esfera.
+                        <br>Formula:
+                        <br> VOLUME = 4 * PI * R ao cubo.
+                        </br>
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="container" style="display: none;" id="REPETICAO">
+            <div class="lista-exercicio" id="lista5">
+                <h1 href="#">Atividades Aula 04-08-2022 - REPETICAO</h1>
+                <ol>
+                    <li><strong class="titulo-exercicio">Atividade 01 - Aula 04-08-2022</strong>
+                        </br>Crie um algoritmo que leia um numero e escreva a sequência de zero até o número.
+                    </li>
+                    <li><strong class="titulo-exercicio">Atividade 02 - Aula 04-08-2022</strong>
+                        </br>Crie um algoritmo que leia um numero e escreva a sequência decrescente até zero.
+                    </li>
+                    <li><strong class="titulo-exercicio">Atividade 03 - Aula 04-08-2022</strong>
+                        </br>Crie um algoritmo que recebe 2 números e multiplica o num1 pelo num2 através
+                        </br>de somas repetidas.(Exemplo:2 e 3 = 2 + 2 + 2 => 6)
+                    </li>
+                </ol>
+            </div>
+            <div class="lista-exercicio" id="lista6">
+                <h1>Exercicios 08-08-2022 - LISTA 01 - REPETICAO</h1>
+                <ol>
+                    <li><strong class="titulo-exercicio">Exercicio 01 </strong>
+                        </br>Suponha que para cada aluno de uma sala exista uma ficha contendo o nome e a idade de 05 alunos.
+                        </br>Faça algoritmo que determine quantos alunos tem idade maior que 30.
+                    </li>
+                    <li><strong class="titulo-exercicio">Exercicio 02 </strong>
+                        </br> Dado o modelo(Fiat, Ford,GM, Wolskwagen,Toyota,Honda), ano fabricação, cor e placa de 5 carros.
+                        </br> Faca um algoritmo que:
+                        </br>
+                        a)Imprima quantos carros sao da cor verde e o percentual em relacao ao total.
+                        </br>
+                        b)Imprima quantos foram fabricados antes de 1990 percentual em relacao ao total;
+                        </br>
+                        c)Imprima quantos sao da Fiat e o percentual em relacao ao total;
+                    </li>
+                    <li>
+                        <strong class="titulo-exercicio">Exercicio 03 </strong>
+                        </br>Dada uma relacao de 5 nomes de carros, imprima quantos sao da cor azul.
+                        <br>Sendo que para cada carro tem-se uma ficha contendo a cor e o nome.
+                    </li>
+                    <li><strong class="titulo-exercicio">Exercicio 04 </strong>
+                        </br>Dada uma serie de 5 valores, faca um algoritmo que calcule e escreva a media destes.
+                        </br>Entretanto, se a media obtida for maior que 8, devera ser atribuido 10 para a media.
+                    </li>
+                    <li><strong class="titulo-exercicio">Exercicio 05 </strong>
+                        </br>Determinado pais tem populacao de 5 milhoes de habitantes com taxa de natalidade de 4 % e mortalidade de 1,1 %.
+                        </br>Um segundo pais tem 7 milhoes de pessoas e natalidade de 2% e mortalidade de 0,8% .
+                        </br>Em quanto tempo o pais 1 ira ultrapassar o pais 2?
+                        </br>Quantos milhoes de população tera o pais 1 e o pais 2 quando isso ocorrer?
+                    </li>
+                    <li><strong class="titulo-exercicio">Exercicio 06</strong>
+                        </br>Implemente um algoritmo que leia um número e uma opção de listagem.
+                        </br>Com base nessa opção, escreva a sequência dos números:
+                        </br> em ordem crescente (de zero até o número)
+                        </br>ou decrescente (do número até zero).
+                        </br>Exemplo:
+                        </br>Opcao=> 1 - CRESCENTE
+                        </br>Opcao=> 2 - DECRESCENTE
+                    </li>
+                    <li><strong class="titulo-exercicio">Exercicio 07</strong>
+                        </br>Crie um algoritmo que leia um número e calcule seu fatorial.Ex: 5! = 5 * 4 * 3 * 2 * 1.
+                    </li>
+                    <li><strong class="titulo-exercicio">Exercicio 08</strong>
+                        </br>Escrever um algoritmo que leia um número n que indica quantos valores
+                        </br>devem ser lidos a seguir. Para cada número lido, mostre os valores lidos
+                        </br>e o fatorial destes valores.
+                    </li>
+                    <li><strong class="titulo-exercicio">Exercicio 09</strong>
+                        </br>Crie um algoritmo que receba vários números inteiros e positivos
+                        </br>e imprima o produto dos números ímpares digitados e a soma dos pares.
+                        </br>O algoritmo encerra quando o zero ou um número negativo é digitado.
+                    </li>
+                    <li><strong class="titulo-exercicio">Exercicio 10</strong>
+                        </br>Escreva um algoritmo que mostre o menor e o maior
+                        </br>dos números digitados pelo usuário.
+                        </br>Termine a leitura se o usuário digitar zero.
+                    </li>
+                </ol>
+            </div>
+            <div class="lista-exercicio" id="lista7">
+                <h1 href="#">Exercicios Aula 09-08-2022 - LISTA 02 - REPETICAO</h1>
+                <ol>
+                    <li><strong class="titulo-exercicio">Exercicio 01</strong>
+                        </br>Escreva um algoritmo que exiba 20 vezes a mensagem “Eu gosto de estudar Algoritmos!”.
+                    </li>
+                    <li><strong class="titulo-exercicio">Exercicio 02</strong>
+                        </br> Escreva um algoritmo que calcule a soma dos números de 1 a 15.
+                    </li>
+                    <li><strong class="titulo-exercicio">Exercicio 03</strong>
+                        </br> Leia o nome do usuário e escreva o nome dele na tela 10 vezes.
+                    </li>
+                    <li><strong class="titulo-exercicio">Exercicio 04</strong>
+                        </br> Leia um número N
+                        </br> Leia um nome de um usuario
+                        </br> Escreva o nome deste usuario na tela N vezes(numero digitado inicialmente).
+                    </li>
+                    <li><strong class="titulo-exercicio">Exercicio 05</strong>
+                        </br>Escreva um algoritmo que leia 10 números do usuário e calcule a soma desses números.
+                    </li>
+                    <li><strong class="titulo-exercicio">Exercicio 06</strong>
+                        </br>Leia a idade de 20 pessoas e exiba a soma das idades.
+                    </li>
+                    <li><strong class="titulo-exercicio">Exercicio 07</strong>
+                        </br>Leia a idade de 20 pessoas e exiba a média das idades.
+                    </li>
+                    <li><strong class="titulo-exercicio">Exercicio 08</strong>
+                        </br>Leia a idade de 20 pessoas e exiba quantas pessoas são maiores de idade.
+                    </li>
+                    <li><strong class="titulo-exercicio">Exercicio 09</strong>
+                        </br>Leia o nome e a idade de 10 pessoas e exiba o nome da pessoa mais nova.
+                    </li>
+                    <li><strong class="titulo-exercicio">Exercicio 10</strong>
+                        </br>Crie um algoritmo leia um número do usuário e exiba a sua tabuada de multiplicação.
+                    </li>
+                    <li><strong class="titulo-exercicio">Exercicio 11</strong>
+                        </br>Escreva um algoritmo que leia 20 números do usuário e exiba quantos números são maiores do que 8
+                    </li>
+                    <li><strong class="titulo-exercicio">Exercicio 12</strong>
+                        </br> Escreva um algoritmo que leia 20 números do usuário e exiba quantos números são pares
+                    </li>
+                    <li><strong class="titulo-exercicio">Exercicio 13</strong>
+                        </br> Faça um algoritmo que leia 20 números e, ao final, escreva quantos estão entre 0 e 100.
+                    </li>
+                    <li><strong class="titulo-exercicio">Exercicio 14</strong>
+                        </br>Faça um algoritmo que leia 20 números e, ao final, escreva quantos estão entre 0 e 100,
+                        </br>quantos estão entre 101 e 200 e quantos são maiores de 200.
+                    </li>
+                    <li><strong class="titulo-exercicio">Exercicio 15</strong>
+                        </br>Escreva um algoritmo que leia uma sequência de números do usuário e realize a soma desses números.
+                        </br>Encerre a execução quando um número negativo for digitado.
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="container" style="display: none;" id="PROVA">
+            <div class="lista-exercicio centro">
+                <h1>Composição da Nota</h1>
+                <img src="avaliacao01.png" alt="Nota">
+            </div>
+            <div class="lista-exercicio">
+                <h1>LISTA DE ATIVIDADES....</h1>
+            </div>
+            <div class="lista-exercicio" id="lista8">
+                <h1>Atividade 01 - 11-08-2022 - LISTA 08 - CONDICIONAIS E REPETICAO - ATIVIDADES EM GRUPO</h1>
+                <div class="menu">
+                    <a href="atividade01.html" alt="">Questoes da Atividade 01</a>
+                </div>
+            </div>
+            <div class="lista-exercicio" id="lista9">
+                <h1>Atividade 02 - 15-08-2022 - LISTA 09 - REPETICAO - ATIVIDADES EM GRUPO</h1>
+                <div class="menu">
+                    <a href="atividade02.html" alt="">Questoes da Atividade 02</a>
+                </div>
+            </div>
+            <div class="lista-exercicio" id="lista10">
+                <h1>RECUPERACAO - CONDICIONAIS E REPETICAO - XX-08-2022 - LISTA 10 - RECUPERACAO - ATIVIDADE INDIVIDUAL
+                </h1>
+                <div class="menu" style="display: none;">
+                    <a href="recuperacaoAlgoritmosCondicionaisRepeticao.html" alt="">Questoes da Recuperacao</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container" style="display: none;" id="VETORES">
+            <div class="lista-exercicio" id="lista11">
+                <h1 href="#">Atividades Aula 16-08-2022 - LISTA DE EXERCICIOS DO TIPO VETORES</h1>
+                <ol>
+                    </li>
+                    <li><strong class="titulo-exercicio">Exercicio 01</strong>
+                        <br> Faça um algoritmo que leia Nome idade e sexo de N pessoas. Após a leitura faça:
+                        <br>a. Imprima o Nome, idade e sexo das pessoas cuja idade seja maior que a idade da primeira pessoa.
+                        <br>b. Imprima o Nome e idade de todas as mulheres.
+                        <br>c. Imprima o Nome dos homens menores de 21 anos.
+                    </li>
+                    <li><strong class="titulo-exercicio">Exercicio 02</strong>
+                        <br> Faça um algoritmo que leia, via teclado, 10 valores do tipo inteiro e os guarde na memória.
+                        <br> Após a leitura liste os numeros armazenados.
+                    </li>
+                    <li><strong class="titulo-exercicio">Exercicio 03</strong>
+                        <br> Amplie o exercício anterior emitindo um relatório com todos os números pares que você leu.
+                    </li>
+                    <li><strong class="titulo-exercicio">Exercicio 04</strong>
+                        <br> Faça um algoritmo que determine qual o menor valor existente no vetor do Exercício 02.
+                    </li>
+                    <li><strong class="titulo-exercicio">Exercicio 05</strong>
+                        <br> Faça um algoritmo que determine qual o maior valor existente no vetor do Exercício 02.
+                    </li>
+                    <li><strong class="titulo-exercicio">Exercicio 06</strong>
+                        <br> Faça um algoritmo que leia 10 nomes e os guarde na memória. No fim, imprima os 10 nomes armazenados.
+                    </li>
+                    <li><strong class="titulo-exercicio">Exercicio 07</strong>
+                        <br> Amplie o exercício 06 imprimindo o menor Nome do vetor
+                        <br> (usar função length()) do JAVA, desta forma:
+                        <br> int tamanho = nome.length();
+                        <br> (A função strlen retorna o número de caracteres inseridos numa variável. Ex.: Caso o usuário digitar o nome Maria, o strlen() retornará o valor 05.
+                    </li>
+                    <li><strong class="titulo-exercicio">Exercicio 08</strong>
+                        <br> Faça um algoritmo que leia um nome e o guarde na memória.
+                        <br> Após a leitura, verifique se a palavra é um palíndromo.
+                        <br> Um palíndromo é aquela palavra que a sua leitura
+                        <br> é a mesma da esquerda para a direita e vice versa. Exemplo: ARARA, ANA, etc.
+                        <br>(usar função strlen() do JAVA). (A função strlen retorna o número de caracteres inseridos numa variável.
+                    </li>
+                    <li><strong class="titulo-exercicio">Exercicio 09</strong><br> Faça um algoritmo que leia Nome e notas (total de 4 notas) de 5 alunos de um colégio.
+                        <br> Após a leitura faça:
+                        <br>a. Imprima o Nome e a média dos alunos aprovados (Média >= 7.0).
+                        <br>b. Imprima o Nome e a média dos alunos em Recuperação (5.0 >= Média menor que 7.0)
+                        <br>c. Imprima o Nome e a média dos alunos reprovados (Média menor que 5.0).
+                        <br>d. Imprima o percentual de alunos aprovados.
+                        <br>e. Imprima o percentual de alunos reprovados.
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="container" style="display: none;" id="MATRIZES">
+            <div class="lista-exercicio" id="lista12">
+                <h1 href="#">Atividades Aula 18-08-2022 - LISTA DE EXERCICIOS DO TIPO MATRIZES</h1>
+                <ol>
+                    <li><strong class="titulo-exercicio">Exercicio 01</strong>
+                        <br> Faca uma matriz A de ordem 9x3 que:
+                        <br> leia nome, idade e sexo de nove pessoas.
+                        <br> Imprima os valores da matriz gerada.
+                    </li>
+                    <li><strong class="titulo-exercicio">Exercicio 02</strong>
+                        <br> Dadas duas matrizes A e B de ordem 3 X 3.
+                        <br> Matriz A =
+                        <br> [
+                        <br>&nbsp;&nbsp;[2, 59, 617],
+                        <br>&nbsp;&nbsp;[8, 5, 95],
+                        <br>&nbsp;&nbsp;[1, 59, 67]
+                        <br> ]
+                        <br> Matriz B =
+                        <br> [
+                        <br> &nbsp;&nbsp;[22, 559, 678],
+                        <br> &nbsp;&nbsp;[13, 59 , 7],
+                        <br> &nbsp;&nbsp;[27, 159, 627]
+                        <br> ]
+                        <br> Faca um algoritmo que some as duas e gere a matriz C que é a Soma dos respectivos elementos de A e B.
+                        <br> Imprima os valores das tres matrizes.
+                    </li>
+                    <li><strong class="titulo-exercicio">Exercicio 03</strong>
+                        <br> Dado uma matriz A de ordem 3x3.
+                        <br> Matriz A =
+                        <br> [
+                        <br>&nbsp;&nbsp;[2, 5, 7],
+                        <br>&nbsp;&nbsp;[8, 9, 3],
+                        <br>&nbsp;&nbsp;[1, 6, 10]
+                        <br> ]
+                        <br> Faca um algoritmo que:
+                        <br> a. Calcule a soma dos elementos da primeira coluna
+                        <br> b. calcule o produto dos elementos da primeira linha
+                        <br> c. Calcule a soma da diagonal principal
+                    </li>
+                    <li><strong class="titulo-exercicio">Exercicio 04</strong>
+                        <br> Dada uma matriz A 2x3 de valores reais(float ou Double)(salários).
+                        <br> Matriz A =
+                        <br> [
+                        <br>&nbsp;&nbsp;[2500.98, 5573.45, 7980.32],
+                        <br>&nbsp;&nbsp;[850.26, 987.23, 3536.24]
+                        <br> ]
+                        <br> Faça um algoritmo que faca a leitura destes valores e imprima:
+                        <br> a. Soma dos dados de cada coluna e linha.
+                        <br> Ex: Soma coluna 01=> xxx
+                        <br> Ex: Soma coluna 02=> xxx
+                        <br> Ex: Soma coluna 03=> xxx
+                        <br> Ex: Soma linha 01=> xxx
+                        <br> Ex: Soma linha 02=> xxx
+                        <br> b. listar valores menores que a media em um novo vetor(se necessario for).
+                    </li>
+                    <li><strong class="titulo-exercicio">Exercicio 05</strong>
+                        <br> Dada uma matriz de ordem 3X3.
+                        <br> Matriz A =
+                        <br> [
+                        <br>&nbsp;&nbsp;[1, 5,],
+                        <br>&nbsp;&nbsp;[7, 3],
+                        <br>&nbsp;&nbsp;[8, 2]
+                        <br> ]
+                        <br> Faca um algoritmo que:
+                        <br> a. Gere a Matriz B transposta de A.
+                        <br> a. A Matriz gerada sera a matriz abaixo:
+                        <br> Matriz B - Transposta =
+                        <br> [
+                        <br>&nbsp;&nbsp;[1, 7, 8],
+                        <br>&nbsp;&nbsp;[5, 3, 2]
+                        <br> ]
+                        <br> Explicacao sobre Matriz Transposta: <a href="https://www.todamateria.com.br/matriz-transposta/">clique aqui</a>
+                    </li>
+                    <li><strong class="titulo-exercicio">Exercicio 06</strong>
+                        <br> Dada uma matriz de ordem 3X3.
+                        <br> Matriz A =
+                        <br> [
+                        <br>&nbsp;&nbsp;[2, 5, 11],
+                        <br>&nbsp;&nbsp;[5, 4, 17],
+                        <br>&nbsp;&nbsp;[11, 17, 6]
+                        <br> ]
+                        <br> Faca um algoritmo que verifique se esta Matriz é simetrica.
+                        <br> Para isso sabemos que a Matriz é simetrica quando: Matriz A = Matriz A(Transposta).
+                        <br> Desse modo temos de gerar a Matriz transposta de A e ver se Aij = Aji.
+                        <br> Explicacao sobre Matriz Transposta: <a href="https://www.todamateria.com.br/matriz-transposta/">clique aqui</a>
+                    </li>
+                    <li><strong class="titulo-exercicio">Exercicio 07</strong>
+                        <br> Dada uma matriz de ordem 3X3.
+                        <br> Matriz A =
+                        <br> [
+                        <br>&nbsp;&nbsp;[2, 5, 11],
+                        <br>&nbsp;&nbsp;[5, 4, 17],
+                        <br>&nbsp;&nbsp;[11, 17, 6]
+                        <br> ]
+                        <br> Faca um algoritmo que gera a Matriz B Oposta desta matriz A.
+                        <br> Explicacao sobre Matriz Oposta: <a href="https://www.todamateria.com.br/matriz-transposta/">clique aqui</a>
+                    </li>
+                </ol>
+                <div class="lista-exercicio" id="lista13">
+                    <h1 href="#">Atividades Aula 22-08-2022 - LISTA DE EXERCICIOS DO TIPO MATRIZES</h1>
+                    <ol>
+                        <li>
+                            <strong class="titulo-exercicio">Exercicio 01</strong>
+                            <br>Dada uma matrizA[3][3],
+                            <br> Matriz A =
+                            <br> [
+                            <br>&nbsp;&nbsp;[2, 59, 17],
+                            <br>&nbsp;&nbsp;[8, 5, 95],
+                            <br>&nbsp;&nbsp;[1, 51, 67]
+                            <br> ]
+                            <br>realize as operações abaixo:
+                            <ol style="margin-left: 100px;">
+                                <li>
+                                    gerar nova matriz B[2][3] com a soma dos elementos da sua diagonal principal e da sua diagonal secundária;
+                                </li>
+                                <li>
+                                    gerar nova matriz C[2][3] com a soma dos elementos da linha 1 e com a coluna 2;
+                                </li>
+                                <li>
+                                    calcule e mostre o menor elemento da sua diagonal secundária.
+                                </li>
+                                <li>
+                                    crie uma variavel <b>int mult</b>, e efetue a multiplicacao de cada elemento de matrizA por <b>mult</b> e armazene em um vetor V[9], ao final mostre este vetor;
+                                </li>
+                                <li>
+                                    <br>Na teoria dos sistemas, define-se como elemento minimax de uma matriz o menor elemento de uma linha onde se encontra o maior elemento da matriz.
+                                    <br>Crie um vetor que retorne o elemento minimax, juntamente com a sua posição, das matrizes geradas anteriormente:
+                                    <ul>
+                                        <li>matriz A[3][3]</li>
+                                        <li>matriz B[2][3]</li>
+                                        <li>matriz C[2][3]</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </li>
+                        <li>
+                            <strong class="titulo-exercicio">Exercicio 02</strong>
+                            <br>Dada uma matriz A[10][10], realize as seguintes trocas:
+                            <ul style="margin-left: 100px;">
+                                <li>
+                                    <b><font face="Times New Roman,Times">a linha 2 com a linha 8;</font></b>
+                                </li>
+                                <li>
+                                    <b><font face="Times New Roman,Times">a coluna 4 com a coluna 10;</font></b>
+                                </li>
+                                <li>
+                                    <b><font face="Times New Roman,Times">a diagonal principal com a secundária;</font></b>
+                                </li>
+                                <li>
+                                    <b><font face="Times New Roman,Times">a linha 5 com a coluna 10;</font></b>
+                                </li>
+                            </ul>
+                            <b><font face="Times New Roman,Times">Ao final mostre a matriz alterada.</font></b>
+                        </li>
+
+                        <li>
+                            <strong class="titulo-exercicio">Exercicio 03</strong>
+                            <br>Na teoria dos sistemas, define-se como elemento minimax de uma matriz o menor elemento de uma linha onde se encontra o maior elemento da matriz.
+                            <br>Faça uma função que recebe uma matriz A[10][10] e retorna o seu elemento minimax, juntamente com a sua posição.
+                        </li>
+                        <li>
+                            <strong class="titulo-exercicio">Exercicio 04</strong>
+                            <br>Faça uma função que receba uma matriz A[12][12] e retorne:
+                            <ol>
+                                <li>
+                                    a média aritmética dos elementos abaixo da diagonal principal;
+                                </li>
+                                <li>
+                                    a soma dos elementos acima da diagonal principal;
+                                </li>
+                                <li>
+                                    o menor valor dos elementos abaixo da diagonal secundária;
+                                </li>
+                                <li>
+                                    o menor valor dos elementos acima da diagonal secundária;
+                                </li>
+                                <li>
+                                    a média aritmética dos elementos abaixo da diagonal principal e da diagonal secundária;
+                                </li>
+                                <li>
+                                    o produto dos elementos acima da diagonal principal e da diagonal secundária;
+                                </li>
+                                <li>
+                                    mostre o maior elemento da sua diagonal principal;
+                                </li>
+                            </ol>
+                        </li>
+                        <li>
+                            <strong class="titulo-exercicio">Exercicio 05</strong>
+                            <br>Faça um algoritmo que gere uma matriz A[25][25] apenas de numeros pares entre 1 e 1250.Ao final mostre a nova matriz gerada.
+                            <br>Dica:Gere um vetor de pares e depois alimente a nova matriz com este numeros pares do vetor.
+                        </li>
+                        <li>
+                            <strong class="titulo-exercicio">Exercicio 06</strong>
+                            <br>Amplie o Exercicio 05 e a partir da matriz A[25][25] gerada anteriormente, retorne:
+                            <ul>
+                                <li>quantidade de numeros divisiveis por 7</li>
+                                <li>quantidade de numeros divisiveis por 24</li>
+                                <li>quantidade de numeros divisiveis por 8</li>
+                                <li>quantidade de numeros divisiveis por 3</li>
+                                <li>quantidade de numeros divisiveis por 5</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong class="titulo-exercicio">Exercicio 07</strong>
+                            <br>Faça um algoritmo que gere uma matriz A[7][21] apenas de numeros impares entre 1 e 300.Ao final mostre a nova matriz gerada.
+                            <br>Dica:Gere um vetor de pares e depois alimente a nova matriz com este numeros pares do vetor.
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <div include-html-rodape="rodape.html"></div>
+</body>
+
+<script src="js/script.js"></script>
+<script src="js/atividades.js"></script>
+
+<script defer>
+    loadAllExercises('MATRIZES');
+    includeHTML("include-html-menu");
+    includeHTML("include-html-rodape");
+</script>
+
+</html>

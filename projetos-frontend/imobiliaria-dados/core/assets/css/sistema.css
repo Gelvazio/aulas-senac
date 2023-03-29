@@ -1,0 +1,123 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    background-image: url("../images/bg.jpg");
+    overflow-y: scroll;
+}
+
+header {
+    text-align: center;
+    height: 50px;
+    border-bottom: 1px solid white;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    padding-left: 600px;
+    min-height: 100%;
+    position: relative;
+}
+
+footer {
+    height: 50px;
+    text-align: center;
+    border-top: 1px solid white;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    font-size: 1.2em;
+    background: #23252B;
+}
+
+.fixarRodape {
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    z-index: 2;
+}
+
+footer .direitos {
+    display: flex;
+    justify-content: flex-end;
+    width: 55%;
+}
+
+footer .datahora {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 50px;
+}
+
+.texto {
+    color: aliceblue;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.corpo_formulario {
+    font-size: 3em;
+    font-weight: bold;
+    background-color: #0c63e4;
+    color: black;
+}
+
+.disabled {
+    background-color: #bdbdbd;
+    color: white;
+}
+
+.mensagem {
+    background: #f2f2f2;
+    border: 1px solid white;
+    border-radius: 25px;
+    width: 50%;
+    height: 500px;
+    text-align: center;
+    box-shadow: 0 0 0 3px white;
+}
+
+.centralizaElemento {
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.texto-mensagem {
+    color: black;
+    font-size: 2em;
+    height: 100px;
+}
+
+.texto-mensagem a {
+    text-decoration: none;
+    width: 300px;
+    height: 45px;
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+    padding-left: 0;
+    border: 1px solid black;
+    cursor: pointer;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.texto-mensagem a:hover {
+    cursor: pointer;
+    background: var(--var-background-color-hover);
+    transition: all 0.4s ease-in-out;
+    color: white;
+}

@@ -1,0 +1,16 @@
+    ---------------------
+   |     COLOR SCHEME    |
+   |project_color_pallete|
+   |        .png         |
+    ---------------------
+Used: http://html-color-codes.info/colors-from-image/;      
+From left
+ _______________________
+|Color 		| HEX		|
+|-----------------------|
+|Old pink 	| #F16272   |
+|Salmon		| #FF555A   |
+|Glacial WH.| #F7F6F6   |
+|Baby Blue  | #00A5E7	|
+|Blue       | #009BD9	|
+|_______________________| 

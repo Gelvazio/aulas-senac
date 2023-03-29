@@ -1,0 +1,73 @@
+aluno:gelvazio camargo
+enviar no fim da aula
+
+create database exercicio2
+  with owner = postgres
+       encoding = 'win1252'
+       tablespace = pg_default
+       lc_collate = 'portuguese_brazil.1252'
+       lc_ctype = 'portuguese_brazil.1252'
+       connection limit = -1;	   
+	   
+create schema cadastros
+  authorization postgres;	   
+  
+create table cadastros.tblogradouro
+(
+  logcodigo integer not null,
+  logtipo character varying(10),
+  logdescricao character varying(100),
+  constraint pk_logcodigo primary key (logcodigo)
+)
+with (
+  oids=false
+);
+
+
+create table cadastros.tbpessoa(
+  pescodigo integer not null,
+  pesnome character varying(100) not null,
+  pessexo smallint not null,
+  pestipo smallint not null,
+  logcodigo integer,
+  constraint pk_pescodigo primary key (pescodigo),
+  constraint fk_tbpessoa_tblogradouro foreign key(logcodigo)
+  references cadastros.tblogradouro(logcodigo) match simple
+      on update no action on delete no action
+)
+with (
+  oids=false
+);
+
+
+create table cadastros.tbpessoacontato(
+  pescodigo integer not null,
+  ctpnumero character varying(18) not null,
+  ctpdescricao character varying(100),
+  ctpramal integer,
+  logcodigo integer,
+  constraint pk_tbpessoacontato primary key (pescodigo,ctpnumero),
+  constraint fk_tbpessoacontato_tbpessoa foreign key(pescodigo)
+  references cadastros.tbpessoa(pescodigo) match simple
+      on update no action on delete no action
+)
+with (
+  oids=false
+);
+
+
+create table cadastros.tbimovel(
+  pescodigo integer not null,
+  logcodigo integer not null,
+  imvdescricao character varying(500) not null,
+  imvlargura numeric(10,2),
+  imvcomprimento numeric(10,2),
+  constraint pk_tbimovel_codigo primary key (pescodigo,logcodigo),  
+  constraint fk_tbimovel_tbpessoa foreign key(pescodigo)
+  references cadastros.tbpessoa(pescodigo), 
+  constraint fk_tbimovel_tblogradouro foreign key(logcodigo)
+  references cadastros.tblogradouro(logcodigo) 
+)
+with (
+  oids=false
+);

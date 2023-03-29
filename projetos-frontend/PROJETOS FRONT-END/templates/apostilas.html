@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apostilas</title>
+</head>
+
+<style>
+    /* implementar este codigo aqui:: https://www.youtube.com/watch?v=2GO_E3KMRVg */
+    
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+    }
+    
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    nav ul {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        position: fixed;
+        /* background-color: aliceblue; */
+        background: linear-gradient(90deg, #43a4f9, #1ef4ff);
+        height: 5rem;
+        width: 100%;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    nav ul li {
+        background-color: rgb(49, 66, 161);
+        padding: 10px;
+        border: none;
+        border-radius: 10px;
+        transition: all .3s ease-in;
+        cursor: pointer;
+    }
+    
+    nav ul li:hover {
+        background-color: aqua;
+        color: black;
+    }
+    
+    nav ul li a:hover {
+        color: black;
+    }
+    
+    nav ul li a {
+        text-transform: uppercase;
+        font-size: 20px;
+        color: aliceblue;
+    }
+    
+    section {
+        min-height: 100vh;
+        padding-top: 3rem;
+    }
+    
+    #sobre {
+        background-color: blueviolet;
+    }
+    
+    #servicos {
+        background-color: rgb(70, 78, 183);
+    }
+    
+    #contato {
+        background-color: rgb(43, 205, 226);
+    }
+    /* Iframe CSS */
+    
+    body {
+        background: linear-gradient(-60deg, #03035b, #c853fe);
+    }
+    
+    h1 {
+        color: aliceblue;
+        text-align: center;
+    }
+    
+    iframe {
+        padding: 5px;
+        margin: 0;
+        list-style: none;
+        text-align: center;
+    }
+    
+    .livros ul li iframe {
+        width: 93vw;
+        max-width: 95vw;
+        height: 100vh;
+    }
+    
+    .submenu-livros {
+        min-height: 30px;
+    }
+</style>
+
+<body>
+    <nav>
+        <ul>
+            <!-- <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#servicos">Servicos</a></li>
+            <li><a href="#contato">Contato</a></li> -->
+            <li>
+                <a href="#java">JAVA</a>
+            </li>
+            <li>
+                <a href="#html">HTML</a>
+            </li>
+            <li>
+                <a href="#css">CSS</a>
+            </li>
+            <li>
+                <a href="#javascript">JavaScript</a>
+            </li>
+            <li>
+                <a href="#htmlcssjavascript">HTML e CSS</a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <!-- <section id="sobre">Sobre</section>
+        <section id="servicos">Servicos</section>
+        <section id="contato">Contato</section> -->
+
+        <section class="livros" id="java">
+            <section class="submenu-livros" id="listajava">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#java-livro-01">JAVA livro 01</a>
+                        </li>
+                        <li>
+                            <a href="#java-livro-02">JAVA livro 02</a>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
+            <section id="#java-livro-01">
+                <ul>
+                    <li>
+                        <h1>Classes e Objetos - 01</h1>
+                        <iframe src="apostilas/java/02 - Classes e Objetos.pdf" frameborder="0">Classes e Objetos</iframe>
+                    </li>
+                    <li>
+                        <h1>Classes e Objetos - 02</h1>
+                        <iframe src="apostilas/html,css,javascript/Apostila de Lógica de Programção, HTML e JavaScript.pdf" frameborder="0">HTML e JavaScript</iframe>
+                    </li>
+                </ul>
+            </section>
+            <section id="#java-livro-02">
+                <ul>
+                </ul>
+            </section>
+        </section>
+
+        <section class="livros" id="html">
+            <ul>
+                <li>
+                    <h1>HTML</h1>
+                    <iframe src="apostilas/javascript/livro-javascript.pdf" frameborder="0">Livro Javascript</iframe>
+                </li>
+            </ul>
+        </section>
+
+        <section class="livros" id="css">
+            <ul>
+                <li>
+                    <h1>CSS</h1>
+                    <iframe src="apostilas/javascript/livro-javascript.pdf" frameborder="0">Livro Javascript</iframe>
+                </li>
+            </ul>
+        </section>
+
+        <section class="livros" id="javascript">
+            <ul>
+                <li>
+                    <h1>Livro Javascript</h1>
+                    <iframe src="apostilas/javascript/livro-javascript.pdf" frameborder="0">Livro Javascript</iframe>
+                </li>
+                <li>
+                    <h1>Apostila CSS</h1>
+                    <iframe src="apostilas/css/03_Introducao_CSS.pdf" frameborder="0">Apostila CSS</iframe>
+                </li>
+                <li>
+                    <h1>Livro Javascript</h1>
+                    <iframe src="apostilas/javascript/livro-javascript.pdf" frameborder="0">Livro Javascript</iframe>
+                </li>
+                <li>
+                    <h1>Livro Javascript</h1>
+                    <iframe src="apostilas/javascript/livro-javascript.pdf" frameborder="0">Livro Javascript</iframe>
+                </li>
+            </ul>
+        </section>
+        <section class="livros" id="htmlcssjavascript">
+            <ul>
+                <li>
+                    <h1>HTML,CSS,JAVASCRIPT-ALURA</h1>
+                    <iframe src="apostilas/html,css,javascript/apostila-html-css-javascript-alura.pdf" frameborder="0">HTML,CSS,JAVASCRIPT-ALURA</iframe>
+                </li>
+        </section>
+    </main>
+</body>
+
+</html>

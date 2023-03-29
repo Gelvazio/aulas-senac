@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desenvolvimento - Tech</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <div class="container-principal">
+        <!-- Inclui o Menu Unico Atraves de JavaScript -->
+        <div include-html-menu="menu.html"></div>
+
+        <div class="container">
+            <div class="menu content-cursos-free fundo-branco">
+                <table class="container-table">
+                    <thead>
+                        <tr>
+                            <th class="containerTable-lblTitle">IDE</th>
+                            <th class="containerTable-lblTitle">Site</th>
+                            <th class="containerTable-lblTitle">Linguagens</th>
+                        </tr>
+                    </thead>
+                    <tbody class="containerTable-body">
+                        <tr>
+                            <td class="containerTable-lblValue">Visualg</td>
+                            <td class="containerTable-lblValue">https://visualg3.com.br/</td>
+                            <td class="containerTable-lblValue">Portugol, Pascal</td>
+                        </tr>
+                        <tr>
+                            <td class="containerTable-lblValue">Netbeans</td>
+                            <td class="containerTable-lblValue">https://netbeans.apache.org/download/index.html</td>
+                            <td class="containerTable-lblValue">PHP, JAVA, HTML, CSS, JAVASCRIPT</td>
+                        </tr>
+                        <tr>
+                            <td class="containerTable-lblValue">PHPStorm</td>
+                            <td class="containerTable-lblValue">https://www.jetbrains.com/</td>
+                            <td class="containerTable-lblValue">PHP, HTML, CSS, JAVASCRIPT</td>
+                        </tr>
+                        <tr>
+                            <td class="containerTable-lblValue">IntelliJ</td>
+                            <td class="containerTable-lblValue">https://www.jetbrains.com/</td>
+                            <td class="containerTable-lblValue">JAVA</td>
+                        </tr>
+                        <tr>
+                            <td class="containerTable-lblValue">VSCODE</td>
+                            <td class="containerTable-lblValue">https://code.visualstudio.com/</td>
+                            <td class="containerTable-lblValue">PHP, JAVA, HTML, CSS, JAVASCRIPT, C#, C++, ASPNET CORE, e outras...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div include-html-rodape="rodape.html"></div>
+</body>
+<script src="js/script.js"></script>
+<script>
+    includeHTML("include-html-menu");
+    includeHTML("include-html-rodape");
+</script>
+
+</html>

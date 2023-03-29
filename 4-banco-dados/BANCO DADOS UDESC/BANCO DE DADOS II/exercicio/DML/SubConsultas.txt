@@ -1,0 +1,44 @@
+1 - 
+	select 
+		piloto.companhia
+	from 
+		piloto
+	where 
+		codigo_piloto in (select codigo_piloto from escala where aviao = 'MD11')
+2 - 
+  select 
+    piloto.companhia
+  from 
+    piloto
+  where 
+    codigo_piloto not in (select codigo_piloto from escala where aviao = 'MD11')
+
+3 - 
+  select 
+    distinct(piloto.companhia)
+  from 
+    piloto, escala esc
+  where 
+    piloto.codigo_piloto = esc.codigo_piloto
+    and  
+    esc.aviao = 'MD11'
+    and
+    piloto.codigo_piloto not in (select 
+																   escala.codigo_piloto 
+																 from 
+																   escala 
+																 where 
+																   aviao <> 'MD11')
+																	 
+4 - 
+  select 
+		nome_piloto
+	from 
+		piloto
+	where 
+		codigo_piloto in (select codigo_piloto from escala where aviao in ('MD11', '737'))
+
+
+  
+  
+

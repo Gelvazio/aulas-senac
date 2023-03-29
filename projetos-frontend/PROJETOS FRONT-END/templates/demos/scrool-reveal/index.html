@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Reveal</title>
+</head>
+
+<style>
+    /* html colors    
+        Tomato
+        Orange
+        DodgerBlue
+        MediumSeaGreen
+        Gray
+        SlateBlue
+        Violet
+        LightGray
+    */
+    
+    body {
+        background-color: Violet;
+    }
+    
+    header,
+    main,
+    footer {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 60px;
+        color: aliceblue;
+        font-weight: 700;
+    }
+    
+    .area-1,
+    .area-2,
+    .area-3 {
+        visibility: hidden;
+    }
+    
+    html.sr .load-hidden {
+        visibility: hidden;
+    }
+</style>
+
+<body>
+    <header>
+        <h1 class="area-1">Header</h1>
+    </header>
+    <main>
+        <h1 class="area-2">Main</h1>
+        <!--  utility class (explicit) -->
+        <h1 class="headline load-hidden">
+            Widget Inc.
+        </h1>
+
+        <!-- style extension (implicit) -->
+        <ul class="widget-list">
+            <li class="widget">1</li>
+            <li class="widget">2</li>
+            <li class="widget">3</li>
+            <li class="widget">4</li>
+            <li class="widget">5</li>
+        </ul>
+    </main>
+    <footer>
+        <h1 class="area-3">footer</h1>
+    </footer>
+</body>
+
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="script.js"></script>
+
+</html>

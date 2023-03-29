@@ -1,0 +1,43 @@
+.footer {
+    height: 20px;
+}
+
+.sub-menu {
+    color: white;
+}
+
+.lista-exercicio {
+    background-color: #004384;
+}
+
+.lista-exercicio ul {
+    padding: 20px 50px;
+}
+
+.lista-exercicio ul li {
+    color: aliceblue;
+    font-size: medium;
+    padding: 5px;
+    list-style: none;
+}
+
+.lista-exercicio ul li button {
+    background-color: rgb(0, 149, 255);
+    outline: none;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    margin-right: 10px;
+    color: aliceblue;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+}
+
+.lista-exercicio ul li button:hover {
+    background-color: rgba(0, 149, 255, 0.24);
+}
+
+.menu a {
+    font-size: 12px;
+}

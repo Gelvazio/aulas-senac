@@ -1,0 +1,77 @@
+   /*RESET DE CSS */
+   
+   * {
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+   }
+   
+   html {
+       scroll-behavior: smooth;
+   }
+   
+   .titulo {
+       background: #027e01;
+       height: 40px;
+       color: white;
+       font-weight: bold;
+       text-align: center;
+       padding-top: 10px;
+       font-family: 'Roboto', Trebuchet MS, sans-serif;
+   }
+   
+   .logo {
+       padding: 50px 0;
+       text-align: center;
+   }
+   /* SECAO MENU */
+   
+   .menu {
+       height: 55px;
+       background: #027e01;
+       box-shadow: inset 0px 0px 25px 0px rgb(30 45 24);
+   }
+   
+   .menu ul {
+       display: flex;
+       flex-direction: row;
+       justify-content: center;
+       align-items: center;
+       height: 100%;
+       color: white;
+       font-weight: bold;
+       gap: 15px;
+   }
+   
+   .menu ul li {
+       list-style: none;
+       text-transform: uppercase;
+       height: 100%;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       transition: background-color 300ms ease, border 300ms ease, color 300ms ease;
+   }
+   
+   .menu ul li:hover {
+       background-color: yellow;
+       color: #027e01;
+       cursor: pointer;
+   }
+   
+   .footer {
+       height: 55px;
+       background: #0c610a;
+       color: white;
+       font-weight: bold;
+       text-align: center;
+       padding-top: 15px;
+       position: fixed;
+       bottom: 0;
+       width: 100%;
+   }
+   
+   .content img {
+       width: 100%;
+       height: 60vh;
+   }

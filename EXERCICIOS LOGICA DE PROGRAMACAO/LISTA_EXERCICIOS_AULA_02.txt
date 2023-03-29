@@ -1,0 +1,55 @@
+[EXERCICIOS USANDO CONDICIONAIS
+#Exercicio 01
+Suponha que para cada aluno de uma sala exista uma ficha contendo o nome e a idade de
+05 alunos.Faca algoritmo que determine quantos alunos tem idade maior que 30.
+
+#Exercicio 02
+Dado o modelo(Fiat, Ford,GM, Wolskwagen,Toyota,Honda), ano fabricação, cor e placa de 5 carros
+Faca um algoritmo que:
+a)Imprima quantos carros sao da cor verde e o
+percentual em relacao ao total
+
+b)Imprima quantos foram fabricados antes de 1990 percentual em relacao ao total;
+
+c)Imprima quantos sao da Fiat e o percentual em relacao ao total;
+
+#Exercicio 03
+Dada uma relacao de  5 nomes de carros,
+imprima quantos sao da cor azul
+Sendo que para cada carro
+tem-se uma ficha contendo a cor e o nome
+
+#Exercicio 04
+Dada uma serie de 5 valores, faca um algoritmo que calcule e
+escreva a media destes.
+Entretanto, se a media obtida for maior que 8,
+devera ser atribuido 10 para a media.
+
+#Exercicio 05
+Faca um algoritmo que leia o nome e as tres notas  de um aluno
+e ao final, escreva o seu nome,
+sua media e se ele foi aprovado.
+Media de aprovacao igual a 8.
+
+#Exercicio 06
+Faca um algoritmo que leia tres numeros digitados, e os coloque em ordem crescente.
+
+#Exercicio 07
+Faca um algoritmo que leia o menor numero de tres digitados.
+
+#Exercicio 08
+Faca um algoritmo que leia o maior numero de tres digitados.
+
+#Exercicio 09
+Faca um algoritmo que leia o numero intermediario de tres digitados.
+
+#Exercicio 10
+Faca um algoritmo que leia o maior, o menor e o intermediario de tres numeros digitados.
+
+#Exercicio 11
+Faca um algoritmo que leia um numero e apos imprima o numero lido, o seu antecessor e o seu sucessor na tela;
+
+
+
+
+

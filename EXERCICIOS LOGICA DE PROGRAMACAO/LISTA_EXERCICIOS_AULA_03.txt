@@ -1,0 +1,75 @@
+[LISTA DE EXERCICIOS DO TIPO REPITA
+#Exercicio 01
+Fazer algoritmo para imprimir os 13 primeiros termos da
+sequencia de fibonacci ate um numero dado.
+Obs:Sequencia de fibonacci se da pela soma do numero anterior ao numero atual, para gerar o proximo termo.
+
+#Exercicio 02
+Uma empresa tem 5 vendedores que ganham
+por comissao sobre cada produto vendido
+cada vendedor em um determinado mes vendeu x produtos, onde cada produto pode ou nao ter
+precos iguais
+A empresa deseja obter um relatorio com o Nome,total de vendas e o valor a ser pago a cada vendedor.
+
+A comissao paga pela empresa é de 30% sobre o valor de cada produto vendido.
+
+#Exercicio 03
+Faca um algoritmo para:
+a)Ler um valor x qualquer
+
+b)Calcular Y = (x+1)+(x+2)+(x+3)+(x+4)+(x+5)
+
+Contar ate 5 somente
+
+#Exercicio 04
+Um hotel cobra 300 R$ por diaria e mais uma taxa adicional de servicos
+Se o numero de diarias for menor que 15 a taxa adicional e 15 R$
+Se o numero de diarias for igual a 15 a taxa e de 14 R$
+Se o numero de diarias for maior que 15 a taxa e de 12 R$
+
+Sendo que se tem 5 pessoas no hotel, e cada uma tem um registro com seu nome e numero diarias
+
+Faca um algoritmo que:
+imprima o nome de cada pessoa;
+imprima o total a pagar de cada pessoa
+imprima tambem o total ganho pelo hotel:
+imprima o numero total de diarias.
+
+#Exercicio 05
+Dado o nome e notas de n alunos
+
+a)Imprima nome e media dos alunos aprovados.
+Media >=7
+
+b)Imprima nome e media dos alunos em recuperacao.
+Media >= 5 < ?
+
+c)Imprima nome e media dos alunos reprovados
+Media menor que 5
+
+#Exercicio 06
+Implementar uma progressao aritmetica a partir de um numero inicial x
+com base numa razao y (y é uma constante)
+Ex: 1 3 5 7 9 11 13 15 17
+No exemplo acima a razao é igual a 2.
+
+Imprimir os 10 primeiros numeros da progressão.
+
+#Exercicio 07
+Dado Nome e salario de um numero indeterminado
+de funcionarios, imprima o nome e o salario do funcionario
+que tem o maior salario, bem como o nome do funcionario que possuir o menor salario.
+
+#Exercicio 08
+Faca um algoritmo para ler a base e a altura
+de um numero n de  triangulos
+e imprimir a area e altura dos triangulos
+Triangulo=(Base * Altura)/2
+
+
+
+
+
+
+
+

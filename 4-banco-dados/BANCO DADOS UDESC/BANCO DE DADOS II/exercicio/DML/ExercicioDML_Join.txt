@@ -1,0 +1,49 @@
+1 - 
+	Select 
+		distinct(piloto.companhia)
+	from
+	  piloto
+	inner join escala on 
+	  escala.codigo_piloto = piloto.codigo_piloto
+	where 
+		escala.aviao = 'MD11'
+			
+2 - 
+	Select 
+		aeroporto.cidade,
+		aeroporto.pais
+	from
+		aeroporto
+	inner join voo on 
+		voo.aeroporto_destino = aeroporto.codigo_aeroporto
+	where 
+		voo.codigo_voo = 456
+			
+3 - 
+	Select 
+		escala.codigo_voo,
+		piloto.nome_piloto,
+		escala.aviao,
+		piloto.companhia
+	from
+		escala
+	left outer join piloto on 
+		piloto.codigo_piloto = escala.codigo_piloto
+
+4 - 
+	Select 
+		piloto.companhia
+	from 
+		piloto
+	inner join escala on 
+		escala.codigo_piloto = piloto.codigo_piloto
+	inner join voo on 
+		voo.codigo_voo = escala.codigo_voo
+	inner join aeroporto on 
+		aeroporto.codigo_aeroporto = voo.aeroporto_destino
+	where 
+		aeroporto.pais like '%Brasil%'
+
+5 - 
+
+		

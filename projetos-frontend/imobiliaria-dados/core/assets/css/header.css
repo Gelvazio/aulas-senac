@@ -1,0 +1,28 @@
+.header_login {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    color: white;
+    font-size: 2em;
+}
+
+.btn_header {
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 0 1px gray;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn_header:hover {
+    background-color: #1abc9c;
+    transition: all 0.4s ease-in-out;
+    border: 1px solid rgba(26, 188, 156, 0.3);
+    color: white;
+}
+
+.menu {
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px;
+}

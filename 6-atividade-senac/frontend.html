@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desenvolvimento - Tech</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <div class="container-principal">
+        <!-- Inclui o Menu Unico Atraves de JavaScript -->
+        <div include-html-menu="menu.html"></div>
+
+        <div class="container">
+            <section>
+                <strong>Front-end: o que é e como funciona?</strong>
+                <br> O Front-end está muito relacionado com a interface gráfica do projeto.
+                <br> Ou seja, é onde se desenvolve a aplicação com a qual o usuário irá interagir diretamente,
+                <br> seja em softwares, sites, aplicativos, etc.
+            </section>
+        </div>
+    </div>
+
+    <div include-html-rodape="rodape.html"></div>
+
+</body>
+
+<script src="js/script.js"></script>
+<script>
+    includeHTML("include-html-menu");
+    includeHTML("include-html-rodape");
+</script>
+
+</html>

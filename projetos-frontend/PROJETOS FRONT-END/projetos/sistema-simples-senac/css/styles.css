@@ -1,0 +1,65 @@
+/*
+    Imports CSS
+*/
+
+@import "tables.css";
+@import "menu.css";
+@import "rodape.css";
+@import "api.css";
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #004384;
+}
+
+.container-principal {
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.container section {
+    color: white;
+    font-size: 30px;
+    display: flex;
+    height: 80vh;
+    text-align: center;
+    flex-direction: column;
+    padding-top: 170px;
+}
+
+.content-cursos-free {
+    display: flex;
+    height: 50vh;
+}
+
+.container section strong {
+    text-align: center;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 100vh;
+}
+
+table {
+    border: 1px solid #f7941d;
+}
+
+.link-user {
+    text-decoration: none;
+    cursor: pointer;
+    padding: 10px;
+    color: aliceblue;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}

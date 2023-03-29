@@ -1,0 +1,223 @@
+window.closeFrameModal = function(){
+	$('#frameModal').modal('hide');
+};
+
+/* Função para controlar a altura do FrameModal */
+var lastHeight = 0, currentHeight = 0;
+setInterval(function(){
+	currentHeight = $('#modalFrame').contents().find('body').innerHeight();
+	if(currentHeight != lastHeight){
+		$('#modalFrame').height(currentHeight);
+		lastHeight = currentHeight;
+	}
+}, 100);
+
+
+$(function() {
+	$(".iconMenuDark li.disabled a").attr('href','#');
+	$(".iconMenu li.disabled a").attr('href','#');
+	$(".iconMenuDark li.disabled a").each(function(){
+		val = $(this).attr('title');
+		$(this).attr('title',val + ' (Plano não contratado)');
+	});
+	$(".iconMenu li.disabled a").each(function(){
+		val = $(this).attr('title');
+		$(this).attr('title',val + ' (Plano não contratado)');
+	});
+	//var RecaptchaOptions = {   theme : 'clean'   };
+	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+		$('.selectpicker').selectpicker(); //'mobile'
+	} else {
+		$('.selectpicker').selectpicker();
+	}
+	$( "#accordion" ).accordion({heightStyle:"content", collapsible:true, active:false, icons: { header: "ui-icon-plus", activeHeader: "ui-icon-minus" }});
+	/* Begin Set active link */
+	var current_location = window.location.href.split('/');
+	var page = window.location.pathname;
+	$('a[href*="' + page + '"]').addClass('current');
+	/* End Set active link */
+
+	// Adicionando ação para fechar as janelas modais pelo iframe
+	$('.btn-close').click(function(){
+		window.parent.closeFrameModal();
+	});
+
+	$(".btn-modal").click(function(){
+		var content = $(this).data('content');
+		var title = $(this).data('title');
+		$(".modal-title").html(title);
+		$(".modal-body").html(content);
+	});
+
+	$('a.frameLink').on('click', function(e) {
+		e.preventDefault();
+		var url = $(this).data('href');
+		var title = $(this).data('title');
+		$("#frameModal .modal-title").html(title);
+		$("#frameModal .modal-body").html('<iframe id="modalFrame" width="100%" frameborder="0" scrolling="no" allowtransparency="true" src="'+url+'"></iframe>');
+		$("#frameModal .modal-footer").show();
+		$('#modalFrame').load(function () {
+			obj = $(this);
+			sleep = setTimeout(function(){
+				contentHeight = obj.contents().innerHeight();
+				obj.height(contentHeight);
+				if(obj.contents().width()>550){
+					obj.width(obj.contents().width());
+				}
+				$("#frameModal .modal-footer").hide();
+			}, 1000);
+		});
+	});
+
+	$('.dataTable').dataTable();
+});
+
+/**
+ * Função: 		novaSenha()
+ *
+ * Descrição:	Essa função estancia a classe GerarSenha
+ * 				para ser usado por generate.
+ *
+ *
+ * @param inputSenha
+ */
+function gerarNovaSenha(inputSenha) {
+	// Estanciar as classes
+	var senha = new GerarSenha();
+	// mostrarSenha você informa o campo que vai recebe a senha e usa
+	// função generate da classe
+	mostrarSenha(inputSenha, senha.generate('8'));
+}
+
+/**
+ * Função:			mostrarSenha()
+ *
+ * Descrição:		Essa função passa a senha para
+ * 					o campo da senha.
+ *
+ * @param string	inputSenha
+ * @param string	pass
+ */
+function mostrarSenha(inputSenha, pass) {
+	$("#" + inputSenha).val(pass);
+	$("#" + inputSenha).focus();
+	$("#" + inputSenha).keyup();
+}
+
+/**
+ * Classe:			gerarSenha
+ *
+ * Descrição:		Gerar senha usando a tabela ASCII
+ *
+ * @returns			string
+ */
+var GerarSenha = function() {
+	this.pass = "";
+	this.generate = function(chars) {
+		for (var i = 0; i < chars-3; i++) {
+			this.pass += this.getRandomChar();
+		}
+		this.pass += this.getRandomUpperChar();
+		this.pass += this.getRandomNumber();
+		this.pass += this.getRandomSymbom();
+		return this.pass;
+	}
+	this.getRandomSymbom = function() {
+		var chars = '-+_?.!@#$%&*';
+		var randnum = Math.floor(Math.random() * chars.length);
+		var chr = chars.charAt(randnum);
+		return chr;
+	}
+	this.getRandomUpperChar = function() {
+		var chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+		var randnum = Math.floor(Math.random() * chars.length);
+		var chr = chars.charAt(randnum);
+		return chr;
+	}
+	this.getRandomNumber = function() {
+		var chars = '0123456789';
+		var randnum = Math.floor(Math.random() * chars.length);
+		var chr = chars.charAt(randnum);
+		return chr;
+	}
+	this.getRandomChar = function() {
+		var chars = '0123456789abcdefghijklmnopqrstuvwxyz';
+		var randnum = Math.floor(Math.random() * chars.length);
+		var chr = chars.charAt(randnum);
+		return chr;
+		/*
+		var ascii = [[48, 57], [65,90], [97, 122]];
+		var i = Math.floor(Math.random() * ascii.length);
+		return String.fromCharCode(Math.floor(Math.random() * (ascii[i][1] - ascii[i][0])) + ascii[i][0]);
+		*/
+	}
+}
+
+
+function verEmailItem(pStr) {
+	var reEmail = /^[\w-]+(\.[\w-]+)*@(([A-Za-z\d][A-Za-z\d-]{0,61}[A-Za-z\d]\.)+[A-Za-z]{2,6}|\[\d{1,3}(\.\d{1,3}){3}\])$/;
+	if (reEmail.test(pStr)) {
+		// alert(pStr + " é um endereço de e-mail válido.");
+		return true;
+	} else if (pStr != null && pStr != "") {
+		// alert(pStr + " NÃO é um endereço de e-mail válido.");
+		return false;
+	}
+}
+function adicionaListaEmailAlias() {
+	totalEmails = $('#listaEmailsAlias option').length;
+	if (totalEmails >= 100) {
+		alert('Não é possível adicionar mais e-mails porque o alias possui o número máximo permitido.');
+		return false;
+	}
+
+	emailNovo = $('#emailAliasAvulso').val();
+	emailPai = $('#emailPai').val();
+	if (!verEmailItem(emailNovo)) {
+		alert("Digite corretamente o e-mail (email@domínio).");
+	} else if (emailPai == emailNovo) {
+		alert("Não é permitido adicionar um encaminhamento para o próprio e-mail");
+		$('#emailAliasAvulso').focus();
+	} else {
+		if (emailNovo.length > 0) {
+			var match = false;
+			$('#listaEmailsAlias option').each(function() {
+				if(this.value == emailNovo) match = true;
+			});
+			if(match){
+				alert('Este e-mail já está na lista do alias');
+				$('#emailAliasAvulso').val('');
+				return false;
+			} else {
+				$('#listaEmailsAlias').append(new Option(emailNovo, emailNovo));
+				$('#emailAliasAvulso').val('');
+			}
+		}
+	}
+	atualizaAliasHidden();
+}
+function removeListaEmailAlias() {
+	$("#listaEmailsAlias option:selected").remove();
+	atualizaAliasHidden();
+}
+// toda vez que adicionar ou remover o email da lista de alias, atuaizará o hidden com email,email,...
+function atualizaAliasHidden() {
+	$('#alias').val($('#listaEmailsAlias option').map(function(){ return this.value }).get().join(";"));
+}
+
+$(document).ready(function () {
+	$("#no-more-tables table").each(function() {
+		console.log($(this));
+		var nmtTable = $(this);
+		var nmtHeadRow = nmtTable.find("thead tr");
+		nmtTable.find("tbody tr").each(function () {
+			var curRow = $(this);
+			for (var i = 0; i < curRow.find("td").length; i++) {
+				var rowSelector = "td:eq(" + i + ")";
+				var headSelector = "th:eq(" + i + ")";
+				var dataTitle = nmtHeadRow.find(headSelector).html();
+				curRow.find(rowSelector).attr('data-title', dataTitle);
+			}
+		});
+	});
+});

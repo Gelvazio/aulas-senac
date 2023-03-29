@@ -1,0 +1,163 @@
+/* seletor de classe - usando ponto no inicio do nome do seletor*/
+
+.cadastro3 {
+    color: black;
+    font-size: 60px;
+    border: 3px dashed rgb(0, 58, 128);
+    border-radius: 10em;
+}
+
+
+/* Seletor pelo id - usando hashtag no inicio do nome do seletor*/
+
+#cadastro4 {
+    color: rgb(6, 119, 60);
+    font-size: 60px;
+    border: 3px dashed rgb(0, 58, 128);
+    border-radius: 10em;
+}
+
+
+/* Seletor pelo elemento html */
+
+
+/* aplicar um estilo a todos os elementos do tipo input */
+
+input {
+    background-color: aquamarine;
+}
+
+
+/* Pegando todos os input do tipo "type" = text */
+
+input[type="text"] {
+    background-color: rgb(255, 127, 153);
+}
+
+
+/* Comando de hover */
+
+input[type="text"]:hover {
+    background-color: aquamarine;
+}
+
+h1:hover {
+    background-color: aquamarine;
+    color: blue;
+    transition: all .4s ease-in-out;
+}
+
+.testes {
+    display: none;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input[type="text"] {
+    margin-top: 10px;
+}
+
+form label {
+    margin-top: 10px;
+}
+
+
+/* Formatando os botoes do formulario */
+
+.botao-formulario {
+    height: 150px;
+    border: 1px solid red;
+    /* Somenta habilita as propriedades com display Flex */
+    display: flex;
+    flex-direction: row;
+    /* centraliza na linha */
+    justify-content: center;
+    /* centraliza na coluna */
+    align-items: center;
+    /* Espaco entre elementos */
+    gap: 20px;
+}
+
+.botao-formulario input {
+    max-height: 50px;
+}
+
+
+/* Formatando botao Limpar */
+
+.botao-formulario input[type="reset"] {
+    max-height: 100px;
+    background-color: tomato;
+    /* Criando espaco entre o texto e as bordas */
+    padding: 10px;
+    color: aliceblue;
+    border: none;
+    border-radius: 10px;
+}
+
+
+/* Formatando botao Confirmar */
+
+.botao-formulario input[type="submit"] {
+    max-height: 100px;
+    background-color: rgb(4, 131, 74);
+    /* Criando espaco entre o texto e as bordas */
+    padding: 10px;
+    color: aliceblue;
+    border: none;
+    border-radius: 10px;
+}
+
+
+/* Evento do mouse */
+
+.botao-formulario input:hover {
+    cursor: pointer;
+    color: black;
+    transition: all .4s ease-in-out;
+}
+
+
+/* hover do botao Limpar */
+
+.botao-formulario input[type="reset"]:hover {
+    background-color: red;
+    color: white;
+}
+
+
+/* hover do botao Confirmar */
+
+.botao-formulario input[type="submit"]:hover {
+    background-color: rgb(3, 97, 3);
+    color: white;
+}
+
+
+/* Lista de testes CSS */
+
+.lista-testes a:link {
+    color: green;
+}
+
+.lista-testes a:visited {
+    color: red;
+}
+
+.lista-testes a:hover {
+    color: blue;
+}
+
+
+/* estilo de listas*/
+
+ol {
+    /*tipo de ordenacao*/
+    list-style-type: decimal;
+}
+
+
+https://docs.plugnotas.com.br/#tag/Certificado/operation/get-certificado

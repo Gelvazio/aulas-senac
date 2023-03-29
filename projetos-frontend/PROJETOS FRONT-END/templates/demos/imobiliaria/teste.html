@@ -1,0 +1,40 @@
+<body>
+    <h1>Ler e obter dados um arquivo JSON</h1>
+    <h2>Uso do XMLHttpRequest para obter o conteúdo de um arquivo - Requisição AJAX.</h2>
+    <p>O conteúdo está escrito no formato JSON, e pode facilmente ser convertido em um objeto JavaScript.</p>
+    <p>Para converter o conteúdo JSON em um objeto JavaScript utilize o método JSON.parse().</p>
+    <hr/>
+
+    <p id="demo"></p>
+
+    <script>
+        var xmlhttp = new XMLHttpRequest();
+
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                debugger;
+                var cliente = JSON.parse(this.responseText);
+
+                var teste = 1;
+
+                debugger;
+            }
+        };
+
+        //xmlhttp.open("GET", "https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json", true);
+        xmlhttp.open("GET", "https://imobiliariasenac.herokuapp.com/localizacoes.json", true);
+
+        //        xmlhttp.setRequestHeader("Access-Control-Allow-Origin", "*");
+        xmlhttp.setRequestHeader("Content-Type", "application/json");
+
+        //xmlhttp.setRequestHeader("Access-Control-Allow-Origin", "http://127.0.0.1:5500/");
+
+        //xmlhttp.open("POST", "cliente.json", true);
+        xmlhttp.send();
+    </script>
+
+    <p>Acesse o arquivo JSON <a href="/cliente.json" target="_blank">cliente.json</a></p>
+
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desenvolvimento - Tech</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/alunos.css">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+</head>
+
+<style>
+    .exercicios {
+        display: flex;
+    }
+</style>
+
+<body>
+    <div class="container-principal">
+        <!-- Inclui o Menu Unico Atraves de JavaScript -->
+        <div include-html-menu="menu.html"></div>
+        <div class="container">
+            <!-- <div class="menu">
+                <a href="#" alt="" onclick="loadUsers('TODOS')">Todos Exercicios</a>
+                <a href="#" alt="" onclick="loadUsers('status_ok')">Somente ok</a>
+                <a href="#" alt="" onclick="loadUsers('status_not_verified')">Somente Não Verificados</a>
+                <a href="#" alt="" onclick="loadUsers('status_not_initialized')">Somente Não inicializado</a>
+                <a href="#" alt="" onclick="loadUsers('status_incomplete')">Somente Incompletos</a>
+            </div> -->
+
+            <div class="lista-exercicio exercicios">
+                <ul>
+                    <li>
+                        <h1>EXERCICIOS</h1>
+                    </li>
+                    <!-- <li>Exercicios 19-07-2022 - LISTA 000 - SEQUENCIAIS - VISUALG - APOSTILA 300 IDEIAS DO 1.1.1 ATE O 1.1.15 </li>
+                    <li>Exercicios 25-07-2022 - LISTA 001 - SE E SENAO VISUALG - LISTA DE EXERCICIOS SE E SENAO EM VISUALG</li> -->
+                    <li><button onclick="loadListaExerciciosUsers('99')">Conferir Exercicios</button>Exercicios 26-07-2022 - LISTA 0 - SEQUENCIAIS JAVA - APOSTILA 1 ATE 15</li>
+                    <li><button onclick="loadListaExerciciosUsers('1')">Conferir Exercicios</button>Exercicios 27-07-2022 - LISTA 1 - CONDICIONAIS - JAVA</li>
+                    <li><button onclick="loadListaExerciciosUsers('2')">Conferir Exercicios</button>Exercicios 28-07-2022 - LISTA 2 - CONDICIONAIS - JAVA</li>
+                    <li><button onclick="loadListaExerciciosUsers('3')">Conferir Exercicios</button>Exercicios 01-08-2022 - LISTA 3 - CONDICIONAIS - JAVA</li>
+                    <li><button onclick="loadListaExerciciosUsers('4')">Conferir Exercicios</button>Exercicios 04-08-2022 - LISTA 0 - REPETICAO - ATIVIDADES AULA - JAVA</li>
+                    <li><button onclick="loadListaExerciciosUsers('5')">Conferir Exercicios</button>Exercicios 08-08-2022 - LISTA 1 - REPETICAO - JAVA</li>
+                    <li><button onclick="loadListaExerciciosUsers('6')">Conferir Exercicios</button>Exercicios 09-08-2022 - LISTA 2 - REPETICAO - JAVA</li>
+                    <li><button onclick="loadListaExerciciosUsers('7')">Conferir Exercicios</button>Exercicios 16-08-2022 - LISTA 1 - VETORES</li>
+                    <li><button onclick="loadListaExerciciosUsers('8')">Conferir Exercicios</button>Exercicios 18-08-2022 - LISTA 1 - MATRIZES</li>
+                    <li><button onclick="loadListaExerciciosUsers('9')">Conferir Exercicios</button>Exercicios 22-08-2022 - LISTA 2 - MATRIZES</li>
+                </ul>
+
+                <ul>
+                    <li>
+                        <h1>ATIVIDADES AVALIATIVAS</h1>
+                    </li>
+                    <li><button onclick="loadListaExerciciosUsers('501')">Conferir Atividade</button>Atividade 01 - 11-08-2022 - ATIVIDADES EM GRUPO - ENTREGA EM GRUPO</li>
+                    <li><button onclick="loadListaExerciciosUsers('502')">Conferir Atividade</button>Atividade 02 - 15-08-2022 - ATIVIDADES EM GRUPO - ENTREGA INDIVIDUAL</li>
+                    <li><button onclick="loadListaExerciciosUsers('503')">Conferir Atividade</button>Atividade 03 - XX-08-2022 - RECUPERACAO</li>
+                </ul>
+
+            </div>
+
+            <table class="container-table">
+                <thead>
+                    <tr>
+                        <th class="containerTable-lblTitle">Codigo</th>
+                        <th class="containerTable-lblTitle">Github</th>
+                        <th class="containerTable-lblTitle">Nome</th>
+                        <th class="containerTable-lblTitle">Data</th>
+                        <th class="containerTable-lblTitle">Status</th>
+                        <th class="containerTable-lblTitle">Observacao</th>
+                    </tr>
+                </thead>
+                <tbody class="containerTable-body">
+                    <!--PREENCHIDO ATRAVES DE JAVASCRIPT!!!-->
+                </tbody>
+            </table>
+        </div>
+        <div class="container" id="root"></div>
+    </div>
+
+    <div include-html-rodape="rodape.html"></div>
+</body>
+<script src="js/script.js"></script>
+<script src="js/atividades.js"></script>
+
+<script>
+    // loadUsers("TODOS");
+    loadUsers("status_ok");
+    // loadUsers("status_not_initialized");
+    includeHTML("include-html-menu");
+    includeHTML("include-html-rodape");
+</script>
+
+</html>

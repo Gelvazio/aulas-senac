@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+
+    <title>Central do assinante - Rede Unifique</title>
+
+    <link href="./unifique_files/jquery-ui-1.10.4.min.css" rel="stylesheet">
+    <link href="./unifique_files/bootstrap.min.css" rel="stylesheet">
+    <link href="./unifique_files/bootstrap-select.min.css" rel="stylesheet">
+    <link href="./unifique_files/magic-bootstrap.css" rel="stylesheet">
+    <link href="./unifique_files/jasny-bootstrap.min.css" rel="stylesheet">
+    <link href="./unifique_files/bootstrap-colorpicker.min.css" rel="stylesheet">
+    <link href="./unifique_files/theme.css" rel="stylesheet">
+    <link rel="stylesheet" href="./unifique_files/font-awesome.min.css">
+    <link href="./unifique_files/css2" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/theme.css">
+
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            width: 100vw;
+            flex-direction: column;
+        }
+        
+        .centraliza-cabecalho {
+            display: flex;
+            justify-content: center;
+            width: 100vw;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .containerTable-body {
+            overflow: scroll;
+        }
+        
+        .hide {
+            display: none;
+        }
+        
+        .content-modal-fatura {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<!-- inicia filtrando apenas as faturas em aberto -->
+
+<body onload="onLoadPaginas()">
+    <!-- Fixed navbar -->
+    <div class="centraliza-cabecalho">
+        <div class="navbar navbar-default navbar-fixed-top visible-xs" role="navigation">
+            <div class="container centro">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#/cobrancas/pagas/#">Central do assinante</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#/">Home</a></li>
+                        <li><a href="#/cobrancas/pagas/" onclick="registraLog(cobrancasPagas)" class="current">Cobrancas pagas 122</a></li>
+                        <li><a href="#/cobrancas/abertas/" onclick="registraLog(cobrancasEmAberto)">Cobrancas em aberto</a></li>
+                        <li class="disabled"><a href="#/gerenciar/emails/" onclick="registraLog(gerenciarEmails)">Gerenciar e-mails</a></li>
+                        <li class="disabled"><a href="#/gerenciar/dominios/" onclick="registraLog(gerenciarDominios)">Gerenciar dominios</a></li>
+                        <li class="disabled"><a href="#/gerenciar/ftps/" onclick="registraLog(usuariosFtps)">Usu�rios de FTPs</a></li>
+                        <li class="disabled"><a href="#/gerenciar/bancodedados/" onclick="registraLog(bancoDeDados)">Banco de dados</a></li>
+                        <li><a href="#/telefonia/" onclick="registraLog(telefonia)">Telefonia</a></li>
+                        <li><a href="#/tv/" onclick="registraLog(tv)">TV</a></li>
+                        <li><a href="#/internet/wifi/" onclick="registraLog(redeSenhaWifi)">Rede e Senha Wi-Fi</a></li>
+                        <li><a href="#/ouvidoria/" onclick="registraLog(ouvidoria)">Ouvidoria</a></li>
+                        <li><a href="#/suporte/" onclick="registraLog(suporte)">Solicitar suporte</a></li>
+                        <li><a href="#/logout/">Sair</a></li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+        </div>
+
+        <img style="max-width:432px;" src="./unifique_files/logo2017.png" width="100%">
+
+        <ul class="iconMenuDark hidden-xs background-menu">
+
+            <!-- <li>
+                <a title="Cobrancas pagas" href="#" class="open-detalheFatura current" data-toggle="modal" data-id="62022" data-target="#modalFolhaPagamento">
+                    <span class="ico_light_cobrancas_pagas"></span>
+                    Modal
+                </a>
+            </li>
+            <li><a title="Cobrancas pagas" href="paises.html"  class="current"><span class="ico_light_cobrancas_pagas"></span>Paises</a></li>
+            <li><a title="Cobrancas pagas" href="grafico.html" class="current"><span class="ico_light_cobrancas_pagas"></span>Graficos</a></li> -->
+            <li><a title="Cobrancas pagas" href="#" onclick="atualizaFaturas(2)" class="current"><span class="ico_light_cobrancas_pagas"></span>Cobrancas Pagas</a></li>
+            <li><a title="Cobrancas em aberto" href="#" onclick="atualizaFaturas(1)"><span class="ico_light_cobrancas_abertas"></span>Cobrancas em aberto</a></li>
+            <li class="disabled"><a title="Gerenciar e-mails (Plano nao contratado)" href="#/cobrancas/pagas/#" onclick="registraLog(gerenciarEmails)"><span class="ico_light_emails"></span>Gerenciar e-mails</a></li>
+            <li class="disabled"><a title="Gerenciar dominios (Plano nao contratado)" href="#/cobrancas/pagas/#" onclick="registraLog(gerenciarDominios)"><span class="ico_light_dominios"></span>Gerenciar dominios</a></li>
+            <li class="disabled"><a title="Gerenciar usuarios de FTP (Plano nao contratado)" href="#/cobrancas/pagas/#" onclick="registraLog(usuariosFtps)"><span class="ico_light_ftps"></span>Usuarios de FTPs</a></li>
+            <li class="disabled"><a title="Gerenciar banco de dados (Plano nao contratado)" href="#/cobrancas/pagas/#" onclick="registraLog(bancoDeDados)"><span class="ico_light_bases"></span>Banco de dados</a></li>
+            <li><a title="Gerenciar telefonia" href="#/telefonia/" onclick="registraLog(telefonia)"><span class="ico_light_telefonia"></span>Telefonia</a></li>
+            <li><a title="Gerenciar TV" href="#/tv/" onclick="registraLog(tv)"><span class="ico_light_tv"></span>TV</a></li>
+            <li><a title="Rede e Senha Wi-Fi" href="#/internet/wifi/" onclick="registraLog(redeSenhaWifi)"><span class="ico_light_rede"></span>Rede e Senha Wi-Fi</a></li>
+            <li><a title="Ouvidoria" href="#/ouvidoria/" onclick="registraLog(ouvidoria)"><span class="ico_light_ouvidoria"></span>Ouvidoria</a></li>
+            <li><a title="Contatos Suporte" href="#/suporte/" onclick="javascript:registraLog(suporte)"><span class="ico_light_suporte"></span>Contatos Suporte</a></li>
+            <li><a title="Sair" href="#/logout/"><span class="ico_light_sair"></span>Sair</a></li>
+        </ul>
+    </div>
+    <div style="clear:both;"></div>
+
+    <div class="container">
+        <br><br>
+        <p class="title" id="cobranca-pago">Cobrancas pagas</p>
+        <p class="title" id="cobranca-aberto">Cobrancas em aberto</p>
+        <div id="countrieschart"></div>
+        <table class="container-table" border="1">
+            <thead>
+                <tr>
+                    <th class="containerTable-lblTitle">id</th>
+                    <th class="containerTable-lblTitle">Data Pagamento</th>
+                    <th class="containerTable-lblTitle">Data vencimento</th>
+                    <th class="containerTable-lblTitle">Valor vencimento</th>
+                    <th class="containerTable-lblTitle">Valor pago</th>
+                    <th class="containerTable-lblTitle">Detalhes</th>
+                </tr>
+            </thead>
+            <!-- .containerTable-body -->
+            <tbody class="containerTable-body">
+                <!--PREENCHIDO ATRAVES DE JAVASCRIPT!!!-->
+            </tbody>
+        </table>
+    </div>
+    <!-- /.container -->
+
+    <!-- FrameModal -->
+    <div class="modal fade" id="modalFatura" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="width: 100vw;">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel" style="text-align: center;">Detalhes da Folha de Pagamento</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                </div>
+                <div class="modal-body modal-lg">
+                    <!-- Conteudo do Modal -->
+                    <div class="content-modal-fatura">
+                        <div>
+                            <label for="mesano">Id Fatura:</label>
+                            <input type="text" name="idfatura" id="idfatura" value="" disabled/>
+                        </div>
+                        <!-- <img src="images/detalhe-unifique-2.png" alt="" width="700px" height="400px"> -->
+                        <table border="1">
+                            <thead>
+                                <th>Discriminação Serviço</th>
+                                <th>Bilhetagem - Inicio</th>
+                                <th>Bilhetagem - Fim</th>
+                                <th>Circuito</th>
+                                <th>Valor</th>
+                            </thead>
+                            <tbody class="containerTableDetalhe-body">
+                                <tr>
+                                    <td>Unifique Play +1 </td>
+                                    <td>01/08/2022</td>
+                                    <td>31/08/2022</td>
+                                    <td>010000048484878</td>
+                                    <td>R$ 14,90</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary">Salvar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /FrameModal -->
+</body>
+
+<script src="api.js" defer></script>
+<script src="token.js" defer></script>
+<script src="dados-faturas.js" defer></script>
+<script src="faturas.js" defer></script>
+
+<!-- bootstrap CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<!-- Habilita o jquery -->
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+<!-- Habilita os icons -->
+<!-- <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script> -->
+
+<!-- Habilita o bootstrap -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</html>

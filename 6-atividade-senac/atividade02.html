@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desenvolvimento - Tech</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/atividades.css">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+</head>
+<style>
+    li {
+        margin-left: 55px;
+        color: aliceblue;
+        font-size: 25px;
+    }
+    
+    li strong {
+        margin-left: 55px;
+    }
+    
+    .titulo-exercicio {
+        margin-left: 55px;
+    }
+    
+    h1 {
+        color: aliceblue;
+    }
+    
+    .instrucaoprova {
+        text-align: center;
+        color: yellow;
+    }
+</style>
+
+<body>
+    <div class="container-principal">
+        <!-- Inclui o Menu Unico Atraves de JavaScript -->
+        <div include-html-menu="menu.html"></div>
+
+        <!-- Link atividade:http://www2.dcc.ufmg.br/disciplinas/pc/pc05-1/lista03/
+        lista 2-http://wiki.icmc.usp.br/images/5/5b/Lista2-T2.pdf
+        lista 3-http://docente.ifsc.edu.br/vilson.junior/ip/IP_03_VisuALG_Repeticao.pdf
+        lista 4-https://docplayer.com.br/63962054-Lista-de-exercicios-03a-algoritmos-repeticao.html
+        lista 5-file:///C:/Users/tidas/Downloads/Exerc%C3%ADcios%20com%20comandos%20de%20Repeti%C3%A7%C3%A3o.html
+        -->
+        <br>
+        <h1 class="instrucaoprova">INSTRUCOES:</h1>
+        <br>
+        <ul>
+            </li>
+            <li>A atividade deverá ser entregue de forma INDIVIDUAL, porem com ajuda dos grupos formados.
+            </li>
+            <li>As respostas das questões devem ser entregues através do github
+            </li>
+            <li>Você deve utilizar a linguagem JAVA para resolver as questões.
+            </li>
+            <li>Data de Entrega: 15/08/2022
+            </li>
+            <li>
+                <br> Cada aluno será sorteado com um número
+                <br> e deverá explicar aleatoriamente 3 questões dentre as apresentadas abaixo,
+                <br> que são referentes ao número sorteado.
+            </li>
+            <li>
+                Crie um "package" de nome "atividade02"
+            </li>
+        </ul>
+        <br>
+        <br>
+        <h1 class="instrucaoprova">GRUPOS</h1>
+        <br>
+        <img src="grupoatividade02.png" alt="Grupos" />
+        <img src="atividade02.png" alt="Grupos" />
+        <br>
+        <h1 class="instrucaoprova">LISTA DE EXERCICIOS CONDICIONAIS</h1>
+        <ol style="color:white; padding-top: 10px; display:flex;flex-direction: column;gap:10px;">
+            <li>
+                Faça um algoritmo que leia os valores A, B, C e imprima na tela se a soma de A + B é menor que C.
+            </li>
+            </br>
+            <li>
+                Faça um algoritmo que leia o nome, o sexo("F" ou "M") e o estado civil de uma pessoa.
+                </br> Caso sexo seja “F” e estado civil seja “CASADA”, solicitar o tempo de casada (anos).
+                </br> Ao final do algoritmo imprima os dados lidos.
+            </li>
+            </br>
+            <li>
+                Faça um algoritmo para receber um número qualquer e informar na tela se é par ou ímpar.
+            </li>
+            </br>
+            <li>
+                Faça um algoritmo que leia dois valores inteiros A e B, e se os valores forem iguais deverá se somar os dois, caso contrário multiplique A por B. Ao final de qualquer um dos cálculos deve-se atribuir o resultado para uma variável C e mostrar seu conteúdo
+                na tela.
+            </li>
+            </br>
+            <li>
+                Encontrar o dobro de um número caso ele seja positivo e o seu triplo caso seja negativo, imprimindo o resultado.
+            </li>
+            </br>
+            <li>
+                Escreva um algoritmo que lê dois valores booleanos (lógicos) e então determina se ambos são VERDADEIROS ou FALSOS.Obs:Faça uma pergunta por exemplo:Você é maior de idade?Responda SIM ou NAO. Atribua o valor conforme o caso e no final mostre a resposta:
+                A pessoa é maior de idade, se a resposta for SIM A pessoa é menor de idade, se a resposta for NAO
+            </li>
+            </br>
+            <li>
+                Faça um algoritmo que leia uma variável e some 5 caso seja par ou some 8 caso seja ímpar, imprimir o resultado desta operação.
+            </li>
+            </br>
+            <li>
+                Escreva um algoritmo que leia três valores inteiros e diferentes e mostre-os em ordem decrescente.
+            </li>
+            </br>
+            <li>
+                Escreva um algoritmo que leia três valores inteiros e diferentes e mostre-os em ordem crescente.
+            </li>
+            </br>
+            <li>Tendo como dados de entrada a altura e o sexo de uma pessoa, construa um algoritmo que calcule seu peso ideal, utilizando as seguintes fórmulas:
+                <ul>
+                    <li>
+                        para homens: (72.7 * h) – 58;
+                    </li>
+                    <li>
+                        para mulheres: (62.1 * h) – 44.7.
+                    </li>
+                </ul>
+                Ao final do mesmo, informe se a pessoa tem peso ideal ou não.
+            </li>
+            </br>
+            <li>
+                O IMC – Indice de Massa Corporal é um critério da Organização Mundial de Saúde para dar umaindicação sobre a condição de peso de uma pessoa adulta. A fórmula é IMC = peso / ( altura )2 Elabore um algoritmo que leia o peso e a altura de um adulto e mostre
+                sua condição de acordo com a tabela abaixo. IMC em adultos Condição Abaixo de 18,5 Abaixo do peso Entre 18,5 e 25 Peso normal Entre 25 e 30 Acima do peso Acima de 30 obeso
+            </li>
+            </br>
+            <li>
+                Faca um algoritmo que leia o nome e as tres notas de um aluno e ao final, escreva o seu nome, sua media e se ele foi aprovado. Media de aprovacao igual a 8.
+            </li>
+            </br>
+            <li>
+                Faca um algoritmo que leia tres numeros digitados, e os coloque em ordem crescente.
+            </li>
+            </br>
+            <li>
+                Faca um algoritmo que leia o menor numero de tres digitados.
+            </li>
+            </br>
+            <li>
+                Faca um algoritmo que leia o maior numero de tres digitados.
+            </li>
+            </br>
+            <li>
+                Faca um algoritmo que leia o numero intermediario de tres digitados.
+            </li>
+            </br>
+            <li>
+                Faca um algoritmo que leia o maior, o menor e o intermediario de tres numeros digitados.
+            </li>
+            </br>
+            <li>
+                Faca um algoritmo que leia um numero e apos imprima o numero lido, o seu antecessor e o seu sucessor na tela;
+            </li>
+            </br>
+            <li>
+                Conta telefônica - Uma conta telefônica é composta dos seguintes custos: assinatura: R$ 17,90 impulsos: R$ 0,04 por impulso que exceder a 90 interurbanos chamadas p/ celular: R$0,20 por impulso Monte a fórmula para calcular o valor da conta para 254 impulsos,
+                R$34,29 de interurbanos e 23 chamadas para celular. Elabore um programa que mostra os custos, calcula e mostra o valor total.
+            </li>
+            </br>
+            <li>
+                Uma pessoa com pouco tempo disponível lê um livro por 5 minutos a cada dia, 6 dias por semana. Monte a fórmula e escreva um programa que calcula e mostra na tela quanto tempo, em horas, a pessoa terá dedicado ao livro ao final de um ano.
+            </li>
+            </br>
+            <li>
+                Vou e volto diariamente a pé para o trabalho, que dista aproximadamente 800 m de minha casa. Supondo que trabalho 5 dias por semana, 45 semanas por ano, "bole" a operação matemática que deve ser efetuada para calcular quantos quilômetros, aproximadamente,
+                terei andado ao final de um ano. Elabore um programa que faça as contas e mostre o resultado
+            </li>
+            </br>
+            <li>
+                Faça um algoritmo para verificar se um aluno esta APROVADO ou REPROVADO, lendo 3 notas e calculando sua media que deve ser maior ou igual a 7.
+            </li>
+            </br>
+            <li>
+                Faça um algoritmo para verificar se uma pessoa ja pode tirar carteira de motorista considerando a idade >= 18 anos e mostre na tela uma mensagem: JA POSSO TIRAR A CARTEIRA DE MOTORISTA, se for o caso AINDA NÃO POSSO TIRAR A CARTEIRA DE MOTORISTA, se for
+                o caso
+
+            </li>
+            </br>
+            <li>
+                Faça um algoritmo para verificar se uma pessoa ja atingiu a maioridade. algoritmo deve receber como entrada apenas o ano de nascimento e considerar o ano atual para calculo e 18 anos para maioridade.
+            </li>
+            </br>
+            <li>
+                Faça um algoritmo para verificar se um valor e PAR ou IMPAR;
+            </li>
+            </br>
+            <li>
+                Faça um algoritmo para calcular o Indice de Massa Corporal de uma pessoa, considerando a seguinte formula: IMC = PESO / (ALTURA AO QUADRADO) Se a pessoa tiver IMC MENOR OU IGUAL A 18.5, mostre a mensagem abaixo: "Parabens! Voce esta no seu peso ideal"
+                Senão mostre a mensagem abaixo: "Voce nao esta na faixa de peso ideal" </li>
+            <li>
+                Um estudante muito metódico estava matriculado em 6 disciplinas, e dispunha de 1 hora e 40 minutos para estudar. Sua intenção era dividir o tempo disponível igualmente para as 6 disciplinas, e descansar livremente o tempo restante. Faça um programa que
+                calcule o tempo que ele deve dedicar para cada disciplina e o tempo livre.
+            </li>
+            </br>
+            <li>
+                Determine a velocidade de um automovel que percorreu uma distancia S em km, * em um intervalo de tempo T,informando em horas.
+            </li>
+            </br>
+            <li>
+                Faça um algoritmo que leia dois numeros inteiros (n1 e n2) * calcule a divisão de n1/n2, e informe o resto desta divisão. * Não pode ser usado funções pre-programadas(mod em VisualG e %).
+            </li>
+            </br>
+            <li>
+                Faça um algoritmo para ler uma temperatura em graus Celsius, e transforme * para graus Farenheidt e Kelvin. * OBS: * C = 5 (F - 32)/9; * K = C + 273;
+            </li>
+            </br>
+            <li>
+                Desenvolva um algoritmo para identificar se um determinado numero inteiro, * é positivo,negativo,ou nulo.
+            </li>
+            </br>
+            <li>
+                Calcule o salario do mes de um funcionario. * O funcionario ganha 3000, mais 500 reais por carro vendido, * mais 5% do valor total de cada carro vendido. * Quanto o funcionario ganha ao fim do mes?
+            </li>
+            </br>
+            <li>
+                Fornecido os coeficientes de uma equação do 2 grau,(a,b,c - ler do teclado) * faça um algoritmo que calcule as raizes se houverem * Validar se o numero e negativo, pois não existe raiz de numero negativo!
+            </li>
+            </br>
+            <li>
+                Suponha que voce foi ao supermercado e comprou:
+                </br>n Kg de café á x reais;
+                </br>k litros de leite á y reais;
+                </br>m Kg de farinha a z reais;
+                </br>Faça um algoritmo que imprima o ticket de compra.
+                </br>Primeiro produto: R$ 0,00
+                </br>Segundo produto: R$ 0,00
+            </li>
+            </br>
+            <li>
+                Faça um algoritmo que receba do usuario o raio em cm e calcule o volume de uma esfera.
+                <br>Formula:
+                <br> VOLUME = 4 * PI * R ao cubo.
+                </br>
+            </li>
+            </br>
+            <li>
+                Escrever um programa que lê dois números e efetua uma divisão,
+                </br>mas somente se o divisor for diferente de zero; quando isto ocorrer, é mostrada uma mensagem de erro apropriada.
+            </li>
+            </br>
+            <li>
+
+                Em um triângulo, cada lado é menor do que a soma dos outros dois.
+                </br>Escreva um programa que lê três valores e informa se estes não podem constituir um triângulo ou,
+                </br>caso contrário, se o triângulo formado é equilátero (três lados iguais), isósceles (dois lados iguais)
+                </br>ou escaleno (lados diferentes).
+
+            </li>
+            </br>
+            <li>
+                Um salário tem os seguintes componentes: - valor nominal - adicional devido a horas extras - valor descontado
+                </br>para o INSS (10% do valor a receber, limitado a 150 reais). O valor adicional devido às horas extras é
+                </br>calculado dividindo-se o valor nominal
+                </br>por 176 (22 dias de 8 horas), multiplicando-se pela quantidade de horas e ainda com um acréscimo de 50%.
+                </br>Escrever um programa que lê os valores necessários, calcula e mostra na tela os componentes do salário e
+                </br> o salário líquido
+                </br>resultante para o empregado.
+                </br>Não é preciso prever arredondamentos, mas os valores devem ser mostrados na tela com duas casas decimais.
+                </br>Exemplos: para um salário de R$ 1.000,00, com 30 horas extras, teremos R$ 255,68 de horas extras
+                </br>[(1.000/176)*30*1,5], R$ 125,57 de INSS e um salário líquido de R$ 1.130,11.
+                </br>Para um salário de R$ 2.000,00 e 20 horas extras, seriam R$ 340,91 de horas extras,
+                </br>R$ 150,00 de INSS (e não os 10%), com um salário líquido de R$ 2.190,91.
+            </li>
+            </br>
+            <li>
+                Construa um programa que lê um número de 1 a 7 e informa o dia da semana correspondente,
+                </br>sendo domingo o dia de número 1. Se o número não corresponder a um dia da semana, é mostrada uma mensagem de erro.
+            </li>
+            </br>
+            <li>Crie um algoritmo que leia um número inteiro do usuário e verifique se o número está entre 100 e 200. Se o número não estiver nesse intervalo, deve ser exibida a mensagem “O número está fora do intervalo”. Caso contrário mostre a mensagem
+                “O número está dentro do intervalo”.
+            </li>
+            </br>
+            <li>Crie um algoritmo que leia um número inteiro do usuário e informe se esse número é ou não é múltiplo de 3.
+            </li>
+            </br>
+            <li>Crie um algoritmo que leia um número inteiro do usuário e informe se esse número é ou não é múltiplo de 4.
+            </li>
+            </br>
+            <li>Crie um algoritmo que peça ao usuário para adivinhar para qual time você torce. Caso ele acerte, escreva a mensagem: “Você acertou! Meu eu torço para esse time”. Caso contrário, escreva a mensagem “Você errou”.
+            </li>
+            </br>
+            <li>Crie um algoritmo que leia um número inteiro do usuário e informe se o valor lido é maior do que 10. Caso seja, informe o valor da subtração de 10 pelo número lido. Caso contrário escreva a mensagem dizendo que o número não é maior do que
+                10.
+            </li>
+            </br>
+            <li>Crie um algoritmo que leia um número inteiro do usuário e informe se esse número é ou não é múltiplo de 5.
+            </li>
+            </br>
+            <li>Crie um algoritmo que peça ao usuário para responder a pergunta: “Qual país colonizou o Brasil?” Caso ele responda Portugal, escreva a mensagem: “Você acertou! Parabéns!”. Caso contrário, escreva a mensagem “Você errou. Que pena”.
+            </li>
+            </br>
+            <li>Crie um algoritmo que peça ao usuário para adivinhar a última letra do seu nome. Caso ele digite a letra correta, escreva a mensagem: “Você acertou! Meu nome termina comessa letra”. Caso contrário, escreva a mensagem “Você errou”.
+            </li>
+            </br>
+            <li>Crie um algoritmo que peça ao usuário para adivinhar a primeira letra do seu nome. Caso ele digite a letra correta, escreva a mensagem: “Você acertou! Meu nome começa com essa letra”. Caso contrário, escreva a mensagem “Você errou”.
+            </li>
+            </br>
+            <li>Crie um algoritmo que leia um número inteiro do usuário e informe se o valor lido é menor do que 50. Caso seja, informe a mensagem “O número é menor do que 50”. Caso contrário escreva a mensagem dizendo que o número não é menor do que 50.
+            </li>
+            </br>
+            <li>Crie um algoritmo que peça ao usuário para responder a pergunta: “Quantos títulos mundiais o Brasil ganhou no futebol?” Caso ele digite o valor 5, escreva a mensagem: “Você acertou! Parabéns!”. Caso contrário, escreva a mensagem “Você errou.
+                Que pena!”.
+            </li>
+            </br>
+            <li>Crie um algoritmo que leia um número inteiro do usuário e verifique se o número está entre 1 e 100. Se o número não estiver nesse intervalo, deve ser exibida a mensagem “O número está fora do intervalo”. Caso contrário mostre a mensagem “O
+                número está dentro do intervalo”
+            </li>
+            </br>
+            <li>
+                Desenvolver um algoritmo que efetue a soma de todos os números ímpares que são múltiplos
+                <br> de três e que se encontram no conjunto dos números de 1 até 500.
+            </li>
+
+            <h1 class="instrucaoprova">LISTA DE EXERCICIOS REPETICAO</h1>
+
+            <li>Escreva um algoritmo que imprima todos os números inteiros de 0 a 50.
+            </li>
+            </br>
+            <li>
+                Escreva um algoritmo que imprima todos os números inteiros do intervalo fechado de 1 a 100.
+            </li>
+            </br>
+            <li>
+                Escreva um algoritmo que imprima todos os números inteiros de 100 a 1 (em ordem decrescente).
+            </li>
+            </br>
+            <li> Escreva um algoritmo que imprima todos os números inteiros de 100 a 200.
+            </li>
+            </br>
+            <li> Escreva um algoritmo que imprima todos os números inteiros de 200 a 100 (em ordem decrescente)
+            </li>
+            </br>
+            <li> Escreva um algoritmo que imprima todos os números múltiplos de 5, no intervalo fechado de 1 a 500.
+            </li>
+            </br>
+            <li> Escreva um algoritmo que imprima todos os números pares do intervalo fechado de 1 a 100.
+            </li>
+            </br>
+            <li> Escreva um algoritmo que imprima os 100 primeiros números ímpares.
+            </li>
+            </br>
+            <li> Escreva um algoritmo que imprima o quadrado dos números no intervalo fechado de 1 a 20.
+            </li>
+            </br>
+            <li> Escreva um algoritmo que imprima todos os números ímpares do intervalo fechado de 1 a 100.
+            </li>
+            </br>
+            <li> Escreva um algoritmo que receba dez números do usuário e imprima a metade de cada número.
+            </li>
+            </br>
+            <li> Escreva um algoritmo que receba dez números do usuário e imprima o quadrado de cada número.
+            </li>
+            </br>
+            <li> Escreva um algoritmo que receba dez números do usuário e imprima o cubo de cada número.
+            </li>
+            </br>
+            <li> Escreva um algoritmo que receba quinze números do usuário e imprima a raiz quadrada de cada número.
+            </li>
+            </br>
+            <li> Escreva um algoritmo que receba oito números do usuário e imprima o logaritmo de cada um deles na base 10.
+            </li>
+            </br>
+            <li> Criar um algoritmo que imprima todos os números de 1 até 100, inclusive, e a soma de todos eles.
+            </li>
+            </br>
+            <li> Criar um algoritmo que imprima todos os números de 1 até 100, inclusive, e a soma do quadrado desses números.
+            </li>
+            </br>
+            <li> Criar um algoritmo que imprima todos os números de 1 até 100, inclusive, e a soma da metade desses números.
+            </li>
+            </br>
+            <li> Criar um algoritmo que imprima todos os números de 1 até 100, inclusive, e a soma do cubo desses números.
+            </li>
+        </ol>
+        <ol style="display: none;">
+            </br>
+            <li> Criar um algoritmo que imprima todos os números de 1 até 100, inclusive, e a média de todos eles.
+            </li>
+            </br>
+            <li> Criar um algoritmo que leia um número (NUM) e depois leia NUM números inteiros e imprima o maior deles.
+                <br> Suponha que todos os números lidos serão positivos.
+            </li>
+            </br>
+            <li> Criar um algoritmo que leia um número (NUM) e depois leia NUM números inteiros e imprima o maior deles.
+            </li>
+            </br>
+            <li> Criar um algoritmo que leia um número (NUM) e depois leia NUM números inteiros e imprima o menor deles.
+            </li>
+            </br>
+            <li> Criar um algoritmo que leia dez números inteiros e imprima o maior e o menor número da lista.
+            </li>
+            </br>
+            <li> Criar um algoritmo que leia dez números inteiros e imprima o maior e o segundo maior número da lista.
+            </li>
+            </br>
+            <li> Criar um algoritmo que leia os limites inferior e superior de um intervalo e imprima
+                <br> todos os números pares no intervalo aberto e seu somatório. Suponha que os dados digitados
+                <br> são para um intervalo crescente, ou seja, o primeiro valor
+                <br> é menor que o segundo.
+            </li>
+            </br>
+            <li> Criar um algoritmo que leia um número (NUM) e então imprima os múltiplos de 3 e 5, ao mesmo tempo, no intervalo fechado de 1 a NUM. 28
+            </li>
+            </br>
+            <li> Escreva um algoritmo que leia 200 números inteiros e imprima quantos são pares e quantos são ímpares.
+            </li>
+            </br>
+            <li> Escreva um algoritmo que receba 15 números e imprima quantos números maiores que 30 foram digitados.
+            </li>
+            </br>
+            <li> Escreva um algoritmo que leia 20 números e imprima a soma dos positivos e o total de números negativos.
+            </li>
+            </br>
+            <li> Escreva um algoritmo que realize o produto de A (número real) por B (número inteiro) ou seja, A * B, através de adições (somas) Esses dois valores são passados pelo usuário através do teclado.
+            </li>
+            </br>
+            <li> Escreva um algoritmo que realize a potência de A (número real) por B (número inteiro e positivo) ou seja, AB , através de multiplicações sucessivas. Esses dois valores são passados pelo usuário através do teclado.
+            </li>
+            </br>
+            <li> Escreva um algoritmo que calcule o resto da divisão de A por B (número inteiros e positivos) ou seja, A mod B, através de subtrações sucessivas. Esses dois valores são passados pelo usuário através do teclado.
+            </li>
+            </br>
+            <li> Escreva um algoritmo que calcule o quociente da divisão de A por B (número inteiros e positivos) ou seja, A div B, através de subtrações sucessivas. Esses dois valores são passados pelo usuário através do teclado.
+            </li>
+            </br>
+            <li> Escreva um algoritmo que determine se dois valores inteiros e positivos A e B são primos entre si. (dois números inteiros são ditos primos entre si, caso não exista divisor comum aos dois números.
+            </li>
+            </br>
+            <li> Escreva um algoritmo para calcular o fatorial do número N, cujo valor é obtido através do usuário pelo teclado.
+            </li>
+            </br>
+            <li> Escreva um algoritmo que determine todos os divisores de um dado número N.
+            </li>
+            </br>
+            <li> Escreva um algoritmo que determine se um dado número N (digitado pelo usuário) é primo ou não.
+            </li>
+            </br>
+            <li> Escreva um algoritmo que calcule os N-menores números primos. Este número N deve ser lido do teclado.
+            </li>
+            </br>
+            <li> Escreva um algoritmo que calcule o m.d.c. (máximo divisor comum) entre A e B (número inteiros e positivos
+            </li>
+            </br>
+            <li> Esses dois valores são passados pelo usuário através do teclado.
+            </li>
+            </br>
+            <li> A série de Fibonacci é formada pela seqüência: 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, ...
+                <br> Escreva um algoritmo que gere a série de FIBONACCI até o Nésimo termo.
+            </li>
+            </br>
+            <li> A série de RICCI difere da série de FIBONACCI porque os dois primeiros termos são fornecidos pelo usuário.
+                <br> Os demais termos são gerados da mesma forma que a série de FIBONACCI.
+                <br> Criar um algoritmo que imprima os N primeiros termos da série de RICCI e a soma dos termos impressos, sabendo-se que para existir esta série serão necessários pelo menos três termos. 43
+            </li>
+            </br>
+            <li> A série de FETUCCINE é gerada da seguinte forma: os dois primeiros termos são fornecidos pelo usuário;
+                <br> a partir daí, os termos são gerados com a soma ou subtração dos dois termos anteriores,
+                <br> ou seja: para i par para i ímpar 1 2 1 2 − − − − = − = + i i i i i i A A A A A A
+                <br> Criar um algoritmo que imprima os N primeiros termos da série de FETUCCINE,
+                <br> sabendo-se que para existir esta série serão necessários pelo menos três termos.
+            </li>
+            </br>
+            <li> Seja a seguinte série: 1, 4, 9, 16, 25, 36, ... Escreva um algoritmo que gere esta série até o N-ésimo termo.
+                <br>Este N-ésimo termo é digitado pelo usuário.
+            </li>
+            </br>
+            <li> Seja a seguinte série: 1, 4, 4, 2, 5, 5, 3, 6, 6, 4, 7, 7, ...
+                <br>Escreva um algoritmo que seja capaz de gerar os N termos dessa série. Esse número N deve ser lido do teclado.
+            </li>
+            </br>
+            <li> Sendo H = 1 + 2 1 + 3 1 + 4 1 + ... N 1 , faça um algoritmo para gerar o número H. O número N é lido do teclado.
+            </li>
+            </br>
+            <li> Sendo H = 1 - 2 1 + 3 1 - 4 1 + ... N 1 , faça um algoritmo para gerar o número H. O número N é lido do teclado.
+            </li>
+            </br>
+            <li> Faça um algoritmo para calcular o valor de S, dado por: 2 1 1 2 3 1 1 2 N N N N N S + − + + − + − = + K
+                <br>sendo N fornecido pelo teclado.
+            </li>
+            </br>
+            <li> Sendo S = 1 + 2 2 1 + 3 3 1 + 4 4 1 + 5 5 1 + ... + N N 1 , um somatório de N (definido pelo usuário) termos,
+                <br>escreva algoritmo para calcular S para um número N.
+            </li>
+            </br>
+            <li> NAO FAZER!!!Faça um algoritmo que: - leia um número real X do teclado;
+                <br>determine e imprima o seguinte somatório:
+                <br> = − + − + +L 1! 2! 3! 4! X X X X S X usando os 20 primeiros termos da série.
+            </li>
+            </br>
+            <li> O valor aproximado do número π pode ser calculado usando-se a série 3 3 3 3 L 9 1 7 1 5 1 3 1 S = 1− + − + sendo 3 π = S × 32 .
+                <br>Faça um algoritmo que calcule e imprima o valor de π usando os 51 primeiros termos da séria acima. 52
+            </li>
+            </br>
+            <li> Escreva um algoritmo, que leia um conjunto de 50 fichas, cada uma contendo,
+                <br> a altura e o código do sexo de uma pessoa (código = 1 se for masculino e 2 se for feminino e calcule
+                <br>e imprima: - a maior e a menor altura da turma; - a média
+                <br>de altura das mulheres; - a média de altura da turma.
+            </li>
+            </br>
+            <li> Escreva um algoritmo que: - leia 100 fichas, onde cada ficha contém o número de matrícula e a nota de cada aluno
+                <br>de um determinado curso; - determine e imprima as duas maiores notas, juntamente com o número de matrícula do aluno que
+                <br> obteve cada uma delas; - Suponha que não exista dois ou mais alunos com a mesma nota.
+            </li>
+            </br>
+            <li> Um cinema possui capacidade de 100 lugares e está sempre com ocupação total. Certo dia, cada espectador respondeu a um questionário, no qual constava: - sua idade; - sua opinião em relação ao filme, segundo as seguintes notas: Nota Significado
+                <br>A Ótimo B Bom C Regular D Ruim E Péssimo Elabore um algoritmo que, lendo estes dados, calcule e imprima: - a quantidade de respostas ótimo; - a diferença percentual entre respostas bom e regular; - a média de idade das pessoas que
+                responderam
+                <br>ruim; - a percentagem de respostas péssimo e a maior idade que utilizou esta opção;
+                <br> - a diferença de idade entre a maior idade que respondeu ótimo e a maior idade que respondeu ruim.
+            </li>
+            </br>
+            <li> Em um prédio, com 50 moradores, há três elevadores denominados A, B e C. Para otimizar o sistema de controle dos elevadores,
+                <br>foi realizado um levantamento no qual cada usuário respondia:
+                <br> - o elevador que utilizava com mais freqüência;
+                <br> - o período que utilizava o elevador, entre: - “M” = matutino; - “V” = vespertino; - “N” = noturno. Construa um algoritmo que
+                <br> calcule e imprima:
+                <br> - qual é o elevador mais freqüentado e em que período se concentra o maior fluxo;
+                <br> - qual o período mais usado de todos e a que elevador pertence;
+                <br> - qual a diferença percentual entre o mais usado dos horários e o menos usado;
+                <br> - qual a percentagem sobre o total de serviços prestados do elevador de média utilização.
+            </li>
+            </br>
+            <li> Calcule o imposto de renda de um grupo de 10 contribuintes, considerando que os dados de cada contribuinte,
+                <br>número do CPF, número de dependentes e renda mensal são valores fornecidos pelo usuário. Para cada contribuinte será feito um desconto
+                <br>de 5% do salário mínimo por dependente. Os valores da alíquota para cálculo do imposto são:
+                <br>Renda Líquida Alíquota Até 2 salários mínimos Isento
+                <br>2 a 3 salários mínimos 5%
+                <br>3 a 5 salários mínimos 10%
+                <br> 5 a 7 salários mínimos 15%
+                <br>Acima de 7 salários mínimos 20%
+                <br>Observe que deve ser fornecido o valor atual do salário mínimo para que o algoritmo calcule os valores corretamente.
+            </li>
+            </br>
+            <li> Escreva um algoritmo que receba números do usuário e imprima o triplo de cada número.
+                <br>O algoritmo deve encerrar quando o número –999 for digitado.
+            </li>
+            </br>
+            <li> Escreva um algoritmo que receba números do usuário enquanto eles forem positivos e ao fim o
+                <br> algoritmo deve imprimir quantos números foram digitados.
+            </li>
+            </br>
+            <li> Escreva um algoritmo que receba números do usuário enquanto eles forem positivos e ao fim o algoritmo
+                <br>deve imprimir a média dos números digitados.
+            </li>
+            </br>
+            <li> Escreva um algoritmo que leia vários números e informe quantos números entre 100 e 200 foram digitados.
+                <br>Quando o valor 0 (zero) for lido, o algoritmo deverá cessar sua execução.
+            </li>
+            </br>
+            <li> Escreva um algoritmo que receba números e imprima o quadrado de cada número até entrar um número múltiplo de 6
+                <br>que deverá ter seu quadrado também impresso.
+            </li>
+            </br>
+            <li> Construa um algoritmo para calcular a média de valores PARES e ÍMPARES, que serão digitados pelo usuário.
+                <br>Ao final o algoritmo deve mostrar estas duas médias.
+                <br>O algoritmo deve mostrar também o maior número PAR digitado e o menor número ÍMPAR digitado.
+                <br>Para finalizar o usuário irá digitar um valor negativo.
+            </li>
+            </br>
+            <li> Construa um algoritmo para fazer a soma de vários valores inteiros e positivos,
+                <br>fornecidos pelo usuário através do teclado. O dado que finaliza a seqüência de entrada é o número –1, e este não deve ser considerado.
+            </li>
+            </br>
+            <li> Construa um algoritmo para calcular a média de um conjunto de valores inteiros e positivos,
+                <br>fornecidos pelo usuário através do teclado. Novamente, o dado finalizar é o número –1, e este não deve ser considerado.
+            </li>
+            </br>
+            <li> Construa um algoritmo para que: Dado um conjunto de valores inteiros e positivos,
+                <br>digitados pelo usuário através do teclado, determinar qual o menor valor do conjunto.
+                <br>O algoritmo deve imprimir o valor determinado. Quando o usuário decidir que finalizou a entrada de dados, ele deve digitar –1, e este dado não deve ser considerado.
+            </li>
+            </br>
+            <li> Construa um algoritmo para encontrar o maior e o menor número de uma série de números
+                <br>positivos fornecidos pelo usuário através do teclado. Novamente, o dado finalizador é o número –1, e este não deve ser considerado.
+            </li>
+            </br>
+            <li> Dado um país A, com 5000000 de habitantes e uma taxa de natalidade de 3% ao ano, e um país B com 7000000 de habitantes e uma taxa de natalidade de 2% ao ano, escrever um algoritmo que seja capaz de calcular e iterativamente e no fim imprimir
+                o tempo necessário para que a população do país A ultrapasse a população do país B.
+            </li>
+            </br>
+            <li> Chico tem 1,50m e cresce 2 centímetros por ano, enquanto Juca tem 1,10m e cresce 3 centímetros por ano. Construir um algoritmo que calcule iterativamente e imprima quantos anos serão necessários para que Juca seja maior que Chico.
+            </li>
+            </br>
+            <li> Na usina de Angra dos Reis, os técnicos analisam a perda de massa de um material radioativo.
+                <br>Sabendo-se que este perde 25% de sua massa a cada 30 segundos.
+                <br>Criar um algoritmo que calcule iterativamente e imprima o tempo necessário
+                <br>para que a massa deste material se torne menor que 0,10 grama.
+                <br>O algoritmo pode calcular o tempo para várias massas. 74
+            </li>
+            </br>
+            <li> Dois ciclistas A e B estão andando em uma pista de ciclismo com 2 Km de comprimento com velocidades de 10 m/s e 15 m/s, respectivamente.
+                <br>Escreva um algoritmo que determine iterativamente o tempo que levará para que esses dois ciclistas
+                <br>A e B se encontrem em um mesmo ponto, sabendo que eles partiram de um mesmo ponto inicial, porém em sentido contrário.
+                <br> O algoritmo também deve calcular o deslocamento (a distância) que cada um percorreu.
+            </li>
+            </br>
+            <li> Considere uma linha ferroviária entre São Paulo e Curitiba. Suponha que uma locomotiva (trem) A
+                <br>parte de São Paulo para Curitiba com velocidade de 30 m/s enquanto que uma outra locomotiva B parte de Curitiba
+                <br>para São Paulo no mesmo instante com velocidade de 40 m/s.
+                <br>Considere a distância entre São Paulo e Curitiba de 400 Km.
+                <br> Escreva um algoritmo que calcule iterativamente o tempo necessário para os maquinistas pararem
+                <br>as locomotivas antes que uma colisão aconteça. O algoritmo deve calcular
+                <br>também a distância que as locomotivas devem percorrer para que a colisão aconteça. 76
+            </li>
+            </br>
+            <li> Criar um algoritmo que receba vários números inteiros e positivos e imprima o produto dos números
+                <br>ímpares digitados e a soma dos pares. O algoritmo encerra quando o zero ou um número negativo é digitado. 77
+            </li>
+            </br>
+            <li> Criar um algoritmo que leia vários números e encerre a leitura com 0 e imprima o maior,
+                <br>o menor e a média aritmética dos números. O número 0 (zero) não faz parte da seqüência. 78
+            </li>
+            </br>
+            <li> Criar um algoritmo que leia idade e sexo (0-masculino, 1-feminino de várias pessoas)
+                <br>Calcule e imprima a idade média, o total de pessoas do sexo feminino com idade entre 30-45
+                <br>inclusive e o número total de pessoas do sexo masculino.
+                <br>O algoritmo termina quando se digita um número não positivo (0 ou um número negativo para a idade)
+            </li>
+            </br>
+            <li> Os alunos de informática tiveram cinco provas (uma de cada matéria/disciplina): 1, 2, 3, 4 e 5.
+                <br>Considere aprovado o aluno com nota igual ou superior a 7.0.
+                <br>Criar um algoritmo que leia o Nome dos alunos e as suas respectivas cinco notas.
+                <br>Inicialmente o algoritmo deve perguntar quantos alunos existem na turma e deve também imprimir:
+                <br> - Nome dos que foram aprovados em todas as matérias;
+                <br> - Nome dos alunos aprovados nas matérias 1 e 4;
+                <br> - A porcentagem dos aprovados na matéria 3.
+            </li>
+            </br>
+            <li> Criar um algoritmo que leia um conjunto de informações (nome, sexo, idade, peso e altura.
+            </li>
+            </br>
+            <li> dos atletas que participaram de uma olimpíada, e informar:
+                <br> - O atleta do sexo masculino mais alto;
+                <br> - A atleta do sexo feminino mais pesada;
+                <br> - A média de idade dos atletas.
+                <br>Deverão ser lidos dados dos atletas até que seja digitado o nome @ para um atleta.
+            </li>
+            </br>
+            <li> Escreva um algoritmo que receba a idade de várias pessoas e pare a execução com a entrada de um número não positivo.
+                <br>O algoritmo deve imprimir: - O total de pessoas com menos de 21 anos; - O total de pessoas com mais de 50 anos.
+            </li>
+            </br>
+            <li> Construa um algoritmo que receba um número e verifique se ele é um número triangular.
+                <br>(Um número é triangular quando é resultado do produto de três números consecutivos. Exemplo: 24 = 2 x 3 x 4
+            </li>
+            </br>
+            <li> Escreva um algoritmo que receba vários números e ao final imprima o maior número digitado.
+                <br>O algoritmo acaba quando se digita –9999; 84
+            </li>
+            </br>
+            <li> Criar um algoritmo que calcule o M.M.C (mínimo múltiplo comum) entre dois números lidos.
+                <br>(por exemplo: o M.M.C, entre 10 e 15 é 30)
+            </li>
+            </br>
+            <li> Criar um algoritmo que receba vários números inteiros e positivos e imprima a média dos números múltiplos de 3.
+                <br>A execução deve encerrar quando um número não positivo for lido.
+            </li>
+            </br>
+            <li> Escreva um algoritmo que receba vários números inteiros e imprima a quantidade de
+                <br>números primos dentre os números que foram digitados. O algoritmo acaba quando se digita um número menor ou igual a 0.
+            </li>
+            </br>
+            <li> Escreva um algoritmo que receba vários números, e finalize com a entrada do número –999.
+                <br>Para cada número, o algoritmo deve imprimir seus divisores.
+            </li>
+            </br>
+            <li> Criar um algoritmo que receba 10 números positivos e imprima a raiz quadrada de cada número.
+                <br>Para cada entrada de dados deverá haver um trecho de proteção para que um número negativo não seja aceito.
+            </li>
+            </br>
+            <li> Criar um algoritmo que leia vários números inteiros e apresente o fatorial de cada número.
+                <br>O algoritmo deve finalizar quando um número menor do que 1 é digitado. 90
+            </li>
+            </br>
+            <li> Escreva um algoritmo que receba vários números e verifique se eles são ou não quadrados perfeitos.
+                <br>O algoritmo termina a execução quando for digitado um número menor ou igual a 0.
+                <br>(Um número é quadrado perfeito quando tem um número inteiro como raiz quadrada.
+            </li>
+            </br>
+            <li> Numa universidade, os alunos das turmas de informática fizeram uma prova de algoritmos.
+                <br>Cada turma possui um número de alunos.
+                <br>Criar um algoritmo que imprima para cada turma:
+                <br> - Quantidade de alunos aprovados;
+                <br> - Média de cada turma;
+                <br> - Percentual de reprovados.
+                <br> Considere aprovado aluno com nota igual ou superior a 7.0.
+                <br> O programa deve ler o número de alunos de cada turma e só finalizar o programa
+                <br> quando um número não positivo de alunos for digitado.
+            </li>
+            </br>
+            <li> Numa universidade cada aluno possui os seguintes dados:
+                <br> - Renda pessoal; - Renda familiar;
+                <br> - Total gasto com alimentação;
+                <br> - Total gasto com outras despesas;
+                <br>Criar um algoritmo que imprima a porcentagem dos alunos que gasta acima de R$ 200,00 com outras despesas,
+                <br> o número de alunos com renda pessoal maior que renda familiar e a porcentagem gasta com alimentação e outras despesas em relação às rendas pessoal e familiar.
+                <br>O algoritmo acaba quando se digita 0 para a renda pessoal.
+            </li>
+            </br>
+            <li> Existem três candidatos a uma vaga no Senado.
+                <br> Feita a eleição, os votos são registrados em disco.
+                <br> O voto de cada eleitor foi codificado da seguinte forma:
+                <br> 1 2 3 Voto para os candidatos
+                <br> 0 Voto branco
+                <br> 4 Voto nulo
+                <br> Deseja-se saber:
+                <br> - O número do candidato vencedor;
+                <br> - O número de votos em branco;
+                <br> - O número de votos nulos;
+                <br> - O número de eleitores que compareceram às urnas.
+                <br> Admite-se que não são possíveis empates.
+                <br> Então, construa um algoritmo que execute esta tarefa, sabendo que o voto de cada eleitor
+                <br> é lido do disco através do comando leia(VOTO) O voto finalizador tem código –1, e não deve ser computado. 94
+            </li>
+            </br>
+            <li> Escreva um algoritmo que calcule o imposto de renda de um grupo de contribuintes considerando:
+                <br> - Os dados de cada contribuinte, número do CPF, número de dependentes e renda anual,
+                <br> serão digitados pelo usuário através do teclado;
+                <br> 12 - Para cada contribuinte será feito um desconto de R$ 300,00 por dependente;
+                <br> - Os valores da alíquota para cálculo do imposto são:
+                <br> Renda Anual Líquida Alíquota Até R$ 12.000,00 Isento
+                <br> De R$ 12.000,00 a R$ 25.000,00 12%
+                <br> Acima de R$ 25.000,00 27,5%
+                <br>Para finalizar o algoritmo o CPF digitado zera igual a zero.
+            </li>
+            </br>
+            <li> Em uma eleição presidencial, existem quatro candidatos. Os votos são informados através de código.
+                </br> Os dados utilizados para a escrutinagem obedecem à seguinte codificação:
+                </br> - 1, 2, 3 e 4 = voto para os respectivos candidatos;
+                </br>- 5 voto nulo;
+                </br> - 6 voto em branco;
+                </br> Elaborar um algoritmo que calcule e imprima:
+                </br> - O total de votos para cada candidato;
+                </br> - O total de votos nulos;
+                </br> - O total de votos em branco;
+                </br> - O percentual dos votos em branco e nulos sobre o total.
+            </li>
+            </br>
+            <li> Uma Empresa de fornecimento de energia elétrica faz a leitura mensal dos medidores de consumo.
+                </br> Para cada consumidor, são digitados os seguintes dados:
+                </br> - Número do consumidor;
+                </br> - Quantidade de kWh consumidos durante o mês;
+                </br> - Tipo (código) do consumidor.
+                </br>1 – residencial, preço em reais por kWh = 0,3
+                </br>2 – comercial, preço em reais por kWh = 0,5
+                </br>3 – industrial, preço em reais por kWh = 0,7
+                </br> Os dados devem ser lidos até que seja encontrado um consumidor com Número 0 (zero).
+            </li>
+            </br>
+            <li>Escreva um algoritmo que calcule e imprima:
+                </br> - O custo total para cada consumidor;
+                </br> - O total de consumo para os três tipos de consumidor;
+                </br> - A média de consumo dos tipos 1 e 2.
+            </li>
+            </br>
+            <li> Escreva um algoritmo que receba o número da conta e o saldo de várias pessoas.
+                </br> O algoritmo deve imprimir todas as contas, os respectivos saldos e uma das mensagens:
+                </br> positivo/negativo. Ao final, o percentual de pessoas com saldo negativo.
+                </br> O algoritmo acaba quando se digita um número negativo para a conta.
+            </li>
+            </br>
+            <li>
+                Uma agência de uma cidade do interior tem, no máximo, 10000 clientes.
+                </br>Criar um algoritmo que possa receber o número da conta, nome e saldo de cada cliente.
+                </br>Esse algoritmo deve imprimir todas as contas, os respectivos saldos e uma das mensagens: positivo/negativo.
+                </br>A digitação acaba quando se digita –999 para um número da conta ou quando chegar a 10000.
+                </br>Ao final, deverá sair o total de clientes com saldo negativo, o total de clientes da agência e o saldo da agência.
+            </li>
+            </br>
+            <li> Criar um algoritmo que possa ler um conjunto de pedidos de compra e calcule o valor total da compra.
+                </br>Cada pedido é composto pelos seguintes campos:
+                </br> - Número de pedido;
+                </br> - Data do pedido (dia, mês, ano)
+                </br> - Preço unitário;
+                </br> - Quantidade.
+                </br>O algoritmo deverá processar novos pedidos até que o usuário digite (zero) como número de pedido.
+            </li>
+            </br>
+            <li> Uma fábrica produz e vende vários produtos e para cada um deles tem-se o nome,
+                </br>quantidade produzida e quantidade vendida.
+                </br>Criar um algoritmo que imprima:
+                </br> - Para cada produto, nome, quantidade no estoque e uma mensagem se o produto tiver menos de 50 itens no estoque;
+                </br> - Nome e quantidade do produto com maior estoque.
+            </li>
+        </ol>
+    </div>
+    <div include-html-rodape="rodape.html"></div>
+</body>
+
+<script src="js/script.js"></script>
+<script src="js/atividades.js"></script>
+
+<script defer>
+    includeHTML("include-html-menu");
+    includeHTML("include-html-rodape");
+</script>
+
+</html>

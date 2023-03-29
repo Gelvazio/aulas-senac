@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unifique - Rio do Sul</title>
+</head>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        line-height: 1.4;
+        color: #253a76;
+        background-color: #ffffff;
+    }
+
+    .login {
+        max-width: 300px;
+        color: #253a76;
+        font-size: 16px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 350px;
+    }
+
+    label {
+        font-size: 16px;
+    }
+
+    input {
+        width: 100%;
+        height: 45px;
+    }
+
+    input[type="submit"]{
+        margin-top: 5px;
+    }
+
+    .titulo {
+        color: #253a76;
+        font-size: 20px;
+        text-align: center;
+    }
+</style>
+<body>
+
+<div class="login">
+    <img src="./images/logo.png" alt="" width="100%">
+    <h1 class="titulo">Central do Assinante</h1>
+    <form action="" method="post" id="formularioLogin">
+        <input type="hidden" name="acao" value="EXECUTA_LOGIN">
+
+        <label for="cpfcnpj">CPF/CNPJ</label>
+        <input type="text" id="cpfcnpj" name="cpfcnpj" value="346.596.720-85">
+
+        <label for="password">SENHA</label>
+        <input type="password" id="password" name="password" value="admin">
+
+        <button class="btn btn-lg btn-success btn-block" onclick="entrarSistema()">Acessar</button>
+        <!-- <input class="btn btn-lg btn-success btn-block" type="submit" value="Acessar"> -->
+    </form>
+
+    <br><span>È seu primeiro acesso?<a href="./login/cadastrarusuario.php">Clique aqui</a></span>
+    <br><span>Esqueceu sua senha?<a href="./login/esqueceusenhausuario.php">Clique aqui</a></span>
+
+</div>
+</body>
+
+<!-- bootstrap CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<!-- Habilita o jquery -->
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+<!-- Habilita os icons -->
+<!-- <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script> -->
+
+<!-- Habilita o bootstrap -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script src="api.js" defer></script>
+<script src="token.js" defer></script>
+<script src="login.js" defer></script>
+
+</html>

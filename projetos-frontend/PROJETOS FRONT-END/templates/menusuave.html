@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apostilas</title>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    nav ul {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        position: fixed;
+        background-color: aliceblue;
+        height: 2rem;
+        width: 100%;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    section {
+        min-height: 100vh;
+        padding-top: 3rem;
+    }
+    
+    #sobre {
+        background-color: blueviolet;
+    }
+    
+    #servicos {
+        background-color: rgb(70, 78, 183);
+    }
+    
+    #contato {
+        background-color: rgb(43, 205, 226);
+    }
+    /* Iframe CSS */
+    
+    body {
+        background: linear-gradient(-60deg, #03035b, #c853fe);
+    }
+    
+    h1 {
+        color: aliceblue;
+        text-align: center;
+    }
+    
+    iframe {
+        padding: 5px;
+        margin: 0;
+        list-style: none;
+        text-align: center;
+    }
+    
+    .livros ul li iframe {
+        width: 93vw;
+        max-width: 95vw;
+        height: 100vh;
+    }
+</style>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#servicos">Servicos</a></li>
+            <li><a href="#contato">Contato</a></li>
+            <li>
+                <a href="#java">JAVA</a>
+            </li>
+            <li>
+                <a href="#html">HTML</a>
+            </li>
+            <li>
+                <a href="#css">CSS</a>
+            </li>
+            <li>
+                <a href="#htmlcssjavascript">HTML,CSS, JavaScript</a>
+            </li>
+            <li>
+                <a href="#javascript">JavaScript</a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <section id="sobre">Sobre</section>
+        <section id="servicos">Servicos</section>
+        <section id="contato">Contato</section>
+
+        <section class="livros" id="java">
+            <ul>
+                <li>
+                    <h1>Livro Java</h1>
+                    <iframe src="apostilas/javascript/livro-javascript.pdf" frameborder="0">Livro Javascript</iframe>
+                </li>
+            </ul>
+        </section>
+
+        <section class="livros" id="html">
+            <ul>
+                <li>
+                    <h1>HTML</h1>
+                    <iframe src="apostilas/javascript/livro-javascript.pdf" frameborder="0">Livro Javascript</iframe>
+                </li>
+            </ul>
+        </section>
+
+        <section class="livros" id="css">
+            <ul>
+                <li>
+                    <h1>CSS</h1>
+                    <iframe src="apostilas/javascript/livro-javascript.pdf" frameborder="0">Livro Javascript</iframe>
+                </li>
+            </ul>
+        </section>
+
+        <section class="livros" id="javascript">
+            <ul>
+                <li>
+                    <h1>Livro Javascript</h1>
+                    <iframe src="apostilas/javascript/livro-javascript.pdf" frameborder="0">Livro Javascript</iframe>
+                </li>
+                <li>
+                    <h1>Apostila CSS</h1>
+                    <iframe src="apostilas/css/03_Introducao_CSS.pdf" frameborder="0">Apostila CSS</iframe>
+                </li>
+                <li>
+                    <h1>Livro Javascript</h1>
+                    <iframe src="apostilas/javascript/livro-javascript.pdf" frameborder="0">Livro Javascript</iframe>
+                </li>
+                <li>
+                    <h1>Livro Javascript</h1>
+                    <iframe src="apostilas/javascript/livro-javascript.pdf" frameborder="0">Livro Javascript</iframe>
+                </li>
+            </ul>
+        </section>
+        <section class="livros" id="htmlcssjavascript">
+            <ul>
+                <li>
+                    <h1>HTML,CSS,JAVASCRIPT-ALURA</h1>
+                    <iframe src="apostilas/html,css,javascript/apostila-html-css-javascript-alura.pdf" frameborder="0">HTML,CSS,JAVASCRIPT-ALURA</iframe>
+                </li>
+        </section>
+    </main>
+</body>
+
+</html>

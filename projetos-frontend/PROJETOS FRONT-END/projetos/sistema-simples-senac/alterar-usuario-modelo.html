@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterar Usuário</title>
+</head>
+<script>
+
+    // Sessions 
+    // Save data to sessionStorage
+    // sessionStorage.setItem("key", "value");
+
+    // // Get saved data from sessionStorage
+    // let data = sessionStorage.getItem("key");
+
+    // // Remove saved data from sessionStorage
+    // sessionStorage.removeItem("key");
+
+    // // Remove all saved data from sessionStorage
+    // sessionStorage.clear();
+
+    function iniciaAlteracao(){
+        // Pega o codigo do usuario que esta na Session e carrega os dados do usuario na tela
+        // em modo edicao
+
+        // Seta o codigo do usuario na session para alteracao
+        const usucodigo = sessionStorage.getItem("usucodigo");
+
+        if(usucodigo == undefined){
+            limpaCampos();
+            
+            alert("Não foi informado o codigo do usuario!");
+            
+            return false;
+        }
+
+        loadUsuarioByCodigo(usucodigo);
+    }
+
+    function loadUsuarioByCodigo(usucodigo){
+        // Cria uma consulta com o codigo do usuario
+        var metodo = "POST";
+        var porta = "consultausuariofiltro";
+
+        var body = {
+            campofiltro: "usucodigo",
+            operadorfiltro: "igual",
+            valorfiltro: usucodigo
+        };
+
+        callApi(metodo, porta, body, function(data) {
+            // Carrega os dados do usuario na tabela html
+            loadAlteracaoUsuario(data);
+        });
+    }
+
+    function loadAlteracaoUsuario(data){
+        const aDadosUsuarios = data;
+
+        aDadosUsuarios.forEach(function(oUsuario, key) {
+            const codigo = oUsuario.usucodigo;
+            const nome = oUsuario.usunome;
+            const email = oUsuario.usuemail;
+            const situacao = oUsuario.usuativo;
+
+            loadAlteracaoUsuarioHTML(codigo, nome, email, situacao);
+        });
+    }
+
+    function loadAlteracaoUsuarioHTML(codigo, nome, email, situacao){
+        // Carrega os dados da api no documento html
+
+        document.querySelector("#usucodigo").value = codigo;
+        document.querySelector("#usunome").value = nome;
+        document.querySelector("#usuemail").value = email;
+        document.querySelector("#usuativo").value = situacao;
+    }
+
+    function executaAlteracao(){
+        var metodo = "POST";
+        var porta = "executaalteracao";
+
+        const codigo   = document.querySelector("#usucodigo").value;
+        const nome     = document.querySelector("#usunome").value
+        const email    = document.querySelector("#usuemail").value;
+        const situacao = document.querySelector("#usuativo").value;
+        
+        var body = {
+            usucodigo: codigo,
+            usunome: nome,
+            usuemail: email,
+            usuativo: situacao
+        };
+
+        callApi(metodo, porta, body, function(data) {
+            alert(data.mensagem);
+
+            if(data.status){
+                limpaCampos();
+
+                listarUsuarios();
+            }
+        });
+    }
+
+    function listarUsuarios(){
+        // destroi a sessao
+        sessionStorage.removeItem("usucodigo");
+
+        // Redireciona para a tela de consultas
+        window.location.href = "usuario-consulta-com-edicao.html";
+    }
+
+     function limpaCampos(){
+        document.querySelector("#usucodigo").value = "";
+        document.querySelector("#usunome").value = "";
+        document.querySelector("#usuemail").value = "";
+        document.querySelector("#usuativo").value = "";
+     }
+
+</script>
+
+<style>
+    body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .formulario {
+        display: flex;
+        flex-direction: column;
+    }
+
+    input, select, button {
+        outline: none;
+        transition: all .4s ease-in-out;
+        padding: 5px 20px;
+        border-radius: 10px;   
+        border: 1px solid black;    
+    }
+
+    input:hover, select:hover {
+        outline: none;
+        background-color: aquamarine;
+    }
+    
+    button {
+        
+        outline: none;
+        cursor: pointer;
+    }
+
+    button:hover  {
+        outline: none;
+        background-color: rgb(11, 193, 132);
+    }
+
+</style>
+<body onload="iniciaAlteracao()">
+    <h1>Alteração de Usuário</h1>
+    <hr>
+
+    <div class="formulario">
+        <label for="usucodigo">Código:</label>
+        <input type="text" id="usucodigo" disabled>
+        <br>
+        
+        <label for="usunome">Nome:</label>
+        <input type="text" id="usunome">
+        <br>
+
+        <label for="usuemail">E-mail:</label>
+        <input type="text" id="usuemail">
+        <br>
+        <label for="codigo">Ativo:</label>
+        <select name="usuativo" id="usuativo">
+            <option value="1">Sim</option>
+            <option value="0">Não</option>
+        </select>
+
+        <br>
+        <button onclick="executaAlteracao()" class="button2">Confirmar</button>
+        <hr>
+        <button onclick="listarUsuarios()" class="button2">Listar Usuarios</button>
+    </div>
+
+
+</body>
+
+<!-- Comando defer deixa o js carregar apenas apos a pagina estar carregada -->
+<script src="js/api.js" defer></script>
+
+</html>

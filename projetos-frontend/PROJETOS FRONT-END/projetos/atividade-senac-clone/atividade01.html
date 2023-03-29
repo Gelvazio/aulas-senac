@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desenvolvimento - Tech</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/atividades.css">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+</head>
+<style>
+    li {
+        margin-left: 55px;
+        color: aliceblue;
+        font-size: 20px;
+    }
+    
+    li strong {
+        margin-left: 55px;
+    }
+    
+    .titulo-exercicio {
+        margin-left: 55px;
+    }
+    
+    h1 {
+        color: aliceblue;
+    }
+    
+    .tipoQuestao {
+        color: yellow;
+        padding-left: 55px;
+    }
+    
+    .instrucaoprova {
+        text-align: center;
+    }
+</style>
+
+<body>
+    <div class="container-principal">
+        <!-- Inclui o Menu Unico Atraves de JavaScript -->
+        <div include-html-menu="menu.html"></div>
+
+        <div class="prova">
+            <br>
+            <h1 class="instrucaoprova">INSTRUCOES:</h1>
+            <br>
+            <ul>
+                <li>A atividade é INDIVIDUAL
+                </li>
+                <li>As respostas das questões devem ser entregues através do github
+                </li>
+                <li>Você deve utilizar a linguagem JAVA para resolver as questões.
+                </li>
+                <li>Data de Entrega: 15/08/2022
+                </li>
+                <li>Cada aluno será sorteado com um número e deverá explicar aleatoriamente 3 questões dentre as apresentadas abaixo, que são referentes ao número sorteado.
+                </li>
+                <li>Crie um "package" para cada lista de exercicio conforme abaixo:
+                    <br>
+                    <ul>
+                        <li>Questão sobre operações aritméticas=> prova01operacoesaritmeticas</li>
+                        <li>Questão sobre comandos de decisão => prova01comandosdecisao</li>
+                        <li>Questão sobre laços de repetição => prova01lacosrepeticao</li>
+                    </ul>
+                </li>
+            </ul>
+            <br>
+            <div class="container">
+                <div class="lista-exercicio" id="listaXXX">
+                    <h1>EXERCICIOS CONDICIONAIS</h1>
+                    <ol style="color:white; padding-top: 10px; display:flex;flex-direction: column;gap:10px;">
+                        <li>
+                            Faça um algoritmo que leia os valores A, B, C e imprima na tela se a soma de A + B é menor que C.
+                        </li>
+                        <li>
+                            Faça um algoritmo que leia o nome, o sexo("F" ou "M") e o estado civil de uma pessoa.
+                            </br> Caso sexo seja “F” e estado civil seja “CASADA”, solicitar o tempo de casada (anos).
+                            </br> Ao final do algoritmo imprima os dados lidos.
+                        </li>
+                        <li>
+
+                            </br>Faça um algoritmo para receber um número qualquer e informar na tela se é par ou ímpar.
+                        </li>
+                        <li>
+
+                            </br> Faça um algoritmo que leia dois valores inteiros A e B, e se os valores forem iguais deverá se somar os dois, caso contrário multiplique A por B. Ao final de qualquer um dos cálculos deve-se atribuir o resultado para uma variável
+                            C e mostrar seu conteúdo na tela.
+                        </li>
+                        <li>
+
+                            </br> Encontrar o dobro de um número caso ele seja positivo e o seu triplo caso seja negativo, imprimindo o resultado.
+                        </li>
+                        <li>
+
+                            </br> Escreva um algoritmo que lê dois valores booleanos (lógicos) e então determina se ambos são VERDADEIROS ou FALSOS.Obs:Faça uma pergunta por exemplo:Você é maior de idade?Responda SIM ou NAO. Atribua o valor conforme o caso
+                            e no final mostre a resposta: A pessoa é maior de idade, se a resposta for SIM A pessoa é menor de idade, se a resposta for NAO
+                        </li>
+                        <li>
+
+                            </br>Faça um algoritmo que leia uma variável e some 5 caso seja par ou some 8 caso seja ímpar, imprimir o resultado desta operação.
+                        </li>
+                        <li>
+
+                            </br> Escreva um algoritmo que leia três valores inteiros e diferentes e mostre-os em ordem decrescente.
+                        </li>
+                        <li>
+
+                            </br> Escreva um algoritmo que leia três valores inteiros e diferentes e mostre-os em ordem crescente.
+                        </li>
+                        <li>
+
+                            </br> Tendo como dados de entrada a altura e o sexo de uma pessoa, construa um algoritmo que calcule seu peso ideal, utilizando as seguintes fórmulas:
+                            <ul>
+                                <li>
+                                    para homens: (72.7 * h) – 58;
+                                </li>
+                                <li>
+                                    para mulheres: (62.1 * h) – 44.7.
+                                </li>
+                            </ul>
+                            Ao final do mesmo, informe se a pessoa tem peso ideal ou não.
+                        </li>
+                        <li>
+
+                            </br> O IMC – Indice de Massa Corporal é um critério da Organização Mundial de Saúde para dar umaindicação sobre a condição de peso de uma pessoa adulta. A fórmula é IMC = peso / ( altura )2 Elabore um algoritmo que leia o peso e
+                            a altura de um adulto e mostre sua condição de acordo com a tabela abaixo. IMC em adultos Condição Abaixo de 18,5 Abaixo do peso Entre 18,5 e 25 Peso normal Entre 25 e 30 Acima do peso Acima de 30 obeso
+                        </li>
+
+                        <li>
+                            </br> Faca um algoritmo que leia o nome e as tres notas de um aluno e ao final, escreva o seu nome, sua media e se ele foi aprovado. Media de aprovacao igual a 8.
+
+                        </li>
+                        <li>
+                            </br> Faca um algoritmo que leia tres numeros digitados, e os coloque em ordem crescente.
+
+                        </li>
+                        <li>
+                            </br> Faca um algoritmo que leia o menor numero de tres digitados.
+
+                        </li>
+                        <li>
+                            </br> Faca um algoritmo que leia o maior numero de tres digitados.
+
+                        </li>
+                        <li>
+                            </br> Faca um algoritmo que leia o numero intermediario de tres digitados.
+
+                        </li>
+                        <li>
+                            </br> Faca um algoritmo que leia o maior, o menor e o intermediario de tres numeros digitados.
+
+                        </li>
+                        <li>
+                            </br> Faca um algoritmo que leia um numero e apos imprima o numero lido, o seu antecessor e o seu sucessor na tela;
+                        </li>
+
+                        <li>
+                            </br> Conta telefônica - Uma conta telefônica é composta dos seguintes custos: assinatura: R$ 17,90 impulsos: R$ 0,04 por impulso que exceder a 90 interurbanos chamadas p/ celular: R$0,20 por impulso Monte a fórmula para calcular
+                            o valor da conta para 254 impulsos, R$34,29 de interurbanos e 23 chamadas para celular. Elabore um programa que mostra os custos, calcula e mostra o valor total.
+                        </li>
+
+                        <li>
+                            </br> Uma pessoa com pouco tempo disponível lê um livro por 5 minutos a cada dia, 6 dias por semana. Monte a fórmula e escreva um programa que calcula e mostra na tela quanto tempo, em horas, a pessoa terá dedicado ao livro ao final
+                            de um ano.
+                        </li>
+
+                        <li>
+                            </br> Vou e volto diariamente a pé para o trabalho, que dista aproximadamente 800 m de minha casa. Supondo que trabalho 5 dias por semana, 45 semanas por ano, "bole" a operação matemática que deve ser efetuada para calcular quantos
+                            quilômetros, aproximadamente, terei andado ao final de um ano. Elabore um programa que faça as contas e mostre o resultado
+                        </li>
+
+                        <li>
+                            </br> Faça um algoritmo para verificar se um aluno esta APROVADO ou REPROVADO, lendo 3 notas e calculando sua media que deve ser maior ou igual a 7.
+                        </li>
+
+                        <li>
+                            </br> Faça um algoritmo para verificar se uma pessoa ja pode tirar carteira de motorista considerando a idade >= 18 anos e mostre na tela uma mensagem: JA POSSO TIRAR A CARTEIRA DE MOTORISTA, se for o caso AINDA NÃO POSSO TIRAR A
+                            CARTEIRA DE MOTORISTA, se for o caso
+
+                        </li>
+                        <li>
+                            </br> Faça um algoritmo para verificar se uma pessoa ja atingiu a maioridade. algoritmo deve receber como entrada apenas o ano de nascimento e considerar o ano atual para calculo e 18 anos para maioridade.
+                        </li>
+
+                        <li>
+                            </br> Faça um algoritmo para verificar se um valor e PAR ou IMPAR;
+                        </li>
+
+                        <li>
+                            </br> Faça um algoritmo para calcular o Indice de Massa Corporal de uma pessoa, considerando a seguinte formula: IMC = PESO / (ALTURA AO QUADRADO) Se a pessoa tiver IMC MENOR OU IGUAL A 18.5, mostre a mensagem abaixo: "Parabens!
+                            Voce esta no seu peso ideal" Senão mostre a mensagem abaixo: "Voce nao esta na faixa de peso ideal" </li>
+                        <li>
+                            </br> Um estudante muito metódico estava matriculado em 6 disciplinas, e dispunha de 1 hora e 40 minutos para estudar. Sua intenção era dividir o tempo disponível igualmente para as 6 disciplinas, e descansar livremente o tempo restante.
+                            Faça um programa que calcule o tempo que ele deve dedicar para cada disciplina e o tempo livre.
+                        </li>
+
+                        <li>
+                            </br> Determine a velocidade de um automovel que percorreu uma distancia S em km, * em um intervalo de tempo T,informando em horas.
+                        </li>
+                        <li>
+                            </br> Faça um algoritmo que leia dois numeros inteiros (n1 e n2) * calcule a divisão de n1/n2, e informe o resto desta divisão. * Não pode ser usado funções pre-programadas(mod em VisualG e % em JAVA).
+                        </li>
+                        <li>
+                            </br> Faça um algoritmo para ler uma temperatura em graus Celsius, e transforme * para graus Farenheidt e Kelvin. * OBS: * C = 5 (F - 32)/9; * K = C + 273;
+                        </li>
+                        <li>
+                            </br> Desenvolva um algoritmo para identificar se um determinado numero inteiro, * é positivo,negativo,ou nulo.
+                        </li>
+                        <li>
+                            </br> Calcule o salario do mes de um funcionario. * O funcionario ganha 3000, mais 500 reais por carro vendido, * mais 5% do valor total de cada carro vendido. * Quanto o funcionario ganha ao fim do mes?
+                        </li>
+                        <li>
+                            </br> Fornecido os coeficientes de uma equação do 2 grau,(a,b,c - ler do teclado) * faça um algoritmo que calcule as raizes se houverem * Validar se o numero e negativo, pois não existe raiz de numero negativo!
+                        </li>
+                        <li>
+                            </br> Suponha que voce foi ao supermercado e comprou:
+                            </br>n Kg de café á x reais;
+                            </br>k litros de leite á y reais;
+                            </br>m Kg de farinha a z reais;
+                            </br>Faça um algoritmo que imprima o ticket de compra.
+                            </br>Primeiro produto: R$ 0,00
+                            </br>Segundo produto: R$ 0,00
+                        </li>
+                        <li>
+                            </br> Faça um algoritmo que receba do usuario o raio em cm e calcule o volume de uma esfera.
+                            <br>Formula:
+                            <br> VOLUME = 4 * PI * R ao cubo.
+                            </br>
+                        </li>
+                        <li>
+                            Escrever um programa que lê dois números e efetua uma divisão,
+                            </br>mas somente se o divisor for diferente de zero; quando isto ocorrer, é mostrada uma mensagem de erro apropriada.
+                        </li>
+                        <li>
+                            </br>
+                            Em um triângulo, cada lado é menor do que a soma dos outros dois.
+                            </br>Escreva um programa que lê três valores e informa se estes não podem constituir um triângulo ou,
+                            </br>caso contrário, se o triângulo formado é equilátero (três lados iguais), isósceles (dois lados iguais)
+                            </br>ou escaleno (lados diferentes).
+
+                        </li>
+                        <li>
+                            Um salário tem os seguintes componentes: - valor nominal - adicional devido a horas extras - valor descontado
+                            </br>para o INSS (10% do valor a receber, limitado a 150 reais). O valor adicional devido às horas extras é
+                            </br>calculado dividindo-se o valor nominal
+                            </br>por 176 (22 dias de 8 horas), multiplicando-se pela quantidade de horas e ainda com um acréscimo de 50%.
+                            </br>Escrever um programa que lê os valores necessários, calcula e mostra na tela os componentes do salário e
+                            </br> o salário líquido
+                            </br>resultante para o empregado.
+                            </br>Não é preciso prever arredondamentos, mas os valores devem ser mostrados na tela com duas casas decimais.
+                            </br>Exemplos: para um salário de R$ 1.000,00, com 30 horas extras, teremos R$ 255,68 de horas extras
+                            </br>[(1.000/176)*30*1,5], R$ 125,57 de INSS e um salário líquido de R$ 1.130,11.
+                            </br>Para um salário de R$ 2.000,00 e 20 horas extras, seriam R$ 340,91 de horas extras,
+                            </br>R$ 150,00 de INSS (e não os 10%), com um salário líquido de R$ 2.190,91.
+                        </li>
+                        <li>
+                            Construa um programa que lê um número de 1 a 7 e informa o dia da semana correspondente,
+                            </br>sendo domingo o dia de número 1. Se o número não corresponder a um dia da semana, é mostrada uma mensagem de erro.
+                        </li>
+                        <li>Crie um algoritmo que leia um número inteiro do usuário e verifique se o número está entre 100 e 200. Se o número não estiver nesse intervalo, deve ser exibida a mensagem “O número está fora do intervalo”. Caso contrário mostre
+                            a mensagem “O número está dentro do intervalo”.
+                        </li>
+                        <li>Crie um algoritmo que leia um número inteiro do usuário e informe se esse número é ou não é múltiplo de 3.
+                        </li>
+                        <li>Crie um algoritmo que leia um número inteiro do usuário e informe se esse número é ou não é múltiplo de 4.
+                        </li>
+                        <li>Crie um algoritmo que peça ao usuário para adivinhar para qual time você torce. Caso ele acerte, escreva a mensagem: “Você acertou! Meu eu torço para esse time”. Caso contrário, escreva a mensagem “Você errou”.
+                        </li>
+                        <li>Crie um algoritmo que leia um número inteiro do usuário e informe se o valor lido é maior do que 10. Caso seja, informe o valor da subtração de 10 pelo número lido. Caso contrário escreva a mensagem dizendo que o número não é maior
+                            do que 10.
+                        </li>
+                        <li>Crie um algoritmo que leia um número inteiro do usuário e informe se esse número é ou não é múltiplo de 5.
+                        </li>
+                        <li>Crie um algoritmo que peça ao usuário para responder a pergunta: “Qual país colonizou o Brasil?” Caso ele responda Portugal, escreva a mensagem: “Você acertou! Parabéns!”. Caso contrário, escreva a mensagem “Você errou. Que pena”.
+                        </li>
+                        <li>Crie um algoritmo que peça ao usuário para adivinhar a última letra do seu nome. Caso ele digite a letra correta, escreva a mensagem: “Você acertou! Meu nome termina comessa letra”. Caso contrário, escreva a mensagem “Você errou”.
+                        </li>
+                        <li>Crie um algoritmo que peça ao usuário para adivinhar a primeira letra do seu nome. Caso ele digite a letra correta, escreva a mensagem: “Você acertou! Meu nome começa com essa letra”. Caso contrário, escreva a mensagem “Você errou”.
+                        </li>
+                        <li>Crie um algoritmo que leia um número inteiro do usuário e informe se o valor lido é menor do que 50. Caso seja, informe a mensagem “O número é menor do que 50”. Caso contrário escreva a mensagem dizendo que o número não é menor
+                            do que 50.
+                        </li>
+                        <li>Crie um algoritmo que peça ao usuário para responder a pergunta: “Quantos títulos mundiais o Brasil ganhou no futebol?” Caso ele digite o valor 5, escreva a mensagem: “Você acertou! Parabéns!”. Caso contrário, escreva a mensagem
+                            “Você errou. Que pena!”.
+                        </li>
+                        <li>Crie um algoritmo que leia um número inteiro do usuário e verifique se o número está entre 1 e 100. Se o número não estiver nesse intervalo, deve ser exibida a mensagem “O número está fora do intervalo”. Caso contrário mostre a
+                            mensagem “O número está dentro do intervalo”
+                        </li>
+                        <h1>EXERCICIOS DE REPETICAO</h1>
+                        <li>
+                            Os números perfeitos são iguais à soma de seus divisores:
+                            </br>6 pode ser dividido por 1, 2 e 3 e, quando você soma esses números, o resultado é 6.
+                            </br>Faça um algoritmo que conte quantos numeros perfeitos existem entre 1 e 5000;
+                        </li>
+                        <li>
+                            Crie um algoritmo para o usuário tentar adivinhar qual é o seu nome. Ele terá até 10 chances para acertar.
+                        </li>
+                        <li>
+                            Leia 7 valores referente ao valor gasto com o almoço de cada dia durante uma semana. Em seguida, informe o total em dinheiro gasto na semana.
+                        </li>
+                        <li>
+                            Leia o nome de 20 alunos em uma sala e exiba quantas pessoas se chamam ou Maria ou João.
+                        </li>
+                        <li>
+                            Leia a nota de 10 alunos e exiba quantos alunos tem nota acima de 7.
+                        </li>
+                        <li>
+                            Leia a nota de 20 alunos e exiba quantos alunos tem nota abaixo de 5.
+                        </li>
+                        <li>
+                            Leia a quantidade de votos de 5 candidatos a prefeitos e informe quantos tiveram mais do que 3000 votos.
+                        </li>
+                        <li>
+                            Leia a quantidade de votos de 5 vereadores eleitos e informe quantos vereadores tiveram mais do que 200 votos.
+                        </li>
+                        <li>
+                            Leia a nota de 10 alunos e exiba quantos alunos tem nota entre 5 e 7.
+                        </li>
+                        <li>
+                            Leia o nome de 10 alunos em uma sala de aula e exiba quantas pessoas se chamam João.
+                        </li>
+                        <li>
+                            Leia 30 valores referente ao valor gasto com transporte durante cada dia de um mês. Em seguida, informe o total em dinheiro gasto no mês.
+                        </li>
+                        <li>
+                            Leia o nome de 20 alunos em uma sala de aula e exiba quantas pessoas se chamam Maria.
+                        </li>
+                        <li>
+                            Leia o preço de 10 livros em uma livraria e informe quantos livros custam mais do que R$ 50,00.
+                        </li>
+                        <li>
+                            Implementar uma progressao aritmetica a partir de um numero inicial x com base numa razao y (y é uma constante)
+                            </br>Ex: 1 3 5 7 9 11 13 15 17
+                            </br>No exemplo acima a razao é igual a 2. e o numero inicial e 1;
+                            </br>Imprimir os 10 primeiros numeros da progressão.
+                        </li>
+                        <li>
+                            Escreva um algoritmo que leia os numeros de 1 ate 500.
+                            </br>Neste intervalo armazene os seguintes dados sobre os numeros:
+                            <ol>
+                                <li>quantidade de numeros pares</li>
+                                <li>quantidade de numeros impares</li>
+                                <li>quantidade de numeros divisiveis por 3</li>
+                                <li>soma dos numeros pares</li>
+                                <li>fatorial dos numeros impares</li>
+                                <li>quantidade de numeros perfeitos</li>
+                                <li>quantidade de numeros imperfeitos</li>
+                            </ol>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <div include-html-rodape="rodape.html"></div>
+</body>
+
+<script src="js/script.js"></script>
+<script src="js/atividades.js"></script>
+
+<script defer>
+    includeHTML("include-html-menu");
+    includeHTML("include-html-rodape");
+</script>
+
+</html>

@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <title>Pare Azul Web</title>
+    <script src="./index_files/js"></script>
+
+    <link type="image/png" rel="icon" href="./images/favicon.png">
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- BOXICONS -->
+    <!-- <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script> -->
+
+    <!-- bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <style>
+        .acao-comprar {
+            /* background-color: tomato; */
+            /* background-color: tomato; */
+            height: 126.9px;
+        }
+        
+        .acao-comprar img {
+            width: 219px;
+            height: 126.9px;
+            transition: all .4s ease-in;
+        }
+        
+        .acao-comprar img:hover {
+            cursor: pointer;
+            /* translate: 0 10px 5px; */
+            transform: rotate(-3deg);
+        }
+        
+        .texto-comprar {
+            text-transform: uppercase;
+            /* color: rgba(55, 55, 221, 0.332); */
+        }
+        
+        .dollar-symbol {
+            background-color: tomato;
+            opacity: 0.3;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .tipo-veiculo {
+            display: flex;
+            color: black;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="root" class="full-screen">
+        <div class="ant-layout" style="min-height: 100vh;">
+            <div class="painel-header ant-layout-header">
+                <div class="ant-row-flex ant-row-flex-space-between">
+                    <div class="" style="display: flex;">
+                        <div><img src="./index_files/59cec712ec9ca689819c50d9392f3570.png" alt="Logomarca do Pare Azul" style="height: 28.7px;"></div>
+                        <div class="ant-dropdown-trigger" style="margin-left: 8px; color: white; cursor: pointer;">Rio do Sul<i class="anticon anticon-down" style="margin-left: 5px;"><svg viewBox="64 64 896 896" class="" data-icon="down" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"></path></svg></i></div>
+                    </div>
+                    <div class="" style="display: flex;">
+                        <div class="ant-dropdown-trigger" style="cursor: pointer;"><img src="./index_files/cdbfe0ad1b528f3fec1535d7ceccdbac.png" alt="Imagem do usuário" style="height: 28.69px;"><span class="painel-texto-simples" style="margin-left: 10px;">
+                          JOAO DA SILVA<i class="anticon anticon-down" style="margin-left: 5px;"><svg viewBox="64 64 896 896" class="" data-icon="down" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"></path></svg></i></span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="layout-background"></div>
+            <div class="background-default background-RSL ant-layout-content" style="padding-top: 25px;">
+                <div class="ant-row-flex ant-row-flex-center painel-content">
+                    <div class="ant-col-xs-24 ant-col-sm-22 ant-col-md-22 ant-col-lg-10 ant-col-xl-7">
+                        <div class="ant-row">
+                            <div class="">
+                                <div class="ant-row">
+                                    <div class="">
+                                        <div class="ant-card painel-card ant-card-bordered">
+                                            <div class="ant-card-head">
+                                                <div class="ant-card-head-wrapper">
+                                                    <div class="ant-card-head-title">Créditos</div>
+                                                </div>
+                                            </div>
+                                            <div class="ant-card-body">
+                                                <div class="ant-row card-creditos">
+                                                    <div class="ant-col-12 credito-text">
+                                                        <h1 class="painel-texto-simples">Saldo</h1>
+                                                        <h1 style="padding-top: 10px; font-weight: bold; padding-bottom: 10px;">R$ 25,00</h1>
+                                                    </div>
+                                                    <div class="ant-col-12" style="height: 126.9px;">
+                                                        <button type="button" class="btn-saldo"></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="">
+                                        <div class="ant-card painel-card painel-card-cartoes ant-card-bordered">
+                                            <div class="ant-card-head">
+                                                <div class="ant-card-head-wrapper">
+                                                    <div class="ant-card-head-title">Cartões de crédito</div>
+                                                </div>
+                                            </div>
+                                            <div class="ant-card-body">
+                                                <div class="ant-row-flex ant-row-flex-center" style="padding: 0px;">
+                                                    <div class="ant-col-24">
+                                                        <div class="ant-row-flex ant-row-flex-space-between card-apresentacao" style="height: 71px;">
+                                                            <div class=""><img alt="cartao" src="./index_files/8d76f470350be6230fb4d7bafad79fae.png" style="height: 30px; margin-top: 7px; margin-left: 10px;"></div>
+                                                            <div class="">
+                                                                <h3 class="card-apresentacao-texto" style="vertical-align: middle; padding-top: 13px;">*** **** **** 01927</h3>
+                                                            </div>
+                                                            <div class=""><button type="button" class="btn-img btn-img-deletar"></button></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="" style="padding-top: 20px;">
+                                                        <!-- MODAL NOVO CARTAO -->
+                                                        <button type="button" class="btn-criar" data-toggle="modal" data-target="#novo-cartao">
+                                                            Novo cartão
+                                                        </button>
+                                                        <!-- Modal -->
+                                                        <div class="modal fade" id="novo-cartao" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                        <h5 class="modal-title" id="novo-cartao">Novo Cartão</h5>
+                                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                            <span aria-hidden="true">&times;</span>
+                                                                        </button>
+                                                                    </div>
+                                                                    <div class="modal-body">
+                                                                        <form>
+                                                                            <div class="form-group">
+                                                                                <input type="text" class="form-control" id="numero-cartao" placeholder="Número Cartão">
+                                                                            </div>
+
+                                                                            <div class="form-group">
+                                                                                <input type="text" class="form-control" id="titular-cartao" placeholder="Titular">
+                                                                            </div>
+
+                                                                            <div class="form-group">
+                                                                                <input type="text" class="form-control" id="data-expiracao-cartao" placeholder="Data Expiração">
+                                                                            </div>
+
+                                                                            <div class="form-group">
+                                                                                <input type="text" class="form-control" id="cvv-cartao" placeholder="CVV">
+                                                                            </div>
+                                                                        </form>
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                                                                        <button type="button" class="btn btn-primary">Confirmar</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ant-col-xs-24 ant-col-sm-22 ant-col-md-22 ant-col-lg-12 ant-col-xl-7">
+                        <div class="ant-card painel-card painel-card-veiculos ant-card-bordered">
+                            <div class="ant-card-head">
+                                <div class="ant-card-head-wrapper">
+                                    <div class="ant-card-head-title">Veículos</div>
+                                </div>
+                            </div>
+                            <div class="ant-card-body">
+                                <div class="ant-row-flex ant-row-flex-center" style="padding: 0px;">
+                                    <div class="ant-col-24">
+                                        <div class="ant-row-flex ant-row-flex-space-between card-apresentacao">
+                                            <div class="ant-col-14">
+                                                <div class="ant-row">
+                                                    <div class="">
+                                                        <h1 class="card-apresentacao-texto">MBY5J56</h1>
+                                                        <div class="painel-texto-simples" style="margin-top: 3px; word-break: break-all;"> CELTA 3 PORTAS SUPER 2002</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="ant-col-6" style="padding-block-start: 10px; margin-left: -5%;">
+                                                <!-- MODAL NOVO ESTACIONAMENTO-->
+                                                <button type="button" class="btn-estacionar" data-toggle="modal" data-target="#novo-estacionamento">
+                                                    Estacionar
+                                                </button>
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="novo-estacionamento" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="novo-estacionamento">Estacionar</h5>
+                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <form>
+                                                                    <div class="form-group">
+                                                                        <label for="">Escolha o Carro</label>
+                                                                        <br>
+                                                                        <select class="form-control" id="tipo-veiculo">
+                                                                            <option value="1">MBY5J56 - CELTA</option>
+                                                                            <option value="2">MFI7814 - NXR BROS</option>
+                                                                        </select>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <input type="text" class="form-control" id="placa-estacionamento" placeholder="PLACA">
+                                                                    </div>
+
+                                                                    <div class="form-group">
+                                                                        <input type="text" class="form-control" id="endereco-estacionamento" placeholder="ENDEREÇO">
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label for="">Selecione a regra:</label>
+                                                                        <br>
+                                                                        <input type="radio" checked id="regra-estacionamento" class="ant-radio ant-radio-checked">
+                                                                        <span>Zona Azul</span>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label for="">Selecione o tempo:</label>
+                                                                        <br>
+                                                                        <input type="radio" checked id="tempo-30-min-estacionamento" name="tempo-estacionamento" class="ant-radio ant-radio-checked">
+                                                                        <span>30 minutos: R$ 1,00</span>
+                                                                        <br>
+                                                                        <input type="radio" id="tempo-60-min-estacionamento" name="tempo-estacionamento" class="ant-radio ant-radio-checked">
+                                                                        <span>1 hora: R$ 2,00</span>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                                                                <button type="button" class="btn btn-primary">Confirmar</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="ant-col-4" style="margin-right: -5%;">
+                                                <div class="ant-row-flex ant-row-flex-center">
+                                                    <div class=""><button type="button" class="btn-img btn-img-deletar"></button></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ant-row-flex ant-row-flex-space-between card-apresentacao">
+                                            <div class="ant-col-14">
+                                                <div class="ant-row">
+                                                    <div class="">
+                                                        <h1 class="card-apresentacao-texto">MFI7814</h1>
+                                                        <div class="painel-texto-simples" style="margin-top: 3px; word-break: break-all;"> NXR BORS 150 2008</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="ant-col-6" style="padding-block-start: 10px; margin-left: -5%;">
+                                                <!-- <button type="button" class="btn-estacionar">Estacionar</button> -->
+                                                <button type="button" class="btn-estacionar" data-toggle="modal" data-target="#novo-estacionamento">
+                                                    Estacionar
+                                                </button>
+                                            </div>
+                                            <div class="ant-col-4" style="margin-right: -5%;">
+                                                <div class="ant-row-flex ant-row-flex-center">
+                                                    <div class=""><button type="button" class="btn-img btn-img-deletar"></button></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="" style="padding-top: 20px;">
+                                        <!-- MODAL NOVO VEICULO -->
+                                        <button type="button" class="btn-criar" data-toggle="modal" data-target="#novo-veiculo">
+                                            Novo veículo
+                                        </button>
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="novo-veiculo" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="novo-veiculo">Novo Veículo</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <form>
+                                                            <div class="form-group">
+                                                                <label for="">Escolha o Tipo</label>
+                                                                <br>
+                                                                <select class="form-control" id="tipo-veiculo">
+                                                                    <option value="1">MOTO</option>
+                                                                    <option value="2">CARRO</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <input type="text" class="form-control" id="placa-veiculo" placeholder="PLACA">
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <input type="text" class="form-control" id="ano-veiculo" placeholder="ANO">
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <input type="text" class="form-control" id="fabricante-veiculo" placeholder="FABRICANTE">
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <input type="text" class="form-control" id="modelo-veiculo" placeholder="MODELO">
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                                                        <button type="button" class="btn btn-primary">Confirmar</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ant-col-xs-24 ant-col-sm-22 ant-col-md-22 ant-col-lg-22 ant-col-xl-9">
+                        <div class="ant-card painel-card painel-card-atividades ant-card-bordered ant-card-wider-padding ant-card-padding-transition">
+                            <div class="ant-card-head">
+                                <div class="ant-card-head-wrapper">
+                                    <div class="ant-card-head-title">Atividades</div>
+                                </div>
+                            </div>
+                            <div class="ant-card-body">
+                                <div class="ant-tabs ant-tabs-top painel-card-atividades-tab ant-tabs-line">
+                                    <div role="tablist" class="ant-tabs-bar" tabindex="0">
+                                        <div class="ant-tabs-nav-container"><span unselectable="unselectable" class="ant-tabs-tab-prev ant-tabs-tab-btn-disabled"><span class="ant-tabs-tab-prev-icon"><i class="anticon anticon-left ant-tabs-tab-prev-icon-target"><svg viewBox="64 64 896 896" class="" data-icon="left" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M724 218.3V141c0-6.7-7.7-10.4-12.9-6.3L260.3 486.8a31.86 31.86 0 0 0 0 50.3l450.8 352.1c5.3 4.1 12.9.4 12.9-6.3v-77.3c0-4.9-2.3-9.6-6.1-12.6l-360-281 360-281.1c3.8-3 6.1-7.7 6.1-12.6z"></path></svg></i></span></span>
+                                            <span unselectable="unselectable" class="ant-tabs-tab-next ant-tabs-tab-btn-disabled"><span class="ant-tabs-tab-next-icon"><i class="anticon anticon-right ant-tabs-tab-next-icon-target"><svg viewBox="64 64 896 896" class="" data-icon="right" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M765.7 486.8L314.9 134.7A7.97 7.97 0 0 0 302 141v77.3c0 4.9 2.3 9.6 6.1 12.6l360 281.1-360 281.1c-3.9 3-6.1 7.7-6.1 12.6V883c0 6.7 7.7 10.4 12.9 6.3l450.8-352.1a31.96 31.96 0 0 0 0-50.4z"></path></svg></i></span></span>
+                                            <div class="ant-tabs-nav-wrap">
+                                                <div class="ant-tabs-nav-scroll">
+                                                    <div class="ant-tabs-nav ant-tabs-nav-animated">
+                                                        <div>
+                                                            <div role="tab" aria-disabled="false" aria-selected="true" class="ant-tabs-tab-active ant-tabs-tab">Hoje</div>
+                                                            <div role="tab" aria-disabled="false" aria-selected="false" class=" ant-tabs-tab">7 Dias</div>
+                                                            <div role="tab" aria-disabled="false" aria-selected="false" class=" ant-tabs-tab">15 Dias</div>
+                                                            <div role="tab" aria-disabled="false" aria-selected="false" class=" ant-tabs-tab">30 Dias</div>
+                                                        </div>
+                                                        <div class="ant-tabs-ink-bar ant-tabs-ink-bar-animated" style="display: block; transform: translate3d(0px, 0px, 0px); width: 84px;"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ant-tabs-content ant-tabs-content-animated" style="margin-left: 0%;">
+                                        <div role="tabpanel" aria-hidden="false" class="ant-tabs-tabpane ant-tabs-tabpane-active">
+                                            <ul class="ant-timeline timeline-atividade">
+                                                <li id="compra" class="ant-timeline-item">
+                                                    <div class="ant-timeline-item-tail"></div>
+                                                    <div class="ant-timeline-item-head ant-timeline-item-head-blue"></div>
+                                                    <div class="ant-timeline-item-content">
+                                                        <div class="ant-row timeline-atividade-conteudo">
+                                                            <div class="ant-col-xs-5 ant-col-sm-4 ant-col-md-4 ant-col-lg-3 ant-col-xl-4" style="text-align: center; margin-right: 3px; margin-top: 7px;">
+                                                                <h2 class="timeline-atividade-data">06</h2>
+                                                                <h3 class="painel-texto-simples" style="margin-bottom: 0px;">SET</h3>
+                                                                <h4 class="painel-texto-foco" style="margin-bottom: 0px;">19:24</h4>
+                                                            </div>
+                                                            <div class="ant-col-1" style="border-left: 2px solid white; height: 78px;"></div>
+                                                            <div class="ant-col-xs-17 ant-col-sm-18 ant-col-md-18 ant-col-lg-19 ant-col-xl-18">
+                                                                <h3 class="painel-texto-foco">Compra de R$ 25,00</h3>
+                                                                <h4 class="painel-texto-simples">
+                                                                    <div>
+                                                                        <h3 class="painel-texto-simples"><img src="./index_files/57e9eb21f443ee2590688a96313b490b.png" alt="compra cartão" style="height: 17px; margin-right: 6px;">Cartão de crédito</h3>
+                                                                    </div>
+                                                                </h4>
+                                                                <h4 class="painel-texto-simples">Cód: Q0VVRR</h4>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div role="tabpanel" aria-hidden="true" class="ant-tabs-tabpane ant-tabs-tabpane-inactive"></div>
+                                        <div role="tabpanel" aria-hidden="true" class="ant-tabs-tabpane ant-tabs-tabpane-inactive"></div>
+                                        <div role="tabpanel" aria-hidden="true" class="ant-tabs-tabpane ant-tabs-tabpane-inactive"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="background-color: rgb(255, 255, 255); border: 1px solid rgb(204, 204, 204); box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 3px; position: absolute; transition: visibility 0s linear 0.3s, opacity 0.3s linear 0s; opacity: 0; visibility: hidden; z-index: 2000000000; left: 0px; top: -10000px;">
+        <div style="width: 100%; height: 100%; position: fixed; top: 0px; left: 0px; z-index: 2000000000; background-color: rgb(255, 255, 255); opacity: 0.05;"></div>
+        <div class="g-recaptcha-bubble-arrow" style="border: 11px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -11px; z-index: 2000000000;"></div>
+        <div class="g-recaptcha-bubble-arrow" style="border: 10px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -10px; z-index: 2000000000;"></div>
+        <div style="z-index: 2000000000; position: relative; width: 0px; height: 0px;">
+
+            <iframe title="recaptcha challenge expires in two minutes" src="./index_files/bframe.html" name="c-6u8icg9acz46" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"
+                style="width: 0px; height: 0px;">
+              </iframe>
+        </div>
+    </div>
+    <div>
+        <div>
+            <div class="ant-modal-mask ant-modal-mask-hidden"></div>
+            <div tabindex="-1" class="ant-modal-wrap ant-modal-centered" role="dialog" aria-labelledby="rcDialogTitle0" style="display: none;">
+                <div role="document" class="ant-modal modal-compra-creditos" style="width: 520px; transform-origin: 526.303px 8.54547px;">
+                    <div tabindex="0" style="width: 0px; height: 0px; overflow: hidden;">sentinelStart</div>
+                    <div class="ant-modal-content"><button aria-label="Close" class="ant-modal-close"><span class="ant-modal-close-x"><i class="anticon anticon-close ant-modal-close-icon"><svg viewBox="64 64 896 896" class="" data-icon="close" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M563.8 512l262.5-312.9c4.4-5.2.7-13.1-6.1-13.1h-79.8c-4.7 0-9.2 2.1-12.3 5.7L511.6 449.8 295.1 191.7c-3-3.6-7.5-5.7-12.3-5.7H203c-6.8 0-10.5 7.9-6.1 13.1L459.4 512 196.9 824.9A7.95 7.95 0 0 0 203 838h79.8c4.7 0 9.2-2.1 12.3-5.7l216.5-258.1 216.5 258.1c3 3.6 7.5 5.7 12.3 5.7h79.8c6.8 0 10.5-7.9 6.1-13.1L563.8 512z"></path></svg></i></span></button>
+                        <div class="ant-modal-header">
+                            <div class="ant-modal-title" id="rcDialogTitle0">Novo veículo</div>
+                        </div>
+                        <div class="ant-modal-body">
+                            <form class="ant-form ant-form-horizontal">
+                                <div class="ant-row-flex ant-row-flex-space-between">
+                                    <div class="ant-row ant-form-item" style="width: 100%; text-align: center;">
+                                        <div class="ant-form-item-control-wrapper">
+                                            <div class="ant-form-item-control"><span class="ant-form-item-children"><h3 class="painel-texto-simples">Escolha o tipo do veículo</h3><div class="ant-radio-group ant-radio-group-outline"><label class="radio-veiculo ant-radio-button-wrapper ant-radio-button-wrapper-checked"><span class="ant-radio-button ant-radio-button-checked"><input type="radio" class="ant-radio-button-input" value="1" checked=""><span class="ant-radio-button-inner"></span></span><span><img alt="Icon Carro" src="./index_files/5d9e7413beae62d50674a794abe91641.png" style="height: 18px;"><span class="painel-texto-simples">CARRO</span></span>
+                                                </label><label class="radio-veiculo ant-radio-button-wrapper"><span class="ant-radio-button"><input type="radio" class="ant-radio-button-input" value="2"><span class="ant-radio-button-inner"></span></span><span><img alt="Icon Moto" src="./index_files/f81215b977b0233473b5ad511c028d8a.png" style="height: 18px;"><span class="painel-texto-simples">MOTO</span></span></label></div>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ant-col-11">
+                                    <div class="ant-row ant-form-item">
+                                        <div class="ant-form-item-control-wrapper">
+                                            <div class="ant-form-item-control"><span class="ant-form-item-children"><input class="ant-input modal-veiculo-input" maxlength="7" placeholder="Placa" type="text" id="veiculo-placa" data-__meta="[object Object]" data-__field="[object Object]" value=""></span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ant-col-11">
+                                    <div class="ant-row ant-form-item">
+                                        <div class="ant-form-item-control-wrapper">
+                                            <div class="ant-form-item-control"><span class="ant-form-item-children"><div class="ant-input-number modal-veiculo-input" style="width: 100%;"><div class="ant-input-number-handler-wrap"><span unselectable="unselectable" role="button" aria-label="Increase Value" aria-disabled="false" class="ant-input-number-handler ant-input-number-handler-up "><i class="anticon anticon-up ant-input-number-handler-up-inner"><svg viewBox="64 64 896 896" class="" data-icon="up" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M890.5 755.3L537.9 269.2c-12.8-17.6-39-17.6-51.7 0L133.5 755.3A8 8 0 0 0 140 768h75c5.1 0 9.9-2.5 12.9-6.6L512 369.8l284.1 391.6c3 4.1 7.8 6.6 12.9 6.6h75c6.5 0 10.3-7.4 6.5-12.7z"></path></svg></i></span>
+                                                <span unselectable="unselectable" role="button" aria-label="Decrease Value" aria-disabled="false" class="ant-input-number-handler ant-input-number-handler-down "><i class="anticon anticon-down ant-input-number-handler-down-inner"><svg viewBox="64 64 896 896" class="" data-icon="down" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"></path></svg></i></span>
+                                            </div>
+                                            <div class="ant-input-number-input-wrap" role="spinbutton" aria-valuemin="-9007199254740991"><input placeholder="Ano" class="ant-input-number-input" autocomplete="off" maxlength="4" min="-9007199254740991" step="1" id="veiculo-ano" data-__meta="[object Object]" data-__field="[object Object]" value=""></div>
+                                        </div>
+                                        </span>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="ant-row ant-form-item">
+        <div class="ant-form-item-control-wrapper">
+            <div class="ant-form-item-control"><span class="ant-form-item-children"><div id="veiculo-fabricante" class="modal-veiculo-input ant-select-show-search ant-select-auto-complete ant-select ant-select-combobox ant-select-enabled"><div class="ant-select-selection
+            ant-select-selection--single" role="combobox" aria-autocomplete="list" aria-haspopup="true" aria-expanded="false" data-__meta="[object Object]" data-__field="[object Object]"><div class="ant-select-selection__rendered"><div unselectable="on" class="ant-select-selection__placeholder" style="display: block; user-select: none;">Fabricante</div><ul><li class="ant-select-search ant-select-search--inline"><div class="ant-select-search__field__wrap"><input type="text" class="ant-input ant-select-search__field" value=""><span class="ant-select-search__field__mirror">&nbsp;</span></div>
+            </li>
+            </ul>
+        </div><span class="ant-select-arrow" unselectable="on" style="user-select: none;"><i class="anticon anticon-down ant-select-arrow-icon"><svg viewBox="64 64 896 896" class="" data-icon="down" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"></path></svg></i></span></div>
+    </div>
+    </span>
+    </div>
+    </div>
+    </div>
+    <div class="ant-row ant-form-item">
+        <div class="ant-form-item-control-wrapper">
+            <div class="ant-form-item-control"><span class="ant-form-item-children"><div id="veiculo-modelo" class="modal-veiculo-input ant-select-show-search ant-select-auto-complete ant-select ant-select-combobox ant-select-enabled"><div class="ant-select-selection
+            ant-select-selection--single" role="combobox" aria-autocomplete="list" aria-haspopup="true" aria-expanded="false" data-__meta="[object Object]" data-__field="[object Object]"><div class="ant-select-selection__rendered"><div unselectable="on" class="ant-select-selection__placeholder" style="display: block; user-select: none;">Modelo</div><ul><li class="ant-select-search ant-select-search--inline"><div class="ant-select-search__field__wrap"><span class="ant-select-search__field ant-input-affix-wrapper" style="height: 42px;"><input type="text" class="ant-input" value=""><span class="ant-input-suffix"><button type="button" class="ant-btn ant-btn-icon-only ant-btn-background-ghost" style="border: none; color: rgb(229, 229, 229); border-radius: 100%;"><i class="anticon anticon-search"><svg viewBox="64 64 896 896" class="" data-icon="search" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M909.6 854.5L649.9 594.8C690.2 542.7 712 479 712 412c0-80.2-31.3-155.4-87.9-212.1-56.6-56.7-132-87.9-212.1-87.9s-155.5 31.3-212.1 87.9C143.2 256.5 112 331.8 112 412c0 80.1 31.3 155.5 87.9 212.1C256.5 680.8 331.8 712 412 712c67 0 130.6-21.8 182.7-62l259.7 259.6a8.2 8.2 0 0 0 11.6 0l43.6-43.5a8.2 8.2 0 0 0 0-11.6zM570.4 570.4C528 612.7 471.8 636 412 636s-116-23.3-158.4-65.6C211.3 528 188 471.8 188 412s23.3-116.1 65.6-158.4C296 211.3 352.2 188 412 188s116.1 23.2 158.4 65.6S636 352.2 636 412s-23.3 116.1-65.6 158.4z"></path></svg></i></button></span></span>
+                <span class="ant-select-search__field__mirror">&nbsp;</span>
+            </div>
+            </li>
+            </ul>
+        </div><span class="ant-select-arrow" unselectable="on" style="user-select: none;"><i class="anticon anticon-down ant-select-arrow-icon"><svg viewBox="64 64 896 896" class="" data-icon="down" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"></path></svg></i></span></div>
+    </div>
+    </span>
+    </div>
+    </div>
+    </div>
+    <div class="ant-row ant-form-item" style="text-align: center;">
+        <div class="ant-form-item-control-wrapper">
+            <div class="ant-form-item-control">
+                <span class="ant-form-item-children">
+                    <button type="button" 
+                    class="ant-btn btn-form ant-btn-primary ant-btn-loading" 
+                    ant-click-animating-without-extra-node="true">
+                    <i class="anticon anticon-loading">
+                        <svg viewBox="0 0 1024 1024" 
+                        class="anticon-spin" data-icon="loading" 
+                        width="1em" height="1em" fill="currentColor" 
+                        aria-hidden="true" focusable="false">
+                        <path d="M988 548c-19.9 0-36-16.1-36-36 0-59.4-11.6-117-34.6-171.3a440.45 440.45 0 0 0-94.3-139.9 437.71 437.71 0 0 0-139.9-94.3C629 83.6 571.4 72 512 72c-19.9 0-36-16.1-36-36s16.1-36 36-36c69.1 0 136.2 13.5 199.3 40.3C772.3 66 827 103 874 150c47 47 83.9 101.8 109.7 162.7 26.7 63.1 40.2 130.2 40.2 199.3.1 19.9-16 36-35.9 36z"></path></svg></i>
+                        <span>Salvar</span>
+                </button>
+                </span>
+            </div>
+        </div>
+    </div>
+    </form>
+    </div>
+    <div class="ant-modal-footer">
+        <div><button type="button" class="ant-btn"><span>Cancel</span></button><button type="button" class="ant-btn ant-btn-primary"><span>OK</span></button></div>
+    </div>
+    </div>
+    <div tabindex="0" style="width: 0px; height: 0px; overflow: hidden;">sentinelEnd</div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div style="position: absolute; top: 0px; left: 0px; width: 100%;">
+        <div>
+            <div class="ant-select-dropdown ant-select-dropdown--single ant-select-dropdown-placement-bottomLeft  ant-select-dropdown-hidden" style="width: 335px; left: 340.996px; top: 668.996px;">
+                <div style="overflow: auto; transform: translateZ(0px);">
+                    <ul role="listbox" class="ant-select-dropdown-menu  ant-select-dropdown-menu-root ant-select-dropdown-menu-vertical" tabindex="0">
+                        <li role="option" unselectable="on" class="ant-select-dropdown-menu-item ant-select-dropdown-menu-item-selected" aria-selected="true" style="user-select: none;">FORD</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="ant-message"><span></span></div>
+    </div>
+    <div>
+        <div>
+            <div class="ant-modal-mask ant-modal-mask-hidden"></div>
+            <div tabindex="-1" class="ant-modal-wrap ant-modal-centered" role="dialog" aria-labelledby="rcDialogTitle1" style="display: none;">
+                <div role="document" class="ant-modal modal-compra-creditos" style="width: 520px; transform-origin: -3.69696px 86.8656px;">
+                    <div tabindex="0" style="width: 0px; height: 0px; overflow: hidden;">sentinelStart</div>
+                    <div class="ant-modal-content">
+                        <button aria-label="Close" class="ant-modal-close">
+                            <span class="ant-modal-close-x"><i class="anticon anticon-close ant-modal-close-icon"><svg viewBox="64 64 896 896" class="" data-icon="close" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M563.8 512l262.5-312.9c4.4-5.2.7-13.1-6.1-13.1h-79.8c-4.7 0-9.2 2.1-12.3 5.7L511.6 449.8 295.1 191.7c-3-3.6-7.5-5.7-12.3-5.7H203c-6.8 0-10.5 7.9-6.1 13.1L459.4 512 196.9 824.9A7.95 7.95 0 0 0 203 838h79.8c4.7 0 9.2-2.1 12.3-5.7l216.5-258.1 216.5 258.1c3 3.6 7.5 5.7 12.3 5.7h79.8c6.8 0 10.5-7.9 6.1-13.1L563.8 512z"></path></svg></i></span>
+                        </button>
+                        <div class="ant-modal-header">
+                            <div class="ant-modal-title" id="rcDialogTitle1">Novo cartão</div>
+                        </div>
+                        <div class="ant-modal-body">
+                            <form class="ant-form ant-form-horizontal">
+                                <div class="ant-row ant-form-item">
+                                    <div class="ant-form-item-control-wrapper">
+                                        <div class="ant-form-item-control">
+                                            <span class="ant-form-item-children">
+                                                <div class="ant-input-number modal-debito-input" style="width: 100%;">
+                                                    <div class="ant-input-number-handler-wrap">
+                                                        <span unselectable="unselectable" role="button" aria-label="Increase Value" aria-disabled="false" class="ant-input-number-handler ant-input-number-handler-up ">
+                                                            <i class="anticon anticon-up ant-input-number-handler-up-inner">
+                                                                <svg viewBox="64 64 896 896" class="" data-icon="up" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false">
+                                                                    <path d="M890.5 755.3L537.9 269.2c-12.8-17.6-39-17.6-51.7 0L133.5 755.3A8 8 0 0 0 140 768h75c5.1 0 9.9-2.5 12.9-6.6L512 369.8l284.1 391.6c3 4.1 7.8 6.6 12.9 6.6h75c6.5 0 10.3-7.4 6.5-12.7z"></path>
+                                                                </svg>
+                                                            </i>
+                                                        </span>
+                                            <div></div>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </form>
+        </div>
+    </div>
+    </div>
+    <span unselectable="unselectable" role="button" aria-label="Decrease Value" aria-disabled="false" class="ant-input-number-handler ant-input-number-handler-down ">
+                                                <i class="anticon anticon-down ant-input-number-handler-down-inner"><svg viewBox="64 64 896 896" class="" data-icon="down" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"></path></svg></i>
+                                            </span>
+    </div>
+    <div class="ant-input-number-input-wrap" role="spinbutton" aria-valuemin="-9007199254740991"><input placeholder="Numero Cartão" class="ant-input-number-input" autocomplete="off" maxlength="19" min="-9007199254740991" step="1" id="numero" data-__meta="[object Object]" data-__field="[object Object]" value="">
+    </div>
+    </div>
+    </span>
+    </div>
+    </div>
+    </div>
+    <div class="ant-row ant-form-item">
+        <div class="ant-form-item-control-wrapper">
+            <div class="ant-form-item-control"><span class="ant-form-item-children"><input placeholder="Titular" class="ant-input modal-debito-input" type="text" id="titular" data-__meta="[object Object]" data-__field="[object Object]" value=""></span></div>
+        </div>
+    </div>
+    <div class="ant-row">
+        <div class="ant-col-11">
+            <div class="ant-row ant-form-item">
+                <div class="ant-form-item-control-wrapper">
+                    <div class="ant-form-item-control"><span class="ant-form-item-children"><input placeholder="Data Expiração" maxlength="7" class="ant-input modal-debito-input" type="text" id="data_expiracao" data-__meta="[object Object]" data-__field="[object Object]" value="" style="width: 100%;"></span></div>
+                </div>
+            </div>
+        </div>
+        <div class="ant-col-11 ant-col-offset-2">
+            <div class="ant-row ant-form-item">
+                <div class="ant-form-item-control-wrapper">
+                    <div class="ant-form-item-control"><span class="ant-form-item-children"><div class="ant-input-number modal-debito-input" style="width: 100%;"><div class="ant-input-number-handler-wrap"><span unselectable="unselectable" role="button" aria-label="Increase Value" aria-disabled="false" class="ant-input-number-handler ant-input-number-handler-up "><i class="anticon anticon-up ant-input-number-handler-up-inner"><svg viewBox="64 64 896 896" class="" data-icon="up" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M890.5 755.3L537.9 269.2c-12.8-17.6-39-17.6-51.7 0L133.5 755.3A8 8 0 0 0 140 768h75c5.1 0 9.9-2.5 12.9-6.6L512 369.8l284.1 391.6c3 4.1 7.8 6.6 12.9 6.6h75c6.5 0 10.3-7.4 6.5-12.7z"></path></svg></i></span>
+                        <span unselectable="unselectable" role="button" aria-label="Decrease Value" aria-disabled="false" class="ant-input-number-handler ant-input-number-handler-down "><i class="anticon anticon-down ant-input-number-handler-down-inner"><svg viewBox="64 64 896 896" class="" data-icon="down" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"></path></svg></i></span>
+                    </div>
+                    <div class="ant-input-number-input-wrap" role="spinbutton" aria-valuemin="-9007199254740991"><input placeholder="CVV" class="ant-input-number-input" autocomplete="off" maxlength="4" min="-9007199254740991" step="1" id="cvv" data-__meta="[object Object]" data-__field="[object Object]" value=""></div>
+                </div>
+                </span>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <div class="ant-row ant-form-item" style="text-align: center;">
+        <div class="ant-form-item-control-wrapper">
+            <div class="ant-form-item-control"><span class="ant-form-item-children"><button type="button" class="ant-btn btn-form ant-btn-primary"><span>Cadastrar</span></button>
+                </span>
+            </div>
+        </div>
+    </div>
+    </form>
+    </div>
+    <div class="ant-modal-footer">
+        <div><button type="button" class="ant-btn"><span>Cancel</span></button><button type="button" class="ant-btn ant-btn-primary"><span>OK</span></button></div>
+    </div>
+    </div>
+    <div tabindex="0" style="width: 0px; height: 0px; overflow: hidden;">sentinelEnd</div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div>
+        <div>
+            <div class="ant-modal-mask ant-modal-mask-hidden"></div>
+            <div tabindex="-1" class="ant-modal-wrap ant-modal-centered" role="dialog" aria-labelledby="rcDialogTitle2" style="display: none;">
+                <div role="document" class="ant-modal modal-compra-creditos" style="width: 520px; transform-origin: 69.303px -258.818px;">
+                    <div tabindex="0" style="width: 0px; height: 0px; overflow: hidden;">sentinelStart</div>
+                    <div class="ant-modal-content"><button aria-label="Close" class="ant-modal-close"><span class="ant-modal-close-x"><i class="anticon anticon-close ant-modal-close-icon"><svg viewBox="64 64 896 896" class="" data-icon="close" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M563.8 512l262.5-312.9c4.4-5.2.7-13.1-6.1-13.1h-79.8c-4.7 0-9.2 2.1-12.3 5.7L511.6 449.8 295.1 191.7c-3-3.6-7.5-5.7-12.3-5.7H203c-6.8 0-10.5 7.9-6.1 13.1L459.4 512 196.9 824.9A7.95 7.95 0 0 0 203 838h79.8c4.7 0 9.2-2.1 12.3-5.7l216.5-258.1 216.5 258.1c3 3.6 7.5 5.7 12.3 5.7h79.8c6.8 0 10.5-7.9 6.1-13.1L563.8 512z"></path></svg></i></span></button>
+                        <div class="ant-modal-header">
+                            <div class="ant-modal-title" id="rcDialogTitle2">Créditos</div>
+                        </div>
+                        <div class="ant-modal-body">
+                            <div class="ant-row-flex ant-row-flex-center">
+                                <div class="" style="text-align: center; padding-bottom: 25.5px;">
+                                    <h3 class="painel-texto-simples">Selecione o valor que</h3>
+                                    <h3 class="painel-texto-simples">deseja recarregar</h3>
+                                </div>
+                                <div class="ant-col-24"><button imgesquerda="/befbeda94dcf4f1bf70d258346f6588f.png" imgdireita="/9761ecc48c469b5d069f73ecf541eedd.png" texto="R$ 2,00" type="button" class="ant-btn btn-block-modal ant-btn-block"><img alt="imagem esquerda" src="./index_files/befbeda94dcf4f1bf70d258346f6588f.png" style="float: left; height: 29px;"><h4 class="simple-text" style="padding-top: 6px;">R$ 2,00<img alt="" src="./index_files/9761ecc48c469b5d069f73ecf541eedd.png" style="float: right; height: 21px;"></h4></button></div>
+                                <div class="ant-col-24"><button imgesquerda="/befbeda94dcf4f1bf70d258346f6588f.png" imgdireita="/9761ecc48c469b5d069f73ecf541eedd.png" texto="R$ 4,00" type="button" class="ant-btn btn-block-modal ant-btn-block"><img alt="imagem esquerda" src="./index_files/befbeda94dcf4f1bf70d258346f6588f.png" style="float: left; height: 29px;"><h4 class="simple-text" style="padding-top: 6px;">R$ 4,00<img alt="" src="./index_files/9761ecc48c469b5d069f73ecf541eedd.png" style="float: right; height: 21px;"></h4></button></div>
+                                <div class="ant-col-24"><button imgesquerda="/befbeda94dcf4f1bf70d258346f6588f.png" imgdireita="/9761ecc48c469b5d069f73ecf541eedd.png" texto="R$ 10,00" type="button" class="ant-btn btn-block-modal ant-btn-block"><img alt="imagem esquerda" src="./index_files/befbeda94dcf4f1bf70d258346f6588f.png" style="float: left; height: 29px;"><h4 class="simple-text" style="padding-top: 6px;">R$ 10,00<img alt="" src="./index_files/9761ecc48c469b5d069f73ecf541eedd.png" style="float: right; height: 21px;"></h4></button></div>
+                                <div class="ant-col-24"><button imgesquerda="/befbeda94dcf4f1bf70d258346f6588f.png" imgdireita="/9761ecc48c469b5d069f73ecf541eedd.png" texto="R$ 25,00" type="button" class="ant-btn btn-block-modal ant-btn-block"><img alt="imagem esquerda" src="./index_files/befbeda94dcf4f1bf70d258346f6588f.png" style="float: left; height: 29px;"><h4 class="simple-text" style="padding-top: 6px;">R$ 25,00<img alt="" src="./index_files/9761ecc48c469b5d069f73ecf541eedd.png" style="float: right; height: 21px;"></h4></button></div>
+                                <div class="ant-col-24"><button imgesquerda="/befbeda94dcf4f1bf70d258346f6588f.png" imgdireita="/9761ecc48c469b5d069f73ecf541eedd.png" texto="R$ 50,00" type="button" class="ant-btn btn-block-modal ant-btn-block"><img alt="imagem esquerda" src="./index_files/befbeda94dcf4f1bf70d258346f6588f.png" style="float: left; height: 29px;"><h4 class="simple-text" style="padding-top: 6px;">R$ 50,00<img alt="" src="./index_files/9761ecc48c469b5d069f73ecf541eedd.png" style="float: right; height: 21px;"></h4></button></div>
+                            </div>
+                        </div>
+                        <div class="ant-modal-footer">
+                            <div><button type="button" class="ant-btn"><span>Cancel</span></button><button type="button" class="ant-btn ant-btn-primary"><span>OK</span></button></div>
+                        </div>
+                    </div>
+                    <div tabindex="0" style="width: 0px; height: 0px; overflow: hidden;">sentinelEnd</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="position: absolute; top: 0px; left: 0px; width: 100%;">
+        <div>
+            <div class="ant-dropdown  ant-dropdown-placement-bottomLeft  ant-dropdown-hidden" style="left: 883.996px; top: 67.9962px; min-width: 219px;">
+                <ul class="ant-dropdown-menu ant-dropdown-menu-light ant-dropdown-menu-root ant-dropdown-menu-vertical" role="menu">
+                    <li class="ant-dropdown-menu-item" role="menuitem"><i class="anticon anticon-edit"><svg viewBox="64 64 896 896" class="" data-icon="edit" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M257.7 752c2 0 4-.2 6-.5L431.9 722c2-.4 3.9-1.3 5.3-2.8l423.9-423.9a9.96 9.96 0 0 0 0-14.1L694.9 114.9c-1.9-1.9-4.4-2.9-7.1-2.9s-5.2 1-7.1 2.9L256.8 538.8c-1.5 1.5-2.4 3.3-2.8 5.3l-29.5 168.2a33.5 33.5 0 0 0 9.4 29.8c6.6 6.4 14.9 9.9 23.8 9.9zm67.4-174.4L687.8 215l73.3 73.3-362.7 362.6-88.9 15.7 15.6-89zM880 836H144c-17.7 0-32 14.3-32 32v36c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-36c0-17.7-14.3-32-32-32z"></path></svg></i>Editar
+                        perfil
+                    </li>
+                    <li class="ant-dropdown-menu-item" role="menuitem"><i class="anticon anticon-logout"><svg viewBox="64 64 896 896" class="" data-icon="logout" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M868 732h-70.3c-4.8 0-9.3 2.1-12.3 5.8-7 8.5-14.5 16.7-22.4 24.5a353.84 353.84 0 0 1-112.7 75.9A352.8 352.8 0 0 1 512.4 866c-47.9 0-94.3-9.4-137.9-27.8a353.84 353.84 0 0 1-112.7-75.9 353.28 353.28 0 0 1-76-112.5C167.3 606.2 158 559.9 158 512s9.4-94.2 27.8-137.8c17.8-42.1 43.4-80 76-112.5s70.5-58.1 112.7-75.9c43.6-18.4 90-27.8 137.9-27.8 47.9 0 94.3 9.3 137.9 27.8 42.2 17.8 80.1 43.4 112.7 75.9 7.9 7.9 15.3 16.1 22.4 24.5 3 3.7 7.6 5.8 12.3 5.8H868c6.3 0 10.2-7 6.7-12.3C798 160.5 663.8 81.6 511.3 82 271.7 82.6 79.6 277.1 82 516.4 84.4 751.9 276.2 942 512.4 942c152.1 0 285.7-78.8 362.3-197.7 3.4-5.3-.4-12.3-6.7-12.3zm88.9-226.3L815 393.7c-5.3-4.2-13-.4-13 6.3v76H488c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h314v76c0 6.7 7.8 10.5 13 6.3l141.9-112a8 8 0 0 0 0-12.6z"></path></svg></i>Sair</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div>
+            <div class="ant-modal-mask ant-modal-mask-hidden"></div>
+            <div tabindex="-1" class="ant-modal-wrap ant-modal-centered" role="dialog" aria-labelledby="rcDialogTitle3" style="display: none;">
+                <div role="document" class="ant-modal modal-compra-creditos" style="width: 520px; transform-origin: 661.303px -271.453px;">
+                    <div tabindex="0" style="width: 0px; height: 0px; overflow: hidden;">sentinelStart</div>
+                    <div class="ant-modal-content"><button aria-label="Close" class="ant-modal-close"><span class="ant-modal-close-x"><i class="anticon anticon-close ant-modal-close-icon"><svg viewBox="64 64 896 896" class="" data-icon="close" width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false"><path d="M563.8 512l262.5-312.9c4.4-5.2.7-13.1-6.1-13.1h-79.8c-4.7 0-9.2 2.1-12.3 5.7L511.6 449.8 295.1 191.7c-3-3.6-7.5-5.7-12.3-5.7H203c-6.8 0-10.5 7.9-6.1 13.1L459.4 512 196.9 824.9A7.95 7.95 0 0 0 203 838h79.8c4.7 0 9.2-2.1 12.3-5.7l216.5-258.1 216.5 258.1c3 3.6 7.5 5.7 12.3 5.7h79.8c6.8 0 10.5-7.9 6.1-13.1L563.8 512z"></path></svg></i></span></button>
+                        <div class="ant-modal-header">
+                            <div class="ant-modal-title" id="rcDialogTitle3">Editar perfil</div>
+                        </div>
+                        <div class="ant-modal-body">
+                            <div class="ant-row-flex ant-row-flex-center" style="text-align: center; margin-bottom: 5%; margin-top: -5%;">
+                                <div class=""><img src="./index_files/eaf9ff55cedc89ab582156a7e8492cef.png" alt="Logomarca do Pare Azul" width="65" style="margin-bottom: 2%;"><br><span class="painel-texto-simples">Selecione a informação que deseja editar:</span></div>
+                            </div>
+                            <div class="ant-row-flex ant-row-flex-center" style="text-align: center;">
+                                <div class=""><button imgdireita="/22a84899dba9c701aa8aac5ff5910f4c.png" imgesquerda="/cdbfe0ad1b528f3fec1535d7ceccdbac.png" texto="JOAO DA SILVA" type="button" class="ant-btn btn-block-modal ant-btn-block"><img alt="imagem esquerda" src="./index_files/cdbfe0ad1b528f3fec1535d7ceccdbac.png" style="float: left; height: 29px;"><h4 class="simple-text" style="padding-top: 6px;">
+                                  JOAO DA SILVA<img alt="" src="./index_files/22a84899dba9c701aa8aac5ff5910f4c.png" style="float: right; height: 21px;"></h4></button>
+                                    <button imgdireita="/22a84899dba9c701aa8aac5ff5910f4c.png" imgesquerda="/47f4d771a3e845c6cf1574271f894905.png" texto="joaodasilva@gmail.com" type="button" class="ant-btn btn-block-modal ant-btn-block"><img alt="imagem esquerda" src="./index_files/47f4d771a3e845c6cf1574271f894905.png" style="float: left; height: 29px;">
+                                    <h4 class="simple-text" style="padding-top: 6px;">joaodasilva@gmail.com<img alt="" src="./index_files/22a84899dba9c701aa8aac5ff5910f4c.png" style="float: right; height: 21px;"></h4>
+                                    </button><button imgesquerda="/c44b87863c4fa7cf598a8920d528a1d7.png" imgdireita="/22a84899dba9c701aa8aac5ff5910f4c.png" texto=" +55 47 98812-4578" type="button" class="ant-btn btn-block-modal ant-btn-block"><img alt="imagem esquerda" src="./index_files/c44b87863c4fa7cf598a8920d528a1d7.png" style="float: left; height: 29px;"><h4 class="simple-text" style="padding-top: 6px;"> +55 47 98812-4578<img alt="" src="./index_files/22a84899dba9c701aa8aac5ff5910f4c.png" style="float: right; height: 21px;"></h4></button>
+                                    <button imgdireita="/22a84899dba9c701aa8aac5ff5910f4c.png" imgesquerda="/249d3d7f799303c7b7f358e310a020ce.png" texto="Senha" type="button" class="ant-btn btn-block-modal ant-btn-block"><img alt="imagem esquerda" src="./index_files/249d3d7f799303c7b7f358e310a020ce.png" style="float: left; height: 29px;">
+                                        <h4 class="simple-text" style="padding-top: 6px;">Senha<img alt="" src="./index_files/22a84899dba9c701aa8aac5ff5910f4c.png" style="float: right; height: 21px;"></h4>
+                                        </button><button texto="Gerenciar telefones" type="button" class="ant-btn btn-block-modal ant-btn-block" style="margin-top: 28px;"><h4 class="simple-text" style="padding-top: 6px;">Gerenciar telefones<img alt="" style="float: right; height: 21px;"></h4></button></div>
+                            </div>
+                        </div>
+                        <div class="ant-modal-footer">
+                            <div><button type="button" class="ant-btn"><span>Cancel</span></button><button type="button" class="ant-btn ant-btn-primary"><span>OK</span></button></div>
+                        </div>
+                    </div>
+                    <div tabindex="0" style="width: 0px; height: 0px; overflow: hidden;">sentinelEnd</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<!-- bootstrap -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</html>

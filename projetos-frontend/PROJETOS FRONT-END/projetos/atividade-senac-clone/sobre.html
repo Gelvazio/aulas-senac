@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desenvolvimento - Tech</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <div class="container-principal">
+        <!-- Inclui o Menu Unico Atraves de JavaScript -->
+        <div include-html-menu="menu.html"></div>
+
+        <div class="container">
+            <table class="container-table">
+                <thead>
+                    <tr>
+                        <th class="containerTable-lblTitle">Empresa</th>
+                        <th class="containerTable-lblTitle">Cidade</th>
+                        <th class="containerTable-lblTitle">Ano Início</th>
+                        <th class="containerTable-lblTitle">Ano Fim</th>
+                        <th class="containerTable-lblTitle">Função</th>
+                        <th class="containerTable-lblTitle">Atividades</th>
+                    </tr>
+                </thead>
+                <tbody class="containerTable-body">
+                    <tr>
+                        <td class="containerTable-lblValue">Rohden</td>
+                        <td class="containerTable-lblValue">Salete</td>
+                        <td class="containerTable-lblValue">2005</td>
+                        <td class="containerTable-lblValue">2006</td>
+                        <td class="containerTable-lblValue">Auxiliar de Serraria I</td>
+                        <td class="containerTable-lblValue">Auxiliar na Serraria para confecção de portas e janelas</td>
+                    </tr>
+                    <tr>
+                        <td class="containerTable-lblValue">Frigorífico Pamplona</td>
+                        <td class="containerTable-lblValue">Presidente Getúlio</td>
+                        <td class="containerTable-lblValue">2007</td>
+                        <td class="containerTable-lblValue">2008</td>
+                        <td class="containerTable-lblValue">Auxiliar de Produção</td>
+                        <td class="containerTable-lblValue">Carregamento de caixas de carne e embalagem de miúdos suínos</td>
+                    </tr>
+                    <tr>
+                        <td class="containerTable-lblValue">Auto Posto Seola</td>
+                        <td class="containerTable-lblValue">Rio do Sul</td>
+                        <td class="containerTable-lblValue">2008</td>
+                        <td class="containerTable-lblValue">2009</td>
+                        <td class="containerTable-lblValue">Lavador de veículos</td>
+                        <td class="containerTable-lblValue">Lavar carros e motos</td>
+                    </tr>
+                    <tr>
+                        <td class="containerTable-lblValue">Unicerâmica Rainha</td>
+                        <td class="containerTable-lblValue">Rio do Sul</td>
+                        <td class="containerTable-lblValue">2009</td>
+                        <td class="containerTable-lblValue">2010</td>
+                        <td class="containerTable-lblValue">Auxiliar de Qualidade</td>
+                        <td class="containerTable-lblValue">Analisar e testar a qualidade de telhas da empresa</td>
+                    </tr>
+                    <tr>
+                        <td class="containerTable-lblValue">SESI</td>
+                        <td class="containerTable-lblValue">Rio do Sul</td>
+                        <td class="containerTable-lblValue">2010</td>
+                        <td class="containerTable-lblValue">2011</td>
+                        <td class="containerTable-lblValue">Estagiário</td>
+                        <td class="containerTable-lblValue">Auxiliar na configuração de softwares da Saúde, Educação e Administração</td>
+                    </tr>
+                    <tr>
+                        <td class="containerTable-lblValue">IBS Sistemas</td>
+                        <td class="containerTable-lblValue">Rio do Sul</td>
+                        <td class="containerTable-lblValue">2011</td>
+                        <td class="containerTable-lblValue">2012</td>
+                        <td class="containerTable-lblValue">Suporte de Apoio ao Usuário</td>
+                        <td class="containerTable-lblValue">Auxiliar usuários de software comercial a ulilizar o sistema, assim com configurações do sistema.</td>
+                    </tr>
+                    <tr>
+                        <td class="containerTable-lblValue">IPM Sistemas</td>
+                        <td class="containerTable-lblValue">Rio do Sul</td>
+                        <td class="containerTable-lblValue">2016</td>
+                        <td class="containerTable-lblValue">2018</td>
+                        <td class="containerTable-lblValue">Desenvolvedor PHP</td>
+                        <td class="containerTable-lblValue">Desenvolvimento de software na linguagem PHP em software de gestão pública.</td>
+                    </tr>
+                    <tr>
+                        <td class="containerTable-lblValue">IPM Sistemas</td>
+                        <td class="containerTable-lblValue">Rio do Sul</td>
+                        <td class="containerTable-lblValue">2018</td>
+                        <td class="containerTable-lblValue">2019</td>
+                        <td class="containerTable-lblValue">Analista Desenvolvedor PHP</td>
+                        <td class="containerTable-lblValue">Análise e Desenvolvimento de software na linguagem PHP em software de gestão pública.</td>
+                    </tr>
+                    <tr>
+                        <td class="containerTable-lblValue">Tidas Crediário</td>
+                        <td class="containerTable-lblValue">Rio do Sul</td>
+                        <td class="containerTable-lblValue">2019</td>
+                        <td class="containerTable-lblValue">Atual</td>
+                        <td class="containerTable-lblValue">Analista Desenvolvedor PHP</td>
+                        <td class="containerTable-lblValue">Análise e Desenvolvimento de software na linguagem PHP para software de gestão de <a href="https://blog.nubank.com.br/fidc-o-que-e-e-como-funciona/" alt="O que é FIDIC">FIDIC</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div include-html-rodape="rodape.html"></div>
+
+</body>
+
+<script src="js/script.js"></script>
+<script>
+    includeHTML("include-html-menu");
+    includeHTML("include-html-rodape");
+</script>
+
+</html>

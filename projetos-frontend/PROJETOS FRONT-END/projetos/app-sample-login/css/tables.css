@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Jim+Nightshade&family=Nanum+Gothic&family=Open+Sans:wght@300&family=Rubik+Moonrocks&display=swap');
+* {
+    font-family: 'Nanum Gothic', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-red: #FF4949;
+    --color-purple: #541690;
+    --color-orange: #FF8D29;
+    --color-yellow: #FFCD38;
+    --color-blue-senac: #004284c7;
+    --color-orange-senac: #f7941d;
+    --font-lg: 38px;
+    --font-md: 24px;
+    --font-sm: 15px;
+    --font-xs: 9px;
+    --size-lg: 1280px;
+    --size-md: 976px;
+    --size-sm: 768px;
+    --size-xs: 500px;
+}
+
+a {
+    text-decoration: none;
+}
+
+div.container {
+    height: 80%;
+    border-radius: 0 0 5% 5%;
+    overflow: auto;
+    background: rgb(2, 0, 29);
+    /* background: linear-gradient(135deg, rgba(2, 0, 29, 1) 30%, rgba(103, 9, 121, 1) 52%, rgba(0, 185, 255, 1) 81%); */
+}
+
+.fundo-branco {
+    background: #f1f1f1;
+}
+
+.container-table {
+    width: 100%;
+    padding: 10px;
+    border-radius: 0 0 5% 5%;
+    color: var(--color-yellow);
+    padding-bottom: 100px;
+}
+
+.containerTable-lblTitle {
+    font-weight: bolder;
+    color: var(--color-red);
+}
+
+.container-table th:first-child {
+    width: 10%;
+}
+
+.containerTable-lblValue {
+    text-align: left;
+    padding: 2px;
+    background-color: rgba(255, 255, 255, 0.11);
+    color: var(--color-orange);
+    transition: box-shadow .5s, transform .5s, color .5s;
+    /* max-width: 100px; */
+    max-height: 100px;
+}
+
+.containerTable-lblValue img {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.containerTable-lblValue a {
+    text-decoration: none;
+    color: white;
+}
+
+.containerTable-lblValue:hover {
+    box-shadow: 0 10px 10px var(--color-orange-senac);
+    transform: translateY(-10px);
+    background-color: var(--color-purple);
+    color: var(--color-yellow);
+    font-weight: bolder;
+}
+
+.containerTable-lblValue:last-child:hover {
+    box-shadow: none;
+    transform: none;
+    font-weight: none;
+    background-color: rgba(255, 255, 255, 0.11);
+}
+
+.container-table>tbody>tr:hover {
+    background-color: rgba(255, 255, 255, 0.09);
+}
+
+.tableValue-btnOption {
+    width: 30%;
+    height: 35px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    color: var(--color-orange);
+    box-shadow: 0 0 10px var(--color-orange) inset;
+}
+
+.tableValue-btnOption:hover {
+    box-shadow: 0 0 5px var(--color-orange);
+    background-color: rgba(255, 255, 255, 0.127);
+    font-weight: bolder;
+}

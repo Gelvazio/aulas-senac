@@ -1,0 +1,54 @@
+            <h1>
+                Cadastrar Reserva
+            </h1>
+
+                <form name="reservaForm">
+                    <div class="form-group">
+                        <label>Local/Filiais:</label>
+                        <select class="form-control" name="local.nome" ng-model="reserva.local"  ng-options="local.nome for local in locais track by local._id" required>
+                            <option value="" selected="selected">Selecione um Local/Filiais</option>
+
+                        </select>
+                    </div>
+                    <label>Sala:</label>
+                    <div class="form-group">
+                        <select class="form-control" name="sala" ng-model="reserva.sala" ng-options="sala.nome for sala in reserva.local.salas track by sala.nome"  ng-disabled="!reserva.local" required>
+                            <option value="" selected>Selecione a Sala</option>
+
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Data de Inicio:</label>
+                        <input class="form-control" type="datetime-local" name="dataInicio" ng-model="reserva.dataInicio" placeholder="Data Inicio" required/>
+                    </div>
+                    <div class="form-group">
+                        <label>Data do Fim:</label>
+                        <input class="form-control" type="datetime-local" name="dataFim" ng-model="reserva.dataFim" placeholder="Data Fim" required/>
+                    </div>
+                    <div class="form-group">
+                        <label>Responsavel:</label>
+                        <input class="form-control" type="text" name="responsavel" ng-model="reserva.responsavel" placeholder="Responsavel" required/>
+                    </div>
+                    <div class="form-group">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" ng-model="reserva.cafe"/> Café
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group" ng-if="reserva.cafe">
+                        <label>Quantidade de pessoas:</label>
+                        <input class="form-control" type="text" name="quantidadePessoas" ng-model="reserva.quantidadePessoas" placeholder="Informe a Quantidade de pessoas" required/>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Descricao:</label>
+                        <textarea class="form-control" type="text" name="descricao" ng-model="reserva.descricao" placeholder="Descricao"></textarea>
+                    </div>
+                </form>
+
+
+                <button type="button" class="btn btn-default" ng-click="cancelar()">Cancelar</button>
+                <button class="btn btn-default" ng-click="salvar(reservaForm.$valid)">Adicionar Reserva</button>
+

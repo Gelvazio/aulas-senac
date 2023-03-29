@@ -1,0 +1,51 @@
+[LISTA DE EXERCICIOS DO TIPO VETORES
+#Exercicio 01
+Faça um algoritmo que leia Nome idade e sexo de N pessoas. 
+Após a leitura faça:
+ a.	Imprima o Nome, idade e sexo das pessoas cuja idade seja
+ maior que a idade da primeira pessoa.
+
+ b.	Imprima o Nome e idade de todas as mulheres.
+
+ c.	Imprima o Nome dos homens menores de 21 anos.
+
+#Exercicio 02
+Faça um algoritmo que leia, via teclado, 10 valores do tipo inteiro e os guarde na memória.
+
+#Exercicio 03
+Amplie o exercício anterior emitindo um relatório com todos os números pares que você leu.
+
+#Exercicio 04
+Faça um algoritmo que determine qual o menor valor existente no vetor do Exercício 02.
+
+#Exercicio 05
+Faça um algoritmo que determine qual o maior valor existente no vetor do Exercício 02.
+ 
+#Exercicio 06
+Faça um algoritmo que leia 10 nomes e os guarde na memória.
+No fim, imprima os 10 nomes armazenados.
+
+#Exercicio 07
+Amplie o exercício 06 imprimindo o menor Nome do vetor (usar função Compr() do VisualG)
+A função Compr() retorna o número de caracteres inseridos numa variável.
+Ex.: Caso o usuário digitar o nome Maria, o Compr() retornará o valor 05.
+
+#Exercicio 08
+Faça um algoritmo que leia um nome e o guarde na memória.
+Após a leitura, verifique se a palavra é um palíndromo.
+Um palíndromo é aquela palavra que a sua leitura é a
+mesma da esquerda para a direita e vice versa. Exemplo: ARARA, ANA, etc.
+
+#Exercicio 09
+Faça um algoritmo que leia Nome idade e sexo de N pessoas. Após a leitura faça:
+a.	Imprima o Nome, idade e sexo das pessoas cuja idade seja maior que a idade da primeira pessoa.
+b.	Imprima o Nome e idade de todas as mulheres.
+c.	Imprima o Nome dos homens menores de 21 anos.
+
+#Exercicio 10
+Faça um algoritmo que leia Nome e notas (total de 4) de 5 alunos de um colégio. Após a leitura faça:
+ a.	Imprima o Nome e a média dos alunos aprovados (Média >= 7.0).
+ b.	Imprima o Nome e a média dos alunos em Recuperação (5.0 >= Média < 7.0).
+ c.	Imprima o Nome e a média dos alunos reprovados (Média < 5.0).
+ d.	Imprima o percentual de alunos aprovados.
+ e.	Imprima o percentual de alunos reprovados.

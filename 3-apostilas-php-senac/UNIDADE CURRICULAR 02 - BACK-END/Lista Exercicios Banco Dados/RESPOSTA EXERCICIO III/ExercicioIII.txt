@@ -1,0 +1,331 @@
+1. Fazer os comandos de inserção dos seguintes dados nas tabelas (Para o código considere o número da linha na tabela).
+Considere PESTIPO (1-Física e 2 Jurídica) e PESSEXO (0-Não informado, 1-Feminino, 2-Masculino).
+-Falta gerar o script
+
+########################################
+2. A Rua 1 teve seu nome alterado para Rua 7766, você deverá alterar o cadastro das pessoas 
+que moram neste endereço para o novo nome da rua;
+
+UPDATE 
+	Cadastros.tblogradouro
+SET
+	Cadastros.tblogradouro.logdescricao="Rua 7766"
+WHERE
+	Cadastros.tblogradouro.Logcodigo=1;
+	
+########################################
+3. O Logradouro CARLOS GOMES acaba de se tornar uma RUA,
+sendo assim deve ser alterado seu tipo de AVENIDA para RUA;
+UPDATE 
+	Cadastros.tblogradouro
+SET
+	Cadastros.tblogradouro.logdescricao="Rua 7766"
+WHERE
+	Cadastros.tblogradouro.logdescricao LIKE "%CARLOS GOMES%';
+
+########################################
+4. Todos os telefones residenciais devem possuir o DDD relacionado, no caso (47);
+UPDATE 
+	cadastros.tbpessoacontato
+SET
+	cadastros.tbpessoacontato.ctpnumero=("47" || Cadastros.tbpessoacontato.tpnumero)
+Rever
+Nova forma pra adicionar 47 as colunas
+
+UPDATE 
+	cadastros.tbpessoacontato
+SET
+	ctpnumero='47' || ctpnumero
+Forma para tirar todos os 47 fora 
+
+update 
+	cadastros.tbpessoacontato
+set 
+ctpnumero=replace (ctpnumero,'47','')
+
+########################################
+5. Por descuido do funcionário que cadastra pessoas, ele indicou que pessoas JURÍDICAS
+ eram do sexo MASCULINO, deve-se alterar essas pessoas para sexo NÃO INFORMADO;
+
+UPDATE 
+	cadastros.tbpessoacontato
+SET
+	cadastros.tbpessoa.pessexo=0
+WHERE
+	cadastros.tbpessoa.pestipo=2;
+
+########################################
+6. Por determinação universal todas as pessoas com nome Marta devem ser eliminadas do planeta,
+para tanto você deverá excluir essas pessoas da tabela;
+
+
+DELETE FROM cadastros.tbpessoacontato WHERE cadastros.tbpessoacontato.logcodigo=5;
+DELETE FROM cadastros.tbimovel WHERE cadastros.tbimovel.logcodigo=5;
+DELETE FROM cadastros.tbpessoa WHERE cadastros.tbpessoa.pesnome LIKE '%Marta%';
+
+
+########################################
+7. A Rua São Paulo acaba de ser explodida, por tanto ela deve ser excluída da base de dados. 
+
+As pessoas que residiam nesta rua foram transferidas para a Travessa Pinheiros,
+o cadastro delas deve ser atualizado. 
+
+Outras tabelas que fazem relacionamento
+com a tabela de Logradouro devem ser atualizadas também.
+
+--Atualizando tabela pessoa
+UPDATE 
+	cadastros.tbpessoa
+SET
+	cadastros.tbpessoa.logcodigo=3
+WHERE
+	cadastros.tbpessoa.logcodigo=5;
+
+--Atualizando tabela imovel
+UPDATE 
+	cadastros.tbimovel
+SET
+	cadastros.tbimovel.logcodigo=3
+WHERE
+	cadastros.tbimovel.logcodigo=5;
+
+--Atualizando tabela pessoacontato
+UPDATE 
+	cadastros.tbpessoacontato
+SET
+	cadastros.tbpessoacontato.logcodigo=3
+WHERE
+	cadastros.tbpessoacontato.logcodigo=5;
+	
+--Deletando o registro da tabela tblogradouro
+DELETE 
+FROM
+	cadastros.tblogradouro
+WHERE
+	cadastros.tblogradouro.logcodigo=5;
+
+########################################
+8. Pedro acaba de vender seu Telefone Celular, a tabela de contatos da pessoa deve ser alterada, 
+excluindo esta informação.
+DELETE 
+FROM
+	cadastros.tbpessoacontato
+WHERE
+	cadastros.tbpessoacontato.pescodigo=2
+AND 
+	cadastros.tbpessoacontato.ctpdescricao LIKE '%Telefone Celular%';
+
+
+########################################
+9. Crie uma seleção de dados da tabela TBIMOVEIS fazendo uma contagem de registros, 
+agrupando por LOGRADOURO, 
+retornando uma coluna com a contagem dos registros e outra com o código do logradouro;
+
+SELECT
+	count(cadastros.tbimovel.logcodigo) as TotalImoveis,
+	cadastros.tbimovel.logcodigo as CodigoLogradouro	
+FROM
+	cadastros.tbimovel
+GROUP BY 
+	2
+
+########################################
+10. a-Crie uma seleção de dados da tabela TBLOGRADOURO retornando os 
+campos LOGCODIGO, LOGTIPO e LOGDESCRICAO, ordenando a mesma por LOGTIPO, 
+de forma ASCENDENTE;
+
+b. Crie uma seleção de dados da tabela TBPESSOA buscando os campos PESNOME, 
+PESCODIGO, PESSEXO, PESTIPO e LOGCODIGO. Para o nome das colunas selecionadas 
+deverá retornar os seguintes nomes (respectivamente): "Nome ou Razão", "Código", 
+"Sexo", "Tipo", "Cód. Logradouro";
+
+--10-Letra a
+SELECT
+	cadastros.tblogradouro.logcodigo,
+	cadastros.tblogradouro.logtipo,
+	cadastros.tblogradouro.logdescricao
+FROM
+	cadastros.tblogradouro
+ORDER BY 
+	cadastros.tblogradouro.logtipo 
+	ASC
+--10-Letra b
+SELECT
+	cadastros.tbpessoa.pesnome as "Nome ou Razão",
+	cadastros.tbpessoa.pescodigo as "Código",
+	cadastros.tbpessoa.pessexo as "Sexo",
+	cadastros.tbpessoa.pestipo as "Tipo",
+	cadastros.tbpessoa.logcodigo as "Cód. Logradouro"
+FROM
+	cadastros.tbpessoa
+
+
+########################################
+11. Crie uma seleção de dados da tabela TBPESSOA retornando os 
+campos PESNOME, PESCODIGO, LOGCODIGO e o nome do LOGRADOURO relacionado, 
+que deverá ser buscado da tabela TBLOGRADOURO;
+Insira as seguintes condições de filtro:
+	a. Quando o código da pessoa (PESCODIGO) for maior que 500;
+	b. Quando o tipo do logradouro (LOGTIPO) for igual a 'Rua';
+	c. Quando o tipo de pessoa não for outros;
+	d. Quando o nome da pessoa conter "20".
+	e. Quando existirem os caracteres "C" e "7" no nome da pessoa.
+--11-Letra a
+SELECT
+	cadastros.tbpessoa.pesnome as "Nome ou Razão",
+	cadastros.tbpessoa.pescodigo as "Código",
+	cadastros.tbpessoa.logcodigo as "Cód. Logradouro",
+	cadastros.tblogradouro.logdescricao as "Nome Logradouro"
+FROM
+	cadastros.tbpessoa
+INNER JOIN cadastros.tblogradouro ON 
+	cadastros.tbpessoa.logcodigo=cadastros.tblogradouro.logcodigo
+WHERE
+	cadastros.tbpessoa.pescodigo>500;
+	
+11-Letra b
+SELECT
+	cadastros.tbpessoa.pesnome as "Nome ou Razão",
+	cadastros.tbpessoa.pescodigo as "Código",
+	cadastros.tbpessoa.logcodigo as "Cód. Logradouro",
+	cadastros.tblogradouro.logdescricao as "Nome Logradouro"
+FROM
+	cadastros.tbpessoa
+INNER JOIN cadastros.tblogradouro ON 
+	cadastros.tbpessoa.logcodigo=cadastros.tblogradouro.logcodigo
+WHERE
+	cadastros.tblogradouro.logtipo LIKE '%Rua%';	
+11-Letra c
+SELECT
+	cadastros.tbpessoa.pesnome as "Nome ou Razão",
+	cadastros.tbpessoa.pescodigo as "Código",
+	cadastros.tbpessoa.logcodigo as "Cód. Logradouro",
+	cadastros.tblogradouro.logdescricao as "Nome Logradouro"
+FROM
+	cadastros.tbpessoa
+INNER JOIN cadastros.tblogradouro ON 
+	cadastros.tbpessoa.logcodigo=cadastros.tblogradouro.logcodigo
+WHERE
+	cadastros.tbpessoa.pestipo in (1,2);
+
+11-Letra d
+SELECT
+	cadastros.tbpessoa.pesnome as "Nome ou Razão",
+	cadastros.tbpessoa.pescodigo as "Código",
+	cadastros.tbpessoa.logcodigo as "Cód. Logradouro",
+	cadastros.tblogradouro.logdescricao as "Nome Logradouro"
+FROM
+	cadastros.tbpessoa
+INNER JOIN cadastros.tblogradouro ON 
+	cadastros.tbpessoa.logcodigo=cadastros.tblogradouro.logcodigo
+WHERE
+	cadastros.tbpessoa.pesnome LIKE '%20%';
+
+11-Letra e
+SELECT
+	cadastros.tbpessoa.pesnome as "Nome ou Razão",
+	cadastros.tbpessoa.pescodigo as "Código",
+	cadastros.tbpessoa.logcodigo as "Cód. Logradouro",
+	cadastros.tblogradouro.logdescricao as "Nome Logradouro"
+FROM
+	cadastros.tbpessoa
+INNER JOIN cadastros.tblogradouro ON 
+	cadastros.tbpessoa.logcodigo=cadastros.tblogradouro.logcodigo
+WHERE
+	cadastros.tbpessoa.pesnome LIKE '%C%'
+	AND
+	cadastros.tbpessoa.pesnome LIKE '%7%';	
+	
+########################################
+12. Crie uma seleção de dados da tabela TBIMOVEL fazendo junção com a tabela TBPESSOA,
+ retornando as seguintes colunas:TBIMOVEL.IMVCODIGO, TBIMOVEL.IMVLARGURA,
+ TBIMOVEL.IMVCOMPRIMENTO e TBPESSOA.PESNOME, com os nomes originais para as colunas.
+SELECT
+	cadastros.tbimovel.logcodigo,
+	cadastros.tbimovel.imvlargura,
+	cadastros.tbimovel.imvcomprimento,
+	cadastros.tbpessoa.pesnome
+FROM
+	cadastros.tbimovel
+INNER JOIN cadastros.tbpessoa ON
+	cadastros.tbimovel.pescodigo=cadastros.tbpessoa.pescodigo
+	
+
+
+########################################
+13. Crie uma seleção dos 10 (dez) maiores imóveis, considerando o M², retorne juntamente
+ o nome dos proprietários dos imóveis exibidos;
+SELECT
+	cadastros.tbimovel.logcodigo,
+	cadastros.tbimovel.imvdescricao,
+	(cadastros.tbimovel.imvcomprimento * cadastros.tbimovel.imvlargura)as "M²",
+	cadastros.tbpessoa.pesnome
+FROM
+	cadastros.tbimovel
+INNER JOIN cadastros.tbpessoa ON
+	cadastros.tbpessoa.pescodigo=cadastros.tbimovel.pescodigo
+
+ORDER BY 
+	3 DESC	
+LIMIT (10)	
+
+
+########################################
+14. Construa um código SQL que retorne os dados de pessoa, quando o código da 
+pessoa for entre 20 e 5000, 
+desconsiderando pessoas que residam nos logradouros de 20 a 50.
+SELECT
+	cadastros.tbpessoa.pescodigo,
+	cadastros.tbpessoa.pesnome,
+	cadastros.tbpessoa.pessexo,
+	cadastros.tbpessoa.pestipo,
+	cadastros.tbpessoa.logcodigo
+FROM
+	cadastros.tbpessoa
+WHERE 
+	cadastros.tbpessoa.pescodigo>20
+	AND
+	cadastros.tbpessoa.pescodigo<5000
+	AND
+	cadastros.tbpessoa.logcodigo<20
+	AND
+	cadastros.tbpessoa.logcodigo>50
+
+
+########################################
+15. Construa um código SQL que retorne os dados de pessoas, sendo que para 
+os campos PESTIPO e PESSEXO devem ser exibidos os conteúdos 
+(Física, Jurídica, Outros) e (Masculino, Feminino, Não Informado) respectivamente.
+
+SELECT
+	cadastros.tbpessoa.pescodigo,
+	cadastros.tbpessoa.pesnome,
+	CASE 
+		WHEN cadastros.tbpessoa.pestipo = 0 THEN 'Outros'
+		WHEN cadastros.tbpessoa.pestipo = 1 THEN 'Física'
+		WHEN cadastros.tbpessoa.pestipo = 2 THEN 'Jurídica'
+	END AS TipoPessoa,
+	CASE 
+		WHEN cadastros.tbpessoa.pessexo = 0 THEN 'Não Informado'
+		WHEN cadastros.tbpessoa.pessexo = 1 THEN 'Feminino'
+		WHEN cadastros.tbpessoa.pessexo = 2 THEN 'Masculino'
+	END AS SexoPessoa	
+FROM
+	cadastros.tbpessoa
+
+########################################
+16. Construa um código SQL que retorne o último código de pessoa cadastrado e some um a ele.
+SELECT
+	cadastros.tbpessoa.pescodigo,
+	(cadastros.tbpessoa.pescodigo +1) as CodigoSomadoUm,
+	cadastros.tbpessoa.pesnome,
+	cadastros.tbpessoa.pessexo,
+	cadastros.tbpessoa.pestipo,
+	cadastros.tbpessoa.logcodigo
+FROM
+	cadastros.tbpessoa
+order by 1 desc 
+LIMIT(1) 	
+
+
+########################################

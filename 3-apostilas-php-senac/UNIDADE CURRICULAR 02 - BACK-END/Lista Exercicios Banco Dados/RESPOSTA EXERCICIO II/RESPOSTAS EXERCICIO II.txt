@@ -1,0 +1,73 @@
+Aluno:Gelvazio Camargo
+Enviar no fim da aula
+
+CREATE DATABASE exercicio2
+  WITH OWNER = postgres
+       ENCODING = 'WIN1252'
+       TABLESPACE = pg_default
+       LC_COLLATE = 'Portuguese_Brazil.1252'
+       LC_CTYPE = 'Portuguese_Brazil.1252'
+       CONNECTION LIMIT = -1;	   
+	   
+CREATE SCHEMA cadastros
+  AUTHORIZATION postgres;	   
+  
+CREATE TABLE cadastros.tblogradouro
+(
+  Logcodigo integer NOT NULL,
+  Logtipo character varying(10),
+  Logdescricao character varying(100),
+  CONSTRAINT pk_logcodigo PRIMARY KEY (Logcodigo)
+)
+WITH (
+  OIDS=FALSE
+);
+
+
+CREATE TABLE cadastros.tbpessoa(
+  Pescodigo integer NOT NULL,
+  Pesnome character varying(100) not null,
+  Pessexo smallint not null,
+  Pestipo smallint not null,
+  LogCodigo integer,
+  CONSTRAINT pk_pescodigo PRIMARY KEY (Pescodigo),
+  CONSTRAINT fk_tbpessoa_tblogradouro FOREIGN KEY(LogCodigo)
+  REFERENCES Cadastros.tblogradouro(Logcodigo) MATCH SIMPLE
+      ON UPDATE NO ACTION ON DELETE NO ACTION
+)
+WITH (
+  OIDS=FALSE
+);
+
+
+CREATE TABLE cadastros.tbpessoacontato(
+  Pescodigo integer NOT NULL,
+  Ctpnumero character varying(18) not null,
+  Ctpdescricao character varying(100),
+  Ctpramal integer,
+  LogCodigo integer,
+  CONSTRAINT pk_tbpessoacontato PRIMARY KEY (Pescodigo,Ctpnumero),
+  CONSTRAINT fk_tbpessoacontato_tbpessoa FOREIGN KEY(Pescodigo)
+  REFERENCES Cadastros.tbpessoa(Pescodigo) MATCH SIMPLE
+      ON UPDATE NO ACTION ON DELETE NO ACTION
+)
+WITH (
+  OIDS=FALSE
+);
+
+
+CREATE TABLE cadastros.tbimovel(
+  Pescodigo integer NOT NULL,
+  LogCodigo Integer not null,
+  Imvdescricao character varying(500) not null,
+  Imvlargura numeric(10,2),
+  Imvcomprimento numeric(10,2),
+  CONSTRAINT pk_tbimovel_codigo PRIMARY KEY (Pescodigo,LogCodigo),  
+  CONSTRAINT fk_tbimovel_tbpessoa FOREIGN KEY(Pescodigo)
+  REFERENCES Cadastros.tbpessoa(Pescodigo), 
+  CONSTRAINT fk_tbimovel_tblogradouro FOREIGN KEY(LogCodigo)
+  REFERENCES Cadastros.tblogradouro(Logcodigo) 
+)
+WITH (
+  OIDS=FALSE
+);

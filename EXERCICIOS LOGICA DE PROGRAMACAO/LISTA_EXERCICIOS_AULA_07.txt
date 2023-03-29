@@ -1,0 +1,309 @@
+[Lista de Varios Exercicios genericos
+#PASSADO NA LISTA 06
+#Exercicio 01
+ Conta telefônica - Uma conta telefônica é composta dos 
+ seguintes custos: assinatura: R$ 17,90
+impulsos: R$ 0,04 por impulso que exceder a 90
+interurbanos chamadas p/ celular: R$0,20 por impulso Monte 
+a fórmula para calcular o valor da conta para 254 impulsos, 
+R$34,29 de interurbanos e 23 chamadas para celular. Elabore 
+um programa que mostra os custos, calcula e mostra o valor
+total.
+
+#Exercicio 02
+Uma pessoa com pouco tempo disponível lê um livro por 5 minutos 
+a cada dia, 6 dias por semana. Monte a fórmula e escreva um 
+programa que calcula e mostra na tela quanto tempo, em horas, 
+a pessoa terá dedicado ao livro ao final de um ano.
+
+#Exercicio 03
+Vou e volto diariamente a pé para o trabalho, que dista
+aproximadamente 800 m de minha casa. Supondo que trabalho
+ 5 dias por semana, 45 semanas por ano, "bole" a operação 
+ matemática que deve ser efetuada para calcular quantos 
+ quilômetros, aproximadamente, terei andado ao final de um ano. 
+Elabore um programa que faça as contas e mostre o resultado 
+
+#Exercicio 04
+Faça um algoritmo para verificar se um aluno esta APROVADO ou REPROVADO, lendo 3 notas e calculando sua media 
+que deve ser maior ou igual a 7.
+
+#Exercicio 05
+Faça um algoritmo para verificar se uma pessoa ja pode tirar carteira de motorista
+considerando a idade >= 18 anos e mostre na tela uma mensagem:
+JA POSSO TIRAR A CARTEIRA DE MOTORISTA, se for o caso 
+
+AINDA NÃO POSSO TIRAR A CARTEIRA DE MOTORISTA, se for o caso 
+
+#Exercicio 06
+Faça um algoritmo para verificar se uma pessoa ja atingiu a maioridade.
+algoritmo deve receber como entrada apenas o ano de nascimento e considerar o ano atual 
+para calculo e 18 anos para maioridade.
+
+#Exercicio 07
+Faça um algoritmo para verificar se um valor e PAR ou IMPAR;
+
+#Exercicio 08
+Faça um algoritmo para calcular o Indice de Massa Corporal de uma pessoa,
+considerando a seguinte formula:
+IMC = PESO / (ALTURA AO QUADRADO)
+
+Se a pessoa tiver IMC <= 18.5, mostre a mensagem abaixo:
+"Parabens! Voce esta no seu peso ideal"
+
+Senão mostre a mensagem abaixo:
+"Voce nao esta na faixa de peso ideal"
+
+#Exercicio 09
+Um estudante muito metódico estava matriculado em 6 disciplinas,
+e dispunha de 1 hora e 40 minutos para estudar. Sua intenção 
+era dividir o tempo disponível igualmente para
+as 6 disciplinas, e descansar livremente o tempo restante. 
+Faça um programa que calcule o tempo
+que ele deve dedicar para cada disciplina e o tempo livre.
+
+#Exercicio 10
+Determinado pais tem populacao de 5 milhoes de habitantes
+com taxa de natalidade de 4 % e mortalidade de 1,1 %.
+Um segundo pais tem 7 milhoes de pessoas e natalidade de 2% e mortalidade de 0,8% .
+Em quanto tempo o pais 1 ira ultrapassar o pais 2?
+Quantos milhoes de população tera o pais 1 e o pais 2 quando isso ocorrer?
+
+[EXERCICIOS REPETICAO
+#Exercicio 11
+Numa lista de 20 numeros aleatorios(positivos e negativos),
+somar os positivos e contar os negativos
+
+#Exercicio 12
+Imprimir todos os positivos e inteiros entre 1 e 100, que nao sejam multiplos de 3,7,ou 10
+
+#Exercicio 13
+Escrever a tabuada de um a dez.
+
+#Exercicio 14
+Faça um algoritmo para informar se um numero for perfeito.
+ * So é perfeito quando a soma dos divisores for igual a ele mesmo.
+
+#Exercicio 15
+Fazer um algoritmo para somar os 100 primeiros numeros inteiros
+
+#Exercicio 16
+Fazer um algoritmo para saber quantos dias ocorre entre uma data e outra.
+ * EX: 10 janeiro 20 fevereiro calcular quantos dias se passaram.
+
+#Exercicio 17
+Faça um algoritmo que calcule a média aritmética de 3 numeros inteiros,
+ * a serem informados pelo usuario.
+
+[MAIS EXERCICIOS CONDICIONAIS
+
+[VETORES
+#Exercicio 22
+Media da idade de 200 pessoas qtos é maior qe 18
+
+#Exercicio 24
+Ler um vetor C de 10 elementos inteiros, trocar todos os valores negativos do vetor C por 0. 
+Escrever o vetor C modificado.
+
+#Exercicio 25
+Ler um vetor A de 10 elementos inteiros, trocar todos os valores negativos 
+ * do vetor C por 0. Escrever o vetor C modificado
+ * Exemplo: 
+ * Vetor A = 1 -8 6 9 -6 7 15 -98 -5 60
+ * Vetor B = 1  0 6 9 0 7 5 99 154 214 
+ * Vetor C = 
+
+#Exercicio 26
+Fornecido os coeficientes de uma equação do 2 grau,(a,b,c - ler do teclado)
+ * faça um algoritmo que calcule as raizes se houverem
+ * Validar se o numero e negativo, pois não existe raiz de numero negativo!
+
+#Exercicio 27
+Suponha que voce foi ao supermercado e comprou:
+ n Kg de café á x reais;
+ k litros de leite á y reais;
+ m Kg de farinha a z reais;
+Faça um algoritmo que imprima o ticket de compra.
+Primeiro produto: R$ 0,00
+Segundo  //     : R$ 0.00
+
+#Exercicio 28
+Faça um algoritmo qeu calcule o volume de uma esfera.
+Formula = V = 4 * PI  * R ao cubo
+
+#Exercicio 29
+ Vetor Intersecçao compreende os numeros que estao em A e em B
+ Exemplo
+ Vetor A 1 3 6 9 8 7
+ Vetor B 1  5 9 8 7 
+ 
+ Vetor C Intersecçao 1 9 8 7 
+ Desta forma tendo:
+ vetor A = [1,2,5,4,45,89,32,21]
+ vetor B = [10,2,55,44,45,41,89,32,21,157,168,134,257,249,137,246]
+ 
+ Crie um algoritmo que gere um terceiro vetor C, imprimindo apenas os valores de interseção.
+ 
+#Exercicio 30
+Ler um vetor C de 10 elementos inteiros, 
+trocar todos os valores negativos do vetor C por 0. Escrever o vetor C modificado
+ 
+#Exercicio 31
+ Ler 2 vetores, vetor A e vetor B, e percorrer os 2 vetores e formar um terceiro vetor 
+ que contenha os valores de vetor A e vetorB, sem repetir valores
+ 
+#Exercicio 32
+ Faça um programa que calcule a média aritmética entre 
+os números inteiros 12, 25 e 53.
+
+#Exercicio 33
+Faça um programa que leia um número inteiro e imprima 
+o seu antecedente (inteiro anterior) 
+e o seu sucessor (inteiro posterior).
+
+#Exercicio 34
+Faça um programa que imprima o produto dos números inteiros 35 e 47.
+
+#Exercicio 35
+Faça um programa que imprima o produto dos números inteiros 63 e 98.
+
+#Exercicio 36
+Faça um programa que imprima a soma, a diferença, o produto e a divisão entre os números inteiros 21 e 42.
+
+#Exercicio 37. 
+Sendo H = 1 + ½ +1/3 + ¼ + ... + 1/N, faça um algoritmo para calcular H, sendo que N é digitado pelo usuário.
+
+#Exercicio 38. 
+Construir um algoritmo para efetuar a soma e a multiplicação de diversos inteiros fornecidos pelo usuário. 
+O número que encerra as entradas é -1.
+
+#Exercicio 39. 
+Fazer um algoritmo para ler um número real X e determinar e imprimir o seguinte somatório: S = X – X/1 + X/2 – X/3 + ... 
+usando os 20 primeiros termos da série
+
+#Exercicio 40. 
+Escreva um algoritmo para ler um conjunto de 40 formulários contendo cada um a altura e o sexo de 
+uma pessoa (somente ‘M’ ou ‘F’) e imprimir
+• A maior altura e a menor altura da turma
+• A média da altura das mulheres
+• A média da altura dos homens
+
+#Exercicio 41. 
+Faça um algoritmo para calcular o valor de S, dado por: S = 1/N + 2/(N-1) + 3/(N-2) + ... + (N-1)/2 + N/1, 
+sendo N fornecido em cartão.
+
+#Exercicio 42. 
+Entrar com um número de três casas e imprimir o algarismo da casa das centenas
+
+#Exercicio 43. 
+Ler um número inteiro qualquer e imprimir os seus 20 antecessores, o próprio número e os seus 20 sucessores.
+
+#Exercicio 44. 
+Criar um algoritmo para calcular e imprimir a área de uma circunferência
+
+#Exercicio 45. 
+Criar um algoritmo para exibir as tabuadas de multiplicação dos números de 1 a 10.
+
+#Exercicio 46. 
+Criar um algoritmo para calcular e imprimir o volume de um cubo. 
+
+#Exercicio 47.  
+Entrar com a razão e o 1º termo de uma PA e imprimir seu N-ésimo termo, 
+sendo N fornecido pelo usuário.
+
+#Exercicio 48. 
+Dados a razão e o primeiro termo de uma P.A., calcular e imprimir os cinqüenta primeiros termos desta P.A.
+
+#Exercicio 49. 
+Criar um algoritmo para calcular e imprimir a média e a variância das notas de todos os n alunos inscritos em Algoritmos. 
+A média e a variância são calculados da seguinte forma – média = somatório das notas / número de alunos 
+e a variância =(somatório (notas ^ 2) / número de alunos) – media ^ 2.
+
+
+[LISTA DE EXERCICIOS SOBRE VETORES 
+
+#Exercicio 01. 
+Ler um vetor C de 10 elementos inteiros, trocar todos os valores negativos do vetor C por 0. Escrever o vetor C modificado
+
+#Exercicio 02. 
+Ler um vetor X de 10 elementos. A seguir copie todos os valores negativos de vetor X para o vetor R 
+(sem deixar elementos vazios entre os valores copiados). Escrever o vetor R.
+
+#Exercicio 03. 
+Ler 2 vetores X e Y de 10 elementos cada um (ocupando as posições de 1 a 10 em cada vetor). 
+Intercalar os elementos desses 2 vetores formando assim, um novo vetor R de 20 elementos, 
+onde nas posições ímpares de R estejam os elementos de X e nas posições pares os elementos de Y. 
+Após a geração completa do vetor R, escreva-o.
+
+#Exercicio 04. 
+Ler um vetor R de 6 elementos contendo o gabarito (resultado) da MEGA-SENA. A seguir ler um conjunto 
+de 100 apostas (cada qual com 6 números). O algoritmo deverá informar quantos números cada apostador acertou.
+
+#Exercicio 05. 
+Escreva um algoritmo que leia dois vetores de 10 posições e faça a multiplicação dos  elementos de mesmo índice, 
+colocando o resultado em um terceiro vetor. Mostre o vetor resultante.
+
+#Exercicio 06. 
+Elaborar um algoritmo que lê um conjunto de 30 valores e os coloca em 2 vetores  conforme os valores forem pares ou ímpares. 
+O tamanho do vetor é de 5 posições. Se  algum vetor estiver cheio, escrevê-lo. Terminada a leitura escrever 
+o conteúdo dos  dois vetores. Cada vetor pode ser preenchido tantas vezes quantas for necessário.  
+
+#Exercicio 07. 
+Escreva um algoritmo que leia um vetor de N posições e mostre-o. Em seguida,  troque o primeiro elemento com o último, 
+o segundo com o penúltimo, o terceiro com o antepenúltimo, e assim sucessivamente. Mostre o novo vetor depois da troca. 
+
+#Exercicio 08.
+Escreva um algoritmo que leia um vetor de 13 elementos inteiros, que é o Gabarito  de um teste da loteria esportiva,
+ contendo os valores 1(coluna 1), 2  (coluna 2) e 3 (coluna do meio). Leia, a seguir, para cada apostador, 
+ o número do seu cartão e um vetor de Respostas de 13 posições. Verifique para cada apostador o números de acertos,
+ comparando o vetor de Gabarito com o vetor de Respostas. Escreva o número do apostador e o número de acertos.
+ Se o apostador tiver 13 acertos,  mostrar a mensagem "Ganhador".  
+
+#Exercicio 09. 
+Escreva um algoritmo que leia um vetor de 20 elementos inteiros. Encontre e mostre  o menor elemento e sua posição no vetor.  
+
+#Exercicio 10.  
+Escreva um algoritmo que leia um vetor de N posições e mostre-o ordenado em  ordem crescente.  
+
+#Exercicio 11. 
+Escrever um algoritmo que gera os 10 primeiros números primos acima de 100 e  os armazena em um vetor de X, 
+escrevendo, no final, o vetor X.  
+
+#Exercicio 12. 
+Escrever um algoritmo que lê um vetor X com 50 posições e o escreve. Escreva, a seguir, cada um dos valores 
+distintos que aparecem em X dizendo quantas vezes cada valor  aparece em X.  
+
+#Exercicio 13. 
+Faça um algoritmo que leia um vetor (A) de 100 posições. Em seguida, compacte o vetor, retirando 
+os valores nulos e negativos. Coloque o resultado no vetor B.  
+
+#Exercicio 14. 
+Faça um algoritmo que leia um vetor de 500 posições de números inteiros e divida  todos os seus elementos
+ pelo maior valor do vetor. Mostre o vetor após os cálculos.  
+
+#Exercicio 15. 
+Faça um algoritmo que leia dois vetores (A e B) de 50 posições  de números  inteiros. O algoritmo deve, 
+então, subtrair o primeiro elemento de A do último de B, acumulando o valor, subtrair o segundo elemento
+ de A do penúltimo de B,  acumulando o valor, e assim por diante. Mostre o resultado da soma final.  
+
+#Exercicio 16. 
+Uma locadora de vídeos tem guardada, em um vetor de 50 posições, a quantidade de filmes retirados por
+ seus clientes durante o ano de 2010. Agora, esta locadora está fazendo uma promoção e, para cada 10 
+ filmes retirados, o cliente tem direito a uma locação grátis. Faça um algoritmo que crie um outro
+ vetor contendo a quantidade de locações gratuitas a que cada cliente tem direito.  
+
+#Exercicio 17. 
+Em uma fábrica trabalham homens e mulheres divididos em três classes:
+• Trabalhadores que fazem até 30 peças por mês – classe 1;
+• Trabalhadores que fazem de 31 a 35 peças por mês – classe 2;
+• Trabalhadores que fazem mais de 35 peças por mês – classe 3;
+A classe 1 recebe salário mínimo (R$350,00). A classe 2 recebe salário mínimo mais 3% do salário 
+mínimo por peça acima das 30 peças iniciais. A classe 3 recebe salário mínimo mais 5% do salário 
+mínimo por peça fabricada acima das 30 peças iniciais. A fábrica possui 15 operários.
+Faça um programa que leia para cada operário: o seu número (inteiro), o número de peças fabricadas
+ no mês e seu sexo (1 para masculino ou 2 para feminino). Os dados devem ser armazenados em 3 vetores:
+ vetNumOp, vetNumPecas e vetSexo respectivamente. O programa deve calcular os salários dos funcionários,
+ armazená-los em um quarto vetor (vetSalarios) e mostrar um relatório que contenha o número do operário,
+ a quantidade de peças fabricadas no mês e o seu salário. O programa deve mostrar também o total da folha 
+ de pagamento da fábrica.
+ 

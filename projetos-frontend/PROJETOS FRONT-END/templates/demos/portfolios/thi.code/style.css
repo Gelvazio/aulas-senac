@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+:root{
+  --body-bg: #fff;
+  --body-color: #1071ff;
+  --btn-color: #1071ff;
+  --btn-bg: #fff;
+  --btn-bg-hover: #1071ff;
+  --btn-color-hover: #fff;
+  --btn-color-dois: #fa7d17;
+}
+
+.dark-mode:root {
+  --body-bg: #081220;
+  --body-color: #fff;
+  --btn-color: #fff;
+  --btn-bg: #081220;
+  --btn-bg-hover: #fff;
+  --btn-color-hover: #081220;
+  
+}
+
+h3, h2{
+  font-weight: 700;
+  color: var(--body-color);
+}
+
+h5{
+  font-weight: 500;
+  color: var(--body-color);
+}
+
+.inscricoes a{
+  white-space: normal;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: var(--btn-color-dois);
+  box-shadow: 0 4px 15px 0 #fa7d17bf;
+}
+
+.inscricoes a:hover{
+  background-color: #fa7d17;
+}
+
+body {
+  background: rgb(16, 113, 255);
+  background: linear-gradient(
+    0deg,
+    rgb(16, 113, 255) 0%,
+    rgb(1, 211, 255) 100%
+  );
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.cartao {
+  background-color: var(--body-bg);
+  padding: 30px;
+  border-radius: 30px;
+  -webkit-box-shadow: 0px 8px 13px 0px rgba(0, 0, 0, 0.69);
+  box-shadow: 0px 8px 13px 0px rgba(0, 0, 0, 0.69);
+}
+
+img#perfil {
+  max-height: 120px;
+  border: 4px solid #01d1ff;
+}
+
+img#mini-logo {
+  max-width: 20px;
+}
+
+img#logo {
+  width: 170px;
+}
+
+iframe {
+  border-radius: 22px;
+  padding: 15px;
+  
+}
+
+.btn-style{
+  border-radius: 50px;
+  color: var(--btn-color);
+  /* background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed); */
+  box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+  /* border-color: #1071ff ; */
+  background-color: var(--btn-bg);
+  
+  background-size: 300% 100%;
+  font-size: 1.2rem;
+  font-weight: 500;
+
+  word-break: break-all;
+
+  transition: all .4s ease-in-out;
+  -moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+}
+
+.btn-style:hover{
+  background-position: 100% 0;
+  background-color: var(--btn-bg-hover);
+  color: var(--btn-color-hover);
+}
+
+.btn-style:focus {
+  outline: none;
+}
+
+footer{
+  display: flex;
+  justify-content: center;
+}
+
+#logo-footer{
+  margin-top: 4rem;
+  width: 10rem;
+}
+
+.title-text{
+  color: var(--body-color);
+  font-weight: 600;
+  font-size: 18pt;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+  
+}
+
+.fa-moon-o{
+  position: absolute;
+  height: 26px;
+  width: 26px;
+  left: 10px;
+  bottom: 0px;
+  color: #035190;
+}
+
+.fa-sun-o{
+  position: absolute;
+  height: 26px;
+  width: 26px;
+  left: 35.5px;
+  bottom: 0px;
+  color: #ccc;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #035190;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #035190;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+  background-color: #081220;
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+html::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background: linear-gradient(
+    0deg,
+    rgb(16, 113, 255) 0%,
+    rgb(1, 211, 255) 100%
+  );
+}
+
+html::-webkit-scrollbar
+{
+	width: 12px;
+	background: linear-gradient(
+    0deg,
+    rgb(16, 113, 255) 0%,
+    rgb(1, 211, 255) 100%
+  );
+}
+
+html::-webkit-scrollbar-thumb
+{
+	background-color: #fff;
+}
+
+#logodisc{
+  width: 25px;
+  height: 25px;
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobills Clone</title>
+</head>
+<style>
+    .list-cards {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        width: 100vw;
+        gap: 25px;
+    }
+    
+    .images {
+        display: none;
+    }
+    
+    .card {
+        height: 75px;
+        width: 250px;
+        border: 1px solid black;
+        border-radius: 15px;
+        /* generator de box-shadow */
+        /* https://html-css-js.com/css/generator/box-shadow/ */
+        box-shadow: 0 0 0 0.3px linear-gradient(black, black, black, black);
+        transition: all .4s ease-in;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+    }
+    
+    .card:hover {
+        box-shadow: -3px 10px 25px 3px #B3B3B3;
+        cursor: pointer;
+    }
+    
+    .card-bank {
+        color: aliceblue;
+    }
+    
+    .icon {
+        opacity: 0.4;
+        color: aliceblue;
+    }
+    
+    .card-icon {
+        width: 47px;
+        height: 47px;
+        /* background-color: aqua; */
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+    }
+</style>
+
+<body>
+
+    <div class="images">
+        <h1>Nova Despesa</h1>
+        <img src="images/nova-despesa.png" alt="" height="700px">
+        <h1>Nova Receita</h1>
+        <img src="images/nova-receita.png" alt="" height="700px">
+        <h1>Lista Despesa</h1>
+        <img src="images/lista-despesas.png" alt="" height="700px">
+        <h1>Lista Receita</h1>
+        <img src="images/lista-receitas.png" alt="" height="700px">
+    </div>
+
+    <hr>
+    <h1>Testes</h1>
+
+    <div class="list-cards">
+        <div class="card">
+            <span class="card-title">Saldo atual</span>
+            <span class="card-bank">
+                <div class="card-icon">
+                    <box-icon class="icon" name='bank' type='solid' ></box-icon>                
+                </div>
+            </span>
+        </div>
+        <div class="card">
+            <span class="card-title">Receitas</span>
+            <span class="card-arrow-up">
+                <div class="card-icon">
+                    <box-icon class="icon" name='up-arrow-alt'></box-icon>
+                </div>
+            </span>
+        </div>
+        <div class="card">
+            <span class="card-title">Despesas</span>
+            <span class="card-arrow-dow">
+                <div class="card-icon">
+                    <box-icon class="icon" name='down-arrow-alt'></box-icon>
+                </div>
+            </span>
+        </div>
+        <div class="card">
+            <span class="card-title">Cartão Credito</span>
+            <span class="card-credit-card">
+                <div class="card-icon">
+                    <box-icon class="icon" name='credit-card' type='solid' ></box-icon>
+                </div>
+            </span>
+        </div>
+    </div>
+</body>
+
+<script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js" defer></script>
+
+</html>

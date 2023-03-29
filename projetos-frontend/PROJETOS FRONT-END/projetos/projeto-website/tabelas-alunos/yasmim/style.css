@@ -1,0 +1,19 @@
+body {
+    background-color:#e5d4ef ;}
+           h1 {color: #bc5090;
+               font-family: Georgia;}
+           h2 {color: darkmagenta;
+               font-family: Arial}
+           h3 {color: lightcoral;
+               font-family: Arial}
+           p {color: black;
+               font-family: Arial;}
+           a {color: rgb(255, 104, 205);
+               font-family: Arial;}
+           hr {color: pink;}
+           .header {
+            background-color: #F1F1F1;
+            /* text-align: center; */
+             padding: 15px;
+           }
+   

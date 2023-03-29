@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta Usuario</title>
+    <link rel="stylesheet" href="css/button.css">
+    <link rel="stylesheet" href="css/formulario.css">
+</head>
+<style>
+    body {
+        color: aliceblue;
+    }
+
+    .dados-consulta {
+        display: flex;
+        justify-content: center;
+    }
+
+    .menu {
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        gap:5px;
+        flex-direction: column;
+        margin-top: 25px;
+    }
+
+    .menu button {
+        width: 100px;
+        height: 35px;
+        cursor: pointer;
+        transition: all .4s ease-in-out;
+    }
+
+    .filtro-consulta {
+        width: 600px;
+        height: 60px;
+        background-color: aqua;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap:5px;
+    }
+
+    select , input, option {
+        height: 35px;
+        border-radius: 3px;
+        padding: 5px;
+    }
+
+    hr {
+        color:white;
+    }
+
+    .dados-consulta {
+        color: aliceblue;
+    }
+
+    table, tr, td, thead {
+        border: 1px solid var(--blue);
+        width: 52%;
+    }
+
+</style>
+<script>
+    function consultarUsuario() {
+        const valorFiltro = document.querySelector("#valorfiltro").value;
+        if(valorFiltro !== undefined && valorFiltro !== ""){
+            consultarUsuarioComFiltros();
+        } else {
+            consultarUsuarioSemFiltros();
+        }
+    }
+
+    function consultarUsuarioSemFiltros() {
+        var metodo = "GET";
+        var porta = "consultausuario";
+        var body = undefined;
+
+        callApi(metodo, porta, body, function(data) {
+            // Carrega os dados do usuario na tabela html
+            loadUsuariosTabela(data);
+        });
+    }
+
+    function consultarUsuarioComFiltros() {
+        var metodo = "POST";
+        var porta = "consultausuario";
+        
+        // Cria os parametros de filtros
+        const campoFiltro = document.querySelector("#campofiltro").value;
+        const operadorFiltro = document.querySelector("#operadorfiltro").value;
+        const valorFiltro = document.querySelector("#valorfiltro").value;
+        const body= {
+            campofiltro:campoFiltro,
+            operadorfiltro:operadorFiltro,
+            valorfiltro:valorFiltro,
+        };
+
+        const body1 = {
+            campofiltro:"usucodigo",
+            operadorfiltro:"maior",
+            valorfiltro:5,
+        };
+
+        callApi(metodo, porta, body, function(data) {
+            // Carrega os dados do usuario na tabela html
+            loadUsuariosTabela(data);
+        });
+    }
+
+    function loadUsuariosTabela(data) {
+        const aDadosUsuarios = data;
+        let body = document.querySelector(".dados-tabela");
+
+        // limpa a tabela atual
+        body.innerHTML = "";
+
+        aDadosUsuarios.forEach(function(oUsuario, key) {
+            const codigo = oUsuario.usucodigo;
+            const nome = oUsuario.usunome;
+            const email = oUsuario.usuemail;
+            let situacao = oUsuario.usuativo;
+
+            // Trata campo situação
+            if (situacao == 1) {
+                situacao = "Ativo";
+            } else {
+                situacao = "Inativo";
+            }
+
+            // adiciona as colunas da tabela da consulta
+            body.innerHTML += `<tr>
+                                    <td>` + codigo + `</td>
+                                    <td>` + nome + `</td>
+                                    <td>` + email + `</td>
+                                    <td>` + situacao + `</td>
+                                </tr>`;
+        });
+    }
+</script>
+
+<body>
+    <hr>
+    <div class="menu">
+        <h1>Consulta de Usuarios</h1>
+        <div class="filtro-consulta">
+            <label for="campofiltro">Filtro:</label>
+            <select name="campofiltro" id="campofiltro">
+                <option value="usucodigo">Código</option>
+                <option value="usunome">Nome</option>
+                <option value="usuemail">Email</option>
+            </select>
+            <select name="operadorfiltro" id="operadorfiltro">
+                <option value="todos">Todos</option>
+                <option value="maior">Maior que</option>
+                <option value="contem">Contém</option>
+                <option value="naocontem">Não Contém</option>
+                <option value="menorigual">Menor ou igual</option>
+                <option value="menor">Menor que</option>
+                <option value="maiorigual">Maior ou igual</option>
+                <option value="igual">Igual a</option>
+                <option value="diferente">Diferente de</option>
+            </select>
+
+            <input type="text" id="valorfiltro" name="valorfiltro" value="5">
+
+            <button onclick="consultarUsuario()" class="button2">Consultar</button>
+        </div>
+    </div>
+    <hr>
+   <div class="dados-consulta">
+       <table border="1">
+            <thead>
+                <th>Código</th>
+                <th>Nome</th>
+                <th>E-mail</th>
+                <th>Situação</th>
+            </thead>
+            <tbody class="dados-tabela">
+    
+            </tbody>
+        </table>
+   </div> 
+</body>
+
+<!-- Comando defer deixa o js carregar apenas apos a pagina estar carregada -->
+<script src="js/api.js" defer></script>
+
+</html>

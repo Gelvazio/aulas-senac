@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterar Usuario</title>
+</head>
+<script>
+    var ACAO_INCLUSAO = "INCLUSAO";
+    var ACAO_ALTERACAO = "ACAO_ALTERACAO";
+
+    // Inicialmente a acao e de alteracao
+    var ACAO = ACAO_ALTERACAO;
+
+    function atualizaPaginaUsuario() {
+        const codigo_usuario = sessionStorage.getItem("usucodigo");
+
+        if (codigo_usuario != null) {
+            ACAO = ACAO_ALTERACAO;
+
+            loadDadosUsuario(codigo_usuario);
+
+            document.querySelector("#usucodigoAlteracao").innerHTML = "Codigo Informado:" + codigo_usuario;
+        } else {
+            //alert("Codigo Usuario Não Informado!");
+            ACAO = ACAO_INCLUSAO;
+        }
+    }
+
+    function loadDadosUsuario(codigo_usuario) {
+        console.log("Buscando informacoes do usuario:" + codigo_usuario);
+
+        // Cria uma consulta com o codigo do usuario
+        var metodo = "POST";
+        var porta = "consultausuariofiltro";
+
+        var body = {
+            campofiltro: "usucodigo",
+            operadorfiltro: "igual",
+            valorfiltro: codigo_usuario
+        };
+
+        callApi(metodo, porta, body, function(data) {
+            // Carrega os dados do usuario na tabela html
+            loadAlteracaoUsuario(data, codigo_usuario);
+        });
+    }
+
+    function loadAlteracaoUsuario(data) {
+        console.log("Carregando informacoes do usuario:");
+
+        // Vai caregar os dados da API na tela
+        const aDadosUsuarios = data;
+
+        aDadosUsuarios.forEach(function(oUsuario, key) {
+            const codigo = oUsuario.usucodigo;
+            const nome = oUsuario.usunome;
+            const email = oUsuario.usuemail;
+            const situacao = oUsuario.usuativo;
+
+            // Carrega os dados da api no documento html
+            document.querySelector("#usucodigo").value = codigo;
+            document.querySelector("#usunome").value = nome;
+            document.querySelector("#usuemail").value = email;
+            document.querySelector("#usuativo").value = situacao;
+        });
+    }
+
+    function confirmar() {
+        if (ACAO == ACAO_ALTERACAO) {
+            confirmarAlteracaoUsuario();
+        } else if (ACAO == ACAO_INCLUSAO) {
+            confirmarInclusaoUsuario();
+        } else {
+            alert("Ação não encontrada!");
+        }
+    }
+
+    function confirmarInclusaoUsuario() {
+        console.log("Incluindo usuario...");
+
+        // chamar a api para executar a alteracao
+        const usucodigo = document.querySelector("#usucodigo").value;
+        const usunome = document.querySelector("#usunome").value;
+        const usuemail = document.querySelector("#usuemail").value;
+        const usuativo = document.querySelector("#usuativo").value;
+
+        const body = {
+            usucodigo: usucodigo,
+            usunome: usunome,
+            usuemail: usuemail,
+            usuativo: usuativo
+        };
+
+        var metodo = "POST";
+        var porta = "executainclusao";
+
+        callApi(metodo, porta, body, function(data) {
+            alert(data.mensagem);
+
+            // Limpar a sessao
+            sessionStorage.removeItem("usucodigo");
+
+            // redireciona para a consulta
+            window.location.href = "usuario-consulta-edicao.html";
+        });
+    }
+
+    function confirmarAlteracaoUsuario() {
+        console.log("Alterando usuario...");
+
+        // chamar a api para executar a alteracao
+        const usucodigo = document.querySelector("#usucodigo").value;
+        const usunome = document.querySelector("#usunome").value;
+        const usuemail = document.querySelector("#usuemail").value;
+        const usuativo = document.querySelector("#usuativo").value;
+
+        const body = {
+            usucodigo: usucodigo,
+            usunome: usunome,
+            usuemail: usuemail,
+            usuativo: usuativo
+        };
+
+        var metodo = "POST";
+        var porta = "executaalteracao";
+
+        callApi(metodo, porta, body, function(data) {
+            alert(data.mensagem);
+
+            // Limpar a sessao
+            sessionStorage.removeItem("usucodigo");
+
+            // redireciona para a consulta
+            window.location.href = "usuario-consulta-edicao.html";
+        });
+    }
+</script>
+
+<body onload="atualizaPaginaUsuario()">
+    <h1>Usuario sendo alterado</h1>
+    <h2 id="usucodigoAlteracao">Nao Informado</h2>
+    <hr>
+    <h1>Alteração de Usuario</h1>
+
+    <label for="usucodigo">Código:</label>
+    <input type="text" id="usucodigo">
+    <br>
+    <label for="usunome">Nome:</label>
+    <input type="text" id="usunome">
+    <br>
+    <label for="usuemail">E-mail:</label>
+    <input type="text" id="usuemail">
+    <br>
+    <label for="usuativo">Ativo:</label>
+    <select id="usuativo">
+        <option value="1">Sim</option>
+        <option value="0">Não</option>
+    </select>
+    <br>
+    <button onclick=confirmar()>Confirmar</button>
+</body>
+
+<script src="js/api.js" defer></script>
+
+</html>

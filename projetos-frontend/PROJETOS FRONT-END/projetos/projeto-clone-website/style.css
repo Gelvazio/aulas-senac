@@ -1,0 +1,319 @@
+/* RESET DE CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+}
+
+/*
+--------------------------
+        SECAO MENU LEFT
+--------------------------
+*/
+
+.lado-esquerdo {
+    width: 330px;
+    background-color: #2d3e4f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    text-transform: uppercase;
+    color: aliceblue;
+    position: fixed;
+    height: 100vh;
+}
+
+.menu-esquerdo-superior {
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 400px;
+}
+
+.menu-esquerdo-superior > div >  a {
+    list-style: none;
+    text-decoration: none;
+    color: aliceblue;
+    transition: background-color 300ms ease, border 300ms ease, color 300ms ease;
+}
+
+.menu-esquerdo-superior > div >  a:visited {
+    list-style: none;
+}
+
+#titulo a {
+    color: #cf404d;
+    font-size: 50px;
+}
+
+.lado-esquerdo .menu-esquerdo-superior div a:hover {
+    color: #cf404d;
+    cursor: pointer;
+}
+
+/*
+--------------------------
+        SECAO AJUSTE LADO DIREITO
+--------------------------
+*/
+
+.lado-direito {
+    width: 90vw;
+    margin-left: 330px;
+}
+
+/*
+--------------------------
+        SECAO HOME
+--------------------------
+*/
+#home {
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/background.jpg);
+    background-position: 0% 0%, 50% 50%;
+    background-size: auto, cover;
+    background-repeat: repeat, no-repeat;
+    min-height: 100vh;
+}
+
+#home .home-content {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-size: 50px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.home-titulo {
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+.home-sub-titulo {
+    font-size: 16px;
+}
+
+button {
+    padding: 15px;
+    transition: background-color 300ms ease, border 300ms ease, color 300ms ease;
+}
+
+.button-1 {
+    color: white;
+    background: transparent;
+    border-radius: 5px;
+    border: 2px solid white;
+}
+
+.button-1:hover {
+    background: transparent;
+    background-color: #2d3e4f;
+    border: 2px solid #2d3e4f;
+    cursor: pointer;
+}
+
+.button-2 {
+    color: white;
+    border-radius: 5px;
+    background-color: #cf404d;
+    border: 2px solid #cf404d;
+}
+
+.button-2:hover {
+    border-radius: 5px;
+    background: transparent;
+    border: 2px solid #cf404d;
+    cursor: pointer;
+}
+
+.paginas {
+    display: flex;
+    flex-direction: column;
+}
+
+/*
+--------------------------
+        SECAO ABOUT
+--------------------------
+*/
+#about {
+    color: black;
+    font-size: 40px;
+    float: right;
+    min-height: 100vh;
+}
+
+.about-titulo{
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.about-sub-titulo{
+    text-align: center;
+    font-size: 16px;
+    color: gray;
+}
+
+.about-list-itens{
+    display: flex;
+    font-size: 12px;
+}
+
+.about-item{
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 25%;
+}
+
+.about-item img {
+    width: 100px;
+    height: 80px;
+    background-color: #cf404d;
+}
+
+.about-item a {
+    text-transform: capitalize;
+    text-decoration: none;
+    color: #cf404d;
+    margin-top: 10px;
+}
+
+.about-item a:hover {
+    color: green;
+}
+
+.cal-to-action{
+    background-color: #cf404d;
+    padding: 40px;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+/*
+--------------------------
+    SECAO GALLERY
+--------------------------
+*/
+#gallery {
+    float: right;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery-titulo {
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 25%;
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+.gallery-sub-titulo {
+    text-align: center;
+    font-size: 16px;
+    color: gray;
+    margin-top: 10px;
+}
+
+.lista-imagem {
+    display: flex;
+    flex-direction: column;
+    padding: 70px;
+}
+
+.lista-imagem-1 img {
+    max-width: 200px;
+    max-height: 200px;
+    padding: 10px;
+}
+
+.lista-imagem-2 img {
+    max-width: 200px;
+    max-height: 200px;
+    padding: 10px;
+}
+
+/*
+--------------------------
+    SECAO CONTACT
+--------------------------
+*/
+#contact {
+    float: right;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contact-titulo {
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 25%;
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+.contact-sub-titulo {
+    text-align: center;
+    font-size: 16px;
+    color: gray;
+    margin-top: 10px;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contact form .campos-form {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+form textarea {
+  width: 98%;
+}
+
+form input[type=submit] {
+    width: 100%;
+    background-color: #cf404d;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 300ms ease, border 300ms ease, color 300ms ease;
+}
+
+form input[type=submit]:hover {
+    background: transparent;
+    background-color: black;
+    cursor: pointer;
+}

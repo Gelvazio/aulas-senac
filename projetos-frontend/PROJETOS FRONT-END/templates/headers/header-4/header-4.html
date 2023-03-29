@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" class=" js cssanimations">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Perspective Mockup Slideshow | Demo 3</title>
+    <meta name="description" content="A perspective slideshow based on Franklin Ta&#39;s CSS matrix3d transforms">
+    <meta name="keywords" content="perspective, mockup, slideshow, transform, 3d, matrix, css">
+    <meta name="author" content="Codrops">
+    <link rel="shortcut icon" href="https://tympanus.net/Development/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="./header-4_files/normalize.css">
+    <link rel="stylesheet" type="text/css" href="./header-4_files/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="./header-4_files/demo.css">
+    <link rel="stylesheet" type="text/css" href="./header-4_files/animate.css">
+    <link rel="stylesheet" type="text/css" href="./header-4_files/mockup3.css">
+    <script type="text/javascript" async="" src="./header-4_files/ga.js.download"></script>
+    <script src="./header-4_files/modernizr.custom.js.download"></script>
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-7243260-2']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="./header-4_files/demoad.css">
+</head>
+
+<body class="demo-3">
+    <div class="container">
+        <!-- Top Navigation -->
+        <div class="codrops-top clearfix">
+            <a class="codrops-icon codrops-icon-prev" href="http://tympanus.net/Development/DragDropInteractions/"><span>Previous Demo</span></a>
+            <span class="right"><a class="codrops-icon codrops-icon-drop" href="http://tympanus.net/codrops/?p=21345"><span>Back to the Codrops Article</span></a>
+            </span>
+        </div>
+        <div id="wrap" class="wrap">
+            <div class="mockup" style="transform: scale3d(1.00158, 1.00158, 1);">
+                <img class="mockup__img" src="./header-4_files/mockup3.jpg">
+                <div id="mobile" class="mobile">
+                    <ul id="slideshow" class="slideshow">
+                        <li class="slideshow__item current"><img src="./header-4_files/3.png"></li>
+                        <li class="slideshow__item"><img src="./header-4_files/2.png"></li>
+                        <li class="slideshow__item"><img src="./header-4_files/1.png"></li>
+                        <li class="slideshow__item"><img src="./header-4_files/4.png"></li>
+                    </ul>
+                </div>
+                <header class="codrops-header">
+                    <h1><span>Mockup</span> Slideshow <i>An animated perspective mockup with 3D transforms computed with <a href="http://franklinta.com/2014/09/08/computing-css-matrix3d-transforms/">Franklin Ta's helper script</a></i></h1>
+                </header>
+            </div>
+        </div>
+        <div class="content">
+            <nav class="codrops-demos">
+                <a href="https://tympanus.net/Development/MockupSlideshow/index.html">Demo 1</a>
+                <a href="https://tympanus.net/Development/MockupSlideshow/index2.html">Demo 2</a>
+                <a class="current-demo" href="https://tympanus.net/Development/MockupSlideshow/index3.html">Demo 3</a>
+                <a href="https://tympanus.net/Development/MockupSlideshow/index4.html">Demo 4</a>
+            </nav>
+            <p><strong>Free Mockup images from:</strong></p>
+            <ul class="ref">
+                <li><strong>Demo 1 and 3:</strong> <a href="https://www.behance.net/gallery/19352531/Free-PSD-mockup-vol-2">Free PSD Mockups Vol.2</a></li>
+                <li><strong>Demo 4:</strong> <a href="http://pixelbuddha.net/freebie/morning-device-mockups">Morning Device Mockups</a></li>
+            </ul>
+            <ul class="ref">
+                <li><strong>Demo 2</strong> image copyright by Vadim Sherbakov with granted permission to be used in this demo</li>
+                <li><a href="https://creativemarket.com/Vadim.Sherbakov/50038-6-Macbook-In-the-house-mock-ups">6 MacBook in the house mockups</a></li>
+                <li><a href="http://madebyvadim.robot.co/">Made by Vadim</a></li>
+                <li><a href="https://creativemarket.com/Vadim.Sherbakov"> Vadim Sherbakov's Creative Market Shop</a></li>
+            </ul>
+            <ul class="ref">
+                <li><strong><a href="http://pixelbuddha.net/freebie/280-line-icons-pack">Line Icons</a></strong> by Jonas Nullens for PixelBuddha</li>
+            </ul>
+        </div>
+        <!-- Related demos -->
+        <section class="related">
+            <p>If you enjoyed this demo you might also like</p>
+            <a href="http://tympanus.net/Tutorials/TiltedContentSlideshow/">
+                <img src="./header-4_files/TiltedContentSlideshow.jpg">
+                <h3>Tilted Content Slideshow</h3>
+            </a>
+            <a href="http://tympanus.net/codrops/2013/08/01/3d-effect-for-mobile-app-showcase/">
+                <img src="./header-4_files/AppShowcase.jpg">
+                <h3>3D App Showcase</h3>
+            </a>
+        </section>
+    </div>
+    <!-- /container -->
+    <script src="./header-4_files/classie.js.download"></script>
+    <script src="./header-4_files/main.js.download"></script>
+    <script>
+        (function() {
+            new Slideshow(document.getElementById('slideshow'));
+
+            /* Mockup responsiveness */
+            var body = docElem = window.document.documentElement,
+                wrap = document.getElementById('wrap'),
+                mockup = wrap.querySelector('.mockup'),
+                mockupWidth = mockup.offsetWidth;
+
+            scaleMockup();
+
+            function scaleMockup() {
+                var wrapWidth = wrap.offsetWidth,
+                    val = wrapWidth / mockupWidth;
+
+                mockup.style.transform = 'scale3d(' + val + ', ' + val + ', 1)';
+                mockup.style.WebkitTransform = 'scale3d(' + val + ', ' + val + ', 1)';
+            }
+
+            window.addEventListener('resize', resizeHandler);
+
+            function resizeHandler() {
+                function delayed() {
+                    resize();
+                    resizeTimeout = null;
+                }
+                if (typeof resizeTimeout != 'undefined') {
+                    clearTimeout(resizeTimeout);
+                }
+                resizeTimeout = setTimeout(delayed, 50);
+            }
+
+            function resize() {
+                scaleMockup();
+            }
+        })();
+    </script>
+
+    <script src="./header-4_files/demoad.js.download"></script>
+    <div id="cdawrap" style="display: none;">
+        <a href="https://ad.doubleclick.net/ddm/trackclk/N1224323.3091281BUYSELLADS/B25600467.329372860;dc_trk_aid=521668102;dc_trk_cid=166965485;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;ltd=" class="carbon-img" target="_blank" rel="noopener"><img src="./header-4_files/mailchimp_demo.png" alt="Mailchimp" border="0" height="100" width="130"></a><a href="https://ad.doubleclick.net/ddm/trackclk/N1224323.3091281BUYSELLADS/B25600467.329372860;dc_trk_aid=521668102;dc_trk_cid=166965485;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;ltd="
+            class="carbon-text" target="_blank" rel="noopener">Sign up for Mailchimp today.</a>
+        <div class="cda-footer"><a class="carbon-poweredby" href="https://tympanus.net/codrops/advertise/" target="_blank" rel="noopener">Become a sponsor</a><span class="cda-remove" id="cda-remove">Close</span></div>
+    </div>
+
+
+</body>
+
+</html>

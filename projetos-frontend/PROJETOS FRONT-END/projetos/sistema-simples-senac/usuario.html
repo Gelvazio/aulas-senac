@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta Usuario</title>
+</head>
+<script>
+    function consultarUsuario() {
+        var metodo = "GET";
+        var porta = "usuario";
+        var body = undefined;
+
+        callApi(metodo, porta, body, function(data) {
+            // Carrega os dados do usuario na tabela html
+            loadUsuariosTabela(data);
+        });
+    }
+
+    function loadUsuariosTabela(data) {
+        const aDadosUsuarios = data;
+        let body = document.querySelector(".dados-tabela");
+
+        // limpa a tabela atual
+        body.innerHTML = "";
+
+        aDadosUsuarios.forEach(function(oUsuario, key) {
+            const codigo = oUsuario.usucodigo;
+            const nome = oUsuario.usunome;
+            const email = oUsuario.usuemail;
+            let situacao = oUsuario.usuativo;
+
+            // Trata campo situação
+            if (situacao == 1) {
+                situacao = "Ativo";
+            } else {
+                situacao = "Inativo";
+            }
+
+            // adiciona as colunas da tabela da consulta
+            body.innerHTML += `<tr>
+                                    <td>` + codigo + `</td>
+                                    <td>` + nome + `</td>
+                                    <td>` + email + `</td>
+                                    <td>` + situacao + `</td>
+                                </tr>`;
+        });
+    }
+</script>
+
+<body>
+    <hr>
+    <h1>Consulta de Usuarios</h1>
+    <button onclick="consultarUsuario()">Consultar</button>
+    <hr>
+    <table border="1">
+        <thead>
+            <th>Código</th>
+            <th>Nome</th>
+            <th>E-mail</th>
+            <th>Situação</th>
+        </thead>
+        <tbody class="dados-tabela">
+
+        </tbody>
+    </table>
+</body>
+
+<!-- Comando defer deixa o js carregar apenas apos a pagina estar carregada -->
+<script src="js/api.js" defer></script>
+
+</html>

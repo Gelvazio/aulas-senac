@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewporto" content="width=device-width, initial-scale=1.0">
+    <title>Desenvolvimento - Tech</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container-principal">
+        <!-- Inclui o Menu Unico Atraves de JavaScript -->
+        <div include-html-menu="menu.html"></div>
+
+        <div class="container">
+            <table class="container-table">
+                <thead>
+                    <tr>
+                        <th class="containerTable-lblTitle">E-MAIL PESSOAL</th>
+                        <th class="containerTable-lblTitle">E-MAIL SENAC</th>
+                        <th class="containerTable-lblTitle">GITHUB</th>
+                        <th class="containerTable-lblTitle">LINKEDIN</th>
+                    </tr>
+                </thead>
+                <tbody class="containerTable-body">
+                    <tr>
+                        <td class="containerTable-lblValue">GELVAZIO@GMAIL.COM</td>
+                        <td class="containerTable-lblValue">GELVAZIO@PROF.SC.SENAC.BR</td>
+                        <td class="containerTable-lblValue">https://github.com/Gelvazio</td>
+                        <td class="containerTable-lblValue">https://www.linkedin.com/in/gelvaziocamargo/</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div include-html-rodape="rodape.html"></div>
+
+</body>
+
+<script src="js/script.js"></script>
+<script>
+    includeHTML("include-html-menu");
+    includeHTML("include-html-rodape");
+</script>
+
+</html>

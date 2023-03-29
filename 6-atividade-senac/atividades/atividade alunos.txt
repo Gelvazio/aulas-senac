@@ -1,0 +1,9 @@
+grupos 
+
+grupo 01=>14:30-OK
+grupo 02=>14:40-OK
+grupo 03=>14:50-OK
+grupo 04=>15:00-ok
+grupo 05=>15:10-ok
+grupo 06=>15:20-ok
+grupo 07=>15:30-ok

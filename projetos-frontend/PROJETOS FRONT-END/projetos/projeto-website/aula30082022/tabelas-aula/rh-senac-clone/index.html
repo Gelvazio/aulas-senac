@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Folha Pagamento</title>
+
+    <!-- bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="styles.css">
+
+
+    <!-- Habilita o jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+</head>
+<style>
+    /* Ajustes detalhar folha */
+
+    .detalhar-folha {
+        width: 10px;
+        height: 10px;
+        border: none;
+        border-radius: 15px;
+        cursor: pointer;
+    }
+
+    th,
+    td {
+        width: 100px;
+    }
+
+    th {
+        display: flex;
+        justify-content: flex-start;
+        width: 100px;
+    }
+
+    .open-detalheFolhaPagamento {
+        border: none;
+        cursor: pointer;
+        outline: none;
+    }
+
+    .open-detalheFolhaPagamento:hover {
+        background-color: rgba(98, 102, 102, 0.275);
+        border-radius: 15px;
+    }
+</style>
+
+<script defer>
+    // Abre o modal da folha passando como parametro o mes e ano para detalhar os dados
+    // desta forma e possivel buscar os dados da api, se necessario
+    $(document).on("click", ".open-detalheFolhaPagamento", function() {
+        var mesano = $(this).data('id');
+
+        console.log("id folha" + mesano);
+
+        $(".modal-body #mesano").val(mesano);
+    });
+</script>
+
+<body>
+    <header>
+        <section class="logo">
+            <strong class="empresa">benner</strong>
+            <strong class="separator"></strong>
+            <strong class="setor-empresa">RH</strong>
+        </section>
+        <section class="colaborator">
+            <p class="sigla">GC</p>
+            <p>Colaborador</p>
+        </section>
+    </header>
+    <main>
+        <section class="lateral">
+            <ul>
+                <li>Home</li>
+                <li>Meus Dados</li>
+                <li class="selected">Folha de Pagamento</li>
+                <li>Folha Ponto</li>
+                <li>Banco de horas</li>
+                <li>Férias</li>
+                <li>Simulações</li>
+                <li>Benefícios</li>
+                <li>Feedback</li>
+                <li>Minhas tarefas</li>
+                <li>Plano de saúde</li>
+                <li>Avaliação de Competências</li>
+                <li>Recrutamento e seleção</li>
+                <li>Gestão de Competências</li>
+                <li>Educação Corporativa</li>
+                <li>Comprovante de rendimentos</li>
+                <li>Saúde ocupacional</li>
+                <li>Eleições cipa</li>
+                <li>Políticas internas</li>
+                <li>Atualização Cadastral</li>
+                <li>Funções DR/Unidade</li>
+            </ul>
+        </section>
+        <section class="content">
+            <section class="header-main">
+                <div class="card folha">
+                    <span class="valor">R$ 1.678,68</span>
+                    <span class="descricao">Última folha normal</span>
+                    <span class="data-card">01/08/2022</span>
+                </div>
+                <div class="card ferias">
+                    <span class="valor">R$78,54</span>
+                    <span class="descricao">Última folha de férias</span>
+                    <span class="data-card">01/08/2022</span>
+                </div>
+                <div class="card decimo">
+                    <span class="valor">R$56,78</span>
+                    <span class="descricao">Última folha 13º</span>
+                    <span class="data-card">01/08/2022</span>
+                </div>
+            </section>
+            <section class="content-main">
+
+                <div class="header-card">
+                    <span>
+                        <strong>Resumo Última folha</strong>
+                        <span class="detalhe-folha-titulo">Folha Mensal(Normal) - pagamento em 01/08/2022</span>
+                    </span>
+                </div>
+
+                <div class="main-card">
+                    <span class="content-detalhe">
+                        <p class="descricao blue">Provento:</p>
+                        <p class="valor-provento blue">R$1.978,68</p>
+                    </span>
+                    <span class="content-detalhe">
+                        <p class="descricao red">Desconto:</p>
+                        <p class="valor-provento red">R$300,00</p>
+                    </span>
+                    <span class="content-detalhe">
+                        <p class="descricao green">Líquido:</p>
+                        <p class="valor-provento green">R$1.678,68</p>
+                    </span>
+                </div>
+
+                <div class="valores-gerais">
+                    Valores gerais:
+                </div>
+
+                <div class="footer-main-card">
+                    <div class="footer-main-card-main">
+                        <div class="content-detalhe">
+                            <p class="descricao green">FGTS - Base:</p>
+                            <p class="valor-provento green">R$1.678,68</p>
+                        </div>
+
+                        <div class="content-detalhe">
+                            <p class="descricao green">Percentual:</p>
+                            <p class="valor-provento green">8%</p>
+                        </div>
+
+                        <div class="content-detalhe">
+                            <p class="descricao green">Valor:</p>
+                            <p class="valor-provento green">R$154,23</p>
+                        </div>
+                    </div>
+                    <div class="footer-main-card-footer">
+                        <div class="content-detalhe">
+                            <p class="descricao red">INSS - Base:</p>
+                            <p class="valor-provento red">R$1.678,68</p>
+                        </div>
+
+                        <div class="content-detalhe">
+                            <p class="descricao red">Percentual:</p>
+                            <p class="valor-provento red">9%</p>
+                        </div>
+
+                        <div class="content-detalhe">
+                            <p class="descricao red">Valor:</p>
+                            <p class="valor-provento red">R$1.678,68</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="footer-main">
+                <div class="footer-card-folhas">Folhas</div>
+                <div class="footer-card-detalhe-folhas">
+                    <!-- Modal -->
+                    <div class="modal fade" id="modalFolhaPagamento" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Detalhes da Folha de Pagamento</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <h1>
+                                        Conteudo do Modal
+                                    </h1>
+                                    <label for="mes">Mês/Ano:</label>
+
+                                    <input type="text" name="mesano" id="mesano" value="" disabled/>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                                    <button type="button" class="btn btn-primary">Salvar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <table>
+                        <thead>
+                            <th>Data</th>
+                            <th>Tipo</th>
+                            <th>Competência</th>
+                            <th>Provento</th>
+                            <th>Desconto</th>
+                            <th>Líquido</th>
+                            <th align="right">Detalhar</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>01/02/2022</td>
+                                <td>Folha Mensal</td>
+                                <td>01/08/2022</td>
+                                <td>R$1954,78</td>
+                                <td>R$154,78</td>
+                                <td>R$1.654,78</td>
+                                <!-- Chama a tela de modal -->
+                                <td><button class="open-detalheFolhaPagamento" data-toggle="modal" data-id="22022" data-target="#modalFolhaPagamento">
+                                    <box-icon name='search-alt-2'></box-icon>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>01/03/2022</td>
+                                <td>Folha Mensal</td>
+                                <td>01/08/2022</td>
+                                <td>R$1954,78</td>
+                                <td>R$154,78</td>
+                                <td>R$1.654,78</td>
+                                <!-- Chama a tela de modal -->
+                                <td><button class="open-detalheFolhaPagamento" data-toggle="modal" data-id="32022" data-target="#modalFolhaPagamento">
+                                        <box-icon name='search-alt-2'></box-icon>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>01/04/2022</td>
+                                <td>Folha Mensal</td>
+                                <td>01/08/2022</td>
+                                <td>R$1954,78</td>
+                                <td>R$154,78</td>
+                                <td>R$1.654,78</td>
+                                <!-- Chama a tela de modal -->
+                                <td><button class="open-detalheFolhaPagamento" data-toggle="modal" data-id="42022" data-target="#modalFolhaPagamento">
+                                        <box-icon name='search-alt-2'></box-icon>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>01/05/2022</td>
+                                <td>Folha Mensal</td>
+                                <td>01/08/2022</td>
+                                <td>R$1954,78</td>
+                                <td>R$154,78</td>
+                                <td>R$1.654,78</td>
+                                <!-- Chama a tela de modal -->
+                                <td>
+                                    <button class="open-detalheFolhaPagamento" data-toggle="modal" data-id="52022" data-target="#modalFolhaPagamento">
+                                        <box-icon name='search-alt-2'></box-icon>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>01/06/2022</td>
+                                <td>Folha Mensal</td>
+                                <td>01/08/2022</td>
+                                <td>R$1954,78</td>
+                                <td>R$154,78</td>
+                                <td>R$1.654,78</td>
+                                <!-- Chama a tela de modal -->
+                                <td><button class="open-detalheFolhaPagamento" data-toggle="modal" data-id="62022" data-target="#modalFolhaPagamento">
+                                    <box-icon name='search-alt-2'></box-icon>
+                                </button>
+                                </td>
+                            </tr>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="footer-card"></div>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <strong>Gelvazio Camargo.</strong>
+        <strong>&copy All Rights Reserved.</strong>
+        <strong>30/07/2022 20:00.</strong>
+    </footer>
+</body>
+
+<script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+
+<!-- bootstrap -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</html>

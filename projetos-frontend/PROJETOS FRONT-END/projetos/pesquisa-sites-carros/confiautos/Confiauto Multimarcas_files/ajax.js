@@ -1,0 +1,199 @@
+/**
+ * @author Yuri Ruano do Nascimento
+ * @copyright IBS Sistemas
+ * @constructor init;
+ * @version 0.001a
+ *
+ */
+
+var $ajaxLoadbar = {
+    _current: 0,
+    create: function() {
+        d = $element('div');
+        $append(d, $text('Carregando ...'));
+        $s(d, 'id', 'ajax_loadBar');
+        d.className = 'on';
+        $append(document.body, d);
+    },
+    start: function() {
+        var e;
+        if (!$id('ajax_loadBar')) this.create();
+        e = $id('ajax_loadBar');
+        e.className = 'on';
+        this._current++;
+    },
+    stop: function() {
+        var e;
+        this._current--;
+        if (this._current == 0) {
+            e = $id('ajax_loadBar');
+            e.className = 'off';
+        }
+    },
+    ready: function(s) {
+        var e;
+        if (s == 4) this.stop();
+    }
+};
+
+var $ajax = function() {
+    this.init.apply(this, arguments);
+};
+
+$ajax.prototype = {
+    /**
+     * url - type - method - asc - loading - error - debug
+     * @constructor
+     * @param {Object} conf
+     * @return {Object,boolean}
+     */
+    init: function(conf) {
+        this.conf = conf;
+        this.running = true;
+        this.request = null;
+        var r = this._request();
+        this._run();
+        return this;
+    },
+    isRunning: function() {
+        return this.running;
+    },
+    isError: function() {
+        return this.request.error;
+    },
+    getError: function() {
+        var r = this.request;
+        return {
+            nr: r._error,
+            code: r._errorCode,
+            msg: r._errorMsg
+        };
+    },
+    isDebug: function() {
+        return this.request.debug;
+    },
+    getDebug: function() {
+        var r = this.request;
+        return this.request._debug;
+    },
+    _xmlHttpRequest: function() {
+        var r = false;
+        if (window.XMLHttpRequest) {
+            try {
+                r = new XMLHttpRequest();
+            } catch (e) {}
+        } else if (window.ActiveXObject) {
+            try {
+                r = new ActiveXObject("Msxml2.XMLHTTP");
+            } catch (e) {
+                try {
+                    r = new ActiveXObject("Microsoft.XMLHTTP");
+                } catch (e) {}
+            }
+        }
+        return r;
+    },
+    _request: function(conf) {
+        var c, d, r;
+        c = this.conf;
+        r = this.request = {
+            url: c.url,
+            param: c.param || '',
+            method: c.method || 'POST',
+            type: c.type || 'text',
+            asc: c.asc || false,
+            scope: c.scope || false,
+            load: c.load || false,
+            debug: c.debug,
+            error: false,
+            _debug: {},
+            _load: c._load || false,
+            _error: 0,
+            _errorCode: [],
+            _errorMsg: [],
+            _http: this._xmlHttpRequest(),
+            _result: null
+        }
+    },
+    /**
+     * @param {String} nome
+     */
+    getRequest: function() {
+        return this.request._result;
+    },
+    /**
+     * @param {String} nome
+     */
+    _run: function() {
+        var c, x, r, _p, _m, _u;
+        c = this;
+        r = c.request;
+        x = r._http;
+        _p = r.param;
+        _m = r.method;
+        if (_m == 'GET' && _p != '') r.url += '?' + _p;
+        var t = x.open(r.method, r.url, r.asc);
+        x.setRequestHeader("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
+        x.setRequestHeader("Cache-Control", "no-store, no-cache, must-revalidate, post-check=0, pre-check=0");
+        x.setRequestHeader("Pragma", "no-cache");
+        if (r.asc) $ajaxLoadbar.start();
+        x.send((_m == 'POST' && _p != '') ? _p : null);
+        if (r.debug) r._debug.xmlHttpRequest = true;
+        if (!r.asc) {
+            if (x.status == 200) {
+                this._formatRequest();
+            } else {
+                r.error = true;
+                r._error++;
+                r._errorCode = x.status;
+                r._errorMsg = x.responseText;
+            }
+        } else {
+            x.onreadystatechange = function() {
+                if (r.asc) $ajaxLoadbar.ready(x.readyState);
+                if (x.readyState == 4) {
+                    if (x.status == 200) {
+                        c._formatRequest();
+                        r.scope ? r.asc.call(r.scope, c.getRequest(c)) : r.asc(c.getRequest(c));
+                    } else {
+                        r.error = true;
+                        r._error++;
+                        r._errorCode = x.status;
+                        r._errorMsg = x.responseText;
+                    }
+                }
+            }
+        }
+    },
+    _formatRequest: function() {
+        var r, _t, _x, _r, _n;
+        _r = (r = this.request).type;
+        if (_r == 'text') {
+            _t = r._http.responseText;
+            if (_t) r._result = _t;
+        } else if (_r == 'xml') {
+            _x = r._http.responseXML;
+            if (_x) r._result = _x;
+        } else if (_r == 'json') {
+            _t = r._http.responseText;
+            if (_t) r._result = eval("(" + _t + ")");
+        }
+        this.running = false;
+    },
+    _load: function(request, status) {
+        var r, s;
+        r = request || {};
+        s = status || false;
+        if (!r._load) {
+            this.onload.call(this, s);
+        } else {
+            r._load.call(r.scope || this, s);
+        }
+    },
+    onload: null,
+    abort: function() {
+        var r;
+        r = this.request;
+        if (this.running) r._http.abort();
+    }
+};

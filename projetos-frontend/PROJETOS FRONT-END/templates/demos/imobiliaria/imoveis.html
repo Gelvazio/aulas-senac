@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Maurício Imóveis - Comprar</title>
+    <meta property="og:title" content="Maurício Imóveis - Comprar" />
+    <meta property="og:site_name" content="Maurício Imóveis - Comprar" />
+    <meta property="og:description" content="A empresa Maurício Imóveis atua no ramo imobiliário há mais de 10 anos, com sede na cidade de Taió-SC, comercializando casas, terrenos, chácaras, sítios e fazenda em toda a região, realizando os sonhos de seus clientes com muita presteza e dedicação."
+    />
+    <meta name="description" content="A empresa Maurício Imóveis atua no ramo imobiliário há mais de 10 anos, com sede na cidade de Taió-SC, comercializando casas, terrenos, chácaras, sítios e fazenda em toda a região, realizando os sonhos de seus clientes com muita presteza e dedicação."
+    />
+    <meta name="keywords" content="Maurício Imóveis, Imobiliária Maurício, Imobiliária Taió, Maurício Felácio, Finance Empréstimos Financiamentos. Casas, apartamentos, chácara, sítios, fazendas." />
+    <link rel="icon" href="https://cdn.uso.com.br/sites/favicon/12634.png" />
+    <meta name="google-site-verification" content="undefined" />
+    <meta name="msvalidate.01" content="undefined" />
+    <meta property="og:type" content="company" />
+    <meta name="robot" content="all" />
+    <meta name="rating" content="general" />
+    <meta name="distribution" content="local" />
+    <meta name="language" content="PT-Br" />
+    <meta name="abstract" content="" />
+    <meta property="og:locality" content="Taió" />
+    <meta name="development" content="http://www.uso.com.br" />
+    <meta http-equiv="content-language" content="pt-br" />
+    <meta name="google-translate-customization" content="4deca274387655c6-c1ecd5e18f1d4072-g37b46484acf9b163-e" />
+    <meta charset="utf-8" />
+    <link rel="canonical" href="https://www.imobiliariamauricio.com.br/comprar/" />
+    <link rel="stylesheet" href="/css/animate.css" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta property="og:image" content="https://cdn2.uso.com.br/sites/logos/12634.png" />
+</head>
+
+<body onload="fundoSite(12634);">
+    <div class="alinha_elementos_fixos hide_tv">
+        <a href="/favoritos">
+            <div id="botao_favoritos" style="display:none;" class="elementos_fixos_lateral favoritos_fixo_lateral_novo">
+                <div class="icone"><i class="fa fa-heart"></i></div>
+                <div class="dica">
+                    <p>Clique para ver seus favoritos</p>
+                </div>
+            </div>
+        </a>
+        <a href="https://api.whatsapp.com/send?phone=5547991875176" target="_blank" class="ctrl_link_whatsapp">
+            <div id="whatsapp_chat" style="display:block;" class="elementos_fixos_lateral whatsapp_fixo_lateral_novo">
+                <div class="icone"><i class="fa fa-whatsapp"></i></div>
+                <div class="dica">
+                    <p style="line-height:50px; padding:0;">Clique para falar via WhatsApp</p>
+                </div>
+            </div>
+        </a>
+        <div id="whatsapp_numero" style="display:none;" class="elementos_fixos_lateral whatsapp_fixo_lateral_novo">
+            <div class="icone"><i class="fa fa-whatsapp"></i></div>
+            <div class="dica">
+                <p>Tire suas dúvidas via WhatsApp<br/><span>(47) </span><span>99187-5176</span></p>
+            </div>
+        </div>
+        <div onclick="corretorOnline();" class="elementos_fixos_lateral corretor_fixo_lateral_novo corretor_online">
+            <div class="icone"><i class="fa fa-comments"></i></div>
+            <div class="dica">
+                <p>Clique para falar com um corretor</p>
+            </div>
+        </div>
+    </div>
+    <a id="botao_favoritos" href="/favoritos" style="display:none;"><img src="/images/btn_fav.png" style="position:fixed; bottom:0; left:0; z-index:99999999;" /></a>
+    <!-- Modal-->
+    <div id="modal-saindo" tabindex="99999" role="dialog" aria-labelledby="myModalLabel" class="modal fade">
+        <div role="document" class="modal-dialog">
+            <div class="modal-content"><i data-toggle="modal" data-target="#modal-saindo" onclick="$(&quot;#verifica_sair&quot;).show(); fecharVaiSair();" class="fa fa-times fechar_news"></i>
+                <div class="modal-header">
+                    <h2>Está saindo?</h2>
+                    <h5>O imóvel dos seus sonhos pode estar aqui na(o) Imobiliária Maurício.<br/><span>Vai perder essa chance?</span></h5>
+                </div>
+                <div class="modal-body">
+                    <div class="input-group">
+                        <div class="input-group-addon i fa fa-user"></div><input type="text" placeholder="*Nome" valor="nome" formulario="form-esta-saindo" obrigatorio="true" class="form-control" /></div><br/>
+                    <div class="input-group">
+                        <div class="input-group-addon i fa fa-at"></div><input type="text" placeholder="*E-Mail" valor="email" formulario="form-esta-saindo" obrigatorio="true" class="form-control" /></div><br/>
+                    <div class="input-group">
+                        <div class="input-group-addon i fa fa-phone"></div><input type="text" placeholder="Telefone" valor="telefone" formulario="form-esta-saindo" class="form-control" /></div><br/>
+                    <div class="input-group">
+                        <div class="input-group-addon i fa fa-phone"></div><input type="text" placeholder="Celular" valor="celular" formulario="form-esta-saindo" class="form-control" /></div><br/><textarea placeholder="Descreva o imóvel que procura" rows="5" valor="mensagem" formulario="form-esta-saindo"
+                        class="form-control"></textarea><br clear="all" />
+                    <center><button id="btn_enviar" onclick="sendForm(&quot;form-esta-saindo&quot;, this);" class="btn btn_saindo">Enviar</button></center>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="aviso_cookies_fixo">
+        <div class="aviso_cookies_fixo_texto"><span>Nós usamos cookies e outras tecnologias semelhantes para melhorar a sua experiência em nossos serviços, personalizar publicidade e recomendar conteúdo de seu interesse. Ao utilizar nossos serviços, você concorda com tal monitoramento.</span><br/><span>Conheça mais sobre os cookies, <a href="/cookies"><span>clique aqui</span></a>
+            </span><br/><span>Conheça mais sobre a nossa politica de privacidade, <a href="/politica-de-privacidade" target="_blank"><span>clique aqui</span></a>
+            </span>
+        </div><br/>
+        <div class="aviso_cookies_fixo_btn"><a onclick="fecharAvisoCookies();"><span>Prosseguir</span></a></div>
+    </div>
+    <div id="notificacao_novidades">
+        <a><img src="https://grupo-union.s3.amazonaws.com/sites/favicon/12634.png" onerror="this.src = &quot;https://grupo-union.s3.amazonaws.com/sites/logos/12634.png&quot;" alt="Imobiliária Maurício" />
+            <div class="titulo"><span>Imobiliária Maurício</span></div>
+            <div class="texto"><span>Dê uma olhada nas últimas novidades que separamos com o seu perfil.</span></div>
+        </a>
+        <div onclick="$(&quot;#notificacao_novidades&quot;).removeClass(&quot;animated zoomInRight&quot;); $(&quot;#notificacao_novidades&quot;).addClass(&quot;animated zoomOutRight&quot;); fecharNovidades();" class="fechar"><i class="fa fa-close"></i></div>
+    </div><input id="whatsapp_hora_inicio" type="hidden" /><input id="whatsapp_hora_fim" type="hidden" /><input id="whatsapp_dias" type="hidden" /><input id="whatsapp_chat_verificador" type="hidden" value="1" /><input id="flag_busca_sugestao" type="hidden"
+    /><input id="tempo_chatbot" type="hidden" /><input id="chatbot_hora_inicio" type="hidden" /><input id="chatbot_hora_fim" type="hidden" /><input id="chatbot_dias" type="hidden" />
+    <div id="splash" style="width:100vw; height:100vh; position:fixed; z-index:2; top:0; left:0; background-color:#FFF; font-size:20px; color:#333; text-align:center; line-height:100vh;"><span>Carregando...</span></div>
+    <div class="topo">
+        <div class="faixa_topo">
+            <div class="center">
+                <div class="logo_topo">
+                    <a href="/"><img src="https://cdn2.uso.com.br/sites/logos/12634.gif" onerror="this.src = &quot;https://cdn2.uso.com.br/sites/logos/12634.png&quot;;" alt="Imobiliária Maurício"></a>
+                </div>
+                <div onclick="$(&quot;#cssmenu&quot;).slideToggle();" class="btn_menu"><i class="fa fa-bars"></i><span>MENU</span></div>
+                <div class="sociais_topo"><a href="https://www.facebook.com/imobiliariamauricio/" target="_blank" title="Visite-nos no Facebook"><i class="fa fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/imobiliariamauricio/" target="_blank" rel="publisher" title="Visite-nos no Instagram"><i class="fa fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="center">
+            <div class="itens_topo">
+                <a href="https://api.whatsapp.com/send?phone=5547991875176" target="_blank">
+                    <div class="item"><img src="/images/img_whatsapp.png" alt="whatsapp">
+                        <div class="texto"> <span>CLIQUE PARA FALAR</span><br><strong>VIA WHATSAPP</strong></div>
+                    </div><br class="fim"></a>
+                <div class="item"><img src="/images/img_email.png" alt="email">
+                    <div class="texto"><span>NÃO ACHOU O IMÓVEL DESEJADO?</span><br><strong><a href="mailto:imobiliariamauricio@hotmail.com">imobiliariamauricio@hotmail.com</a></strong></div>
+                </div><br class="fim">
+                <div class="item"><img src="/images/img_telefone.png" alt="telefone">
+                    <div class="texto"><span>CENTRAL DE ATENDIMENTO</span><br><strong>47 3562-1772</strong><br><strong>47 99971-4411</strong><br><strong>47 99187-5176</strong></div>
+                </div>
+            </div>
+            <div id="cssmenu">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/empresa">Quem Somos</a></li>
+                    <li class="has-sub"><a href="#">Imóveis</a>
+                        <ul class="submenu_tipos"></ul>
+                    </li>
+                    <li class="has-sub"><a href="#">Lançamentos</a></li>
+                    <li><a href="/servicos">Serviços</a></li>
+                    <li><a href="/contato">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </div><br clear="all">
+    <style type="text/css">
+        .imoveis.filtros.mais_campos {
+            display: none;
+        }
+        
+        .menu_topo_novo,
+        .texto_rodape,
+        .rodape {
+            display: none !important;
+        }
+        
+        @media screen and (min-width:1025px) {
+            .topo {
+                display: none !important;
+            }
+            .topo_resultado {
+                display: block !important;
+            }
+        }
+    </style>
+    <div class="topo_resultado">
+        <ul class="menu_topo">
+            <li class="fechar"><i onclick="$(&quot;.fundo_black&quot;).fadeOut(); $(&quot;ul.menu_topo&quot;).slideToggle();" class="fa fa-times"></i></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/empresa">Quem Somos</a></li>
+            <li><a href="#">Imóveis</a>
+                <ul style="width:300px !important; max-height:350px !important; overflow-y:scroll !important;" class="submenu_tipos"></ul>
+            </li>
+            <li><a href="/empreendimentos">Lançamentos</a></li>
+            <li><a href="/cadastre-seu-imovel">Cadastre seu imóvel</a></li>
+            <li><a href="/servicos">Serviços</a></li>
+            <li><a href="/contato">Contato</a></li>
+        </ul><button onclick="$(&quot;#map&quot;).css({ &quot;top&quot;: &quot;-1000%&quot; }); $(this).hide();" style="display:none !important;" class="btn btn_mapa2"><i class="fa fa-table"></i><span>Busca detalhada</span></button></div>
+    <div class="titulo_pagina">&nbsp</div>
+    <div class="imoveis">
+        <div class="filtros">
+            <div class="busca_codigo"><span>Busca por referência</span><input id="filtro-referencia" type="text" placeholder="Digite a referência" class="referencia form-control" /><button onclick="pesquisar('resultado')" class="btn btn_buscar_referencia"><i class="fa fa-search"></i></button></div>
+            <div class="campos"><span>Finalidade</span><select id="filtro-finalidade" onchange="pesquisar('resultado');"><option value="" selected="true">Todos</option><option value="comprar" selected="true">Comprar</option></select></div>
+            <div class="campos"><span>Tipo</span><select id="filtro-tipo" onchange="pesquisar('resultado');" class="multiselect"><option value="" selected="true">Todos</option></select></div>
+            <div class="campos"><span>Estado</span><select id="filtro-uf" onchange="selecionar('uf', 'filtro-'); pesquisar('resultado');" class="multiselect"><option value="" selected="true">Todos</option></select></div>
+            <div class="campos"><span>Cidade</span><select id="filtro-cidade" onchange="selecionar('cidade', 'filtro-'); pesquisar('resultado');" class="multiselect"><option value="" selected="true">Todos</option></select></div>
+            <div class="campos"><span>Bairro</span><select id="filtro-bairro" multiple="multiple" onchange="selecionar('bairro', 'filtro-'); pesquisar('resultado');" class="multiselect"></select></div>
+            <div class="campos"><span>Faixa de Valor</span><select id="filtro-valor" onchange="pesquisar('resultado');" class="multiselect"></select></div>
+            <div id="mais_campos" style="display:block; position:relative; float:left;" class="mais_campos">
+                <div class="campos"><span>Dormitórios</span><select id="filtro-dormitorios" onchange="pesquisar('resultado');" class="multiselect"><option value="" selected="">Todos</option><option value="1">1 ou mais</option><option value="2">2 ou mais</option><option value="3">3 ou mais</option><option value="4">4 ou mais</option><option value="5">5 ou mais</option></select></div>
+                <div class="campos"><span>Suítes</span><select id="filtro-suites" onchange="pesquisar('resultado');" class="multiselect"><option value="" selected="">Todos</option><option value="1">1 ou mais</option><option value="2">2 ou mais</option><option value="3">3 ou mais</option><option value="4">4 ou mais</option><option value="5">5 ou mais</option></select></div>
+                <div class="campos"><span>Vagas</span><select id="filtro-vagas" onchange="pesquisar('resultado');" class="multiselect"><option value="" selected="">Todos</option><option value="1">1 ou mais</option><option value="2">2 ou mais</option><option value="3">3 ou mais</option><option value="4">4 ou mais</option><option value="5">5 ou mais</option></select></div>
+                <div class="campos"><span>Condomínio</span><select id="filtro-condominio" onchange="pesquisar('resultado');" class="multiselect"><option value="" selected="">Todos</option><option value="1">Sim</option><option value="0">Não</option></select></div>
+                <div class="campos"><span>Faixa de Área</span><select id="filtro-area" onchange="pesquisar('resultado');" class="multiselect"></select></div>
+            </div>
+        </div>
+        <div id="conteudo_imoveis">
+            <div class="filtros_selecionados">
+                <div class="filtro_atual"><a href="/comprar-ou-alugar/"><i class="fa fa-close"></i></a><span>Comprar</span></div>
+            </div>
+            <div class="ordenar"><span class="texto">Resultados:</span>
+                <div class="campo"><select id="ordem-campo" onchange="pesquisar('resultado');" class="multiselect"><option value="valor" selected="true">Valor</option><option value="fotos">Fotos</option><option value="recentes">Mais Recentes</option><option value="dormitorios">Dormitórios</option><option value="bairro">Bairro</option></select></div>
+                <div class="campo"><select id="ordem-resultado" onchange="pesquisar('resultado');" class="multiselect"><option value="crescente" selected="true">Crescente</option><option value="decrescente">Decrescente</option></select></div>
+                <div id="campo-qtd" class="campo"><select id="total-imoveis" onchange="pesquisar('resultado');" class="multiselect"><option value="12" selected="true">12 Imóveis</option><option value="24">24 Imóveis</option><option value="48">48 Imóveis</option></select></div><span class="quantidade">(256 imóveis)</span></div>
+            <div id="resultados" class="resultados">
+                <div class="load_result"><i class="fa fa-spin fa-spinner"></i></div>
+                <!-- Imóvel-->
+                <comprar></comprar>
+                <div id="4237307" class="resultado">
+                    <div class="foto">
+                        <a href="/comprar/sc/taio/vila-mariana/terreno/4237307">
+                            <!-- Foto--><img src="https://cdn.uso.com.br/12634/2016/12/mini_46850114.jpg" title="Comprar, terreno no bairro vila mariana na cidade de taió-sc" alt="Comprar, terreno no bairro vila mariana na cidade de taió-sc" /></a>
+                    </div>
+                    <div class="info_imoveis">
+                        <h3 class="tipo">TERRENO</h3>
+                        <h4 class="cidade">Taió - SC</h4>
+                        <h4 class="bairro">Vila Mariana</h4>
+                        <div class="valor"><small>Venda</small>
+                            <h5>R$ 50.000,00</h5>
+                        </div>
+                        <div class="detalhes">
+                            <div title="Dormitórios" class="detalhe"><i class="fa fa-bed"></i><span>-</span></div>
+                            <div title="Banheiros" class="detalhe"><i class="fa fa-bath"></i><span>-</span></div>
+                            <div title="Vagas" class="detalhe"><i class="fa fa-car"></i><span>-</span></div>
+                            <div title="Área" style="clear:both; float:left; margin:15px 0 0 0;" class="detalhe"><i class="fa fa-expand"></i><span>640</span><span>m²</span></div>
+                            <div style="clear:both; float:left; margin:15px 0 0 10px;"><span>Ref.: TE00019</span></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Imóvel-->
+                <comprar></comprar>
+                <div id="2848025" class="resultado">
+                    <div class="foto">
+                        <a href="/comprar/sc/imbuia/centro/terreno/2848025">
+                            <!-- Foto--><img src="https://cdn.uso.com.br/12634/mini_26783366.jpg" title="Comprar, terreno no bairro centro na cidade de imbuia-sc" alt="Comprar, terreno no bairro centro na cidade de imbuia-sc" /></a>
+                    </div>
+                    <div class="info_imoveis">
+                        <h3 class="tipo">TERRENO</h3>
+                        <h4 class="cidade">IMBUIA - SC</h4>
+                        <h4 class="bairro">CENTRO</h4>
+                        <div class="valor"><small>Venda</small>
+                            <h5>R$ 65.000,00</h5>
+                        </div>
+                        <div class="detalhes">
+                            <div title="Dormitórios" class="detalhe"><i class="fa fa-bed"></i><span>-</span></div>
+                            <div title="Banheiros" class="detalhe"><i class="fa fa-bath"></i><span>-</span></div>
+                            <div title="Vagas" class="detalhe"><i class="fa fa-car"></i><span>-</span></div>
+                            <div title="Área" style="clear:both; float:left; margin:15px 0 0 0;" class="detalhe"><i class="fa fa-expand"></i><span>364</span><span>m²</span></div>
+                            <div style="clear:both; float:left; margin:15px 0 0 10px;"><span>Ref.: 1021</span></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Imóvel-->
+                <comprar></comprar>
+                <div id="2848026" class="resultado">
+                    <div class="foto">
+                        <a href="/comprar/sc/imbuia/centro/terreno/2848026">
+                            <!-- Foto--><img src="https://cdn.uso.com.br/12634/mini_26783367.jpg" title="Comprar, terreno no bairro centro na cidade de imbuia-sc" alt="Comprar, terreno no bairro centro na cidade de imbuia-sc" /></a>
+                    </div>
+                    <div class="info_imoveis">
+                        <h3 class="tipo">TERRENO</h3>
+                        <h4 class="cidade">IMBUIA - SC</h4>
+                        <h4 class="bairro">CENTRO</h4>
+                        <div class="valor"><small>Venda</small>
+                            <h5>R$ 65.000,00</h5>
+                        </div>
+                        <div class="detalhes">
+                            <div title="Dormitórios" class="detalhe"><i class="fa fa-bed"></i><span>-</span></div>
+                            <div title="Banheiros" class="detalhe"><i class="fa fa-bath"></i><span>-</span></div>
+                            <div title="Vagas" class="detalhe"><i class="fa fa-car"></i><span>-</span></div>
+                            <div title="Área" style="clear:both; float:left; margin:15px 0 0 0;" class="detalhe"><i class="fa fa-expand"></i><span>364</span><span>m²</span></div>
+                            <div style="clear:both; float:left; margin:15px 0 0 10px;"><span>Ref.: 1022</span></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Imóvel-->
+                <comprar></comprar>
+                <div id="69301457" class="resultado">
+                    <div class="foto">
+                        <a href="/comprar/sc/taio/padre-eduardo/terreno/69301457">
+                            <!-- Foto--><img src="https://cdn.uso.com.br/12634/2021/03/mini_140775063.jpg" title="Comprar, terreno no bairro padre eduardo na cidade de taió-sc" alt="Comprar, terreno no bairro padre eduardo na cidade de taió-sc" /></a>
+                    </div>
+                    <div class="info_imoveis">
+                        <h3 class="tipo">TERRENO</h3>
+                        <h4 class="cidade">Taió - SC</h4>
+                        <h4 class="bairro">Padre Eduardo</h4>
+                        <div class="valor"><small>Venda</small>
+                            <h5>R$ 65.000,00</h5>
+                        </div>
+                        <div class="detalhes">
+                            <div title="Dormitórios" class="detalhe"><i class="fa fa-bed"></i><span>-</span></div>
+                            <div title="Banheiros" class="detalhe"><i class="fa fa-bath"></i><span>-</span></div>
+                            <div title="Vagas" class="detalhe"><i class="fa fa-car"></i><span>-</span></div>
+                            <div title="Área" style="clear:both; float:left; margin:15px 0 0 0;" class="detalhe"><i class="fa fa-expand"></i><span>502</span><span>m²</span></div>
+                            <div style="clear:both; float:left; margin:15px 0 0 10px;"><span>Ref.: TE00117</span></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Imóvel-->
+                <comprar></comprar>
+                <div id="32447524" class="resultado">
+                    <div class="foto">
+                        <a href="/comprar/sc/salete/beira-rio/terreno/32447524">
+                            <!-- Foto--><img src="https://cdn.uso.com.br/12634/2018/05/mini_70273867.jpg" title="Comprar, terreno no bairro beira rio na cidade de salete-sc" alt="Comprar, terreno no bairro beira rio na cidade de salete-sc" /></a>
+                    </div>
+                    <div class="info_imoveis">
+                        <h3 class="tipo">TERRENO</h3>
+                        <h4 class="cidade">SALETE - SC</h4>
+                        <h4 class="bairro">BEIRA RIO</h4>
+                        <div class="valor"><small>Venda</small>
+                            <h5>R$ 70.000,00</h5>
+                        </div>
+                        <div class="detalhes">
+                            <div title="Dormitórios" class="detalhe"><i class="fa fa-bed"></i><span>-</span></div>
+                            <div title="Banheiros" class="detalhe"><i class="fa fa-bath"></i><span>-</span></div>
+                            <div title="Vagas" class="detalhe"><i class="fa fa-car"></i><span>-</span></div>
+                            <div title="Área" style="clear:both; float:left; margin:15px 0 0 0;" class="detalhe"><i class="fa fa-expand"></i><span>527</span><span>m²</span></div>
+                            <div style="clear:both; float:left; margin:15px 0 0 10px;"><span>Ref.: TE00062</span></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Imóvel-->
+                <comprar></comprar>
+                <div id="4303356" class="resultado">
+                    <div class="foto">
+                        <a href="/comprar/sc/santa-terezinha/centro/terreno/4303356">
+                            <!-- Foto--><img src="/images/no-photo.png" /></a>
+                    </div>
+                    <div class="info_imoveis">
+                        <h3 class="tipo">TERRENO</h3>
+                        <h4 class="cidade">Santa Terezinha - SC</h4>
+                        <h4 class="bairro">Centro</h4>
+                        <div class="valor"><small>Venda</small>
+                            <h5>R$ 70.000,00</h5>
+                        </div>
+                        <div class="detalhes">
+                            <div title="Dormitórios" class="detalhe"><i class="fa fa-bed"></i><span>-</span></div>
+                            <div title="Banheiros" class="detalhe"><i class="fa fa-bath"></i><span>-</span></div>
+                            <div title="Vagas" class="detalhe"><i class="fa fa-car"></i><span>-</span></div>
+                            <div title="Área" style="clear:both; float:left; margin:15px 0 0 0;" class="detalhe"><i class="fa fa-expand"></i><span>496</span><span>m²</span></div>
+                            <div style="clear:both; float:left; margin:15px 0 0 10px;"><span>Ref.: TE00025</span></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Imóvel-->
+                <comprar></comprar>
+                <div id="32109691" class="resultado">
+                    <div class="foto">
+                        <a href="/comprar/sc/taio/rodovia-sc-350-morro-redondo-passo-manso/chacara/32109691">
+                            <!-- Foto--><img src="https://cdn.uso.com.br/12634/2018/02/mini_64221252.jpg" title="Comprar, chacara no bairro rodovia sc 350 - morro redondo - passo manso na cidade de taio-sc" alt="Comprar, chacara no bairro rodovia sc 350 - morro redondo - passo manso na cidade de taio-sc"
+                            /></a>
+                    </div>
+                    <div class="info_imoveis">
+                        <h3 class="tipo">CHACARA</h3>
+                        <h4 class="cidade">TAIO - SC</h4>
+                        <h4 class="bairro">RODOVIA SC 350 - MORRO REDONDO - PASSO MANSO</h4>
+                        <div class="valor"><small>Venda</small>
+                            <h5>R$ 70.000,00</h5>
+                        </div>
+                        <div class="detalhes">
+                            <div title="Dormitórios" class="detalhe"><i class="fa fa-bed"></i><span>-</span></div>
+                            <div title="Banheiros" class="detalhe"><i class="fa fa-bath"></i><span>-</span></div>
+                            <div title="Vagas" class="detalhe"><i class="fa fa-car"></i><span>-</span></div>
+                            <div title="Área" style="clear:both; float:left; margin:15px 0 0 0;" class="detalhe"><i class="fa fa-expand"></i><span>8774</span><span>m²</span></div>
+                            <div style="clear:both; float:left; margin:15px 0 0 10px;"><span>Ref.: CH00010</span></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Imóvel-->
+                <comprar></comprar>
+                <div id="69363311" class="resultado">
+                    <div class="foto">
+                        <a href="/comprar/sc/taio/padre-eduardo/terreno/69363311">
+                            <!-- Foto--><img src="https://cdn.uso.com.br/12634/2021/03/mini_142255202.jpg" title="Comprar, terreno no bairro padre eduardo na cidade de taió-sc" alt="Comprar, terreno no bairro padre eduardo na cidade de taió-sc" /></a>
+                    </div>
+                    <div class="info_imoveis">
+                        <h3 class="tipo">TERRENO</h3>
+                        <h4 class="cidade">Taió - SC</h4>
+                        <h4 class="bairro">Padre Eduardo</h4>
+                        <div class="valor"><small>Venda</small>
+                            <h5>R$ 70.000,00</h5>
+                        </div>
+                        <div class="detalhes">
+                            <div title="Dormitórios" class="detalhe"><i class="fa fa-bed"></i><span>-</span></div>
+                            <div title="Banheiros" class="detalhe"><i class="fa fa-bath"></i><span>-</span></div>
+                            <div title="Vagas" class="detalhe"><i class="fa fa-car"></i><span>-</span></div>
+                            <div title="Área" style="clear:both; float:left; margin:15px 0 0 0;" class="detalhe"><i class="fa fa-expand"></i><span>367.7</span><span>m²</span></div>
+                            <div style="clear:both; float:left; margin:15px 0 0 10px;"><span>Ref.: TE00119</span></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Imóvel-->
+                <comprar></comprar>
+                <div id="2847886" class="resultado">
+                    <div class="foto">
+                        <a href="/comprar/sc/taio/padre-eduardo/terreno/2847886">
+                            <!-- Foto--><img src="https://cdn.uso.com.br/12634/2020/10/mini_126825960.jpg" title="Comprar, terreno no bairro padre eduardo na cidade de taió-sc" alt="Comprar, terreno no bairro padre eduardo na cidade de taió-sc" /></a>
+                    </div>
+                    <div class="info_imoveis">
+                        <h3 class="tipo">TERRENO</h3>
+                        <h4 class="cidade">TAIÓ - SC</h4>
+                        <h4 class="bairro">PADRE EDUARDO</h4>
+                        <div class="valor"><small>Venda</small>
+                            <h5>R$ 70.000,00</h5>
+                        </div>
+                        <div class="detalhes">
+                            <div title="Dormitórios" class="detalhe"><i class="fa fa-bed"></i><span>-</span></div>
+                            <div title="Banheiros" class="detalhe"><i class="fa fa-bath"></i><span>-</span></div>
+                            <div title="Vagas" class="detalhe"><i class="fa fa-car"></i><span>-</span></div>
+                            <div title="Área" style="clear:both; float:left; margin:15px 0 0 0;" class="detalhe"><i class="fa fa-expand"></i><span>360</span><span>m²</span></div>
+                            <div style="clear:both; float:left; margin:15px 0 0 10px;"><span>Ref.: 191</span></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Imóvel-->
+                <comprar></comprar>
+                <div id="2848100" class="resultado">
+                    <div class="foto">
+                        <a href="/comprar/sc/salete/centro/terreno/2848100">
+                            <!-- Foto--><img src="https://cdn.uso.com.br/12634/2017/01/mini_48191618.jpg" title="Comprar, terreno no bairro centro na cidade de salete-sc" alt="Comprar, terreno no bairro centro na cidade de salete-sc" /></a>
+                    </div>
+                    <div class="info_imoveis">
+                        <h3 class="tipo">TERRENO</h3>
+                        <h4 class="cidade">SALETE - SC</h4>
+                        <h4 class="bairro">CENTRO</h4>
+                        <div class="valor"><small>Venda</small>
+                            <h5>R$ 70.000,00</h5>
+                        </div>
+                        <div class="detalhes">
+                            <div title="Dormitórios" class="detalhe"><i class="fa fa-bed"></i><span>-</span></div>
+                            <div title="Banheiros" class="detalhe"><i class="fa fa-bath"></i><span>-</span></div>
+                            <div title="Vagas" class="detalhe"><i class="fa fa-car"></i><span>-</span></div>
+                            <div title="Área" style="clear:both; float:left; margin:15px 0 0 0;" class="detalhe"><i class="fa fa-expand"></i><span>375</span><span>m²</span></div>
+                            <div style="clear:both; float:left; margin:15px 0 0 10px;"><span>Ref.: 2041</span></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Imóvel-->
+                <comprar></comprar>
+                <div id="4954024" class="resultado">
+                    <div class="foto">
+                        <a href="/comprar/sc/salete/america/terreno/4954024">
+                            <!-- Foto--><img src="https://cdn.uso.com.br/12634/2017/10/mini_60424036.jpg" title="Comprar, terreno no bairro america na cidade de salete-sc" alt="Comprar, terreno no bairro america na cidade de salete-sc" /></a>
+                    </div>
+                    <div class="info_imoveis">
+                        <h3 class="tipo">TERRENO</h3>
+                        <h4 class="cidade">SALETE - SC</h4>
+                        <h4 class="bairro">AMERICA</h4>
+                        <div class="valor"><small>Venda</small>
+                            <h5>R$ 70.000,00</h5>
+                        </div>
+                        <div class="detalhes">
+                            <div title="Dormitórios" class="detalhe"><i class="fa fa-bed"></i><span>-</span></div>
+                            <div title="Banheiros" class="detalhe"><i class="fa fa-bath"></i><span>-</span></div>
+                            <div title="Vagas" class="detalhe"><i class="fa fa-car"></i><span>-</span></div>
+                            <div title="Área" style="clear:both; float:left; margin:15px 0 0 0;" class="detalhe"><i class="fa fa-expand"></i><span>2245</span><span>m²</span></div>
+                            <div style="clear:both; float:left; margin:15px 0 0 10px;"><span>Ref.: TE00043</span></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Imóvel-->
+                <comprar></comprar>
+                <div id="34940840" class="resultado">
+                    <div class="foto">
+                        <a href="/comprar/sc/rio-do-campo/floresta/terreno/34940840">
+                            <!-- Foto--><img src="https://cdn.uso.com.br/12634/2020/02/mini_111045197.jpg" title="Comprar, terreno no bairro floresta na cidade de rio do campo-sc" alt="Comprar, terreno no bairro floresta na cidade de rio do campo-sc" /></a>
+                    </div>
+                    <div class="info_imoveis">
+                        <h3 class="tipo">TERRENO</h3>
+                        <h4 class="cidade">Rio do Campo - SC</h4>
+                        <h4 class="bairro">Floresta</h4>
+                        <div class="valor"><small>Venda</small>
+                            <h5>R$ 70.000,00</h5>
+                        </div>
+                        <div class="detalhes">
+                            <div title="Dormitórios" class="detalhe"><i class="fa fa-bed"></i><span>-</span></div>
+                            <div title="Banheiros" class="detalhe"><i class="fa fa-bath"></i><span>-</span></div>
+                            <div title="Vagas" class="detalhe"><i class="fa fa-car"></i><span>-</span></div>
+                            <div title="Área" style="clear:both; float:left; margin:15px 0 0 0;" class="detalhe"><i class="fa fa-expand"></i><span>300</span><span>m²</span></div>
+                            <div style="clear:both; float:left; margin:15px 0 0 10px;"><span>Ref.: TE00106</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pages">
+                    <div class="pagination">
+                        <ul class="pagination">
+                            <li class="active"><a href="/comprar/pagina-1/">1</a></li>
+                            <li><a href="/comprar/pagina-2/">2</a></li>
+                            <li><a href="/comprar/pagina-3/">3</a></li>
+                            <li><a href="/comprar/pagina-4/">4</a></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li>
+                                <a href="/comprar/pagina-2/" aria-label="Next" class="page-link"> <span aria-hidden="true">&raquo;</span><span class="sr-only">Próxima</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="semMapa"></div>
+        <style type="text/css">
+            .imoveis .filtros {
+                margin-top: 50px !important;
+            }
+        </style><input id="enderecos_mapa" type="hidden" value="-27.1153027,-49.98407159999999,4237307|0,0,2848025|0,0,2848026|-26.9827779,-50.01348389999998,32447524|-26.7880354,-50.02043800000001,4303356|">
+        <script>
+            function initMap() {
+                var localization = 'Taió' + ' - ' + 'SC';
+                var geocoder = new google.maps.Geocoder();
+                var myLatLng = [];
+                var enderecos_mapa = document.getElementById('enderecos_mapa').value.replace('undefined', '').split('|');
+                geocoder.geocode({
+                    'address': localization
+                }, function(results, status) {
+                    if (status == google.maps.GeocoderStatus.OK) {
+                        myLatLng = {
+                            lat: results[0].geometry.location.lat(),
+                            lng: results[0].geometry.location.lng()
+                        };
+                        var map = new google.maps.Map(document.getElementById('map'), {
+                            zoom: 16,
+                            center: myLatLng,
+                            mapTypeId: google.maps.MapTypeId.ROADMAP
+                        });
+                    }
+                    var latlngbounds = new google.maps.LatLngBounds();
+                    for (var i = 0; i <= enderecos_mapa.length - 2; i++) {
+                        var marker = new google.maps.Marker({
+                            position: new google.maps.LatLng(enderecos_mapa[i].split(',')[0], enderecos_mapa[i].split(',')[1]),
+                            map: map,
+                            icon: '/images/mapmarker.png'
+                        });
+                        var pkimovel = enderecos_mapa[i].split(',')[2];
+                        var conteudo = "<div class='result_maps'>" + $('#' + pkimovel).html(); + "</div>";
+                        var infowindow = new google.maps.InfoWindow({
+                            content: conteudo,
+                        });
+                        (function(marker, pkimovel, infowindow) {
+                            google.maps.event.addListener(marker, "click", function(e) {
+                                infowindow.open(map, marker);
+                                var iwOuter = $('.gm-style-iw');
+                                var iwBackground = iwOuter.prev();
+                                iwBackground.children(':nth-child(2)').css({
+                                    'display': 'none'
+                                });
+                                iwBackground.children(':nth-child(4)').css({
+                                    'display': 'none'
+                                });
+                                iwOuter.parent().parent().css({
+                                    left: '43px'
+                                });
+                                iwBackground.children(':nth-child(1)').attr('style', function(i, s) {
+                                    return s + 'left: 76px !important;'
+                                });
+                                iwBackground.children(':nth-child(3)').attr('style', function(i, s) {
+                                    return s + 'left: 76px !important;'
+                                });
+                                iwBackground.children(':nth-child(3)').find('div').children().css({
+                                    'box-shadow': 'rgba(52, 52, 52, 0.6) 0px 1px 6px',
+                                    'z-index': '1'
+                                });
+                                var iwCloseBtn = iwOuter.next();
+                                iwCloseBtn.css({
+                                    right: '33px',
+                                    top: '18px'
+                                });
+                                if ($('.iw-content').height() < 140) {
+                                    $('.iw-bottom-gradient').css({
+                                        display: 'none'
+                                    });
+                                }
+                                iwCloseBtn.mouseout(function() {
+                                    $(this).css({
+                                        opacity: '1'
+                                    });
+                                });
+                            });
+                        })(marker, pkimovel, infowindow);
+                        latlngbounds.extend(marker.position);
+                    }
+                    map.fitBounds(latlngbounds);
+                    map.addListener('dragend', function() {
+                        var finalidade = $("#filtro-finalidade").val();
+                        if (finalidade == "") finalidade = "imoveis";
+                        finalidade = finalidade.toString().toLowerCase();
+                        finalidade = finalidade.split(",").join("-ou-");
+                        $('.load_result').show();
+                        $.post("https://maps.googleapis.com/maps/api/geocode/json?latlng=" + map.getCenter().toString().replace("(", "").replace(")", "") + "&sensor=true", function(data) {
+                            try {
+                                var neighborhood = data.results[0].address_components[2].long_name.split(" ").join("-").toLowerCase();
+                                var city = data.results[0].address_components[3].long_name.split(" ").join("-").toLowerCase();
+                                var state = data.results[0].address_components[5].short_name.split(" ").join("-").toLowerCase();
+                                var url = "/" + finalidade + "/" + state + "/" + city + "/" + neighborhood;
+                                url = url.removeDiacritics() + "/";
+                                history.pushState({}, null, url);
+                                $.get("/busca-imoveis-mapa/" + finalidade + "/" + state + "/" + city + "/" + neighborhood, function(data) {
+                                    $("#conteudo_imoveis").html(data);
+                                    var enderecos_mapa = document.getElementById('enderecos_mapa2').value.replace('undefined', '').split('|');
+                                    for (var i = 0; i <= enderecos_mapa.length - 2; i++) {
+                                        var marker = new google.maps.Marker({
+                                            position: new google.maps.LatLng(enderecos_mapa[i].split(',')[0], enderecos_mapa[i].split(',')[1]),
+                                            map: map,
+                                            icon: '/images/mapmarker.png'
+                                        });
+                                        var pkimovel = enderecos_mapa[i].split(',')[2];
+                                        var conteudo = "<div class='result_maps'>" + $('#' + pkimovel).html(); + "</div>";
+                                        var infowindow = new google.maps.InfoWindow({
+                                            content: conteudo,
+                                        });
+                                        (function(marker, pkimovel, infowindow) {
+                                            google.maps.event.addListener(marker, "click", function(e) {
+                                                infowindow.open(map, marker);
+                                                var iwOuter = $('.gm-style-iw');
+                                                var iwBackground = iwOuter.prev();
+                                                iwBackground.children(':nth-child(2)').css({
+                                                    'display': 'none'
+                                                });
+                                                iwBackground.children(':nth-child(4)').css({
+                                                    'display': 'none'
+                                                });
+                                                iwOuter.parent().parent().css({
+                                                    left: '43px'
+                                                });
+                                                iwBackground.children(':nth-child(1)').attr('style', function(i, s) {
+                                                    return s + 'left: 76px !important;'
+                                                });
+                                                iwBackground.children(':nth-child(3)').attr('style', function(i, s) {
+                                                    return s + 'left: 76px !important;'
+                                                });
+                                                iwBackground.children(':nth-child(3)').find('div').children().css({
+                                                    'box-shadow': 'rgba(52, 52, 52, 0.6) 0px 1px 6px',
+                                                    'z-index': '1'
+                                                });
+                                                var iwCloseBtn = iwOuter.next();
+                                                iwCloseBtn.css({
+                                                    right: '33px',
+                                                    top: '18px'
+                                                });
+                                                if ($('.iw-content').height() < 140) {
+                                                    $('.iw-bottom-gradient').css({
+                                                        display: 'none'
+                                                    });
+                                                }
+                                                iwCloseBtn.mouseout(function() {
+                                                    $(this).css({
+                                                        opacity: '1'
+                                                    });
+                                                });
+                                            });
+                                        })(marker, pkimovel, infowindow);
+                                    }
+                                    $('.load_result').hide();
+                                });
+                            } catch {
+                                $('.load_result').hide();
+                            }
+                        });
+                    });
+                });
+            }
+        </script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCCVL-POSHvR8j_d2lvT4P1zlSL9dxfFc4&amp;callback=initMap"></script>
+    </div><br clear="all"><br clear="all">
+    <div class="rodape">
+        <div class="center">
+            <div class="item_rodape">
+                <div class="titulo"><span>Siga-nos</span></div>
+                <div class="sociais_rodape"><a href="https://www.facebook.com/imobiliariamauricio/" target="_blank" title="Visite-nos no Facebook"><i class="fa fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/imobiliariamauricio/" target="_blank" rel="publisher" title="Visite-nos no Instagram"><i class="fa fa-instagram"></i></a>
+                </div><br clear="all"><br clear="all"></div>
+            <div class="item_rodape">
+                <div class="titulo"><span>Newsletter</span></div>
+                <div class="subtitulo"><span>Inscreva-se para receber as melhores ofertas de imóveis.</span></div>
+                <div class="newsletter">
+                    <div class="novo_label"><span>E-mail:</span></div><input type="text" placeholder="Seu e-mail aqui" valor="email" formulario="form-newsletter" obrigatorio="true" class="form-control" /><button onclick="sendForm(&quot;form-newsletter&quot;);" class="btn btn_enviar_news">Enviar</button></div>
+            </div>
+            <div class="item_rodape">
+                <div class="titulo"><span>Contato</span></div>
+                <div class="endereco_rodape"><span>Rua Coronel Feddersen, 1529<span> - Sala 02</span></span><br><span>Centro</span><br><span>Taió/SC</span><br><span>CEP 89190-000</span><br><span>CRECI 3013J</span><br>
+                    <div class="contatos"><span>Fone: </span><a href="tel:473562-1772"><span>47 3562-1772</span></a><br><span>WhatsApp: </span><a href="tel:4799187-5176"><span>47 99187-5176</span></a>
+                        <div class="email"><i class="fa fa-envelope"></i><a href="mailto:imobiliariamauricio@hotmail.com"><span>imobiliariamauricio@hotmail.com</span></a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="item_rodape item_last">
+                <div class="titulo"><span>Facilidades</span></div>
+                <ul>
+                    <li class="corretor_online"><a href="#" onclick="corretorOnline();">Falar com um Corretor Online</a></li>
+                    <li><a href="/imoveis">Buscar Imóveis</a></li>
+                    <li><a href="/cadastre-seu-imovel">Anunciar meu Imóvel</a></li>
+                    <li><a href="/financiamento">Financiamentos</a></li>
+                    <li><a href="/fichas-cadastrais">Fichas Cadastrais</a></li>
+                    <li><a href="/encomende-seu-imovel">Encomendar um Imóvel</a></li>
+                    <li><a href="/servicos">Serviços</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="center"><span>Imobiliária Maurício. Todos os direitos reservados. Tecnologia <a href="https://www.uso.com.br/" target="_blank">Union Softwares</a><span>.  </span><a href="/feed">[rss de imóveis]</a><span>  </span><a href="/sitemap">[mapa do site]</a></span>
+            </div>
+        </div>
+    </div>
+</body>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+<link rel="stylesheet" href="//cdn.uso.com.br/stylesheets/bootstrap/bootstrap.min.css" />
+<link rel="stylesheet" href="//cdn.uso.com.br/stylesheets/bootstrap/bootstrap-multiselect.css" />
+<link rel="stylesheet" href="https://cdn.uso.com.br/stylesheets/gldatepicker/gldatepicker.default.css" />
+<link rel="stylesheet" href="//cdn.uso.com.br/stylesheets/fotorama/fotorama.css" />
+<script src="/javascripts/modernizr.custom.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,700" rel="stylesheet" type="text/css" />
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    document.getElementById("splash").style.display = 'none';
+</script>
+<script type="text/javascript" defer src="//cdn.uso.com.br/javascripts2/jquery/jquery.lazyload.min.js"></script>
+<script type="text/javascript" defer src="//cdn.uso.com.br/javascripts2/jquery/jquery.mask.min.js"></script>
+<script type="text/javascript" defer src="//cdn.uso.com.br/javascripts2/bootstrap/bootstrap-multiselect.js"></script>
+<script type="text/javascript" defer src="//cdn.uso.com.br/javascripts2/bootstrap/bootstrap.min.js"></script>
+<script type="text/javascript" defer src="//cdn.uso.com.br/javascripts2/gldatepicker/gldatepicker.min.js"></script>
+<script type="text/javascript" defer src="/javascripts/scripts.js"></script>
+<script type="text/javascript" defer src="/javascripts/main.js"></script>
+<script type="text/javascript" defer src="/javascripts/modelo.js"></script>
+<script type="text/javascript" defer src="//cdn.uso.com.br/javascripts2/autocomplete/jquery.autocomplete.js"></script>
+<script type="text/javascript" defer src="//cdn.uso.com.br/javascripts2/fotorama/fotorama.js"></script>
+<script type="text/javascript" async defer src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-567685e6ebc00476"></script>
+
+</html>

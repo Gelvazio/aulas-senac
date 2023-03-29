@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Folha Pagamento</title>
+
+    <!-- bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Habilita o jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+</head>
+<style>
+
+    .open-detalheFolhaPagamento {
+        border: none;
+        cursor: pointer;
+        outline: none;
+    }
+
+    .open-detalheFolhaPagamento:hover {
+        border-radius: 15px;
+    }
+
+    body {
+        overflow: auto;
+    }
+</style>
+
+<script defer>
+    // Abre o modal da folha passando como parametro o mes e ano para detalhar os dados
+    // desta forma e possivel buscar os dados da api, se necessario
+    $(document).on("click", ".open-detalheFolhaPagamento", function() {
+        var mesano = $(this).data('id');
+
+        console.log("id folha" + mesano);
+
+        $(".modal-body #mesano").val(mesano);
+    });
+</script>
+
+<body>
+    <header>
+        <section class="logo">
+            <strong class="empresa">benner</strong>
+            <strong class="separator"></strong>
+            <strong class="setor-empresa">RH</strong>
+        </section>
+        <section class="colaborator">
+            <p class="sigla">GC</p>
+            <p>Colaborador</p>
+        </section>
+    </header>
+    <main>
+        <section class="lateral">
+            <ul>
+                <li>Home</li>
+                <li>Meus Dados</li>
+                <li class="selected">Folha de Pagamento</li>
+                <li>Folha Ponto</li>
+                <li>Banco de horas</li>
+                <li>Férias</li>
+                <li>Simulações</li>
+                <li>Benefícios</li>
+                <li>Feedback</li>
+                <li>Minhas tarefas</li>
+                <li>Plano de saúde</li>
+                <li>Avaliação de Competências</li>
+                <li>Recrutamento e seleção</li>
+                <li>Gestão de Competências</li>
+                <li>Educação Corporativa</li>
+                <li>Comprovante de rendimentos</li>
+                <li>Saúde ocupacional</li>
+                <li>Eleições cipa</li>
+                <li>Políticas internas</li>
+                <li>Atualização Cadastral</li>
+                <li>Funções DR/Unidade</li>
+            </ul>
+        </section>
+        <section class="content">
+            <section class="header-main">
+                <div class="card folha">
+                    <span class="valor">R$ 1.678,68</span>
+                    <span class="descricao">Última folha normal</span>
+                    <span class="data-card">01/08/2022</span>
+                </div>
+                <div class="card ferias">
+                    <span class="valor">R$78,54</span>
+                    <span class="descricao">Última folha de férias</span>
+                    <span class="data-card">01/08/2022</span>
+                </div>
+                <div class="card decimo">
+                    <span class="valor">R$56,78</span>
+                    <span class="descricao">Última folha 13º</span>
+                    <span class="data-card">01/08/2022</span>
+                </div>
+            </section>
+            <section class="content-main">
+
+                <div class="header-card">
+                    <span>
+                        <strong>Resumo Última folha</strong>
+                        <span class="detalhe-folha-titulo">Folha Mensal(Normal) - pagamento em 01/08/2022</span>
+                    </span>
+                </div>
+
+                <div class="main-card">
+                    <span class="content-detalhe">
+                        <p class="descricao blue">Provento:</p>
+                        <p class="valor-provento blue">R$1.978,68</p>
+                    </span>
+                    <span class="content-detalhe">
+                        <p class="descricao red">Desconto:</p>
+                        <p class="valor-provento red">R$300,00</p>
+                    </span>
+                    <span class="content-detalhe">
+                        <p class="descricao green">Líquido:</p>
+                        <p class="valor-provento green">R$1.678,68</p>
+                    </span>
+                </div>
+
+                <div class="valores-gerais">
+                    Valores gerais:
+                </div>
+
+                <div class="footer-main-card">
+                    <div class="footer-main-card-main">
+                        <div class="content-detalhe">
+                            <p class="descricao green">FGTS - Base:</p>
+                            <p class="valor-provento green">R$1.678,68</p>
+                        </div>
+
+                        <div class="content-detalhe">
+                            <p class="descricao green">Percentual:</p>
+                            <p class="valor-provento green">8%</p>
+                        </div>
+
+                        <div class="content-detalhe">
+                            <p class="descricao green">Valor:</p>
+                            <p class="valor-provento green">R$154,23</p>
+                        </div>
+                    </div>
+                    <div class="footer-main-card-footer">
+                        <div class="content-detalhe">
+                            <p class="descricao red">INSS - Base:</p>
+                            <p class="valor-provento red">R$1.678,68</p>
+                        </div>
+
+                        <div class="content-detalhe">
+                            <p class="descricao red">Percentual:</p>
+                            <p class="valor-provento red">9%</p>
+                        </div>
+
+                        <div class="content-detalhe">
+                            <p class="descricao red">Valor:</p>
+                            <p class="valor-provento red">R$1.678,68</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="footer-main">
+                <div class="footer-card-folhas">
+                    <h4>
+                        Folhas
+                    </h4>
+                    <button type="button" class="btn btn-primary" onclick="getFolha()">Listar Folhas</button>
+                </div>
+                <div class="footer-card-detalhe-folhas">
+                    <!-- Modal -->
+                    <div class="modal fade" id="modalFolhaPagamento" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="width: 100vw;">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel" style="text-align: center;">Detalhes da Folha de Pagamento</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body modal-lg">
+                                    <!-- Conteudo do Modal -->
+                                    <!-- Mês/Ano -->
+                                    <label for="mes">Mês/Ano:</label>
+                                    <input type="text" name="mesano" id="mesano" value="" disabled/>
+
+                                    <!-- tabela detalhe da folha -->
+                                    <table border="1">
+                                        <tr>
+                                            <td rowspan="1"><img src="images/logo-senac.png" height="100"></td>
+                                            <td>
+                                                <table>
+                                                    <tr>
+                                                        <td align="left">Serviço Nacional de Aprendizagem Comercial</td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td align="left">Departamento Regional de Santa Catarina</td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td align="left">Projeto Jovem Programador</td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td colspan="2">
+                                                <table>
+                                                    <tr>
+                                                        <td>Unidade: Centro de Educacão Profissional de Rio do Sul</td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>CNPJ: 03.603.739/0014-09</td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>DEMONSTRATIVO DE PAGAMENTO</td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>Folha Mensal</td>
+                                                        <td>Competência: 01/08/2022 </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td colspan="2">
+                                                <table>
+                                                    <tr>
+                                                        <td>Matrícula: </td>
+                                                        <td>001.012.751 </td>
+                                                        <td>Admissão: 07/02/2022</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Nome: GELVAZIO CAMARGO</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Cargo/Função Designada: PROFESSOR</td>
+                                                        <td>Função: PROFESSOR</td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td colspan="8">
+                                                <table border="1">
+                                                    <tr>
+                                                        <th>Codigo</th>
+                                                        <th>Verba</th>
+                                                        <th width="100px"></th>
+                                                        <th>Quant.</th>
+                                                        <th>Unit.</th>
+                                                        <th width="120px">Proventos</th>
+                                                        <th width="100px"></th>
+                                                        <th>Descontos</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>5001</td>
+                                                        <td>H. A. N. FIC</td>
+                                                        <td></td>
+                                                        <td>45</td>
+                                                        <td align="right">R$ 30,00</td>
+                                                        <td align="right">R$ 1.350,00</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>5076</td>
+                                                        <td>H. Reunião N. FIC</td>
+                                                        <td></td>
+                                                        <td>4</td>
+                                                        <td align="right">R$ 30,00</td>
+                                                        <td align="right">R$ 120,00</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>5163</td>
+                                                        <td>Rep. Rem. N. FIC</td>
+                                                        <td></td>
+                                                        <td>2</td>
+                                                        <td align="right">R$ 30,00</td>
+                                                        <td align="right">R$ 60,00</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>5238</td>
+                                                        <td>Prod Event N. FIC</td>
+                                                        <td></td>
+                                                        <td>3</td>
+                                                        <td align="right">R$ 30,00</td>
+                                                        <td align="right">R$ 90,00</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>5282</td>
+                                                        <td>F. Atividade Aula FIC</td>
+                                                        <td></td>
+                                                        <td>2</td>
+                                                        <td align="right">R$ 30,00</td>
+                                                        <td align="right">R$ 60,00</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>1500</td>
+                                                        <td>INSS Salário</td>
+                                                        <td></td>
+                                                        <td>14%</td>
+                                                        <td></td>
+                                                        <td align="right">R$ 1.680,00</td>
+                                                        <td></td>
+                                                        <td align="right">R$ 235,20</td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>1600</td>
+                                                        <td>IRRF Salário</td>
+                                                        <td></td>
+                                                        <td>7,5%</td>
+                                                        <td></td>
+                                                        <td align="right">R$ 1.680,00</td>
+                                                        <td></td>
+                                                        <td align="right">R$ 126,00</td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td colspan="8" height="25"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td colspan="2" align="right">Total Bruto:</td>
+                                                        <td align="right">R$ 1.915,20</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td colspan="2" align="right">Tot. Descontos:</td>
+                                                        <td align="right">R$ 361,20</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td colspan="2" align="right">Total Líquido:</td>
+                                                        <td align="right">R$ 1554,00</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td colspan="8">FGTS: 200,00</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="8">Salario Base: 0,00</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td colspan="8">Data: ____/____/____</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                                    <button type="button" class="btn btn-primary">Salvar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <table class="table-consulta-folhas">
+                        <thead>
+                            <th>Data</th>
+                            <th>Tipo</th>
+                            <th>Competência</th>
+                            <th>Provento</th>
+                            <th>Desconto</th>
+                            <th>Líquido</th>
+                            <th align="right">Detalhar</th>
+                        </thead>
+                        <tbody class="containerTable-body">
+                            <tr>
+                                <td>01/02/2022</td>
+                                <td>Folha Mensal</td>
+                                <td>01/08/2022</td>
+                                <td>R$0,00</td>
+                                <td>R$0,00</td>
+                                <td>R$0,00</td>
+                                <!-- Chama a tela de modal -->
+                                <td><button class="open-detalheFolhaPagamento" data-toggle="modal" data-id="22022" data-target="#modalFolhaPagamento">
+                                    <box-icon name='search-alt-2'></box-icon>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="footer-card"></div>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <strong>Gelvazio Camargo.</strong>
+        <strong>&copy All Rights Reserved.</strong>
+        <strong>30/07/2022 20:00.</strong>
+    </footer>
+</body>
+
+<script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+<script src="js/api.js" defer></script>
+<script src="js/global.js" defer></script>
+
+<!-- bootstrap -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</html>

@@ -1,0 +1,309 @@
+"use strict";
+
+$(document).ready(function () {
+    $('input').unbind();
+    $('select').unbind();
+
+    $('input').bind('keydown', 'return', function (event) {        
+        if (event.keyCode == 13) {
+            return $(this).focusNextInputField();
+        }
+    });
+
+    $('select').bind('keydown', 'return', function (event) {
+        if (event.keyCode == 13) {
+            return $(this).focusNextInputField();
+        }
+    });
+});
+
+$(document).ajaxStart(function() {
+    $.LoadingOverlay("show");
+})
+
+$(document).ajaxStop(function() {
+    $.LoadingOverlay("hide");
+})
+
+$.fn.focusNextInputField = function () {
+    return this.each(function () {
+        var fields = $(this).parents('form:eq(0),body').find('button,input,textarea,select');
+        var index = fields.index(this);
+        var flCampo;
+
+        if (index > -1 && (index + 1) < fields.length) {
+            flCampo = fields.eq(index + 1);
+
+            if (flCampo.css("display") != "none") {
+                flCampo.focus();
+            } else {
+                var bAcho = false;
+                while (!bAcho) {
+                    index++;
+                    flCampo = fields.eq(index + 1);
+                    if (flCampo.css("display") != "none") {
+                        bAcho = true;
+                        flCampo.focus();
+
+                        break;
+                    }
+                }
+            }
+        }
+        return false;
+    });
+};
+
+/**
+ * Retira caracteres 
+ * @param {*} valor 
+ * @param {*} validos 
+ * @returns 
+ */
+function limpar(valor, validos) {
+    var result = "";
+    var aux;
+    for (var i = 0; i < valor.length; i++) {
+        aux = validos.indexOf(valor.substring(i, i + 1));
+        if (aux >= 0) {
+            result += valor.substring(i, i + 1);
+        }
+    }
+    return result;
+}
+
+/**
+ * Valida CPF
+ * @param {*} value 
+ * @returns 
+ */
+function isCpf(value) {
+    var i;
+    var s = value;
+    s = limpar(s, "0123456789");
+    if ((s.length != 11) ||
+        (s == '00000000000') ||
+        (s == '11111111111') ||
+        (s == '22222222222') ||
+        (s == '33333333333') ||
+        (s == '44444444444') ||
+        (s == '55555555555') ||
+        (s == '66666666666') ||
+        (s == '77777777777') ||
+        (s == '88888888888') ||
+        (s == '99999999999'))
+        return false;
+
+    var c = s.substr(0, 9);
+    var dv = s.substr(9, 2);
+    var d1 = 0;
+
+    for (i = 0; i < 9; i++) {
+        d1 += c.charAt(i) * (10 - i);
+    }
+
+    if (d1 == 0) {
+        return false;
+    }
+
+    d1 = 11 - (d1 % 11);
+    if (d1 > 9) d1 = 0;
+
+    if (dv.charAt(0) != d1) {
+        return false;
+    }
+
+    d1 *= 2;
+    for (i = 0; i < 9; i++) {
+        d1 += c.charAt(i) * (11 - i);
+    }
+
+    d1 = 11 - (d1 % 11);
+
+    if (d1 > 9) d1 = 0;
+    if (dv.charAt(1) != d1) {
+        return false;
+    }
+
+    return true;
+}
+
+/**
+ * Formata número
+ * @param {*} num 
+ * @returns 
+ */
+function formataNum(num) {
+    if (isNaN(num)) {
+        num = "0";
+    } else if (num == null) {
+        num = "0";
+    }
+
+    num = num.toString().replace(/\$|\,/g, '');
+    var sign = (num == (num = Math.abs(num)));
+    num = Math.floor(num * 100 + 0.50000000001);
+    var cents = num % 100;
+    num = Math.floor(num / 100).toString();
+
+    if (cents < 10) {
+        cents = "0" + cents;
+    }
+
+    for (var i = 0; i < Math.floor((num.length - (1 + i)) / 3); i++) {
+        num = num.substring(0, num.length - (4 * i + 3)) + '.' + num.substring(num.length - (4 * i + 3));
+    }
+
+    return (((sign) ? '' : '-') + num + ',' + cents);
+}
+
+/**
+ * Faz chamada para backend
+ * @param {*} obj 
+ * @returns 
+ */
+function getAPI(obj) {
+    return new Promise(function(resolve, reject) {
+        let dataPost = obj.data || {}
+        dataPost.csrfmiddlewaretoken = document.getElementsByName('csrfmiddlewaretoken')[0].value
+        $.ajax({
+            url: '/api/' + obj.url,
+            type: 'POST',
+            data: dataPost,
+            dataType: 'json',
+            success: function(data) {
+                setTimeout(function() {
+                    resolve(data)
+                }, 50)
+            },
+            error: function(jqXHR, textStatus, errorThrown) {
+                setTimeout(function() {
+                    reject({
+                        textStatus: textStatus,
+                        statusCode: jqXHR.status,
+                        json: jqXHR.responseJSON
+                    })
+                }, 50)
+            }
+        });
+    })
+}
+
+/**
+ * Mascara em currency
+ * @param {*} campo 
+ * @returns 
+ */
+function maskCurrency(campo) {
+    var vr = campo.value;
+    vr = limpar(vr, "0123456789");
+
+    var tam = vr.length;
+    var sRetorno = "";
+    if (tam <= 2) {
+        sRetorno = vr;
+    }
+
+    if ((tam > 2) && (tam <= 5)) {
+        sRetorno = vr.substr(0, tam - 2) + ',' + vr.substr(tam - 2, tam);
+    }
+
+    if ((tam >= 6) && (tam <= 8)) {
+        sRetorno = vr.substr(0, tam - 5) + '.' + vr.substr(tam - 5, 3) + ',' + vr.substr(tam - 2, tam);
+    }
+
+    if ((tam >= 9) && (tam <= 11)) {
+        sRetorno = vr.substr(0, tam - 8) + '.' + vr.substr(tam - 8, 3) + '.' + vr.substr(tam - 5, 3) + ',' + vr.substr(tam - 2, tam);
+    }
+
+    if ((tam >= 12) && (tam <= 14)) {
+        sRetorno = vr.substr(0, tam - 11) + '.' + vr.substr(tam - 11, 3) + '.' + vr.substr(tam - 8, 3) + '.' + vr.substr(tam - 5, 3) + ',' + vr.substr(tam - 2, tam);
+    }
+
+    if ((tam >= 15) && (tam <= 18)) {
+        sRetorno = vr.substr(0, tam - 14) + '.' + vr.substr(tam - 14, 3) + '.' + vr.substr(tam - 11, 3) + '.' + vr.substr(tam - 8, 3) + '.' + vr.substr(tam - 5, 3) + ',' + vr.substr(tam - 2, tam);
+    }
+
+    campo.value = sRetorno;
+    return true;
+}
+
+function mask(isNum, event, src, mask, maxLength, grid) {
+    var isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
+
+    // Pega a tecla acionada
+    var keyCode;
+    if (isFirefox) {
+        keyCode = event.which;
+    } else if (event.srcElement) {
+        keyCode = event.keyCode;
+    } else if (event.target) {
+        keyCode = event.which;
+    }
+
+    // Se for backspace, deixa passar
+    if (keyCode == 0 || keyCode == 8) {
+        return true;
+    }
+
+    // Se for somente números não deixa passar teclas de letras
+    if (isNum && (keyCode < 48 || keyCode > 57)) {
+        return false;
+    }
+
+    // Pega o tamanho do campo preenchido
+    var iTamCampo = src.value.length;
+
+    // Verifica se o campo esta selecionado
+    try {
+        if (src.selectionEnd > 0) {
+            var iTotSel = src.selectionEnd - src.selectionStart;
+            iTamCampo -= iTotSel;
+        }
+    } catch (e) {}
+
+    // Se o valor do campo e a mascara tiverem o mesmo tamanho, não deixa
+    // mais digitar valores
+    if (mask.length == iTamCampo) {
+        return false;
+    }
+
+    // Coloca a mascara
+    var i = src.value.length;
+    var saida = mask.substring(0, 1);
+    var texto = mask.substring(i);
+    if (texto.substring(0, 1) != saida) {
+        src.value += texto.substring(0, 1);
+    }
+
+
+    // Se o campo atingiu o tamanho passa para o proximo
+    var iAcerto = 1;
+    if ((mask.length - iAcerto) == src.value.length) {
+
+        // Coloca no timeout para dar tempo de colocar a tecla
+        setTimeout(function() {
+            var form = src.form;
+            if (form) {
+                for (i = 0; i < form.elements.length; i++) {
+                    if (form.elements[i] == src) {
+
+                        // Verifica qual o próximo campo à receber o foco
+                        for (var x = i + 1; x < form.elements.length; x++) {
+                            if ((form.elements[x] != null) && (form.elements[x].name != "METHOD") && (form.elements[x].style.display != "none")) {
+                                form.elements[x].focus();
+                                break;
+                            }
+                        }
+
+                        break;
+
+                    }
+                }
+            }
+        }, 100);
+    }
+
+    // Envia o retorno padrão
+    return true;
+}

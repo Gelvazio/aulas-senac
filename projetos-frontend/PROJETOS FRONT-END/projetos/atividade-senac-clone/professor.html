@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desenvolvimento - Tech</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+</head>
+<style>
+     :root {
+        --color-red: #FF4949;
+        --color-purple: #541690;
+        --color-orange: #FF8D29;
+        --color-yellow: #FFCD38;
+        --color-blue-senac: #004284c7;
+        --color-blue-senac-hover: #005884c7;
+        --color-orange-senac: #f7941d;
+        --font-lg: 38px;
+        --font-md: 24px;
+        --font-sm: 15px;
+        --font-xs: 9px;
+        --size-lg: 1280px;
+        --size-md: 976px;
+        --size-sm: 768px;
+        --size-xs: 500px;
+    }
+    
+    .dados-cursos {
+        width: 50vw;
+        height: 45vh;
+        border: 1px solid white;
+        border-radius: 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .dados-cursos .linha {
+        padding: 5px;
+    }
+    
+    .dados-cursos .linha a {
+        border: 0.1px solid var(--color-blue-senac-hover);
+        padding: 10px;
+        width: 150px;
+        text-align: center;
+    }
+    
+    .content-cursos-free-2 {
+        display: flex;
+        height: 80vh;
+        background-color: var(--color-blue-senac);
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+    }
+    
+    .menu-cursos-free {
+        background-color: var(--color-blue-senac);
+        margin-top: 0;
+        color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        text-transform: uppercase;
+        gap: 10px;
+        border-radius: 25px;
+    }
+    
+    .menu-cursos-free a {
+        list-style: none;
+        padding: 15px;
+        display: flex;
+        background-color: #004384;
+        transition: all .4s ease-in-out;
+        cursor: pointer;
+        border-radius: 10px;
+        text-decoration: none;
+        color: #fff;
+        cursor: pointer;
+        gap: 10px;
+        color: aliceblue;
+    }
+    
+    .menu-cursos-free a:hover {
+        box-shadow: 0 10px 10px var(--color-blue-senac);
+        transform: translateY(-5px);
+        background-color: var(--color-blue-senac-hover);
+        color: #fff;
+        font-weight: bolder;
+        border: 0.1px solid #fff;
+    }
+    
+    .linha {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .linha a {
+        height: 70px;
+    }
+</style>
+
+<body>
+    <div class="container-principal">
+
+        <!-- Inclui o Menu Unico Atraves de JavaScript -->
+        <div include-html-menu="menu.html"></div>
+
+        <div class="container">
+            <div class="content-cursos-free-2">
+                <div class="menu-cursos-free">
+                    <div class="dados-cursos">
+                        <div class="linha">
+                            <a href="http://docentes.ifrn.edu.br//" alt="IFRN">Docentes IFRN</a>
+                            <a href="https://www.eucapacito.com.br/cursos/" alt="XP">FIAP <br> Eu Capacito</a>
+                        </div>
+                        <div class="linha">
+                            <a href="https://free-for.dev" alt="Free">FREE FOR DEV</a>
+                            <a href="https://www.datascienceacademy.com.br/cursosgratuitos" alt="Cursos Gratuitos Com Certificado">Data Science</a>
+                        </div>
+                        <div class="linha">
+                            <a href="http://docente.ifrn.edu.br/albalopes/disciplinas/autoria-web" alt="Free">IFRN - ALBA - HTML, CSS, JAVASCRIPT</a>
+                            <a href="http://docente.ifrn.edu.br/albalopes/disciplinas/programacao-para-internet" alt="Free">IFRN - ALBA - PHP</a>
+                            <a href="https://www.datascienceacademy.com.br/cursosgratuitos" alt="Cursos Gratuitos Com Certificado">Data Science</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div include-html-rodape="rodape.html"></div>
+</body>
+
+<script src="js/script.js"></script>
+<script>
+    includeHTML("include-html-menu");
+    includeHTML("include-html-rodape");
+</script>
+
+</html>

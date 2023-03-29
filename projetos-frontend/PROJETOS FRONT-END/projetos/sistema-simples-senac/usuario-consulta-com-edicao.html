@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta Usuario</title>
+</head>
+
+<style>
+
+    body {
+        display: flex;
+        flex-direction: column;
+        width: 80vw;
+        justify-content: center;
+        align-items: center;
+    }
+
+    button {
+        padding: 10px;
+        border-radius: 10px;
+        outline: none;
+        transition: all .4s ease-in-out;
+        cursor: pointer;
+        border: 1px solid;
+    }
+
+    button:hover {
+        background-color: darkgreen;
+        color: aliceblue;
+    }
+
+    .alterar {
+        background-color: yellowgreen;
+        cursor: pointer;
+        transition: all .4s ease-in-out;
+        border: 1px solid;
+    }
+    
+    .excluir {
+        background-color: brown;
+        color: aliceblue;
+        cursor: pointer;
+        border: 1px solid;
+    }
+    
+    .alterar:hover{
+        background-color: yellow;
+        color: black;
+    }
+    
+    .excluir:hover{
+        background-color: red;
+    }
+</style>
+<script>
+    function atualizaConsulta() {
+        consultarUsuarioFiltro();
+    }
+
+    function consultarUsuarioFiltro() {
+        var metodo = "POST";
+        var porta = "consultausuariofiltro";
+
+        // Pega o valor pelo id
+        const campoFiltroValorTela = document.querySelector("#campofiltro").value;
+        const operadorFiltroTela = document.querySelector("#operadorfiltro").value;
+        const valorFiltroTela = document.querySelector("#valorfiltro").value;
+
+        var body = {
+            campofiltro: campoFiltroValorTela,
+            operadorfiltro: operadorFiltroTela,
+            valorfiltro: valorFiltroTela
+        };
+
+        callApi(metodo, porta, body, function(data) {
+            // Carrega os dados do usuario na tabela html
+            loadUsuariosTabela(data);
+        });
+    }
+
+    function loadUsuariosTabela(data) {
+        const aDadosUsuarios = data;
+        let body = document.querySelector(".dados-tabela");
+
+        // limpa a tabela atual
+        body.innerHTML = "";
+
+        aDadosUsuarios.forEach(function(oUsuario, key) {
+            const codigo = oUsuario.usucodigo;
+            const nome = oUsuario.usunome;
+            const email = oUsuario.usuemail;
+            let situacao = oUsuario.usuativo;
+
+            // Trata campo situação
+            if (situacao == 1) {
+                situacao = "Ativo";
+            } else {
+                situacao = "Inativo";
+            }
+
+            const acaoAlterar = getAcaoAlterar(codigo);
+            const acaoExcluir = getAcaoExcluir(codigo);
+
+            // adiciona as colunas da tabela da consulta
+            body.innerHTML += `<tr>
+                                    <td>` + codigo + `</td>
+                                    <td>` + nome + `</td>
+                                    <td>` + email + `</td>
+                                    <td>` + situacao + `</td>
+                                    <td>` + acaoAlterar + `</td>
+                                    <td>` + acaoExcluir + `</td>
+                                </tr>`;
+        });
+    }
+
+    function getAcaoAlterar(codigoUsuario){
+        return `<button onclick="alterarUsuario(${codigoUsuario})" class="button2 alterar">Alterar</button>`;
+    }
+
+    function getAcaoExcluir(codigoUsuario){
+        return `<button onclick="excluirUsuario(${codigoUsuario})" class="button2 excluir">Excluir</button>`;
+    }
+
+    function excluirUsuario(codigoUsuario){
+        var metodo = "POST";
+        var porta = "excluirusuario";
+
+        var body = {
+            usucodigo: codigoUsuario
+        };
+
+        callApi(metodo, porta, body, function(data) {
+            
+            alert(data.mensagem);
+            
+            // Apos excluir os usuarios, atualiza a consulta, se deu certo...
+            if(data.status){
+                atualizaConsulta();
+            }
+        });
+    }
+
+    function alterarUsuario(codigoUsuario){
+        // Seta o codigo do usuario na session para alteracao
+        sessionStorage.setItem("usucodigo", codigoUsuario);
+
+        window.location.href = "alterar-usuario-modelo.html";
+    }
+
+</script>
+
+<body onload="atualizaConsulta()">
+    <hr>
+    <h1>Consulta de Usuarios</h1>
+
+    <div class="filtro-consulta">
+        <label for="campofiltro">Filtro:</label>
+        <select name="campofiltro" id="campofiltro">
+            <option value="usucodigo">Código</option>
+            <option value="usunome">Nome</option>
+            <option value="usuemail">Email</option>
+        </select>
+        <select name="operadorfiltro" id="operadorfiltro">
+            <option value="todos">Todos</option>
+            <option value="maior">Maior que</option>
+            <option value="contem">Contém</option>
+            <option value="naocontem">Não Contém</option>
+            <option value="menorigual">Menor ou igual</option>
+            <option value="menor">Menor que</option>
+            <option value="maiorigual" selected>Maior ou igual</option>
+            <option value="igual">Igual a</option>
+            <option value="diferente">Diferente de</option>
+        </select>
+
+        <input type="text" id="valorfiltro" name="valorfiltro" value="5">
+
+        <button onclick="consultarUsuarioFiltro()" class="button2">Consultar</button>
+    </div>
+
+    <hr>
+    <table border="1">
+        <thead>
+            <th>Código</th>
+            <th>Nome</th>
+            <th>E-mail</th>
+            <th>Situação</th>
+            <th colspan="2">Ações</th>
+        </thead>
+        <tbody class="dados-tabela">
+
+        </tbody>
+    </table>
+</body>
+
+<!-- Comando defer deixa o js carregar apenas apos a pagina estar carregada -->
+<script src="js/api.js" defer></script>
+
+</html>

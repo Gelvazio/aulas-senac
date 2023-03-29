@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!-- Coding by CodingLab | www.codinglabweb.com-->
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <!--<title> Login and Registration Form in HTML & CSS | CodingLab </title>-->
+    <link rel="stylesheet" href="style.css">
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="container">
+        <input type="checkbox" id="flip">
+        <div class="cover">
+            <div class="front">
+                <!--<img src="images/frontImg.jpg" alt="">-->
+                <div class="text">
+                    <span class="text-1">Todo novo amigo é <br> uma nova aventura</span>
+                    <span class="text-2">Vamos nos manter conectados!</span>
+                </div>
+            </div>
+            <div class="back">
+                <!--<img class="backImg" src="images/backImg.jpg" alt="">-->
+                <div class="text">
+                    <span class="text-1">Complete miles of journey <br> with one step</span>
+                    <span class="text-2">Let's get started</span>
+                </div>
+            </div>
+        </div>
+        <div class="forms">
+            <div class="form-content">
+                <div class="login-form">
+                    <div class="title">Login</div>
+                    <form action="dashboard/index.html">
+                        <div class="input-boxes">
+                            <div class="input-box">
+                                <i class="fas fa-envelope"></i>
+                                <input type="text" placeholder="Enter your email" required value="email@gmail.com">
+                            </div>
+                            <div class="input-box">
+                                <i class="fas fa-lock"></i>
+                                <input type="password" placeholder="Enter your password" required value="123">
+                            </div>
+                            <div class="text"><a href="#">Esqueceu a senha?</a></div>
+                            <div class="button input-box">
+                                <input type="submit" value="Confirmar">
+                            </div>
+                            <div class="text sign-up-text">Não tem uma conta?<label for="flip">Registrar-se</label></div>
+                        </div>
+                    </form>
+                </div>
+                <div class="signup-form">
+                    <div class="title">Cadastro</div>
+                    <form action="#">
+                        <div class="input-boxes">
+                            <div class="input-box">
+                                <i class="fas fa-user"></i>
+                                <input type="text" placeholder="Nome" required>
+                            </div>
+                            <div class="input-box">
+                                <i class="fas fa-envelope"></i>
+                                <input type="text" placeholder="Email" required>
+                            </div>
+                            <div class="input-box">
+                                <i class="fas fa-lock"></i>
+                                <input type="password" placeholder="Senha" required name="senha">
+                            </div>
+                            <div class="input-box">
+                                <i class="fas fa-lock"></i>
+                                <input type="password" placeholder="Confirmar Senha" required name="confirmasenha">
+                            </div>
+                            <div class="button input-box">
+                                <input type="submit" value="Confirmar">
+                            </div>
+                            <div class="text sign-up-text">Já tem uma conta?<label for="flip">Login</label></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+body {
+    display: flex;
+    height: 95vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    top: 0;
+}
+
+.lado-esquerdo {
+    width: 20vw;
+    background-color: gray;
+}
+
+.lado-direito {
+    width: 80vw;
+    background-color: blue;
+}

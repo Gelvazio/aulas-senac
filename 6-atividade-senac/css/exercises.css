@@ -1,0 +1,31 @@
+/* Iniciou e acabou */
+
+.status_ok {
+    color: aliceblue;
+    background-color: green;
+}
+
+.status_not_verified {
+    color: aliceblue;
+}
+
+
+/* Iniciou mas nao acabou */
+
+.status_incomplete {
+    color: rgb(16, 19, 21);
+    background-color: rgba(190, 190, 33, 0.503);
+}
+
+
+/* Nao iniciou as atividades */
+
+.status_not_initialized {
+    color: aliceblue;
+    background-color: rgb(128, 0, 0);
+}
+
+.status_separate_exercises {
+    color: aliceblue;
+    background-color: #004284c7;
+}

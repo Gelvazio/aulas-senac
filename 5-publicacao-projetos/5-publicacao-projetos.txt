@@ -1,0 +1,2 @@
+1 - github para acompanhamento das atividades
+2 - vercel para publicar projetos em html e php.

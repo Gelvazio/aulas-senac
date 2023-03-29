@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desenvolvimento - Tech</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+</head>
+<style>
+    footer {
+        height: 50px;
+    }
+    
+    .menu {
+        height: 50px;
+    }
+    
+    .conteudo-apostila {
+        height: 90vh;
+        color: aliceblue;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <div class="container-principal">
+        <!-- Inclui o Menu Unico Atraves de JavaScript -->
+        <div include-html-menu="menu.html"></div>
+
+        <div id="apostila-javascript-html-php" class="conteudo-apostila">
+            <iframe src="apostila/java_basico.pdf" width="100%" style="height:100%">Apostila JAVA Basico</iframe>
+            <iframe src="apostila/caelum-html-css-javascript-php.pdf" width="100%" style="height:100%">Apostila Caelum JS HTML e PHP</iframe>
+            <!-- <iframe src="apostila/logica_de_programacao_estrutura_dados_java-280-PAGINAS.pdf" width="100%" style="height:100%">Apostila JAVA - Estrutura de Dados</iframe> -->
+        </div>
+    </div>
+
+    <div include-html-rodape="rodape.html"></div>
+</body>
+
+<script src="js/script.js"></script>
+
+<script>
+    includeHTML("include-html-menu");
+    includeHTML("include-html-rodape");
+</script>
+
+</html>

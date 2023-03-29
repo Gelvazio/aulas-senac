@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    font-family: "Volkorn", Georgia, Serif;
+}
+
+header {
+    background: linear-gradient(135deg, #8844ee, #B07DFB);
+    color: aliceblue;
+    height: 100px;
+    display: grid;
+    align-items: center;
+    padding-bottom: 65px;
+    margin-top: 0px;
+}
+
+#frase_logo {
+    margin-top: 0;
+    font-size: 20px;
+}
+
+/*MAQUINA DE ESCREVER*/
+#frase_logo {
+    max-width: 900px;
+    text-align: center;
+    margin: 5px auto;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#frase_logo::after {
+    content: '|';
+    opacity: 1;
+    margin-left: 5px;
+    display: inline-block;
+    animation: blink .7s infinite;
+}
+
+@keyframes blink {
+    0%,
+    100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+/*MAQUINA DE ESCREVER - FIM*/

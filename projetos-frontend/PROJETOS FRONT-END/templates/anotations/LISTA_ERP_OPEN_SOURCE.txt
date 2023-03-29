@@ -1,0 +1,30 @@
+https://pluga.co/blog/api/erp-open-source/
+
+
+https://www.asaas.com/ - COBRA POR BOLETO, E NAO COBRA MENSALIDADES
+
+https://www.dolibarr.org/
+
+
+SOFTWARE BRASILEIRO 
+https://www.stoq.com.br/
+
+Versao do ERP gratis online 
+https://demo.dolibarr.org/index.php?urlfrom=%2Fpublic%2Fdemo%2Findex.php&disablemodules=dynamicprices,dav,multicurrency,receiptprinter,printing,deplacement,paypal,cashdesk,webservicesclient,emailcollector,modulebuilder,hrm,don,datapolicy,paybox,debugbar,stripe,incoterm,loan,adherent,website,ftp,google,&mainmenu=home
+
+Fontes de ERP Gratuito 
+Usando Laravel 
+https://github.com/akaunting/akaunting 
+
+Em PHP tambem 
+https://github.com/YetiForceCompany/YetiForceCRM
+
+Manual de Instalação do Sistema Yetti:
+https://yetiforce.com/en/knowledge-base/documentation/implementer-documentation/item/how-to-install-crm-system
+
+
+Em PHP tambem - Dollibar
+https://github.com/Dolibarr/dolibarr
+
+
+

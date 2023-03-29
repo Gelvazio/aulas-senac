@@ -1,0 +1,3252 @@
+[{
+        "_id": {
+            "inf_venda": 1,
+            "inf_permuta": 1,
+            "inf_tipo": "SITIO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "rio do campo",
+            "inf_bairro": "Mirador",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "serra do mirador"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "GASPAR",
+            "inf_bairro": "BELA VISTA",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "RUA IPORÃ"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "taio",
+            "inf_bairro": "victor konder",
+            "inf_categoria": "SOBRADO",
+            "inf_endereco": "rua hugo brandt"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "ITUPORANGA",
+            "inf_bairro": "NOSSA SENHORA DE FÁTIMA",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "SC 427 KM 315"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "TAIO",
+            "inf_bairro": "SEMINÁRIO",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "RUA ARISTIDES MORATELI"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Taió",
+            "inf_bairro": "Seminário",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Rua do Seminário",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_permuta": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "rio do campo",
+            "inf_bairro": "centro",
+            "inf_categoria": "SOBRADO",
+            "inf_endereco": "rua almirante tamandaré",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "FAZENDA",
+            "inf_subtipo": "RURAL",
+            "inf_uf": "SC",
+            "inf_cidade": "RIO DO CAMPO",
+            "inf_bairro": "TAIOZINHO",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "TAIOZINHO"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_permuta": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Taió",
+            "inf_bairro": "Victor Konder",
+            "inf_categoria": "SOBRADO",
+            "inf_endereco": "Rua Victor Konder"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "SITIO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Rio do Campo",
+            "inf_bairro": "Tamanduá",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Estrada geral"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "taio",
+            "inf_bairro": "vila mariana",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "rua coronel feddersen"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "TERRENO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Taió",
+            "inf_bairro": "Padre Eduardo",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "rua Eugenio Francisco Cardoso"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_permuta": 1,
+            "inf_tipo": "SITIO",
+            "inf_subtipo": "RURAL",
+            "inf_uf": "SC",
+            "inf_cidade": "TAIO",
+            "inf_bairro": "PASSO MANSO",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "pASSO MANSO",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_permuta": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Taió",
+            "inf_bairro": "Padre Eduardo",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "rua gustavo mueller"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_permuta": 1,
+            "inf_tipo": "SITIO",
+            "inf_subtipo": "RURAL",
+            "inf_uf": "SC",
+            "inf_cidade": "taio",
+            "inf_bairro": "Bracatinga",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "rodovia sc 114 km 5"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "TAIÓ",
+            "inf_bairro": "PADRE EDUARDO",
+            "inf_categoria": "TERREO(A)",
+            "inf_endereco": "RUA ADOLFO BERRI",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "APARTAMENTO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "TAIO",
+            "inf_bairro": "seminario",
+            "inf_estado": "DESOCUPADO",
+            "inf_categoria": "NORMAL",
+            "inf_edificio": "EDIFICIO PRIME FIX",
+            "inf_endereco": "Avenida JK de Oliveira",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Victor Meireles",
+            "inf_bairro": "centro",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Rua Adelicio Day",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "SITIO",
+            "inf_subtipo": "RURAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Taió",
+            "inf_bairro": "Passo Manso",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "estrada geral da localidade de Cachoeira"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "TERRENO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "TAIÓ",
+            "inf_bairro": "SEMINARIO",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "rua Dolia Ferrari",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_permuta": 1,
+            "inf_tipo": "SITIO",
+            "inf_subtipo": "RURAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Salete",
+            "inf_bairro": "Santa Margarida",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Santa Margarida",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Taió",
+            "inf_bairro": "Padre Eduardo",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "rua marcos kluge"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_permuta": 1,
+            "inf_tipo": "PRÉDIO",
+            "inf_subtipo": "COMERCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "TAIÓ",
+            "inf_bairro": "Padre Eduardo",
+            "inf_categoria": "SOBRADO",
+            "inf_endereco": "Rua Francisco Tomasoni"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_permuta": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "JOINVILLE",
+            "inf_bairro": "GLÓRIA",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "RUA GUSTAVO ROSS"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "APARTAMENTO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "TAIÓ",
+            "inf_bairro": "VILA MARIANA",
+            "inf_estado": "NOVO",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "rua Johann Bruns"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "TERRENO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Taió",
+            "inf_bairro": "Victor Konder",
+            "inf_estado": "DESOCUPADO",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Rua Albert kindel",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_permuta": 1,
+            "inf_tipo": "TERRENO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "ITUPORANGA",
+            "inf_bairro": "CENTRO",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "RUA TENENTE JACOB PHILIPPI"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "TAIÓ",
+            "inf_bairro": "Barra dos Lobos",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "rua Francisco Tomasoni",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Taió",
+            "inf_bairro": "Centro",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Rua Tiradentes"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "SITIO",
+            "inf_subtipo": "RURAL",
+            "inf_uf": "SC",
+            "inf_cidade": "BLUMENAU",
+            "inf_bairro": "ITOUPAVAZINHA",
+            "inf_categoria": "TERREO(A)",
+            "inf_endereco": "RUA LUIS MASCKE",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "SITIO",
+            "inf_subtipo": "RURAL",
+            "inf_uf": "SC",
+            "inf_cidade": "TAIÓ",
+            "inf_bairro": "Ribeirão dos Lobos",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Ribeirão dos Lobos",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Taió",
+            "inf_bairro": "padre eduardo",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "rua francisco tomazoni"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "APARTAMENTO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "TAIO",
+            "inf_bairro": "CENTRO",
+            "inf_condonome": "VERSATILLE",
+            "inf_estado": "DESOCUPADO",
+            "inf_categoria": "KITNET",
+            "inf_edificio": "RESIDENCIAL VERSATILLE",
+            "inf_endereco": "RUA GERHARD KOESTER",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "TAIO",
+            "inf_bairro": "BARRA DOS LOBOS",
+            "inf_categoria": "SOBRADO",
+            "inf_endereco": "BARRA DOS LOBOS",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "HOTEL",
+            "inf_subtipo": "COMERCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Pouso Redondo",
+            "inf_bairro": "Serra da Santa",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Serra da Santa",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_permuta": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "taio",
+            "inf_bairro": "padre eduardo",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "rua nicolau ronchi"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_permuta": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Taió",
+            "inf_bairro": "victor konder",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "rua victor konder",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "SITIO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "AURORA",
+            "inf_bairro": "SÃO MARTINHO",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "SÃO MARTINHO"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Taió",
+            "inf_bairro": "Padre Eduardo",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "avenida Franz Xavier Mainhardt"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_permuta": 1,
+            "inf_tipo": "PRÉDIO",
+            "inf_subtipo": "COMERCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "salete",
+            "inf_bairro": "centro",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Rua do Santuário"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_permuta": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Mirim Doce",
+            "inf_bairro": "centro",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "rua Guilherme Bechtold"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "SALA / SALÃO COMERCIAL",
+            "inf_subtipo": "COMERCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Salete",
+            "inf_bairro": "Centro",
+            "inf_categoria": "TERREO(A)",
+            "inf_endereco": "Luis Bertoli"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "SITIO",
+            "inf_subtipo": "RURAL",
+            "inf_uf": "SC",
+            "inf_cidade": "TAIÓ",
+            "inf_bairro": "ribeirão do salto",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "estrada geral Ribeirão do Salto",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "TERRENO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Taió",
+            "inf_bairro": "Victor Konder",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Rua João Sotopietra"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "TERRENO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Taió",
+            "inf_bairro": "Victor Konder",
+            "inf_categoria": "TERREO(A)",
+            "inf_endereco": "Aquiles Zanella",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "taió",
+            "inf_bairro": "ribeirão da vargem",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "estrada geral ribeirão da vargem",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_permuta": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "ITUPORANGA",
+            "inf_bairro": "Centro",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Rua Max Ziegel"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_permuta": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "rio do campo",
+            "inf_bairro": "sul brasil",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "rua voluntarios da patria"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "TAIÓ",
+            "inf_bairro": "CENTRO",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "HEINZ SEMANN"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "TERRENO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Taió",
+            "inf_bairro": "Vila Mariana",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Roberto Brandes"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_permuta": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "TAIÓ",
+            "inf_bairro": "Passo Manso",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Passo Manso"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "SITIO",
+            "inf_subtipo": "RURAL",
+            "inf_uf": "SC",
+            "inf_cidade": "taio",
+            "inf_bairro": "Bracatinga",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "bracatinga",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "APARTAMENTO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Taió",
+            "inf_bairro": "Centro",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Rua Gerard Koestner"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_permuta": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "santa terezinha",
+            "inf_bairro": "centro",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "rua abilio da silva",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_permuta": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "braço do trombudo",
+            "inf_bairro": "centro",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Rua Werner Bader",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "SITIO",
+            "inf_subtipo": "RURAL",
+            "inf_uf": "SC",
+            "inf_cidade": "taió",
+            "inf_bairro": "Vila Mariana",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "vila mariana"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "APARTAMENTO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "SALETE",
+            "inf_bairro": "SCHREIBER",
+            "inf_categoria": "TERREO(A)",
+            "inf_endereco": "RUA AUGUSTO SCHWARTZ",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "TERRENO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Taió",
+            "inf_bairro": "Padre Eduardo",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "rua padre eduardo",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "RIO DO SUL",
+            "inf_bairro": "PAMPLONA",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "RUA LOURO"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_permuta": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Taió",
+            "inf_bairro": "victor konder",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "rua victor konder"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Rio do Campo",
+            "inf_bairro": "guanabara",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Rua José Moratelli"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "SITIO",
+            "inf_subtipo": "RURAL",
+            "inf_uf": "SC",
+            "inf_cidade": "IMBUIA",
+            "inf_bairro": "Alto Rio Engano",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Alto Rio Engano"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "TERRENO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "SALETE",
+            "inf_bairro": "CENTRO",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "RUA SANTOS DUMOND - BEIRA RIO",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "taio",
+            "inf_bairro": "victor konder - Taió-SC",
+            "inf_categoria": "TERREO(A)",
+            "inf_endereco": "rua victor konder",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_permuta": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "TAIÓ",
+            "inf_bairro": "Distrito de Passo Manso",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Passo Manso"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "APARTAMENTO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Taió",
+            "inf_bairro": "centro",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "rua johans bruns"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "APARTAMENTO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Balneário Camboriú",
+            "inf_bairro": "centro",
+            "inf_categoria": "NORMAL",
+            "inf_edificio": "edifício central",
+            "inf_endereco": "avenida central"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "taio",
+            "inf_bairro": "padre eduardo",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "rua marcos kluge"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_permuta": 1,
+            "inf_tipo": "SITIO",
+            "inf_subtipo": "RURAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Ituporanga",
+            "inf_bairro": "Ilha Grande Becker",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Rodovia SC 350 Ilha Grande Becker"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_permuta": 1,
+            "inf_tipo": "SOBRADO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "RIO DO SUL",
+            "inf_bairro": "TABOÃO",
+            "inf_condonome": "UNIQUE",
+            "inf_categoria": "SOBRADO",
+            "inf_endereco": "RUA POLÍBIO PINHEIRO",
+            "int_pubsite_rede": 1,
+            "inf_condominio": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "TERRENO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Taió",
+            "inf_bairro": "padre eduardo",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "rua cecilio schaeffer"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "TAIÓ",
+            "inf_bairro": "vila mariana",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Rua Frederico Kraemer",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_locacao_estu": 1,
+            "inf_tipo": "TERRENO",
+            "inf_subtipo": "COMERCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Taió",
+            "inf_bairro": "Victor Konder",
+            "inf_estado": "DESOCUPADO",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Rua Albert Kindel",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "SITIO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "TAIÓ",
+            "inf_bairro": "BRACATINGA",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "estrada bracatinga",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "TERRENO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "TAIÓ",
+            "inf_bairro": "PADRE EDUARDO",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "PADRE EDUARDO"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "RIO DO SUL",
+            "inf_bairro": "SUMARÉ",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "ARI ACARI DE SOUZA"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Taió",
+            "inf_bairro": "Barra do Lobo",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Barra do Lobo"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "POUSO REDONDO",
+            "inf_bairro": "arroio grande",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "rua do hipodromo"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_permuta": 1,
+            "inf_tipo": "GALPAO",
+            "inf_subtipo": "COMERCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "RIO DO SUL",
+            "inf_bairro": "ALBERTINA",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "RODOVIA SC 302, KM 5"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "TAIÓ",
+            "inf_bairro": "Vila Mariana",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "rua marechal deodoro da fonseca"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "taio",
+            "inf_bairro": "victor konder",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Rua José Francisco Horst"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "RIO DO CAMPO",
+            "inf_bairro": "GUANABARA",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Rua XV de Novembro"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_permuta": 1,
+            "inf_tipo": "TERRENO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "ITUPORANGA",
+            "inf_bairro": "GABIROBA",
+            "inf_estado": "DESOCUPADO",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "RUA HUGO HAVEROTH"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "CHACARA",
+            "inf_subtipo": "RURAL",
+            "inf_uf": "SC",
+            "inf_cidade": "TAIO",
+            "inf_bairro": "RODOVIA SC 350 - MORRO REDONDO - PASSO MANSO",
+            "inf_categoria": "TERREO(A)",
+            "inf_endereco": "RODOVIA SC 350 - MORRO REDONDO - PASSO MANSO",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_permuta": 1,
+            "inf_tipo": "TERRENO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "ITUPORANGA",
+            "inf_bairro": "GABIROBA",
+            "inf_estado": "DESOCUPADO",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "RUA HUGO HAVEROTH",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_permuta": 1,
+            "inf_tipo": "SITIO",
+            "inf_subtipo": "RURAL",
+            "inf_uf": "SC",
+            "inf_cidade": "ITUPORANGA",
+            "inf_bairro": "ESTRADA GERAL ALTO TRÊS BARRAS",
+            "inf_estado": "OCUPADO",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "ESTRADA GERAL ALTO TRÊS BARRAS",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_permuta": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "IMBUIA",
+            "inf_bairro": "CENTRO",
+            "inf_categoria": "TERREO(A)",
+            "inf_endereco": "RUA 07 DE SETEMBRO"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "SITIO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "RIO DO CAMPO",
+            "inf_bairro": "CENTRO",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "SC 427 3 KM DO CENTRO"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_permuta": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "rio do sul",
+            "inf_bairro": "Itoupava",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Rua Maria Cechet"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "SITIO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "RIO DO CAMPO",
+            "inf_bairro": "CENTRO",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "RIBEIRÃO CAÇADOR",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "rio do campo",
+            "inf_bairro": "centro",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "rua Pio XII"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "CHACARA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "ITUPORANGA",
+            "inf_bairro": "· OUTRAS LOCALIDADES",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "FLORESTAL"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "SITIO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "ITUPORANGA",
+            "inf_bairro": "CHAPADAO DO LAGEADO",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "ILHA GRANDE SEBOLD",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "ITUPORANGA",
+            "inf_bairro": "CERRO NEGRO",
+            "inf_categoria": "DUPLEX",
+            "inf_endereco": "ESTRADA GERAL"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "SALA / SALÃO COMERCIAL",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "ITUPORANGA",
+            "inf_bairro": "JARDIM AMÉRICA",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "RUA BOLIVIA"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_permuta": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Piçarras",
+            "inf_bairro": "Balneário Piçarras",
+            "inf_categoria": "SOBRADO",
+            "inf_endereco": "Rua Tainha",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_permuta": 1,
+            "inf_tipo": "PRÉDIO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "ITUPORANGA",
+            "inf_bairro": "CENTRO",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "RUA LEONEL THIESEN"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "TERRENO",
+            "inf_subtipo": "COMERCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Taió",
+            "inf_bairro": "Padre Eduardo",
+            "inf_categoria": "TERREO(A)",
+            "inf_endereco": "Av Franz Xavier / Francisco Tomazoni",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_permuta": 1,
+            "inf_tipo": "SITIO",
+            "inf_subtipo": "RURAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Ituporanga",
+            "inf_bairro": "Cerro Negro",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Barra do Indaiá"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "SITIO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "IMBUIA",
+            "inf_bairro": "CENTRO",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "RUA FERNANDO ALLIEN",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "ITUPORANGA",
+            "inf_bairro": "SANTO ANTÔNIO",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Rua João Paulo I"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_permuta": 1,
+            "inf_tipo": "SITIO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Rio do Campo",
+            "inf_bairro": "Saltinho",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "estrada geral Saltinho"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "TERRENO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "TAIÓ",
+            "inf_bairro": "PADRE EDUARDO",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "RUA FRANZ XAVIER MAINHARDT",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "TERRENO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "TAIÓ",
+            "inf_bairro": "Padre Eduardo",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "ALOIS PEICKER"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "COMERCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "POUSO REDONDO",
+            "inf_bairro": "Centro",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "BR 470"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "RIO DO SUL",
+            "inf_bairro": "PROGRESSO",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "RIO NEGRINHO"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_permuta": 1,
+            "inf_tipo": "SITIO",
+            "inf_subtipo": "RURAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Taió",
+            "inf_bairro": "Passo Manso",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "estrada geral da localidade de Cachoeira"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "TERRENO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "TAIÓ",
+            "inf_bairro": "PADRE EDUARDO",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "rua padre eduardo",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "TERRENO",
+            "inf_subtipo": "COMERCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Rio do Campo",
+            "inf_bairro": "Floresta",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Travessa Avenida Tiradentes",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "SITIO",
+            "inf_subtipo": "RURAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Taió",
+            "inf_bairro": "Distrito de Passo Manso",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "ribeirão Encano"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "SITIO",
+            "inf_subtipo": "RURAL",
+            "inf_uf": "SC",
+            "inf_cidade": "rio do campo",
+            "inf_bairro": "Serrinha",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "serrinha"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "SALA / SALÃO COMERCIAL",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "TAIÓ",
+            "inf_bairro": "CENTRO",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "CORONEL FEDDERSEN"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "TERRENO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "ITUPORANGA",
+            "inf_bairro": "BELA VISTA",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "SC 327"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "TAIÓ",
+            "inf_bairro": "SEMINÁRIO",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "rua Padre José Moacir moser"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_permuta": 1,
+            "inf_tipo": "SITIO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "TAIÓ",
+            "inf_bairro": "PASSO MANSO",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "ENCANO",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "TERRENO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "barra velha",
+            "inf_bairro": "jardim balneário piçarras",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "rua paulo sergio santana",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "SITIO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "TAIÓ",
+            "inf_bairro": "PASSO MANSO",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "RODOVIA TAIO - PASSO MANSO"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "CHACARA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "ITUPORANGA",
+            "inf_bairro": "GABIROBA",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "RUA ARNO ALEX ZIMERMANN"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "APARTAMENTO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "BLUMENAU",
+            "inf_bairro": "VELHA",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "RUA JOÃO PESSOA"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Taió",
+            "inf_bairro": "Centro",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Rua Tiradentes",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "TAIÓ",
+            "inf_bairro": "CENTRO",
+            "inf_categoria": "NORMAL"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Taió",
+            "inf_bairro": "Padre Eduardo",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Rua Elfrida Rausch"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_permuta": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "ITUPORANGA",
+            "inf_bairro": "CENTRO",
+            "inf_estado": "OCUPADO",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "RUA TENENTE JACOB PHILIPPI"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "MIRIM DOCE",
+            "inf_bairro": "centro",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "rua marciano rosa",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "TAIÓ",
+            "inf_bairro": "VILA MARIANA",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "R RAULINO CUCO",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "SITIO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "SALETE",
+            "inf_bairro": "CENTRO",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "ESTRADA GERAL SANTA MARGARIDA"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_permuta": 1,
+            "inf_tipo": "TERRENO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Taió",
+            "inf_bairro": "Padre Eduardo",
+            "inf_estado": "DESOCUPADO",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Rua Jose Novotni"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "SITIO",
+            "inf_subtipo": "RURAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Salete",
+            "inf_bairro": "São Luiz",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "estrada geral Tifa São Luiz"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "SALETE",
+            "inf_bairro": "BELA VISTA",
+            "inf_estado": "NOVO",
+            "inf_categoria": "TERREO(A)",
+            "inf_endereco": "RUA ITAJAI",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_permuta": 1,
+            "inf_tipo": "SITIO",
+            "inf_subtipo": "RURAL",
+            "inf_uf": "SC",
+            "inf_cidade": "ituporanga",
+            "inf_bairro": "Ilha Grande Becker",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Rodovia SC 350 Ilha Grande Becker"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "TERRENO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "TAIÓ",
+            "inf_bairro": "PADRE EDUARDO",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "BARRA DOS LOBOS"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "SITIO",
+            "inf_subtipo": "RURAL",
+            "inf_uf": "SC",
+            "inf_cidade": "TAIÓ",
+            "inf_bairro": "Passo Manso",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "estrada geral da localidade de Cachoeira"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Taió",
+            "inf_bairro": "Centro",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "rua Expedicionário Rafael Busarello"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Taió",
+            "inf_bairro": "vila mariana",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Rua Frederico Kraemer"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "TERRENO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Taió",
+            "inf_bairro": "Centro",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "rua Bertoldo Jacobsen"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_permuta": 1,
+            "inf_tipo": "SITIO",
+            "inf_subtipo": "RURAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Taió",
+            "inf_bairro": "Jundiá",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "estrada tifa Jundiá"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Taió",
+            "inf_bairro": "Boa Vista",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Rua Ver. Sirio Weber"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "SITIO",
+            "inf_subtipo": "RURAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Ituporanga",
+            "inf_bairro": "lageado aguas negras",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Estrada geral"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_permuta": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Taió",
+            "inf_bairro": "Victor Konder",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Rua Albert Kindel"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "TERRENO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "TAIÓ",
+            "inf_bairro": "Padre eduardo",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Loteamento Emilio Largura",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "TERRENO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "TAIÓ",
+            "inf_bairro": "CENTRO",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "CORONEL FEDDERSEN"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Taió",
+            "inf_bairro": "Padre Eduardo",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Rua Jose Novotni"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "SITIO",
+            "inf_subtipo": "RURAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Mirim Doce",
+            "inf_bairro": "Paleta",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Paleta"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "TERRENO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Taió",
+            "inf_bairro": "Centro",
+            "inf_categoria": "TERREO(A)",
+            "inf_endereco": "Coronel Feddersen"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "SITIO",
+            "inf_subtipo": "RURAL",
+            "inf_uf": "SC",
+            "inf_cidade": "POUSO REDONDO",
+            "inf_bairro": "Sumidor",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Ribeirão Sumidor"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "SITIO",
+            "inf_subtipo": "RURAL",
+            "inf_uf": "SC",
+            "inf_cidade": "TAIÓ",
+            "inf_bairro": "ribeirão pequeno",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "ribeirão pequeno"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Taió",
+            "inf_bairro": "Seminário",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Rua Alcacio Goetten de Lima"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "TERRENO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Taió",
+            "inf_bairro": "victor konder",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "rua gentil andriolli"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_permuta": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Taió",
+            "inf_bairro": "Seminário",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Rua Pioneiro Rudolf Hasse",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_permuta": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Salete",
+            "inf_bairro": "São José",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Rua Valmor jumes",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_permuta": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Indaial",
+            "inf_bairro": "Encano do Norte",
+            "inf_categoria": "SOBRADO",
+            "inf_endereco": "Rua Cruz Alta",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Salete",
+            "inf_bairro": "são cristóvão",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Rua Mathias Loch",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "SITIO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "taio",
+            "inf_bairro": "Barra da erva",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Barra da erva",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_permuta": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "trombudo central",
+            "inf_bairro": "cidade alta",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "rua adolfo konder"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_permuta": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "RIO DO SUL",
+            "inf_bairro": "TABOÃO",
+            "inf_condonome": "UNIQUE",
+            "inf_categoria": "SOBRADO",
+            "inf_endereco": "RUA POLÍBIO PINHEIRO",
+            "inf_condominio": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_permuta": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "ASCURRA",
+            "inf_bairro": "vila nova",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Rua Vereador Ambrósio Poffo"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "BLUMENAU",
+            "inf_bairro": "BOA VISTA",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "RUA ADOLFO TALLMANN"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "GALPAO",
+            "inf_subtipo": "INDUSTRIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "taio",
+            "inf_bairro": "ribeirão pinheiro",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "ribeirão pinheiro"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "PRÉDIO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Camboriú",
+            "inf_bairro": "Monte Alegre",
+            "inf_categoria": "TERREO(A)",
+            "inf_endereco": "Rua Monte Pedra do Sino",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "SITIO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Taió",
+            "inf_bairro": "barra dos lobos",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "barra dos lobos",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "SITIO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "taio",
+            "inf_bairro": "seminário",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "rua joão Carvalho",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Taió",
+            "inf_bairro": "Universitário",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Rua Angelbert Muller"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "SITIO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "ITUPORANGA",
+            "inf_bairro": "RIO BONITO",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "RIO BONITO"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "TERRENO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "ITUPORANGA",
+            "inf_bairro": "NOSSA SENHORA DE FÁTIMA",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "RUA MATIAS KNABEN"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "TERRENO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "rio do sul",
+            "inf_bairro": "Laranjeiras",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Rua Ladeira Brasilia",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "APARTAMENTO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "SALETE",
+            "inf_bairro": "CENTRO",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "RUA RIBEIRAO GRANDE"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "TERRENO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Taió",
+            "inf_bairro": "padre eduardo",
+            "inf_categoria": "NORMAL",
+            "inf_lote": "25",
+            "inf_endereco": "rua adolfo berri"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "APARTAMENTO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Taió",
+            "inf_bairro": "Seminário",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Rua Juscelino Kubischeck de Oliveira"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "TERRENO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "pouso redondo",
+            "inf_bairro": "centro",
+            "inf_estado": "DESOCUPADO",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "rua Ari Verdi"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "TAIO",
+            "inf_bairro": "VILA MARIANA",
+            "inf_categoria": "DUPLEX",
+            "inf_endereco": "RUA CORONEL FEDDERSEN",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Taio",
+            "inf_bairro": "Victor Konder",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Voluntários da Patria",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "SITIO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Rio do Campo",
+            "inf_bairro": "Mirador",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Estrada Geral Mirador - Rio do Campo"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Rio do Sul",
+            "inf_bairro": "Brehmer",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Beco Leopoldo Harbs"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "TERRENO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "TAIÓ",
+            "inf_bairro": "PADRE EDUARDO",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "JOSE NOVOTNI"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_permuta": 1,
+            "inf_tipo": "SITIO",
+            "inf_subtipo": "RURAL",
+            "inf_uf": "SC",
+            "inf_cidade": "ITUPORANGA",
+            "inf_bairro": "Lageado Águas Negras",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Lageado Águas Negras"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "TERRENO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Blumenau",
+            "inf_bairro": "Velha",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "rua Irmã Aluysianis"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_permuta": 1,
+            "inf_tipo": "CHACARA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "TAIO",
+            "inf_bairro": "RIBEIRÃO DA ERVA",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "RIBEIRÃO OSVALDO - RIBEIRÃO DA ERVA",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "TERRENO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Taió",
+            "inf_bairro": "Universitário",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Rua August Henrich Purnhagen"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "TERRENO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "TAIO",
+            "inf_bairro": "padre eduardo",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "rodovia Bruno Heidrich - SC 114"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_permuta": 1,
+            "inf_tipo": "SITIO",
+            "inf_subtipo": "RURAL",
+            "inf_uf": "SC",
+            "inf_cidade": "pouso redondo",
+            "inf_bairro": "Corruchel",
+            "inf_categoria": "TERREO(A)",
+            "inf_endereco": "Corrochel",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "SITIO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "TAIÓ",
+            "inf_bairro": "GRAMADO",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "RODOVIA SC 427 TAIO - RIO DO CAMPO",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_permuta": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "RIO DO SUL",
+            "inf_bairro": "ALBERTINA",
+            "inf_categoria": "TERREO(A)",
+            "inf_endereco": "RODOVIA SC 350, KM 05,",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "joinville",
+            "inf_bairro": "vila nova",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Rua Bento Torquato da Rocha",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_permuta": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Taio",
+            "inf_bairro": "Victor Konder",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Rua Hugo Brandt",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "PRÉDIO",
+            "inf_subtipo": "COMERCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "salete",
+            "inf_bairro": "schreiber",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "rua germano niheus",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "ITAPEMA",
+            "inf_bairro": "ANDORINHA",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "RUA 218"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "TERRENO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "ITUPORANGA",
+            "inf_bairro": "CENTRO",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "RUA JOÃO WIESE"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "TERRENO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "TAIÓ",
+            "inf_bairro": "VILA MARIANA",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "CORONEL FEDDERSEN"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "TERRENO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "SALETE",
+            "inf_bairro": "Schreiber",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "rua Luiz Bertoli",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_permuta": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Rio do campo",
+            "inf_bairro": "Centro",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Pio XII"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "TERRENO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Taió",
+            "inf_bairro": "Vila Mariana",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Otto Hosang",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "TAIO",
+            "inf_bairro": "VILA MARIANA",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "RUA CAETANO ZANLUCA",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "APARTAMENTO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Taió",
+            "inf_bairro": "Centro",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Rua Johann Bruns"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "TERRENO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "taió",
+            "inf_bairro": "Padre Eduardo",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "rua Ernesto Bolduan Sobrinho"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "TERRENO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "taió",
+            "inf_bairro": "Boa Vista",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "rua August Henrich Purnhagen"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Salete",
+            "inf_bairro": "Bela Vista",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Rua Amazonas",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "TERRENO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Taió",
+            "inf_bairro": "Padre Eduardo",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "rua padre eduardo"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "TERRENO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "SALETE",
+            "inf_bairro": "AMERICA",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "RUA PEDRO LUCKMANN",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Taió",
+            "inf_bairro": "Vila Mariana",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Rua Roberto Brandes"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "taio",
+            "inf_bairro": "vila mariana",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "rua frederico kraemer"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_permuta": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "taió",
+            "inf_bairro": "Padre Eduardo",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "rua padre eduardo"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_permuta": 1,
+            "inf_tipo": "SITIO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "atalanta",
+            "inf_bairro": "rio caçador",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "rio caçador",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "TAIO",
+            "inf_bairro": "PADRE EDUARDO",
+            "inf_condonome": "RESIDENCIAL TAIOENSE",
+            "inf_categoria": "SOBRADO",
+            "inf_endereco": "SC 422 KM 3",
+            "inf_condominio": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "SITIO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "POUSO REDONDO",
+            "inf_bairro": "TAQUAROÇU",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "SERRA VENCIDA",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Taió",
+            "inf_bairro": "Padre Eduardo",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Rua Nicolau Ronchi",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "TERRENO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "SALETE",
+            "inf_bairro": "Beira Rio",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Rua Vereador Artur Moratelli",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_permuta": 1,
+            "inf_tipo": "SITIO",
+            "inf_subtipo": "RURAL",
+            "inf_uf": "SC",
+            "inf_cidade": "TAIÓ",
+            "inf_bairro": "Passo Manso",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Passo Manso"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "TAIÓ",
+            "inf_bairro": "VICTOR KONDER",
+            "inf_estado": "DESOCUPADO",
+            "inf_categoria": "SOBRADO",
+            "inf_endereco": "RUA FABIO BELLI",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Salete",
+            "inf_bairro": "Cachoeira",
+            "inf_categoria": "TERREO(A)",
+            "inf_endereco": "Cachoeira",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_permuta": 1,
+            "inf_tipo": "SITIO",
+            "inf_subtipo": "RURAL",
+            "inf_uf": "SC",
+            "inf_cidade": "TAIÓ",
+            "inf_bairro": "Ribeirão Osvaldo",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "ribeirão Osvaldo"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "PRÉDIO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "pouso redondo",
+            "inf_bairro": "centro",
+            "inf_condonome": "edificio residencial rosa mística",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "rua 23 de Julho",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "PRÉDIO",
+            "inf_subtipo": "COMERCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Salete",
+            "inf_bairro": "Centro",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Rua Luis Bertoli",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "salete",
+            "inf_bairro": "Centro",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Rua Luis Bertoli"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "TERRENO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "MIRIM DOCE",
+            "inf_bairro": "CENTRO",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "ALFREDO CORDEIRO"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "SITIO",
+            "inf_subtipo": "RURAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Taió",
+            "inf_bairro": "Barra da Erva",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "barra da erva",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "PENHA",
+            "inf_bairro": "SANTA LÍDIA",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "ESTRADA GERAL SANTA LIDIA"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Taió",
+            "inf_bairro": "padre eduardo",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Rua José Pedro Kniess"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "SITIO",
+            "inf_subtipo": "RURAL",
+            "inf_uf": "SC",
+            "inf_cidade": "TAIÓ",
+            "inf_bairro": "Passo Manso",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Estrada geral localidade de Pintado"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "TAIÓ",
+            "inf_bairro": "Padre Eduardo",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Rua Erich Passold"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_permuta": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "ITUPORANGA",
+            "inf_bairro": "BOA VISTA",
+            "inf_estado": "OCUPADO",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "RUA FRANCISCO FRANCIOSE",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "TAIÓ",
+            "inf_bairro": "CENTRO",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "GUSTAVO DE LIMA"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "taio",
+            "inf_bairro": "vila mariana",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "rua manoel claudino"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_permuta": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Taió",
+            "inf_bairro": "Seminário",
+            "inf_categoria": "SOBRADO",
+            "inf_endereco": "rua Padre José Moacir Moser"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_permuta": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "PETROLÂNDIA",
+            "inf_bairro": "SERRA GRANDE",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "RUA GERAL SERRA GRANDE"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_permuta": 1,
+            "inf_tipo": "SITIO",
+            "inf_subtipo": "RURAL",
+            "inf_uf": "SC",
+            "inf_cidade": "VIDAL RAMOS",
+            "inf_bairro": "Baixo Rio das Pacas",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Estrada geral - rio veado"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_permuta": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Taió",
+            "inf_bairro": "Padre Eduardo",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "rua adolfo  berri"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "TERRENO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "RIO DO CAMPO",
+            "inf_bairro": "CENTRO",
+            "inf_categoria": "NORMAL"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "SALETE",
+            "inf_bairro": "BELA VISTA  - SALETE - SC",
+            "inf_estado": "USADO",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "RUA AMAZONAS",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "SITIO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "RIO DO CAMPO",
+            "inf_bairro": "CENTRO",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "RUA HILARIO BOGO BAIRRO GUANABARA"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_permuta": 1,
+            "inf_tipo": "SITIO",
+            "inf_subtipo": "RURAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Alfredo Wagner",
+            "inf_bairro": "alto jararaca",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Estrada Geral"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "TERRENO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "IMBUIA",
+            "inf_bairro": "CENTRO",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "RUA JOÃO RAITZ"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "TERRENO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "TAIÓ",
+            "inf_bairro": "vila mariana",
+            "inf_categoria": "NORMAL",
+            "inf_lote": "15",
+            "inf_endereco": "rua projetada 4",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "TERRENO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "SALETE",
+            "inf_bairro": "BEIRA RIO",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "RUA ARTUR MORATELLI",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "APARTAMENTO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Blumenau",
+            "inf_bairro": "Salto do Norte",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Salto do Norte"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "PRÉDIO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "ITUPORANGA",
+            "inf_bairro": "BELA VISTA",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "SC 110"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "TAIO",
+            "inf_bairro": "seminario",
+            "inf_categoria": "SOBRADO",
+            "inf_endereco": "RUA 12 DE FEVEREIRO",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "CAMBORIU",
+            "inf_bairro": "MONTE ALEGRE",
+            "inf_categoria": "TERREO(A)",
+            "inf_endereco": "RUA MONTE PEDRA DO SINO",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_permuta": 1,
+            "inf_tipo": "TERRENO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "ITUPORANGA",
+            "inf_bairro": "GABIROBA",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "RUA FABRÍCIO MEES",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "TERRENO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "taio",
+            "inf_bairro": "seminário",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "rua faustino piazera"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "APARTAMENTO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Bombinhas",
+            "inf_bairro": "Bombas",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Rua Saira Amarela"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "RIO DO SUL",
+            "inf_bairro": "SANTANA",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Rua Virginia Ledra",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "TERRENO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Taió",
+            "inf_bairro": "Victor Konder",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Rua Achiles Zanela",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "SITIO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "TAIÓ",
+            "inf_bairro": "Passo Manso",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Ribeirão das Pedras"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_permuta": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Taió",
+            "inf_bairro": "vila mariana",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "rua roberto brandes"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "TERRENO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Mirim Doce",
+            "inf_bairro": "centro",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Rua Pioneiros Nunes"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_permuta": 1,
+            "inf_tipo": "TERRENO",
+            "inf_subtipo": "COMERCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "RIO DO SUL",
+            "inf_bairro": "ALBERTINA",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "RODOVIA SC 302 KM 5"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Indaial",
+            "inf_bairro": "Tapajos",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Rua Curitiba"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "ITUPORANGA",
+            "inf_bairro": "SANTO ANTÔNIO",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "RUA LEOPOLDO LUDWIG"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "TERRENO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Taio",
+            "inf_bairro": "victor konder",
+            "inf_categoria": "NORMAL",
+            "inf_quadra": "01",
+            "inf_endereco": "rua projetada 01",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_permuta": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "TAIÓ",
+            "inf_bairro": "Seminário",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Rua Alvin Borchardt,"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "CASA",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Taió",
+            "inf_bairro": "seminário",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Estrada Margem Esquerda",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "TERRENO",
+            "inf_subtipo": "COMERCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "TAIO",
+            "inf_bairro": "PADRE EDUARDO",
+            "inf_categoria": "TERREO(A)",
+            "inf_endereco": "Rua Franz Xavier Mainhardt",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "TERRENO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "Santa Terezinha",
+            "inf_bairro": "Centro",
+            "inf_estado": "DESOCUPADO",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "rua Silvino Longen",
+            "int_pubsite_rede": 1
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_tipo": "Sala / Salão Comercial",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "TAIÓ",
+            "inf_bairro": "CENTRO",
+            "inf_categoria": "Normal",
+            "inf_endereco": "RUA GERARD KOSTNER"
+        }
+    },
+    {
+        "_id": {
+            "inf_venda": 1,
+            "inf_permuta": 1,
+            "inf_tipo": "TERRENO",
+            "inf_subtipo": "RESIDENCIAL",
+            "inf_uf": "SC",
+            "inf_cidade": "SÃO FRANCISCO DO SUL",
+            "inf_bairro": "ROCIO PEQUENO",
+            "inf_estado": "EM CONSTRUÇÃO",
+            "inf_categoria": "NORMAL",
+            "inf_endereco": "Rua Ubirajara Alves de Carvalho",
+            "int_pubsite_rede": 1
+        }
+    }
+]

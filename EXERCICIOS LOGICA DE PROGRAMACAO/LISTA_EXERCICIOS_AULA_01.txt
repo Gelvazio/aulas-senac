@@ -1,0 +1,67 @@
+[LISTA DE EXERCICIO 01
+Faça os exercicios da apostila de nome "300 Ideias para Programar", conforme abaixo:
+Do numero 1.1.1 ate o numero 1.1.14
+
+[LISTA DE EXERCICIO 02
+#Exercicio 01
+Faca um algoritmo que leia os valores A,B,C
+e diga se a soma de A + B é menor que C.
+
+#Exercicio 02
+Faca um algoritmo que leia dois valores A,B
+Se valores forem iguais devera se somar os dois ,
+caso contrario,multiplique A por B
+Ao final  do calculo, atribuir e imprimir o valor para a
+variavel C.
+
+#Exercicio 03
+Faca um algoritmo para ler a base e a altura de um triangulo, conforme formula abaixo:
+Area = (BASE * ALTURA)/2
+
+#Exercicio 04
+Faca um algoritmo que calcule a media de 4 alunos informados.
+
+#Exercicio 05
+Dados as seguintes informaçoes de um funcionario:
+O salario bruto teve um reajuste de 38%.
+O funcionario recebera uma gratificação de 20% do salario bruto.
+O salario total é descontado 15% para encargos.
+Faca um algoritmo para:
+Imprimir Nome,idade e cargo
+Imprimir o salario bruto
+Imprimir o salario liquido
+
+#Exercicio 06
+O preco de custo de um automovel e calculado pela soma do:
+"preco de fabrica  + MAIS;
+Preco dos impostos (15 %)+ MAIS
+percentual revendedor (25%)
+
+Faca um algoritmo que leia o nome do automovel,preco de fabrica,
+e imprima o nome e o preco final do carro.
+
+#Exercicio 07
+Uma empresa tem para um determinado funcionario uma ficha contendo o nome,
+numero de horas trabalhadas e o numero de  dependentes de um funcionario
+Considerando que:
+a)A empresa paga 10 reais por hora e 20 reais por dependentes
+
+b)Sobre o salario sao feitos descontos de 8,5 % para o INSS e 5% para IR.
+
+Faca um algoritmo para ler o Nome,numero horas trabalhadas e numero de dependentes do funcionario
+Apos a leitura,escreva qual o nome ,salario bruto,valores descontados para cada tipo de imposto (INSS,IR)
+e finalmente qual o salario liquido do funcionario.
+
+
+
+
+
+
+
+
+
+
+
+
+
+

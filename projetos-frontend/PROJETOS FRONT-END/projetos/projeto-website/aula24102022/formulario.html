@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+
+<body>
+    <br><br><br>
+    <center>
+        <h1>Cadastro de Usuario</h1>
+    </center>
+    <center>
+        <fieldset>
+            <legend>Cadastro de Usuario</legend>
+            <form action="index.html">
+                <label for="codigo">Código:</label>
+                <input type="number" id="codigo" name="codigo" min="1" required maxlength="100">
+                <br>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome aqui...">
+                <br>
+                <label for="idade">Idade:</label>
+                <input type="number" id="idade" name="idade" min="1" max="120">
+                <br>
+                <label for="datanascimento">Data Nascto:</label>
+                <input type="date" id="datanascimento" name="datanascimento">
+                <br>
+                <label for="usuario">Usuario:</label>
+                <input type="text" id="usuario" name="usuario">
+                <br>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+                <br>
+                <label for="ativo ">Ativo:</label>
+                <!-- Se o usuario esta ativo -->
+                <input type="radio" id="ativo" name="ativo">
+                <label for="ativo">Inativo:</label>
+                <input type="radio" id="inativo" name="ativo">
+                <br>
+                <label for="senha">Senha:</label>
+                <input type="text" id="senha" name="senha">
+                <br>
+                <label for="confirmasenha ">Confirmar Senha:</label>
+                <input type="text" id="confirmasenha" name="confirmasenha">
+
+                <br>Observações
+                <br>
+                <textarea name="observacoes" rows="4" cols="20"></textarea>
+                <br>
+                <br>
+                <label for="cidade">Cidades:</label>
+                <select name="cidade" id="cidade">
+                    <option value="1">Rio do Sul</option>
+                    <option value="2">Lontras</option>
+                    <option value="3">Taio</option>
+                    <option value="4">Ibirama</option>
+                </select>
+                <br>
+                <label for="linguagem">Marque as linguagens de programação que voce estuda:</label>
+                <br>
+
+                <label for="php">PHP</label>
+                <input type="checkbox" id="php" name="php">
+                <br>
+                <label for="html ">HTML</label>
+                <input type="checkbox" id="html" name="html">
+                <br>
+                <label for="javascript">JAVASCRIPT</label>
+                <input type="checkbox" id="javascript" name="javascript">
+                <br>
+                <label for="css">CSS</label>
+                <input type="checkbox" id="css" name="css">
+                <br>
+                <br>
+
+                <input type="reset" value="Limpar">
+                <input type="submit" value="Confirmar">
+            </form>
+        </fieldset>
+    </center>
+</body>
+
+</html>

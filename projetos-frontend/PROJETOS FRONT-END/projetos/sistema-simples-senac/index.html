@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<style>
+    .conteudo {
+        color: aliceblue;
+        font-size: 40px;
+    }
+
+    tr, td, th {
+        color: aliceblue;
+    }
+
+    td {
+        width:200px;
+    }
+
+    fieldset {
+        min-height: 100px;
+        width: 400px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap:10px;
+        padding: 25px 10px;
+    }
+
+    .documentacao {
+        min-height: 120px;
+        font-size: 20px;
+        border: 1px solid blue;
+        background-color: aqua;
+    }
+
+    .documentacao a {
+        color:yellow;
+        transition: all .4s ease-in-out;
+    }
+
+    .documentacao a:hover {
+        background-color: aqua;
+        color: black;
+    }
+
+    .centralizaEmemento {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .centralizaEmementoFiltros {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+</style>
+<script>
+    var ULTIMA_PAGINA_FILTRADA = 0;
+    var CHAMADA_CALL_API = false;
+
+    function inicializaFiltroPaginas(){
+        var retorno = "<option value='TODAS'>Todas Páginas</option>";
+        retorno += "<option value='1' selected >Pagina 1</option>";
+
+        var pagina = 2;
+        while(pagina < 100){
+
+            retorno += "<option value=\"" + pagina + "\">Página - " + pagina + "</option>";
+
+            pagina++;
+        }
+
+        document.querySelector("#pagina-auxilio").innerHTML = retorno;
+    }
+
+    function inicializaFiltroPaginasPHP(){
+        var retorno = "<option value='TODAS'>Todas Páginas</option>";
+
+        var pagina = 2;
+        while(pagina < 100){
+
+            retorno += "<option value=\"" + pagina + "\">Página até " + pagina + "</option>";
+
+            pagina = pagina + 100;
+        }
+
+        document.querySelector("#pagina-auxilio").innerHTML = retorno;
+    }
+
+    async function callApiTerceiros(method, port, body, oCall, urlParam) {
+
+        if (body == undefined) {
+            body = "";
+        }
+
+        if (method == undefined) {
+            method = "GET";
+        }
+
+        if (port == undefined) {
+            port = "ping";
+        }
+
+        // Define a url
+        let url = getUrlBase(port);
+        if (urlParam) {
+            url = urlParam + port;
+        }
+
+        console.log("url gerada:" + url);
+
+        const myInit = getInitFetchApi(method, body);
+
+        const promise = await fetch(url, myInit)
+            // Converting the response to a JSON object
+            .then(response => response.json())
+            .then(data => {
+
+                console.log(data);
+
+                if (oCall) {
+                    // Chama a function por parametor com os dados retornados...
+                    oCall(data);
+                }
+
+            })
+            .catch(function(error) {
+                console.log('There has been a problem with your fetch operation: ' + error.message);
+            });
+    }
+
+    function getInitFetchApi(method, body) {
+        let usaBody = false;
+        if (method == "POST") {
+            usaBody = true;
+        }
+
+        if (usaBody) {
+            return {
+                method: method,
+                headers: getHeadersApi(),
+                mode: 'cors',
+                cache: 'default',
+                body: JSON.stringify(body)
+            };
+        }
+
+        return {
+            method: method,
+            headers: getHeadersApi(),
+            mode: 'cors',
+            cache: 'default'
+        };
+    }
+
+    function getHeadersApi() {
+        return new Headers({
+            "Accept": "Application/json",
+            "chave-api-dados": "e87c65b7590a28a987705526d3812c4a",
+            "Content-Type": "Application/json"
+        });
+    }
+
+    function getDadosAbertosCallApi(port) {
+        CHAMADA_CALL_API = true;
+
+        // Parametros da URL
+        var parametros_url = getFiltrosAuxilioEmergencial();
+        if(port == undefined){
+            port = "auxilio-emergencial-beneficiario-por-municipio";
+        }
+
+        // const urlApi = "https://api.portaldatransparencia.gov.br/api-de-dados/" + port;
+        const urlApi = getUrlBaseApiPHP();
+
+        var metodo = "GET";
+
+        var validaConsulta = true;
+        const pagina = parseInt(document.querySelector("#pagina-auxilio").value);
+        if(ULTIMA_PAGINA_FILTRADA == pagina){
+            validaConsulta = false;
+        } else {
+            ULTIMA_PAGINA_FILTRADA = pagina;
+        }
+
+        const nomeBeneficiarioInformado = document.querySelector("#nome-auxilio").value;
+        validaConsulta = true;
+
+        const ano = document.querySelector("#ano-auxilio").value;
+        let mes = document.querySelector("#mes-auxilio").value;
+
+        const mesano = ano + mes;
+
+        body = {
+            mesano:mesano,
+            pagina:pagina,
+            nome:nomeBeneficiarioInformado
+        };
+
+        let paginaFiltro = "";
+        if(pagina == "TODAS"){
+            body = {
+                mesano:mesano,
+                nome:nomeBeneficiarioInformado
+            };
+        } else if(nomeBeneficiarioInformado != ""){
+            body = {
+                mesano:mesano,
+                pagina:pagina,
+                nome:nomeBeneficiarioInformado
+            };
+        }
+
+        if(validaConsulta){
+            callApi("POST", "auxilios", body, function(data) {
+                loadDadosTabela(data, port);
+            }, urlApi);
+        }
+    }
+
+    function getDadosAbertos(port) {
+        // Parametros da URL
+        var parametros_url = getFiltrosAuxilioEmergencial();
+        if(port == undefined){
+            port = "auxilio-emergencial-beneficiario-por-municipio";
+        }
+
+        const urlApi = "https://api.portaldatransparencia.gov.br/api-de-dados/" + port;
+
+        var metodo = "GET";
+        var body = undefined;
+
+        var validaConsulta = true;
+        const pagina = parseInt(document.querySelector("#pagina-auxilio").value);
+        if(ULTIMA_PAGINA_FILTRADA == pagina){
+            validaConsulta = false;
+        } else {
+            ULTIMA_PAGINA_FILTRADA = pagina;
+        }
+
+        const nomeBeneficiarioInformado = document.querySelector("#nome-auxilio").value;
+        if(nomeBeneficiarioInformado != ""){
+            validaConsulta = true;
+        }
+
+        validaConsulta = true;
+
+        if(validaConsulta){
+            callApiTerceiros(metodo, parametros_url, body, function(data) {
+                loadDadosTabela(data, port);
+            }, urlApi);
+        }
+    }
+
+    function getFiltrosAuxilioEmergencial() {
+        const ano = document.querySelector("#ano-auxilio").value;
+        let mes = document.querySelector("#mes-auxilio").value;
+
+        const pagina = document.querySelector("#pagina-auxilio").value;
+
+        var parametros = "?codigoIbge=4214805&mesAno=" + ano + mes + "&pagina=" + pagina;
+
+        return parametros;
+    }
+
+    function loadDadosTabela(dados, porta) {
+        switch(porta){
+            case "auxilio-emergencial-beneficiario-por-municipio":
+                document.querySelector("#tabela-dados-auxilio-emergencial").style.display = "block";
+                loadDadosAuxilioEmergencial(dados);
+                break;
+        }
+    }
+
+    function loadDadosAuxilioEmergencial(aDadosAuxilios) {
+
+        let body = document.querySelector(".dados-tabela-auxilio-emergencial");
+
+        // limpa a tabela atual
+        body.innerHTML = "";
+
+        if(CHAMADA_CALL_API){
+            // Trata os dados que estao sendo buscados do supabase
+            aDadosAuxilios.forEach(function(oAuxilio, key) {
+                var aAuxilios = JSON.parse(oAuxilio.dados);
+
+                aAuxilios = JSON.parse(aAuxilios);
+
+                loadDadosAuxilioEmergencialHtml(body, aAuxilios);
+            });
+        } else {
+            // Consulta o GOV BR direto
+            loadDadosAuxilioEmergencialHtml(body, aDadosAuxilios);
+        }
+    }
+
+    function loadDadosAuxilioEmergencialHtml(body, data) {
+
+        const aDadosAuxiliosParam = data;
+
+        const parcelaFiltro = document.querySelector("#parcela-auxilio").value;
+        const nomeBeneficiarioInformado = document.querySelector("#nome-auxilio").value;
+
+        aDadosAuxiliosParam.forEach(function(oAuxilio, key) {
+            const parcela = oAuxilio.numeroParcela;
+
+            let listadados = false;
+
+            const nomebeneficiarioFiltrado = oAuxilio.beneficiario.nome;
+            if(nomeBeneficiarioInformado != ""){
+                var isNomeFiltrado = nomebeneficiarioFiltrado.toLowerCase().indexOf(nomeBeneficiarioInformado.toLowerCase()) > -1;
+
+                listadados = false;
+                if(isNomeFiltrado){
+                    listadados = true;
+                }
+            } else {
+                listadados = true;
+            }
+
+            if(listadados) {
+                listadados = false;
+                if(parcelaFiltro == parcela || parcelaFiltro == "TODAS"){
+                    listadados = true;
+                }
+            }
+
+            if(listadados){
+                const mes = oAuxilio.mesDisponibilizacao;
+                const situacao = oAuxilio.situacaoAuxilioEmergencial;
+                const valor = "R$ " + formataNumero(oAuxilio.valor);
+
+                // Beneficiario
+                const nomebeneficiario = oAuxilio.beneficiario.nome;
+                const cpfbeneficiario = oAuxilio.beneficiario.cpfFormatado;
+
+                // Responsavel
+                const nomeresponsavel = oAuxilio.responsavelAuxilioEmergencial.nome;
+                const cpfresponsavel = oAuxilio.responsavelAuxilioEmergencial.cpfFormatado;
+
+                // Localização
+                const codigoibge = oAuxilio.municipio.codigoIBGE;
+                const cidade     = oAuxilio.municipio.nomeIBGE;
+                const regiao     = oAuxilio.municipio.codigoRegiao + " - " + oAuxilio.municipio.nomeRegiao;
+                const estado     = oAuxilio.municipio.uf.sigla + " - " + oAuxilio.municipio.uf.nome;
+                const pais       = oAuxilio.municipio.pais;
+
+                // adiciona as colunas da tabela da consulta
+                body.innerHTML += `<tr>
+                                        <td>` + mes + `</td>
+                                        <td>` + situacao + `</td>
+                                        <td>` + parcela + `</td>
+                                        <td>` + valor + `</td>
+                                        <td>` + nomebeneficiario + `</td>
+                                        <td>` + cpfbeneficiario + `</td>
+                                        <td>` + nomeresponsavel + `</td>
+                                        <td>` + cpfresponsavel + `</td>
+                                        <td>` + codigoibge + `</td>
+                                        <td>` + cidade + `</td>
+                                        <td>` + regiao + `</td>
+                                        <td>` + estado + `</td>
+                                        <td>` + pais + `</td>
+                                    </tr>`;
+            }
+        });
+     }
+
+    function getUrlBaseApiPHP() {
+        return "https://api-sistema-senac.herokuapp.com/api.php/";
+    }
+
+</script>
+
+<body onload="inicializaFiltroPaginas()">
+    <div class="documentacao centralizaEmemento">
+        <h1>Documentação Api Dados Gov
+            <a href="https://api.portaldatransparencia.gov.br/swagger-ui.html#/" target="_blank">clique aqui</a>
+        </h1>
+    </div>
+    <div class="call-api centralizaEmemento centralizaEmementoFiltros">
+        <fieldset>
+            <legend>Auxilio Emergencial - Rio do Sul</legend>
+            <label for="pagina-auxilio">Página:</label>
+            <select id="pagina-auxilio">
+                <option value="1">Página 1</option>
+                <option value="2">Página 2</option>
+                <option value="3">Página 3</option>
+                <option value="4">Página 4</option>
+                <option value="5">Página 5</option>
+                <option value="6">Página 6</option>
+                <option value="7">Página 7</option>
+                <option value="8">Página 8</option>
+                <option value="9">Página 9</option>
+                <option value="10">Página 10</option>
+            </select>
+            <label for="ano-auxilio">Ano:</label>
+            <select id="ano-auxilio">
+                <option value="2020">2020</option>
+                <option value="2021" selected>2021</option>
+                <option value="2022">2022</option>
+            </select>
+            <label for="mes-auxilio">Mês:</label>
+            <select id="mes-auxilio">
+                <option value="01" selected>Janeiro</option>
+                <option value="02">Fevereiro</option>
+                <option value="03">Março</option>
+                <option value="04">Abril</option>
+                <option value="05">Maio</option>
+                <option value="06">Junho</option>
+                <option value="07">Julho</option>
+                <option value="08">Agosto</option>
+                <option value="09">Setembro</option>
+                <option value="10">Outubro</option>
+                <option value="11">Novembro</option>
+                <option value="12">Dezembro</option>
+            </select>
+            <label for="parcela-auxilio">Parcela:</label>
+            <select id="parcela-auxilio">
+                <option value="TODAS">Todas Parcelas</option>
+                <option value="1ª">1ª Parcela</option>
+                <option value="2ª">2ª Parcela</option>
+                <option value="3ª">3ª Parcela</option>
+                <option value="4ª">4ª Parcela</option>
+                <option value="5ª">5ª Parcela</option>
+                <option value="6ª">6ª Parcela</option>
+                <option value="7ª">7ª Parcela</option>
+            </select>
+            <label for="nome-auxilio">Nome:</label>
+            <input type="text" id="nome-auxilio">
+
+            <button onclick="getDadosAbertos('auxilio-emergencial-beneficiario-por-municipio')">Consultar - API GOV.BR</button>  
+            <button onclick="getDadosAbertosCallApi('auxilio-emergencial-beneficiario-por-municipio')">Consultar - API PHP</button>
+        </fieldset>
+    </div>
+    <h1>Resultado</h1>
+    <span id="resultado">Resultado...</span>
+
+    <hr>
+    <table border="1" id="tabela-dados-auxilio-emergencial" style="display: none;">
+        <thead>
+            <tr>
+                <th colspan="4">Auxílio</th>
+                <th colspan="2">Beneficiário</th>
+                <th colspan="2">Responsável</th>
+                <th colspan="5">Localização</th>
+            </tr>
+            <tr>
+                <!-- Auxilio -->
+                <th>Mês</th>
+                <th>Situação</th>
+                <th>Parcela</th>
+                <th>Valor</th>
+
+                <!-- Beneficiario -->
+                <th>Nome</th>
+                <th>CPF</th>
+
+                <!-- Responsavel -->
+                <th>Nome</th>
+                <th>CPF</th>
+
+                <!-- Municipio -->
+                <th>Cód. IBGE</th>
+                <th>Cidade</th>
+                <th>Região</th><!-- Codigo e Nome -->
+                <th>Estado</th>
+                <th>Pais</th>
+            </tr>
+        </thead>
+        <tbody class="dados-tabela-auxilio-emergencial">
+
+        </tbody>
+    </table>
+</body>
+
+<script src="js/api.js" defer></script>
+
+</html>

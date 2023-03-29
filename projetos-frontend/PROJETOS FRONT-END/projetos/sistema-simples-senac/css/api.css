@@ -1,0 +1,32 @@
+
+.call-api {
+    background-color: #45a09d;
+    border:1px solid white;
+    display: flex;
+    gap:40px;
+    padding: 10px;
+}
+
+.call-api button {
+    background-color: #004384;
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+    transition: all .4s ease-in-out;
+    /*border-color: white;*/
+    border:1px solid white;
+}
+
+.call-api button:hover {
+    cursor: pointer;
+    background-color: #1f6284;
+    border-radius: 10px;
+}
+
+#resultado {
+    color: white;
+}
+
+#titulo-resultado {
+    color: white;
+}

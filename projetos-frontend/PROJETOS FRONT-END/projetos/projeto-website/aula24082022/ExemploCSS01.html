@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina 01 CSS</title>
+    <!-- Forma 03 - num arquivo separado, pode ser dentro de uma pasta -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<!-- Formas de usar css no HTML -->
+
+<!-- Forma 02 - dentro da pagina HTML -->
+<style>
+    span {
+        font-size: 30px;
+    }
+    
+    #secao-sobre {
+        background-color: red;
+        /* Altura de 100% da area visivel da tela*/
+        height: 100vh;
+        /* Largura */
+        width: 200px;
+        color: aliceblue;
+    }
+    
+    #secao-contato {
+        background-color: rgb(0, 157, 255);
+        /* Altura */
+        height: 100px;
+        /* Largura de 100% da area visivel da tela*/
+        width: 100vw;
+        color: aliceblue;
+    }
+</style>
+
+
+<body>
+    <header>
+        <!-- Forma 01 - inline -->
+        <!-- <span style="atributo:valor;atributo:valor">Header</span> -->
+        <span style="color:tomato;">Header 01</span>
+        <br>
+        <span style="color:tomato;">Header 02</span>
+    </header>
+    <main>
+        Main
+        <h1>Listas de Definicao</h1>
+        <dl>
+            <dt>Terremoto</dt>
+            <dd>
+                Terremoto e quando... Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente commodi quo illo?
+            </dd>
+            <dt>Maremoto</dt>
+            <dd>
+                Maremoto e quando... Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente commodi quo illo?
+            </dd>
+        </dl>
+        <h1>Listas de Links</h1>
+        <ul>
+            <li><a href="#secao-menu">Menu</a></li>
+            <li><a href="#secao-sobre">Sobre</a></li>
+            <li><a href="#secao-contato">Contato</a></li>
+        </ul>
+
+        <div id="secao-menu">
+            <ul>
+                <li>Meu menu</li>
+                <li>Meu menu</li>
+                <li>Meu menu</li>
+                <li>Meu menu</li>
+                <li>Meu menu</li>
+            </ul>
+            Secao Sobre....
+            </p>
+        </div>
+        <div id="secao-sobre">
+            <p>
+                Secao Sobre....
+            </p>
+        </div>
+        <div id="secao-contato">
+            <p>
+                Secao Contato....
+            </p>
+        </div>
+    </main>
+    <footer>
+        Footer
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,3 @@
+Foi usado com postgresql o banco de dados supabase
+https://supabase.com/
+

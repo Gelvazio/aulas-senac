@@ -1,0 +1,111 @@
+header {
+  position: relative;
+}
+
+.cabecalho {
+ text-align:center;
+}
+
+.cabecalho img {
+  max-width: 100%;
+}
+
+.menu-opcoes {
+  width:100%;
+  background-color: #3E48CC;
+  position: static;
+  text-align: center;
+}
+
+.menu-opcoes ul li {
+  display: inline-block;
+  text-align:center;
+  margin: 5px;  
+}
+
+.des {
+  text-align:center;
+}
+
+.painel ol, .des ol {
+  margin-left:-30px; 
+}
+
+.des li a:link {text-decoration: none; color: #fff; font-family: Calibri, Arial, Verdana, Helvetica, sans-serif; font-size: 18px; font-style: italic;}
+.des li a:visited {text-decoration: none; color: #fff; font-family: Calibri, Arial, Verdana, Helvetica, sans-serif; font-size: 18px; font-style: italic;}
+.des li a:hover {text-decoration: none; color: #ED3237; font-family: Calibri, Arial, Verdana, Helvetica, sans-serif; font-size: 18px; font-weight:bold; font-style: italic;}
+.des li a:active {text-decoration: none; color: #fff; font-family: Calibri, Arial, Verdana, Helvetica, sans-serif; font-size: 18px; font-style: italic;}
+
+.menu-opcoes ul li:first-child {
+  margin-left: -30px;
+}
+
+.carro {
+  width:95%;  
+  float:left;
+  clear:both;
+}
+
+.fotocarro {
+  width: 100%;
+}
+
+.fotocarro img {
+  max-width: 100%;
+}
+
+@media (max-width:450px){
+  div.classificados, div.video, div.classificados1{
+    width:290px;
+  }
+  
+  div.video {
+    margin-left:0px;
+  }
+  
+  div.video2, div.video1 {
+    width:270px;  
+    height:202px;
+    padding-left:7px;	
+  }
+  
+  div.video3 {
+    margin-top:5px;
+	margin-left:7px;
+    width:263px;
+  }
+  
+  .dadoscarrovideo {
+    width:290px;
+    height:260px;
+  }
+
+  div.video4 {
+    width:270px;  
+    height:202px;	
+  }
+  
+  div.faixa2 {
+    width:290px;
+    padding: 0px;
+  }
+  
+  div.listaclas, div.listaclas1 {
+    width:263px;
+  }
+  
+  div.listaclas2, div.listaclas3 {
+    width:273px;
+	height:100%;
+    padding:10px;
+  }
+  
+  div.classificados img {
+    max-width: 100%;  
+  }
+  
+  div.proplateral, div.login {
+    width:290px;
+    text-align:center;
+  } 
+}

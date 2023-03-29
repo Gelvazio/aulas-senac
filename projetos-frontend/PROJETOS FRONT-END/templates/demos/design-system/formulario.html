@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Comercial</title>
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/formulario.css">
+    <link rel="stylesheet" href="css/all.css">
+</head>
+
+<body>
+    <ul id="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Portfolio</a>
+            <ul>
+                <li><a href="#">Web Design</a></li>
+                <li><a href="#">Graphic Design</a></li>
+                <li><a href="#">Logo Design</a></li>
+                <li><a href="#">Blog Design</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Projects</a>
+            <ul>
+                <li><a href="#">This is a project</a></li>
+                <li><a href="#">So is this</a></li>
+                <li><a href="#">and this</a></li>
+                <li><a href="#">and  this too</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Contact</a>
+            <ul>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Quote</a></li>
+                <li><a href="#">General Enquiry</a></li>
+            </ul>
+        </li>
+    </ul>
+    <div class="container">
+        <div class="formulario">
+            <div class="header-form">Usuário</div>
+            <form action="/action_page.php">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" placeholder="Informe o nome...">
+
+                <label for="sobrenome">Email</label>
+                <input type="text" id="sobrenome" name="sobrenome" placeholder="Informe sobrenome...">
+
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="senha">
+
+                <label for="country">País</label>
+                <select id="country" name="country">
+                    <option value="australia">Brasil</option>
+                    <option value="canada">Canada</option>
+                    <option value="usa">USA</option>
+                </select>
+                <input type="submit" value="Confirmar">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

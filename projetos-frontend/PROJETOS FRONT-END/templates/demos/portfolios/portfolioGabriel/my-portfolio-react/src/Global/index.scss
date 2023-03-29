@@ -1,0 +1,93 @@
+@import "variables";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+  width: 1rem;
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: $color-bg-variant;
+  border-radius: 1rem;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background: $color-bg;
+  color: $color-white;
+  line-height: 1.7;
+  background-image: url(../Assets/bg-texture.png);
+}
+.container {
+  width: $container-width-lg;
+  margin: 0 auto;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 500;
+}
+h1 {
+  font-size: 2.5rem;
+}
+header {
+  margin-top: 2rem;
+}
+section {
+  margin-top: 8rem;
+  & > h2 {
+    color: $color-primary;
+    margin-bottom: 3rem;
+  }
+}
+section > h2,
+section > h5 {
+  text-align: center;
+  color: $color-light;
+}
+
+img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* ------ Tablet (Medium Devices) ------ */
+@media screen and (max-width: 1024px) {
+  .container {
+    width: $container-width-md;
+  }
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  section {
+    margin-top: 6rem;
+  }
+}
+
+/* ------ Mobile (Small Devices) ------ */
+@media screen and (max-width: 600px) {
+  .container {
+    width: $container-width-sm;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  section > h2 {
+    margin-bottom: 2rem;
+  }
+}

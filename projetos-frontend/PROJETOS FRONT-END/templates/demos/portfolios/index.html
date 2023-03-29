@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            outline: none;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 25px;
+        }
+
+        body {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            background: url("https://th.bing.com/th/id/R.07711086bcc73c621d551d7ab7cc60fe?rik=iJ97xhtQttElCA&pid=ImgRaw&r=0");
+            background-size: cover;
+        }
+
+        nav {
+            width: 100%;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            position: fixed;
+            z-index: 9999;
+        }
+
+        #green {
+            margin: 30px;
+            padding: 10px 30px 10px 30px;
+            background: linear-gradient(rgb(0, 214, 0), greenyellow);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.178), inset 0 5px 8px rgb(223, 255, 176), inset 0 0 3px green, inset 0 4px 8px rgb(239, 255, 216), inset 0 0 5px green, inset 0 -5px 8px rgb(145, 216, 39);
+            border-radius: 10px;
+            color: white;
+            transition: all 0.3s;
+        }
+
+        #green:hover {
+            background: linear-gradient(rgb(0, 194, 0), rgb(184, 255, 78));
+            ;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.178), inset 0 5px 8px rgb(223, 255, 176), inset 0 1px 4px green, inset 0 4px 8px rgb(239, 255, 216), inset 0 0 5px green, inset 0 -5px 8px rgb(145, 216, 39);
+        }
+
+        #metallic {
+            margin: 30px;
+            padding: 10px 30px 10px 30px;
+            background: linear-gradient(rgb(247, 247, 247), rgb(158, 158, 158));
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.178), inset 0 4px 10px white, inset 0 -3px 3px rgb(102, 102, 102);
+            border-radius: 10px;
+            color: white;
+            transition: all 0.3s;
+        }
+
+        #metallic:hover {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.178), inset 0 7px 15px white, inset 0 -1px 3px rgb(102, 102, 102);
+        }
+
+        #transparent {
+            margin: 30px;
+            padding: 10px 30px 10px 30px;
+            color: white;
+            background: linear-gradient(rgba(156, 156, 156, 0.5), rgba(110, 110, 110, 0.5));
+            backdrop-filter: blur(3px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3), inset 0 1px 1px white, inset 0 -1px 1px rgb(90, 90, 90), inset 0 -5px 10px rgb(179, 179, 179), inset 0 -10px 20px white;
+            border-radius: 5px;
+            transition: all 0.6s;
+        }
+
+        #transparent:hover {
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3), inset 0 1px 1px white, inset 0 -1px 1px rgb(90, 90, 90), inset 0 -5px 1px rgb(179, 179, 179), inset 0 -10px 10px white;
+        }
+
+        #neon {
+            margin: 30px;
+            padding: 10px 30px 10px 30px;
+            background: linear-gradient(rgb(43, 43, 43), rgb(31, 31, 31));
+            box-shadow: inset 0 5px 10px dimgray, inset 0 -5px 10px black, inset 0 -10px 10px rgb(49, 49, 49);
+            border: 1px solid rgba(0, 0, 0, 0);
+            border-radius: 10px;
+            color: white;
+            transition: all 0.3s;
+        }
+
+        #neon:hover {
+            border: 1px solid palevioletred;
+            box-shadow: 0 0 20px palevioletred, inset 0 5px 10px dimgray, inset 0 -5px 10px black, inset 0 -10px 10px rgb(49, 49, 49);
+        }
+
+        #neonTransparent {
+            margin: 30px;
+            padding: 10px 30px 10px 30px;
+            color: white;
+            background: rgba(34, 34, 34, 0.4);
+            border-radius: 50px;
+            border: 1px solid rgba(0, 0, 0, 0);
+            backdrop-filter: blur(2px);
+            transition: all 0.5s;
+        }
+
+        #neonTransparent:hover {
+            border: 1px solid red;
+            box-shadow: 0 0 20px red;
+        }
+
+        .menu {
+            height: 100vh;
+            width: 500px;
+        }
+
+        .centro {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            align-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menu centro">
+        <a href="portfolio-1/index.html" id="transparent">Portfolio I</a>
+        <a href="portfolio-2/index.html" id="transparent">Portfolio II</a>
+        <a href="portfolio-3/index.html" id="transparent">Portfolio III</a>
+        <a href="portfolio-4/index.html" id="transparent">Portfolio IV</a>
+    </div>
+</body>
+
+</html>

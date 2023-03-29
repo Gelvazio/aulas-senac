@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>jQuery</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="estilo.css">
+        <script src="jquery.js"></script>
+    </head>
+    <body>
+        <section class="total">
+            <header>
+                <h2 class="header">métodos jQuery</h2>
+            </header>
+                <p>Com jQuery é possível animar os elementos HTML, fazendo-os esconderem, aparecerem, de acordo com cada evento que ocorrerá na página</p>
+        </section>
+        <div class="umTerco left playg total">
+            <h2 class="header">.show()</h2>
+            <p>O método .show() permite mostrar elementos HTML, de acordo com o evento indicado</p>
+            <button class="toShow">.show()</button>
+            <div class="willShow center"></div>
+        </div>
+        <script>
+        $(document).ready(function(){
+            $(".toShow").click(function(){
+                $(".willShow").show();
+            });
+        });
+        </script>
+        <!--  -->
+        <div class="umTerco playg total">
+            <h2 class="header">.hide()</h2>
+            <p>O método .hide() permite esconder elementos HTML, de acordo com o evento indicado</p>
+            <button class="toHide">.hide()</button>
+            <div class="willHide"></div>
+        </div>
+        <script>
+        $(document).ready(function(){
+            $(".toHide").click(function(){
+                $(".willHide").hide();
+            });
+        });
+        </script>
+        <!--  -->
+        <div class="umTerco playg total">
+            <h2 class="header">.toggle()</h2>
+            <p>O método .toggle() permite alterar a visibilidade dos elementos HTML - a junção do .show() e .hide()</p>
+            <button class="toToggle">.toggle()</button>
+            <div class="willToggle"></div>
+        </div>
+        <script>
+        $(document).ready(function(){
+            $(".toToggle").click(function(){
+                $(".willToggle").toggle();
+            });
+        });
+        </script>
+        <!--  -->
+        <div class="umTerco left playg total">
+            <h2 class="header">.slideUp()</h2>
+            <p>O método .slideUp() permite fazer drillup em elementos HTML, de acordo com o evento indicado</p>
+            <button class="toSlideUp">.slideUp()</button>
+            <div class="willSlideUp center"></div>
+        </div>
+        <script>
+        $(document).ready(function(){
+            $(".toSlideUp").click(function(){
+                $(".willSlideUp").slideUp();
+            });
+        });
+        </script>
+        <!--  -->
+        <div class="umTerco playg total">
+            <h2 class="header">.slideDown()</h2>
+            <p>O método .slideDown() permite fazer drillDown em elementos HTML, de acordo com o evento indicado</p>
+            <button class="toSlideDown">.slideDown()</button>
+            <div class="willSlideDown"></div>
+        </div>
+        <script>
+        $(document).ready(function(){
+            $(".toSlideDown").click(function(){
+                $(".willSlideDown").slideDown();
+            });
+        });
+        </script>
+        <!--  -->
+        <div class="umTerco playg total">
+            <h2 class="header">.slideToggle()</h2>
+            <p>O método .slideToggle() permite alterar a visibilidade dos elementos HTML - junção do .slideUp() e .slideDown()</p>
+            <button class="toSlideToggle">.slideToggle()</button>
+            <div class="willSlideToggle"></div>
+        </div>
+        <script>
+        $(document).ready(function(){
+            $(".toSlideToggle").click(function(){
+                $(".willSlideToggle").slideToggle();
+            });
+        });
+        </script>
+        <!--  -->
+        <div class="umTerco left playg total">
+            <h2 class="header">.fadeIn()</h2>
+            <p>O método .fadeIn() permite mostrar suavemente elementos HTML, de acordo com o evento indicado</p>
+            <button class="toFadeIn">.fadeIn()</button>
+            <div class="willFadeIn center"></div>
+        </div>
+        <script>
+        $(document).ready(function(){
+            $(".toFadeIn").click(function(){
+                $(".willFadeIn").fadeIn();
+            });
+        });
+        </script>
+        <!--  -->
+        <div class="umTerco playg total">
+            <h2 class="header">.fadeOut()</h2>
+            <p>O método .fadeOut() permite esconder suavemente elementos HTML, de acordo com o evento indicado</p>
+            <button class="toFadeOut">.fadeOut()</button>
+            <div class="willFadeOut"></div>
+        </div>
+        <script>
+        $(document).ready(function(){
+            $(".toFadeOut").click(function(){
+                $(".willFadeOut").fadeOut();
+            });
+        });
+        </script>
+        <div class="umTerco playg total">
+            <h2 class="header">.fadeTo()</h2>
+            <p>O método .fadeTo() permite alterar a visibilidade dos elementos HTML, indicando o nível de opacidade</p>
+            <button class="toFadeTo">.fadeTo()</button>
+            <div class="willFadeTo"></div>
+        </div>
+        <script>
+        $(document).ready(function(){
+            $(".toFadeTo").click(function(){
+                $(".willFadeTo").fadeTo("fast", Math.random());
+            });
+        });
+        </script>
+        <!--  -->
+        <div class="umTerco left playg total">
+            <h2 class="header">.animate()</h2>
+            <p>O método .animate() permite trocar o CSS do elemento selecionado, gerando animações</p>
+            <button class="toAnimate">.animate()</button>
+            <button class="resetAnimate">reset</button>
+            <div class="willAnimate"></div>
+        </div>
+        <script>
+        $(document).ready(function(){
+            $(".toAnimate").click(function(){
+                $(".willAnimate").animate({height: "100px", 'width': "95%"},150);
+            });
+            $(".resetAnimate").click(function(){
+                $(".willAnimate").animate({height: "80px",'width':"90%"},300);
+            });
+        });
+        </script>
+        <!--  -->
+        <div class="umTerco playg total">
+            <h2 class="header">.css()</h2>
+            <p>Através do método .css() é possível definir formatações CSS ao elemento selecionado</p>
+            <button class="borda">Borda</button>
+            <button class="tamanho">Tamanho</button>
+            <button class="largura">Largura</button>
+            <div class="willCSS"></div>
+        </div>
+        <script>
+        $(document).ready(function(){
+            $(".borda").click(function(){
+                $(".willCSS").css("border","5px solid #ff0000");
+            });
+            $(".tamanho").click(function(){
+                $(".willCSS").css("height","100px");
+            });
+            $(".largura").click(function(){
+                $(".willCSS").css("width","95%");
+            });
+        });
+        </script>
+        <!--  -->
+        <div class="umTerco playg total">
+            <h2 class="header">.html()</h2>
+            <p>Através do método .html() é possível alterar o conteúdo de elementos HTML</p>
+            <input id="toHtml" type="text" val="">
+            <button class="toHtml">.html()</button>
+            <div class="willHtml"></div>
+        </div>
+        <script>
+        $(document).ready(function(){
+            $(".toHtml").click(function(){
+                var texto = $("#toHtml").val();
+                $(".willHtml").html(texto);
+            });
+        });
+        </script>
+        <!--  -->
+        <div class="umMeio left playg total">
+            <h2 class="header">.before()</h2>
+            <p>Com o método .before() é possível adicionar conteúdos antes do elemento HTML selecionado</p>
+            <input id="toBefore" type="text" val="">
+            <button class="toBefore">.before()</button>
+            <div class="willBefore"></div>
+        </div>
+        <script>
+        $(document).ready(function(){
+            $(".toBefore").click(function(){
+                var texto = $("#toBefore").val();
+                $(".willBefore").before(texto);
+            });
+        });
+        </script>
+        <!--  -->
+        <div class="umMeio playg total">
+            <h2 class="header">.after()</h2>
+            <p>Com o método .after() é possível adicionar conteúdos depois do elemento HTML selecionado</p>
+            <input id="toAfter" type="text" val="">
+            <button class="toAfter">.after()</button>
+            <div class="willAfter"></div>
+        </div>
+        <script>
+        $(document).ready(function(){
+            $(".toAfter").click(function(){
+                var texto = $("#toAfter").val();
+                $(".willAfter").after(texto);
+            });
+        });
+        </script>
+        <!--  -->
+        <div class="umMeio left playg total">
+            <h2 class="header">.height()</h2>
+            <p>Com o método .height() é possível alterar a altura do elemento HTML</p>
+            <button class="toHeight">.height()</button>
+            <div class="willHeight"></div>
+        </div>
+        <script>
+        $(document).ready(function(){
+            $(".toHeight").click(function(){
+                $(".willHeight").height("200px");
+            });
+        });
+        </script>
+        <!--  -->
+        <div class="umMeio playg total">
+            <h2 class="header">.width()</h2>
+            <p>Com o método .width() é possível alterar a largura do elemento HTML</p>
+            <button class="toWidth">.width()</button>
+            <div class="willWidth"></div>
+        </div>
+        <script>
+        $(document).ready(function(){
+            $(".toWidth").click(function(){
+                $(".willWidth").width("100%");
+            });
+        });
+        </script>
+        <!--  -->
+    </body>
+</html>

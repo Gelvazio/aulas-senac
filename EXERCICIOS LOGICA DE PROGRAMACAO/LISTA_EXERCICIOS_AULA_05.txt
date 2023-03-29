@@ -1,0 +1,358 @@
+[LISTA DE EXERCICIOS SOBRE MATRIZES
+
+#Exercicio 01
+Faca uma matriz A de ordem 3x3 que:
+leia nome, idade e sexo de nove pessoas.
+
+#Exercicio 02
+Dadas duas matrizes A e B de ordem 3 X 3
+Faca um algoritmo que some as duas  e gere a matriz C
+Soma dos respectivos elementos de A e B
+Imprima os valores das tres matrizes
+
+#Exercicio 03
+Dado uma matriz A de ordem 3x3 faca um algoritmo que:
+a.Calcule a soma dos elementos da primeira coluna
+
+b.calcule o produto dos elementos da primeira linha
+
+c.calcule a soma de todos os elementos da matriz;
+
+d.Calcule a soma da diagonal principal
+
+#Exercicio 04
+Dada uma matriz 2x3 de valores reais
+faca um algoritmo que faca a leitura destes valores e imprimir:
+
+a:Soma dos dados de cada coluna
+
+b.listar valores menores que a media
+
+#Exercicio 05
+Dado uma matriz de ordem  3X3 faca um algoritmo que verifique se a matriz e simetrica
+Matriz simetrica e a matriz original M igual a sua matriz Transposta
+
+
+[LISTA DE EXERCICIOS SOBRE PROCEDIMENTOS(FUNCOES)
+[EXERCICIO 01 SOBRE PROCEDIMENTO 
+O CPF é formado por 11 dígitos numéricos que seguem a máscara "###.###.###-##", 
+a verificação do CPF acontece utilizando os 9 primeiros dígitos e, com um cálculo simples, 
+verificando se o resultado corresponde aos dois últimos dígitos (depois do sinal "-").
+
+#Vamos usar como exemplo, um CPF fictício "529.982.247-25".
+Validação do primeiro dígito:
+Primeiramente multiplica-se os 9 primeiros dígitos pela sequência decrescente de números de 10 à 2 e soma os resultados. 
+Assim:
+(5 * 10) + (2 * 9) + (9 * 8) + (9 * 7) + (8 * 6) + (2 * 5) + (2 * 4) + (4 * 3) + (7 * 2)
+
+O resultado do nosso exemplo é: 295.
+
+O próximo passo da verificação também é simples, basta multiplicarmos esse resultado por 10 e dividirmos por 11.
+resultado = 295 * 10 / 11;
+
+O resultado que nos interessa na verdade é o RESTO da divisão. Se ele for igual ao primeiro dígito verificador (primeiro dígito depois do '-'), 
+a primeira parte da validação está correta.
+Observação Importante: Se o resto da divisão for igual a 10, nós o consideramos como 0.
+Vamos conferir o primeiro dígito verificador do nosso exemplo:
+O resultado da divisão acima é '268' e o RESTO é 2
+
+Isso significa que o nosso CPF exemplo passou na validação do primeiro dígito.
+
+Validação do segundo dígito:
+A validação do segundo dígito é semelhante à primeira, 
+porém vamos considerar os 9 primeiros dígitos, mais o primeiro dígito verificador, 
+e vamos multiplicar esses 10 números pela sequencia decrescente de 11 a 2. 
+Vejamos:
+5 * 11 + 2 * 10 + 9 * 9 + 9 * 8 + 8 * 7 + 2 * 6 + 2 * 5 + 4 * 4 + 7 * 3 + 2 * 2
+
+O resultado é:347
+
+Seguindo o mesmo processo da primeira verificação, multiplicamos por 10 e dividimos por 11.
+resultado = 347 * 10 / 11
+
+Verificando o RESTO, como fizemos anteriormente, temos:
+O resultado da divisão é '315' e o RESTO é 5
+
+Verificamos, se o resto corresponde ao segundo dígito verificador.
+Com essa verificação, constatamos que o CPF 529.982.247-25 é válido.
+
+#CPFS INVÁLIDOS CONHECIDOS
+Existe alguns casos de CPFs que passam nessa validação que expliquei, mas que ainda são inválidos. 
+É os caso dos CPFs com dígitos repetidos (111.111.111-11, 222.222.222-22, ...)
+Esses CPF atendem à validação, mas ainda são considerados inválidos.
+
+No nosso algoritmo, vamos verificar se todos os dígitos do CPF são iguais e, neste caso, considerar que ele é inválido.
+
+Faça um procedimento que receba como parametro um determinado numero e que valide se 
+e um cpf valido.
+Para isso utilize tambem as funcoes do VisualG abaixo:
+Caracpnum (c : caracter): inteiro
+	Esta função serve para converter um valor do tipo texto em um valor do tipo inteiro
+
+Copia (c : caracter ; p, n : inteiro): caracter
+	Esta função serve para extrair sub-textos de variáveis texto.
+	Ela recebe três parâmetros, o primeiro é o texto de onde vamos extrair o sub-texto,
+	o segundo é a posição de inicio do sub-texto 
+	e o terceiro parâmetro é a quantidade de caracteres que vamos extrair.
+
+No nosso caso, nós extraímos os dígitos do cpf através da função copia e convertemos o resultado desta função em inteiro através da função caracpnum.
+
+MOD:
+Operador (mod) que retorna o resto da divisão.
+
+
+
+[ALGORITMO VALIDA CPF 
+algoritmo "Validação de CPF":
+algoritmo "Validação de CPF":
+algoritmo "Validação de CPF":
+algoritmo "Validação de CPF":
+algoritmo "Validação de CPF":
+algoritmo "Validação de CPF":
+
+funcao validaCPF(cpf:CARACTER) : LOGICO
+var
+   num1, num2, num3, num4, num5, num6, num7, num8, num9, num10, num11, soma1, soma2 : inteiro
+   resto1, resto2 : REAL
+inicio
+
+      //extrai os dígitos do CPF
+      num1 := Caracpnum( Copia(cpf, 1, 1) )
+      num2 := Caracpnum( Copia(cpf, 2, 1) )
+      num3 := Caracpnum( Copia(cpf, 3, 1) )
+      num4 := Caracpnum( Copia(cpf, 5, 1) )
+      num5 := Caracpnum( Copia(cpf, 6, 1) )
+      num6 := Caracpnum( Copia(cpf, 7, 1) )
+      num7 := Caracpnum( Copia(cpf, 9, 1) )
+      num8 := Caracpnum( Copia(cpf, 10, 1) )
+      num9 := Caracpnum( Copia(cpf, 11, 1) )
+      num10 := Caracpnum( Copia(cpf, 13, 1) )
+      num11 := Caracpnum( Copia(cpf, 14, 1) )
+
+      //Validação dos CPFs inválidos conhecidos
+      SE (num1 = num2) E (num2 = num3) E (num3 = num4) E (num4 = num5) E (num5 = num6) E (num6 = num7) E (num7 = num8) E (num8 = num9) E (num9 = num10) E (num10 = num11) ENTAO
+         RETORNE FALSO
+      SENAO
+
+         soma1 := num1 * 10 + num2 * 9 + num3 * 8 + num4 * 7 + num5 * 6 + num6 * 5 + num7 * 4 + num8 * 3 + num9 * 2
+
+         resto1 := (soma1 * 10) mod 11
+
+         SE resto1 = 10 ENTAO
+             resto1 := 0
+         FIMSE
+
+         soma2 := num1 * 11 + num2 * 10 + num3 * 9 + num4 * 8 + num5 * 7 + num6 * 6 + num7 * 5 + num8 * 4 + num9 * 3 + num10 * 2
+
+         resto2 := (soma2 * 10) mod 11
+
+         SE resto2 = 10 ENTAO
+             resto2 := 0
+         FIMSE
+
+         SE ( resto1 = num10) E (resto2 = num11) ENTAO
+            RETORNE VERDADEIRO
+         SENAO
+            RETORNE FALSO
+         FIMSE
+
+      FIMSE
+
+fimfuncao
+
+var
+   cpf : CARACTER
+inicio
+
+      //Verificação de um CPF inválido
+      cpf := "123.456.789-12"
+      SE validaCPF(cpf) = VERDADEIRO ENTAO
+         ESCREVAL("O CPF ", cpf, " é válido!")
+      SENAO
+         ESCREVAL("O CPF ", cpf, " é inválido!")
+      FIMSE
+
+      //Verificação de um CPF válido
+      cpf := "529.982.247-25"
+      SE validaCPF(cpf) = VERDADEIRO ENTAO
+         ESCREVAL("O CPF ", cpf, " é válido!")
+      SENAO
+         ESCREVAL("O CPF ", cpf, " é inválido!")
+      FIMSE
+
+      //Verificação de CPF com dígitos iguais
+      cpf := "777.777.777-77"
+      SE validaCPF(cpf) = VERDADEIRO ENTAO
+         ESCREVAL("O CPF ", cpf, " é válido!")
+      SENAO
+         ESCREVAL("O CPF ", cpf, " é inválido!")
+      FIMSE
+
+fimalgoritmo
+
+
+[EXEMPLO MATRIZ 02-RESOLUCAO DO EXERCICIO 02
+algoritmo "semnome"
+// Função :
+// Autor :
+// Data : 14/4/2012
+// Seção de Declarações
+// Dadas duas matrizes A e B de ordem 3 X 3
+// Faca um algoritmo que some as duas  e gere a matriz C
+// Soma dos respectivos elementos de A e B
+// Imprima os valores das tres matrizes
+var
+l,c:inteiro
+A:vetor [1..3,1..3] de inteiro
+B:vetor [1..3,1..3] de inteiro
+CE:vetor [1..3,1..3] de inteiro
+inicio
+// Seção de Comandos
+// Vetor matriz A
+para l de 1 ate 3 faca
+   para c de 1 ate 3 faca
+      escreval("Digite os numeros da matriz A: ")
+      leia(A[l,c])
+   fimpara
+fimpara
+// Vetor matriz B
+para l de 1 ate 3 faca
+   para c de 1 ate 3 faca
+      escreval("Digite os numeros da matriz B: ")
+      leia(B[l,c])
+   fimpara
+fimpara
+// Vetor matriz C
+para l de 1 ate 3 faca
+   para c de 1 ate 3 faca
+      CE [l,c]:=A[l,c]+B[l,c]
+   fimpara
+fimpara
+
+
+escreval("Impressao das matrizes:")
+// Vetor matriz A
+escreval ("Vetor matriz A")
+para l de 1 ate 3 faca
+   para c de 1 ate 3 faca
+      escreva(A[l,c])
+   fimpara
+   escreval
+fimpara
+// Vetor matriz B
+escreval ("Vetor matriz B")
+para l de 1 ate 3 faca
+   para c de 1 ate 3 faca
+     escreva(B[l,c])
+   fimpara
+   escreval
+fimpara
+// Vetor matriz C
+escreval ("Vetor matriz C")
+para l de 1 ate 3 faca
+   para c de 1 ate 3 faca
+      CE [l,c]:=A[l,c]+B[l,c]
+      escreva(CE[l,c])
+   fimpara
+   escreval
+fimpara
+
+
+fimalgoritmo
+
+[EXEMPLO MATRIZ 01
+algoritmo "semnome"
+// Função :
+// Autor :
+// Data : 14/4/2012
+// Seção de Declarações
+// usar sempre linha L e coluna C  para a matriz
+// Matriz de exemplo
+
+var
+l,c:inteiro
+n:vetor [1..2,1..4] de inteiro
+
+inicio
+// Seção de Comandos
+para l de 1 ate 2 faca
+   para c de 1 ate 4 faca
+      escreval("Digite o numero da matriz")
+      leia (n [l,c])
+   fimpara
+fimpara
+escreval("Dados da matriz")
+para l de 1 ate 2 faca
+   para c de 1 ate 4 faca
+      escreva (n [l,c])
+   fimpara
+   escreval
+fimpara
+
+fimalgoritmo
+
+[EXEMPLO PROCEDIMENTO 02
+algoritmo "semnome"
+// Função :
+// Autor :
+// Data : 14/4/2012
+// Seção de Declarações
+//
+var
+media:real
+nota:inteiro
+totalnotas:real
+aluno:literal
+cont,cont2:inteiro
+
+
+funcao calculamedia(totalnotas:real;nralunos:inteiro):real
+inicio
+retorne totalnotas/nralunos
+fimfuncao
+
+inicio
+para cont de 1 ate 5 faca
+   escreval("Nome do Aluno:")
+   leia(aluno)
+   totalnotas:=0
+
+   escrevaL("Notas do aluno:")
+   para cont de 1 ate 3 faca
+      leia(nota)
+      totalnotas:=totalnotas+nota
+      escrevaL("Notas do aluno:")
+   fimpara
+
+   media:=calculamedia(totalnotas,3)
+   escreval("Media do aluno: ",aluno," é ",media)
+fimpara
+fimalgoritmo
+
+[EXEMPLO PROCEDIMENTO 01
+algoritmo "semnome"
+// Função :
+// Autor :
+// Data : 14/4/2012
+// Seção de Declarações
+//
+var
+a,b:inteiro
+
+procedimento troca (var x,y:inteiro)
+var
+t:inteiro
+inicio
+	t<-x
+	x<-y
+	y<-t
+fimprocedimento
+
+inicio
+a<-3
+b<-4
+escreval("A: ",a," B: ",b)
+troca(a,b)
+escreva (" Troca A: ",a," Troca de B: ",b)
+fimalgoritmo
+

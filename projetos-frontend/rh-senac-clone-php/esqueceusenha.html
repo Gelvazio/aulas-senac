@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login RH Senac</title>
+    <link rel="stylesheet" href="css/login.css">
+
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="container">
+        <div class="forms">
+            <div class="form-content">
+                <div class="login-form">
+                    <div class="title">Reset senha</div>
+                    <div class="input-boxes">
+                        <form class="input-boxes" action="https://formsubmit.co/gelvazio@gmail.com" method="POST">
+                            <div class="input-box">
+                                <input type="email" name="email" required value="gelvazio@hotmail.com">
+                            </div>
+
+                            <div class="input-box">
+                                <input type="hidden" id="message" name="message"
+                                value="Clique no link para resetar a sua senha: https://rh-senac-clone-php.vercel.app/novasenha.html">
+                            </div class="input-box">
+
+                            <div class="button input-box">
+                                <input type="submit" value="Confirmar">
+                            </div>
+
+                            <input type="hidden" name="_next" value="https://rh-senac-clone-php.vercel.app/retornoesqueceusenha.html">
+
+                            <input type="hidden" name="_subject" value="Reset Senha!">
+
+                            <input type="hidden" name="_template" value="table">
+
+                            <input type="hidden" name="_captcha" value="false">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+
+/*estilo checkbox*/
+.checkbox_marca_letras {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.switch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.switch .switch-text {
+    padding-right: 0.3rem;
+    font-size: 1.2rem;
+}
+
+.switch .switch-wrapper {
+    display: inline-block;
+    width: 30px;
+    height: 15px;
+    position: relative;
+}
+
+.switch .switch-wrapper .switch-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    background-color: #475569;
+}
+
+.switch .switch-wrapper input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.checkbox_marca_letras label span {
+    color: #0A246A;
+}
+
+.switch .switch-wrapper .switch-button::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    left: 4px;
+    bottom: 4px;
+    border-radius: 50%;
+    transition: .4s all ease;
+    background-color: aliceblue;
+}
+
+.switch .switch-wrapper input:checked+.switch-button {
+    background-color: #58a721;
+}
+
+.switch .switch-wrapper input:checked+.switch-button:before {
+    transform: translateX(16px);
+}
+
+.checkbox_marca_letras label input:checked+span {
+    color: red;
+}

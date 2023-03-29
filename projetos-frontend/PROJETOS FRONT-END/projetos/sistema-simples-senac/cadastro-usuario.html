@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema Senac</title>
+    <link rel="stylesheet" href="css/login.css">
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<style>
+
+    body {
+        display: flex;
+        flex-direction: column;  
+        justify-content: space-evenly;  
+    }
+
+    .title {
+        text-align: center;
+    }
+
+    .forms .form-content {
+        height: 70vh;
+        width:90%;
+    }
+
+    .forms .form-content .title:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 3px;
+        width: 100%;
+        background: #7d2ae8;
+    }
+
+    .container {
+        width: 400px;
+    }
+
+    .form-content .login-form, .form-content {
+        width:100%;
+    }
+
+    menu {
+        background-color: #441581;
+    }
+
+    ul, li {
+        list-style: none;
+        text-decoration: none;
+        width: 100%;
+        border-radius: 3px;
+        text-align: center;
+        color: aliceblue;        
+        display: flex;
+        transition: .4s all ease-in-out;
+        gap:5px;
+    }    
+
+    li {
+        padding: 4px;  
+        border-radius: 3px;      
+    }
+    
+    li:hover {
+        background-color: #7d2ae8;
+        cursor: pointer;
+        border-radius: 3px;
+    }
+
+</style>
+<body>
+   <menu>
+        <ul>
+            <li>Usuário</li>
+            <li>Pessoa</li>
+            <li>Produto</li>                
+        </ul>
+    </menu>
+    <div class="container">       
+        <div class="forms">
+            <div class="form-content">
+                <div class="login-form">
+                    <div class="title">Cadastro Usuário</div>
+                    <div class="input-boxes">
+                        <div class="input-box">
+                            <i class="fas fa-user"></i>
+                            <input type="text" placeholder="Entre com seu nome" name="login-nome" id="login-nome" value="senac" required>
+                        </div>
+                        <div class="input-box">
+                            <i class="fas fa-envelope"></i>
+                            <input type="text" placeholder="Entre com seu email" name="login-email" id="login-email" value="senac@gmail.com" required>
+                        </div>
+                        <div class="input-box">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" placeholder="Entre com sua senha" name="login-senha" id="login-senha" required>
+                        </div>
+                        <div class="input-box">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" placeholder="Confirme a senha" name="login-senha2" id="login-senha2" required>
+                        </div>
+                        <div class="button input-box">
+                            <input type="submit" value="Confirmar" onclick="resetsenha()">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<!-- <script src="js/api.js" defer></script>
+<script src="js/login.js" defer></script> -->
+</html>

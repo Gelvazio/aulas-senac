@@ -1,0 +1,159 @@
+/* .explicacao-margin {
+    margin-top: 100px;
+    margin-left: 70px;
+    margin-right: 40px;
+    margin-bottom: 10px;
+} */
+
+
+/*
+.explicacao-margin {
+    border: 1px solid red;
+    margin: 100px 40px 10px 70px;
+ Atalho
+    margin: 0 40px 0 0;
+    margin-right: 40px;
+
+    atalho com todos os lados
+    margin:15px;
+} */
+
+
+/* Reset CSS */
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    top: 0;
+}
+
+
+/* Padding */
+
+.content {
+    color: blue;
+    border: 1px solid rgb(87, 8, 77);
+}
+
+.citacao {
+    color: red;
+    font-weight: bold;
+    border: 3px solid rgb(5, 82, 56);
+    margin-top: 10px;
+}
+
+.hide {
+    display: none;
+}
+
+.explicacao-padding {
+    /* Usando flex em modo column */
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    border: 1px solid red;
+    /* Padding */
+    /* padding-top: 125px;
+    padding-left: 70px;
+    padding-right: 40px;
+    padding-bottom: 10px; */
+    /* Atalho Padding */
+    /*       top  right bottom left*/
+    /* padding: 15px 25px  250px  55px; */
+    /* Atalho 2 colocando o mesmo valor
+    para todos*/
+    padding: 20px;
+}
+
+.explicacao-border {
+    /* Usando flex em modo column */
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    /* ESPESSURA DA BORDA */
+    /* border: thick solid red; */
+    /* border: medium solid red; */
+    /* border: thin solid red; */
+    /* border: 1px solid red; */
+}
+
+.borda-1 {
+    /* ESTILO DA BORDA */
+    border-style: solid;
+    border-width: thin;
+    border-color: red;
+}
+
+.borda-2 {
+    margin-top: 15px;
+    /* ESTILO DA BORDA */
+    border-style: dashed;
+    border-width: thick;
+    border-color: red;
+}
+
+.borda-3 {
+    margin-top: 15px;
+    /* ESTILO DA BORDA */
+    border-style: dotted;
+    border-width: thick;
+    border-color: red;
+}
+
+.borda-4 {
+    margin-top: 100px;
+    padding: 25px;
+    /* LOCAL DA BORDA */
+    /* Teste de 1 local */
+    /* topo */
+    border-top-width: thick;
+    border-top-style: solid;
+    border-top-color: green;
+    /* rodape */
+    border-bottom-width: 10px;
+    border-bottom-style: groove;
+    border-bottom-color: green;
+    /* esquerda */
+    border-left-width: 3px;
+    border-left-style: solid;
+    border-left-color: rgb(255, 0, 93);
+    /* direita */
+    border-right-width: 10px;
+    border-right-style: double;
+    border-right-color: green;
+}
+
+.citacao-border {
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.citacao-titulo {
+    font-style: italic;
+}
+
+.muda-cor-todos-texto {
+    color: blue;
+    font-size: 50px;
+}
+
+.backgrounds-testes {
+    border: 1 px solid blue;
+    min-height: 50px;
+    color: aliceblue;
+    background-color: rgb(69, 129, 6);
+}
+
+.backgrounds-testes2 {
+    background-color: aquamarine;
+    border: 1px solid blue;
+    min-height: 2000px;
+    color: aliceblue;
+    background-image: url(images/pexels-hert.jpg);
+    background-size: 400px;
+    background-position: 200px 70px;
+    background-repeat: no-repeat;
+    /* Define se a imagem de funto rola  com a tela*/
+    background-attachment: fixed;
+}

@@ -1,0 +1,58 @@
+footer {
+    height: 50px;
+}
+
+ol li {
+    font-size: 20px;
+}
+
+ol li:last-child {
+    padding-bottom: 50px;
+}
+
+
+/* css combobox */
+
+.lista-exercicio {
+    background-color: #004384;
+    color: black;
+    padding-bottom: 35px;
+}
+
+.lista-exercicio h1 {
+    color: aliceblue;
+    font-size: 30px;
+    text-align: center;
+    border-top: 3px solid aliceblue;
+    border-bottom: 3px solid aliceblue;
+    padding: 5px;
+}
+
+.lista-exercicio h2 {
+    text-align: center;
+}
+
+.lista-exercicio ol li {
+    color: aliceblue;
+    font-size: larger;
+    padding: 20px 20px;
+}
+
+.lista-exercicio ol li:last-child {
+    padding-bottom: 45px;
+}
+
+.titulo-exercicio {
+    color: rgb(234, 255, 0);
+    font-size: 25px;
+}
+
+.containerTable-body tr td {
+    padding: 20px;
+}
+
+.containerTable-lblValue span {
+    /* overflow: scroll; */
+    color: aliceblue;
+    font-size: 20px;
+}

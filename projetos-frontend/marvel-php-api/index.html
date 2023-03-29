@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marvel Documentation</title>
+    <script src="marvel.js"></script>
+    <link rel="stylesheet" href="marvel.css">
+    <style>
+        .get {
+            width: 60px;
+            height: 30px;
+            padding: 35px;
+            border: 1px solid red;
+            border-radius: 15px;
+            background-color: black;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .get a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        .get:hover {
+            background-color: red;
+            transition: all .4s ease;
+        }
+
+        h1 {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            background-color: black;
+            padding: 5px;
+            color: white;
+            font-weight: bold;
+        }
+
+        .marvel {
+            border: 1px solid black;
+        }
+
+        .link{
+            font-size: 30px;
+            color: white;
+            text-decoration: aqua;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <header>
+        <div class="wrapper run-animation" id="animate">
+            <div class="logo">
+
+                <span class="marvel">marvel</span>
+                <span class="studios">studios</span>
+
+            </div>
+        </div>
+
+        <div class="images"></div>
+    </header>
+
+    <br>
+    <hr/>
+    <h1>
+        <div class="marvel">CHARACTERS</div>
+    </h1>
+    <hr/>
+    <div class="get"><a href="#">GET</a></div>
+    <div class="link"> /v1/public/charactersFetches lists of characters.</div>
+    <br>
+    <hr/>
+    <div class="get"><a href="#">GET</a></div>
+    <div class="link">/v1/public/characters/{characterId}Fetches a single character by id.</div>
+    <br>
+    <hr/>
+    <div class="get"><a href="#">GET</a></div>
+    <div class="link">/v1/public/characters/{characterId}/comicsFetches lists of comics filtered by a character id.
+    </div>
+    <br>
+    <hr/>
+    <div class="get"><a href="#">GET</a></div>
+    <div class="link">/v1/public/characters/{characterId}/eventsFetches lists of events filtered by a character id.
+    </div>
+    <br>
+    <hr/>
+    <div class="get"><a href="#">GET</a></div>
+    <div class="link">/v1/public/characters/{characterId}/seriesFetches lists of series filtered by a character id.
+    </div>
+    <br>
+    <hr/>
+    <div class="get"><a href="#">GET</a></div>
+    <div class="link">/v1/public/characters/{characterId}/storiesFetches lists of stories filtered by a character id.
+    </div>
+    <br>
+    <hr/>
+    <h1><div class="marvel">COMICS</div></h1>
+    <hr/>
+    <div class="get"><a href="#">GET</a></div>
+    <div class="link">/v1/public/comicsFetches lists of comics.</div>
+    <br>
+    <hr/>
+    <div class="get"><a href="#">GET</a></div>
+    <div class="link">/v1/public/comics/{comicId}Fetches a single comic by id.</div>
+    <br>
+    <hr/>
+    <div class="get"><a href="#">GET</a></div>
+    <div class="link">/v1/public/comics/{comicId}/charactersFetches lists of characters filtered by a comic id.
+    </div>
+    <br>
+    <hr/>
+    <div class="get"><a href="#">GET</a></div>
+    <div class="link">/v1/public/comics/{comicId}/creatorsFetches lists of creators filtered by a comic id.</div>
+    <br>
+    <hr/>
+    <div class="get"><a href="#">GET</a></div>
+    <div class="link">/v1/public/comics/{comicId}/eventsFetches lists of events filtered by a comic id.</div>
+    <br>
+    <hr/>
+    <div class="get"><a href="#">GET</a></div>
+    <div class="link">/v1/public/comics/{comicId}/storiesFetches lists of stories filtered by a comic id.</div>
+    <hr/>
+    <h1>
+        <div class="marvel">CREATORS</div>
+    </h1>
+    <hr/>
+    <div class="get"><a href="#">GET</a></div>
+    <div class="link">/v1/public/creatorsFetches lists of creators.</div>
+    <br>
+    <hr/>
+    <div class="get"><a href="#">GET</a></div>
+    <div class="link">/v1/public/creators/{creatorId}Fetches a single creator by id.</div>
+    <br>
+    <hr/>
+    <div class="get"><a href="#">GET</a></div>
+    <div class="link">/v1/public/creators/{creatorId}/comicsFetches lists of comics filtered by a creator id.</div>
+    <br>
+    <hr/>
+    <div class="get"><a href="#">GET</a></div>
+    <div class="link">/v1/public/creators/{creatorId}/eventsFetches lists of events filtered by a creator id.</div>
+    <br>
+    <hr/>
+    <div class="get"><a href="#">GET</a></div>
+    <div class="link">/v1/public/creators/{creatorId}/seriesFetches lists of series filtered by a creator id.</div>
+    <br>
+    <hr/>
+    <h1><div class="marvel">EVENTS</div></h1>
+    <hr/>
+    <div class="get"><a href="#">GET</a></div>
+    <div class="link">/v1/public/creators/{creatorId}/storiesFetches lists of stories filtered by a creator id.</div>
+    <br>
+    <hr/>
+    <div class="get"><a href="#">GET</a></div>
+    <div class="link">/v1/public/eventsFetches lists of events.</div>
+    <br>
+    <hr/>
+    <div class="get"><a href="#">GET</a></div>
+    <div class="link">/v1/public/events/{eventId}Fetches a single event by id.</div>
+    <br>
+    <hr/>
+    <div class="get"><a href="#">GET</a></div>
+    <div class="link">/v1/public/events/{eventId}/charactersFetches lists of characters filtered by an event id.</div>
+    <br>
+    <hr/>
+    <div class="get"><a href="#">GET</a></div>
+    <div class="link">/v1/public/events/{eventId}/comicsFetches lists of comics filtered by an event id.</div>
+    <br>
+    <hr/>
+    <div class="get"><a href="#">GET</a></div>
+    <div class="link">/v1/public/events/{eventId}/creatorsFetches lists of creators filtered by an event id.</div>
+    <br>
+    <hr/>
+    <div class="get"><a href="#">GET</a></div>
+    <div class="link">/v1/public/events/{eventId}/seriesFetches lists of series filtered by an event id.</div>
+    <br>
+    <hr/>
+    <div class="get"><a href="#">GET</a></div>
+    <div class="link">/v1/public/events/{eventId}/storiesFetches lists of stories filtered by an event id.</div>
+    <br>
+    <hr/>
+    <h1><div class="marvel">SERIES</div></h1>
+    <hr/>
+    <div class="get"><a href="#">GET</a></div>
+    <div class="link">/v1/public/seriesFetches lists of series.</div>
+    <br>
+    <hr/>
+    <div class="get"><a href="#">GET</a></div>
+    <div class="link">/v1/public/series/{seriesId}Fetches a single comic series by id.</div>
+    <br>
+    <hr/>
+    <div class="get"><a href="#">GET</a></div>
+    <div class="link">/v1/public/series/{seriesId}/charactersFetches lists of characters filtered by a series id.</div>
+    <br>
+    <hr/>
+    <div class="get"><a href="#">GET</a></div>
+    <div class="link">/v1/public/series/{seriesId}/comicsFetches lists of comics filtered by a series id.</div>
+    <br>
+    <hr/>
+    <div class="get"><a href="#">GET</a></div>
+    <div class="link">/v1/public/series/{seriesId}/creatorsFetches lists of creators filtered by a series id.</div>
+    <br>
+    <hr/>
+    <div class="get"><a href="#">GET</a></div>
+    <div class="link">/v1/public/series/{seriesId}/eventsFetches lists of events filtered by a series id.</div>
+    <br>
+    <hr/>
+    <div class="get"><a href="#">GET</a></div>
+    <div class="link">/v1/public/series/{seriesId}/storiesFetches lists of stories filtered by a series id.</div>
+    <br>
+    <hr/>
+    <h1><div class="marvel">STORIES</div></h1>
+    <hr/>
+    <div class="get"><a href="#">GET</a></div>
+    <div class="link">/v1/public/storiesFetches lists of stories.</div>
+    <br>
+    <hr/>
+    <div class="get"><a href="#">GET</a></div>
+    <div class="link">/v1/public/stories/{storyId}Fetches a single comic story by id.</div>
+    <br>
+    <hr/>
+    <div class="get"><a href="#">GET</a></div>
+    <div class="link">/v1/public/stories/{storyId}/charactersFetches lists of characters filtered by a story id.</div>
+    <br>
+    <hr/>
+    <div class="get"><a href="#">GET</a></div>
+    <div class="link">/v1/public/stories/{storyId}/comicsFetches lists of comics filtered by a story id.</div>
+    <br>
+    <hr/>
+    <div class="get"><a href="#">GET</a></div>
+    <div class="link">/v1/public/stories/{storyId}/creatorsFetches lists of creators filtered by a story id.</div>
+    <br>
+    <hr/>
+    <div class="get"><a href="#">GET</a></div>
+    <div class="link">/v1/public/stories/{storyId}/eventsFetches lists of events filtered by a story id.</div>
+    <br>
+    <hr/>
+    <div class="get"><a href="#">GET</a></div>
+    <div class="link">/v1/public/stories/{storyId}/seriesFetches lists of series filtered by a story id.</div>
+</div>
+</body>
+
+</html>

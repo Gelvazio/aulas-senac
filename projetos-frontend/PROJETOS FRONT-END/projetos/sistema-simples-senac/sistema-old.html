@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema</title>
+</head>
+<script>
+    function ping() {
+        callApi("GET", "sistema", undefined, function(data) {
+            // api sendo chamada...
+        });
+    }
+</script>
+
+<body>
+    <hr>
+    <button onclick="ping()">ping</button>
+    <hr>
+    <h1>Resultado:</h1>
+    <hr>
+</body>
+
+<script src="js/api.js"></script>
+
+</html>

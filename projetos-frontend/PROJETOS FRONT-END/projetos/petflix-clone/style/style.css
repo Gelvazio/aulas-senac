@@ -1,0 +1,304 @@
+:root{
+    --vermelho: #E50914;
+    --preto: #141414;
+} 
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--preto);
+    font-family: 'Arial', Times;
+    color: #fff;
+    margin-top: 0.5rem;
+}
+/* TOPO */
+
+h1{
+    color: var(--vermelho);
+    font-family: 'Arial Black', Times;
+    font-size: 45px;
+    
+}
+
+header nav a{
+    color: rgb(188, 188, 188);
+    padding: 1rem;
+
+}
+nav i{
+    color: rgb(188, 188, 188);
+    
+}
+header nav i:hover{
+    color: #fff;
+}
+
+i.fa-search{
+    cursor: pointer;
+}
+
+header nav a:hover{
+    color: #fff;
+}
+
+header .container-nav{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.container-nav{
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+/* PRINCIPAL */
+
+.filme-principal {
+    position: relative;
+    top: 0;
+    left: 0;
+    font-size: 18px;
+    background: linear-gradient(rgba(0, 0, 0, .80),rgba(0,0,0,.50)100%);
+    height: 100%;
+    margin: 1rem;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.filme-principal .capa {
+  z-index: -9999;
+  width: 100%;
+  object-fit: cover;
+}
+
+.filme-principal .container{
+    position: absolute;
+    width: 80%;
+}
+
+.filme-principal .two-buttons {
+  display: flex;
+}
+
+.filme-principal .sinopse{
+    margin-top: 1rem;
+    margin-left: 20px;
+    width: 450px;
+}
+
+.container .titulo{
+    font-size: 40px;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    margin-left: 20px;
+    
+}
+
+.button{
+    margin: 3rem 2rem  1rem 1rem;
+    border: none;
+    background-color: rgba(31, 31, 31, 0.455);
+    color: #fff;
+    padding: 1rem 1rem;
+    font-size: 12px;
+    cursor: pointer;
+    transition: 0.6s ease all;
+}
+
+.button:hover{
+    color: #000;
+    background-color: #fff;
+    
+}
+
+.button i{
+    margin-right: 8px;
+}
+
+.filme-principal .container{
+    width: 70%;
+}
+
+/* ROW DE FILMES */
+
+.owl-theme{
+  padding: 0.75rem;
+  
+}
+
+.box-filmes{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    
+}
+.popular-title .popular{
+    margin-left: 2rem;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    margin-bottom: 1rem;
+    font-size: 20px;
+   
+}
+.popular-title{
+    color: rgb(188, 188, 188);
+    display: inline-block;
+
+}
+
+.popular-title:hover{
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+/* Responsividade */
+
+@media only screen and (min-width:525px) and (max-width:750px){
+    header .container-nav{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .filme-principal .container h2{
+        font-size: 25px;
+        margin-top: 10%;
+    }
+
+    .filme-principal .sinopse {
+        font-size: 8px;
+        width: 300px;
+    }
+   
+    .button {
+        margin-top: 1rem;
+        padding: 0.5rem;
+        
+    }
+}
+@media only screen and (min-width:435px) and (max-width:524px){
+    header .container-nav{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .filme-principal .container h2{
+        font-size: 18px;
+        margin-top: 2%;
+    }
+
+    .filme-principal .sinopse {
+        font-size: 6px;
+        width: 300px;
+    }
+   
+    .button {
+        padding: 4px;
+        margin-top: 1rem;
+
+    }
+    .popular-title .popular {
+        font-size: 17px;
+    }
+
+    header nav a {
+      font-size: 9px;
+    }
+
+    header nav i{
+       font-size: 9px;
+    
+    }
+}
+
+@media only screen and (min-width:422px) and (max-width:434px){
+    header .container-nav{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .filme-principal .container h2{
+        font-size: 16px;
+        margin-top: 4%;
+    }
+
+    .filme-principal .sinopse {
+        font-size: 1px;
+        width: 300px;
+    }
+   
+    .button {
+        padding: 4px;
+        margin-top: 1rem;
+
+    }
+    .popular-title .popular {
+        font-size: 16px;
+    }
+
+    header nav a {
+      font-size: 7px;
+      padding: 0.5rem;
+    }
+
+    header nav i{
+       font-size: 7px;
+    
+    }
+}
+@media only screen and (min-width:320px) and (max-width:422px){
+    header .container-nav{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .container h2{
+        width: 100%;
+    }
+    .filme-principal .container h2{
+        font-size: 16px;
+    }
+
+    .filme-principal .sinopse {
+        display: none;
+    }
+   .filme-principal .container{
+       margin-top: 1%;
+   }
+    .button {
+        margin: 15px;
+        padding: 5px;
+
+    }
+    .popular-title .popular {
+        font-size: 15px;
+    }
+
+    header nav a {
+      font-size: 12px;
+      padding-right: 0.3rem;
+    }
+
+    header nav i{
+       font-size: 14px;
+    
+    }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+}

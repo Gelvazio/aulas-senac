@@ -1,0 +1,26 @@
+[Etapa 01 - 33% nota
+Conferencia dos exercicios feitos das seguintes datas:
+#Condicionais
+26-07-2022
+27-07-2022
+28-07-2022
+
+#Repeticao
+08-08-2022
+09-08-2022
+
+[Etapa 02 - 33% nota - Exercicios da Atividade01
+
+[Etapa 03 - 33% nota - Exercicios da Atividade02
+
+[Conceitos:
+Atendido - Sem recuperacao
+Parcialmente Atendido - Sem recuperacao com feedback
+Não Atendido - Com recuperacao
+
+[Recuperacao
+Sera definida uma lista de atividades.
+
+
+
+

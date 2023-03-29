@@ -1,0 +1,325 @@
+/* define a formatação para o body
+	no caso, a fonte utilizada será Helvetica, e a cor de fundo #f1f1f1
+
+	para definir cores, podemos utilizar seu nome em inglês - black, white, indigo, gray, yellow, blue...
+	seu código hexadecimal - #fff (branco), #000 (preto), #ff0000 (vermelho)...
+	seu código rbg ou rgba - na escala Red (vermelho) Blue (azul) Green (verde) Alpha (alfa - ou opacidade)
+
+	entre outras formas
+ */
+body{
+	font-family: Helvetica;
+	background-color:#f1f1f1;
+}
+
+/* define a formatação dos elementos com ID header
+	no caso, o tamanho da fonte será 22px, o "peso" será normal, com uma borda inferior de 1px e cinza, e o texto alinhado ao centro
+
+	font-weight determina o "peso" da letra - negrito (bold), ou em uma escala de 100 a 900, suave (light/lighter); seu valor padrão é normal
+
+	na propriedade border, utilizamos o que chamamos de "atalho" - para definirmos toda a propriedade da borda em 1 só, definimos o tamanho (1px), seu tipo
+	(solid), e a sua cor (#d1d1d1) - existem vários tipos de borda, como solid (sólida), dashed (tracejada), dotted (pontilhada), entre outras
+
+	text-align define o alinhamento do texto - se ele será alinhado à esquerda (left), à direita (right), ao centro (center) ou justificado à página (justify)
+
+ */
+#header{
+	font-size: 22px;
+	font-weight: normal;
+	border-bottom: 1px solid #d1d1d1;
+	text-align: center;
+}
+
+/* define a formatação dos elementos hr */
+hr{
+	border:1px dotted #ccc;
+}
+
+/* define a formatação dos elementos p
+	
+	margin-bottom é a propriedade que define a margem inferior do elemento - no caso, 5px
+	temos margin-bottom, margin-top, margin-left e margin-right - inferior, superior, esquerda e direita, respectivamente
+
+	aqui, também podemos utilizar um "atalho". definindo a propriedade margin, e colocando os valores respectivos
+	dessa forma, teríamos - margin: 0 0 5px 0; - onde a ordem dos valores seria top, right, bottom e left - no sentido horário
+
+ */
+p{
+	font-size: 16px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	font-weight: normal;
+}
+
+/* define a formatação para os elementos que utilizam a classe lista */
+.lista{
+	font-size: 16px;
+	font-weight: normal;
+	padding:0;
+}
+
+/* define a formatação para os elementos li dentro de uma ul que possui a classe lista
+	
+	aqui utilizamos a mesclagem de seletores, utilizando uma classe como referência e acessando o elemento li que estará dentro da ul com a classe lista
+ */
+.lista li{
+	list-style:none;
+	margin:5px 0;
+}
+
+/* define a formatação para os elementos com a classe centro
+
+	margin: 0 auto; é um truque CSS para centralizarmos um elemento - ele terá uma margem top e bottom de 0, e suas margens left e right será "auto", automáticas
+	quando as margens top/bottom, e left/right possuem o mesmo valor, podemos utilizar esse atalho, definindo apenas 2 valores na propriedade margin
+	o primeiro valor é correspondente a top/bottom, e o segundo, a left/right
+
+ */
+.centro{
+	text-align: center;
+	margin: 0 auto;
+}
+
+/* define a formatação para os elementos com a classe left
+
+	float:left; define que o elemento com essa classe irá flutuar à esquerda
+
+	min-width:30%; determina que o elemento terá uma largura mínima de 30%
+	medidas que utilizam % são determinadas de acordo com o tamanho do elemento pai
+ */
+.left{
+	float: left;
+	background: #a8b7be;
+	min-height: 100px;
+	min-width: 30%;
+}
+
+/* determina a formatação para os elementos com a classe right
+
+	float:right; define que o elemento com essa classe irá flutuar à direita
+ */
+.right{
+	float:right;
+	background: #bfbfbf;
+	min-height: 100px;
+	min-width: 30%;
+}
+
+/* determina a formatação para os elementos com a classe clear
+
+	clear:both; define que o elemento com essa classe não irá "flutuar", ele será "fixo", ou "cleared", como chamamos
+ */
+.clear{
+	clear:both;
+	background: #3ea3b7;
+	min-height: 100px;
+	margin-top:10px;
+}
+
+/* define a formatação para os elementos com a classe absolute
+
+	position:absolute; define que o elemento terá posição absoluta
+	top e right definem onde o elemento será posicionado, em relação ao seu elemento pai - 500px de top, e 25% de right, no caso
+ */
+.absolute{
+	position:absolute;
+	background: #a8b7be;
+	top:500px;
+	right:25%;
+}
+
+/* define a formatação para os elementos com a classe absolute
+
+	position:fixed; define que o elemento terá posição fixa
+ */
+.fixed{
+	position: fixed;
+	background: #3ea3b7;
+}
+
+/* define a formatação para os elementos com a classe absolute
+
+	position:relative; define que o elemento terá posição relative
+	a propriedade top foi adicionada aqui para organizar melhor as divs - sem ela, por causa do posicionamento no documento, as divs ficariam encavaladas
+ */
+.relative{
+	position: relative;
+	background: #bfbfbf;
+	top:25%;
+}
+
+/* define a formatação para os elementos com a classe index9
+
+	a propriedade z-index define o posicionamento do elemento em relação ao fundo - se ele estará mais perto do fundo ou da tela
+ */
+.index9{
+	z-index: 9;
+	color:#ff0000;
+}
+.index-1{
+	position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+}
+
+/* define a formatação para os elementos com a classe none
+
+	display:none; define que o elemento não irá aparecer na tela, ele ficará escondido
+ */
+.none{
+	display:none;
+	min-height: 100px;
+}
+
+/* define a formatação para os elementos com a classe block
+
+	display:none; define que o elemento não irá aparecer na tela em forma de blocos
+ */
+.block{
+	display:block;
+	min-height: 100px;
+	background: #3ea3b7;
+}
+
+/* define a formatação para os elementos com a classe inline
+
+	display:none; define que o elemento não irá aparecer na tela en forma de linhas
+ */
+.inline{
+	display:inline;
+	min-height: 100px;
+	float:left;
+	margin-right: 10px;
+	background: #bfbfbf;
+}
+
+/* define a formatação para os elementos com a classe inlineBlock
+
+	display:none; define que o elemento não irá aparecer na tela em forma de blocos, alinhados em linhas
+ */
+.inlineBlock{
+	display:inline-block;
+	min-height: 100px;
+	background: #a8b7be;
+}
+
+/* define a formatação para os elementos com a classe visible
+
+	overflow:visible; define que se o conteúdo dessa classe ultrapassar seu tamanho, ele será sempre visível
+ */
+.visible{
+	overflow: visible;
+	max-height: 50px;
+	background: #a8b7be;
+}
+
+/* define a formatação para os elementos com a classe auto
+
+	overflow:visible; define que se o conteúdo dessa classe ultrapassar seu tamanho, o navegador irá colocar uma barra de rolagem
+ */
+.auto{
+	overflow: auto;
+	max-height: 80px;
+	background: #a8b7be;
+	max-width: 80px;
+}
+
+/* define a formatação para os elementos com a classe hidden
+
+	overflow:visible; define que se o conteúdo dessa classe ultrapassar seu tamanho, ele será escondido
+ */
+.hidden{
+	overflow: hidden;
+	max-height: 50px;
+	background: #a8b7be;
+}
+
+/* define a formatação para os elementos com a classe scroll
+
+	overflow:visible; define que, mesmo se o conteúdo dessa classe não ultrapassar seu tamanho, o navegador irá colocar uma barra de rolagem
+ */
+.scroll{
+	overflow: scroll;
+	max-height: 80px;
+	background: #a8b7be;
+}
+
+
+
+
+
+/* classes "coringas" - para ajudar na construção do layout dos exemplos */
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+ 
+.clearfix {
+	display:block;
+}
+
+.header{
+	text-align: center;
+	border-bottom: 3px solid #3b92a1;
+}
+.total{
+	text-align: center;
+}
+.second{
+	margin-top: 10px;
+	border-top: 1px solid #fff;
+}
+.second a{
+	color:#3a5795;
+	text-decoration: none;
+}
+.second a:hover{
+	text-decoration: underline;
+}
+
+.example{
+	margin: 30px 0;
+    font-size: 18px;
+}
+.bigger{
+	font-size: 30px;
+	margin: 30px 0;
+}
+
+.umMeio{
+	width: 48.8%;
+	margin-left: 2%;
+	float: left;
+	position: relative;
+	margin-top:2%;
+}
+.umTerco{
+	width: 31.8%;
+	margin-left: 2%;
+	float: left;
+	position: relative;
+	margin-top:2%;
+}
+.umMeio.left, .umTerco.left, .umQuarto.left, .umQuarto.left, .umQuinto.left, .doisQuintos.left, .tresQuartos.left, .doisTercos.left, .umOitavo.left{
+	margin-left: 0;
+	background: none;
+}
+.playg{
+	min-height: 300px;
+	border: 1px solid #3b92a1;
+}
+
+.willShow, .willHide, .willToggle, .willSlideUp, .willSlideDown, .willSlideToggle, .willFadeIn, .willFadeOut, .willFadeTo, .willAnimate, .willHtml,
+.willBefore, .willAfter, .willCSS, .willWidth, .willHeight{
+	background:#3b92a1;
+	width:90%;
+	margin: 5% auto;
+	height: 80px;
+}
+.willShow, .willSlideDown, .willFadeIn{
+	display: none;
+}

@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Title" content="Central do assinante - Rede Unifique">
+    <meta name="Author" content="www.unifique.com.br">
+    <meta http-equiv="Content-Language" content="pt-br">
+    <meta name="Robots" content="All">
+    <meta name="Revisit" content="1 week">
+    <meta http-equiv="Content-Type" content="text/html; ISO-8859-1">
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="https://unifique-clone.vercel.app/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://unifique-clone.vercel.app/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://unifique-clone.vercel.app/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://unifique-clone.vercel.app/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="https://unifique-clone.vercel.app/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://unifique-clone.vercel.app/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://unifique-clone.vercel.app/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://unifique-clone.vercel.app/apple-touch-icon-152x152.png">
+    <link rel="icon" type="image/png" href="https://unifique-clone.vercel.app/favicon-196x196.png" sizes="196x196">
+    <link rel="icon" type="image/png" href="https://unifique-clone.vercel.app/favicon-160x160.png" sizes="160x160">
+    <link rel="icon" type="image/png" href="https://unifique-clone.vercel.app/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="https://unifique-clone.vercel.app/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="https://unifique-clone.vercel.app/favicon-32x32.png" sizes="32x32">
+    <meta name="msapplication-TileColor" content="#253a76">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+
+    <!-- /favicon -->
+    <title>Central do assinante - Rede Unifique</title>
+    <link href="./unifique_files/jquery-ui-1.10.4.min.css" rel="stylesheet">
+    <link href="./unifique_files/bootstrap.min.css" rel="stylesheet">
+    <link href="./unifique_files/bootstrap-select.min.css" rel="stylesheet">
+    <link href="./unifique_files/magic-bootstrap.css" rel="stylesheet">
+    <link href="./unifique_files/jasny-bootstrap.min.css" rel="stylesheet">
+    <link href="./unifique_files/bootstrap-colorpicker.min.css" rel="stylesheet">
+    <link href="https://unifique-clone.vercel.app/css/dataTables.bootstrap.css">
+    <link href="https://unifique-clone.vercel.app/css/sweetalert2.min.css">
+    <link href="./unifique_files/theme.css" rel="stylesheet">
+    <link rel="stylesheet" href="./unifique_files/font-awesome.min.css">
+    <link href="./unifique_files/css2" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/theme.css">
+
+    <script type="text/javascript" async="" src="./unifique_files/analytics.js.download"></script>
+    <script type="text/javascript" src="./unifique_files/jquery.min.js.download"></script>
+    <script type="text/javascript" src="./unifique_files/bootstrap.min.js.download"></script>
+    <script type="text/javascript" src="./unifique_files/jasny-bootstrap.js.download"></script>
+    <script type="text/javascript" src="./unifique_files/jquery.passstrength.js.download"></script>
+    <script type="text/javascript" src="./unifique_files/jquery.backstretch.min.js.download"></script>
+    <script type="text/javascript" src="./unifique_files/jquery-ui-1.10.4.min.js.download"></script>
+    <script type="text/javascript" src="./unifique_files/jquery.validate.min.js.download"></script>
+    <script type="text/javascript" src="./unifique_files/bootstrap-select.min.js.download"></script>
+    <script type="text/javascript" src="./unifique_files/bootstrap-colorpicker.min.js.download"></script>
+    <script type="text/javascript" src="./unifique_files/jquery.dataTables.min.js.download"></script>
+    <script type="text/javascript" src="./unifique_files/dataTables.bootstrap.js.download"></script>
+    <script type="text/javascript" src="./unifique_files/sweetalert2.all.min.js.download"></script>
+
+    <script type="text/javascript" src="./unifique_files/init.js.download"></script>
+
+    <style>
+        .float {
+            position: fixed;
+            font-family: 'Ubuntu', sans-serif;
+            width: 220px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: #FFF;
+            text-align: center;
+            font-size: 12px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 100;
+        }
+
+        .my-float {
+            margin-top: 16px;
+        }
+
+        a.whats {
+            text-decoration: none;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            width: 100vw;
+            /* background-color: rgb(95, 255, 71); */
+        }
+
+        .centraliza-cabecalho {
+            display: flex;
+            justify-content: center;
+            width: 100vw;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <noscript>
+        <div class="noscript-message">
+            <div align="center">
+                <img id="alert" src="/images/alert.png" alt="Alerta" />
+                <span>Habilite JavaScript ou atualize seu navegador para completa visualiza��o do site</span>
+                <div id="atualize">
+                    <a href="http://br.mozdev.org/download/" target="_blank">
+                        <img class="browser" alt="Mozilla Firefox" src="/images/firefox.png" />
+                    </a>
+                    <a href="http://www.microsoft.com/windows/internet-explorer/default.aspx" target="_blank">
+                        <img class="browser" alt="Internet Explorer" src="/images/ie.png" />
+                    </a>
+                    <a href="http://www.google.com/chrome?hl=pt-BR" target="_blank">
+                        <img class="browser" alt="Google Chrome" src="/images/chrome.png" />
+                    </a>
+                    <p id="floating">Upgrade</p>
+                </div>
+            </div>
+        </div>
+    </noscript>
+
+    <!-- Fixed navbar -->
+    <div class="centraliza-cabecalho">
+        <div class="navbar navbar-default navbar-fixed-top visible-xs" role="navigation">
+            <div class="container centro">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+                    <a class="navbar-brand" href="https://unifique-clone.vercel.app/cobrancas/pagas/#">Central do assinante</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="https://unifique-clone.vercel.app/">Home</a></li>
+                        <!-- <li><a href="grafico.html" class="current">Teste Grafico Paises</a></li>
+                        <li><a href="#" onclick="callApiSupaBase()" class="current">Teste SupaBase</a></li> -->
+                        <li><a href="https://unifique-clone.vercel.app/cobrancas/pagas/" onclick="registraLog(cobrancasPagas)" class="current">Cobrancas pagas</a></li>
+                        <li><a href="https://unifique-clone.vercel.app/cobrancas/abertas/" onclick="registraLog(cobrancasEmAberto)">Cobrancas em aberto</a></li>
+                        <li class="disabled"><a href="https://unifique-clone.vercel.app/gerenciar/emails/" onclick="registraLog(gerenciarEmails)">Gerenciar e-mails</a></li>
+                        <li class="disabled"><a href="https://unifique-clone.vercel.app/gerenciar/dominios/" onclick="registraLog(gerenciarDominios)">Gerenciar dominios</a></li>
+                        <li class="disabled"><a href="https://unifique-clone.vercel.app/gerenciar/ftps/" onclick="registraLog(usuariosFtps)">Usu�rios de FTPs</a></li>
+                        <li class="disabled"><a href="https://unifique-clone.vercel.app/gerenciar/bancodedados/" onclick="registraLog(bancoDeDados)">Banco de dados</a></li>
+                        <li><a href="https://unifique-clone.vercel.app/telefonia/" onclick="registraLog(telefonia)">Telefonia</a></li>
+                        <li><a href="https://unifique-clone.vercel.app/tv/" onclick="registraLog(tv)">TV</a></li>
+                        <li><a href="https://unifique-clone.vercel.app/internet/wifi/" onclick="registraLog(redeSenhaWifi)">Rede e Senha Wi-Fi</a></li>
+                        <li><a href="https://unifique-clone.vercel.app/ouvidoria/" onclick="registraLog(ouvidoria)">Ouvidoria</a></li>
+                        <li><a href="https://unifique-clone.vercel.app/suporte/" onclick="registraLog(suporte)">Solicitar suporte</a></li>
+                        <li><a href="https://unifique-clone.vercel.app/logout/">Sair</a></li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+        </div>
+
+        <img style="max-width:432px;" src="./unifique_files/logo2017.png" width="100%">
+        <ul class="iconMenuDark hidden-xs">
+            <li><a title="Cobrancas pagas" href="grafico.html" onclick="callApiSupaBase()" class="current"><span class="ico_light_cobrancas_pagas"></span>Graficos</a></li>
+            <li><a title="Cobrancas pagas" href="https://unifique-clone.vercel.app/cobrancas/pagas/" onclick="registraLog(cobrancasPagas)" class="current"><span class="ico_light_cobrancas_pagas"></span>Cobrancas Pagas</a></li>
+            <li><a title="Cobrancas em aberto" href="https://unifique-clone.vercel.app/cobrancas/abertas/" onclick="registraLog(cobrancasEmAberto)"><span class="ico_light_cobrancas_abertas"></span>Cobrancas em aberto</a></li>
+            <li class="disabled"><a title="Gerenciar e-mails (Plano n�o contratado)" href="https://unifique-clone.vercel.app/cobrancas/pagas/#" onclick="registraLog(gerenciarEmails)"><span class="ico_light_emails"></span>Gerenciar e-mails</a></li>
+            <li class="disabled"><a title="Gerenciar dominios (Plano n�o contratado)" href="https://unifique-clone.vercel.app/cobrancas/pagas/#" onclick="registraLog(gerenciarDominios)"><span class="ico_light_dominios"></span>Gerenciar dominios</a></li>
+            <li class="disabled"><a title="Gerenciar usuarios de FTP (Plano n�o contratado)" href="https://unifique-clone.vercel.app/cobrancas/pagas/#" onclick="registraLog(usuariosFtps)"><span class="ico_light_ftps"></span>Usuarios de FTPs</a></li>
+            <li class="disabled"><a title="Gerenciar banco de dados (Plano n�o contratado)" href="https://unifique-clone.vercel.app/cobrancas/pagas/#" onclick="registraLog(bancoDeDados)"><span class="ico_light_bases"></span>Banco de dados</a></li>
+            <li><a title="Gerenciar telefonia" href="https://unifique-clone.vercel.app/telefonia/" onclick="registraLog(telefonia)"><span class="ico_light_telefonia"></span>Telefonia</a></li>
+            <li><a title="Gerenciar TV" href="https://unifique-clone.vercel.app/tv/" onclick="registraLog(tv)"><span class="ico_light_tv"></span>TV</a></li>
+            <li><a title="Rede e Senha Wi-Fi" href="https://unifique-clone.vercel.app/internet/wifi/" onclick="registraLog(redeSenhaWifi)"><span class="ico_light_rede"></span>Rede e Senha Wi-Fi</a></li>
+            <li><a title="Ouvidoria" href="https://unifique-clone.vercel.app/ouvidoria/" onclick="registraLog(ouvidoria)"><span class="ico_light_ouvidoria"></span>Ouvidoria</a></li>
+            <li><a title="Contatos Suporte" href="https://unifique-clone.vercel.app/suporte/" onclick="javascript:registraLog(suporte)"><span class="ico_light_suporte"></span>Contatos Suporte</a></li>
+            <li><a title="Sair" href="https://unifique-clone.vercel.app/logout/"><span class="ico_light_sair"></span>Sair</a></li>
+        </ul>
+    </div>
+    <div style="clear:both;"></div>
+    <script>
+        function registraLog(operacao) {
+            // $.ajax({
+            //     url: "/gerenciar/logsController",
+            //     type: "POST",
+            //     data: {
+            //         acao: 'gerarLogs',
+            //         operacao: operacao
+            //     },
+            //     success: function(retorno) {
+            //         console.log(retorno);
+            //     }
+            // });
+        }
+    </script>
+    <div class="container">
+        <br><br>
+        <p class="title"><a href="https://unifique-clone.vercel.app/cobrancas/declaracao_quitacao/VkoxQUgwcXNLVDglMkZMYyUyQlBuJTJCdDBWdyUzRCUzRA==/" target="_blank" onclick="registraLog(declaracaoQuitacao)">Declaracao de quitacao de debitos 2021 - Unidade Timbo</a></p>
+        <br>
+        <p class="title">Cobrancas pagas</p>
+        <div id="accordion" class="ui-accordion ui-widget ui-helper-reset" role="tablist">
+            <h3 class="ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all" role="tab" id="ui-accordion-accordion-header-0" aria-controls="ui-accordion-accordion-panel-0" aria-selected="false" aria-expanded="true" tabindex="0"><span class="ui-accordion-header-icon ui-icon ui-icon-plus"></span>10/09/2022</h3>
+            <div class="table-responsive ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-accordion-accordion-panel-0" aria-labelledby="ui-accordion-accordion-header-0" role="tabpanel" aria-hidden="true" style="display: none;">
+                <table class="table table-hover table-striped table-bordered">
+                    <tbody>
+                        <tr>
+                            <th colspan="5">D�bito - CECRED / AILOS</th>
+                        </tr>
+                        <tr>
+                            <th>Vencimento</th>
+                            <th>Valor</th>
+                            <th>Data Pgto</th>
+                            <th>Valor Pgto</th>
+                            <th>&nbsp;</th>
+                        </tr>
+                        <tr>
+                            <td>10/09/2022</td>
+                            <td>Cortesia</td>
+                            <td></td>
+                            <td></td>
+                            <td><a class="btn btn-primary btn-xs" target="_blank" href="https://unifique-clone.vercel.app/cobrancas/demonstrativo/YnVYTGh0aGdWSDZmMUVCSVlKS1FOTmNyT2lJWFRrZnR1dFQwemRFMXU2SSUzRA==/">Demonstrativo</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h3 class="ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all" role="tab" id="ui-accordion-accordion-header-1" aria-controls="ui-accordion-accordion-panel-1" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-plus"></span>10/08/2022</h3>
+            <div class="table-responsive ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-accordion-accordion-panel-1" aria-labelledby="ui-accordion-accordion-header-1" role="tabpanel" aria-hidden="true" style="display: none;">
+                <table class="table table-hover table-striped table-bordered">
+                    <tbody>
+                        <tr>
+                            <th colspan="5">D�bito - CECRED / AILOS</th>
+                        </tr>
+                        <tr>
+                            <th>Vencimento</th>
+                            <th>Valor</th>
+                            <th>Data Pgto</th>
+                            <th>Valor Pgto</th>
+                            <th>&nbsp;</th>
+                        </tr>
+                        <tr>
+                            <td>10/08/2022</td>
+                            <td>Cortesia</td>
+                            <td></td>
+                            <td></td>
+                            <td><a class="btn btn-primary btn-xs" target="_blank" href="https://unifique-clone.vercel.app/cobrancas/demonstrativo/TWpJMnMzNmgwbHRzTXkwRUVxdGpHVVZzVlBoMVhDUE1LWDhHMFVKZm1sNCUzRA==/">Demonstrativo</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h3 class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-accordion-accordion-header-2" aria-controls="ui-accordion-accordion-panel-2" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-plus"></span>10/08/2022</h3>
+            <div class="table-responsive ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-accordion-accordion-panel-2" aria-labelledby="ui-accordion-accordion-header-2" role="tabpanel" aria-hidden="true" style="display: none;">
+                <table class="table table-hover table-striped table-bordered">
+                    <tbody>
+                        <tr>
+                            <th colspan="5">Boleto - Santander</th>
+                        </tr>
+                        <tr>
+                            <th>Vencimento</th>
+                            <th>Valor</th>
+                            <th>Data Pgto</th>
+                            <th>Valor Pgto</th>
+                            <th>&nbsp;</th>
+                        </tr>
+                        <tr>
+                            <td>10/08/2022</td>
+                            <td>R$ 137,54</td>
+                            <td>06/08/2022</td>
+                            <td>R$ 137,54</td>
+                            <td><a class="btn btn-primary btn-xs" target="_blank" href="https://unifique-clone.vercel.app/cobrancas/demonstrativo/QlpxZ01WSUZ6c3QwSyUyQjFqd3ZNbTVSUVJNUXVFemdGdzhEbCUyQkFWdGlyZXMlM0Q=/">Demonstrativo</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h3 class="ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all" role="tab" id="ui-accordion-accordion-header-3" aria-controls="ui-accordion-accordion-panel-3" aria-selected="false" aria-expanded="true" tabindex="0"><span class="ui-accordion-header-icon ui-icon ui-icon-plus"></span>10/07/2022</h3>
+            <div class="table-responsive ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-accordion-accordion-panel-3" aria-labelledby="ui-accordion-accordion-header-3" role="tabpanel" aria-hidden="true" style="display: none;">
+                <table class="table table-hover table-striped table-bordered">
+                    <tbody>
+                        <tr>
+                            <th colspan="5">D�bito - CECRED / AILOS</th>
+                        </tr>
+                        <tr>
+                            <th>Vencimento</th>
+                            <th>Valor</th>
+                            <th>Data Pgto</th>
+                            <th>Valor Pgto</th>
+                            <th>&nbsp;</th>
+                        </tr>
+                        <tr>
+                            <td>10/07/2022</td>
+                            <td>Cortesia</td>
+                            <td></td>
+                            <td></td>
+                            <td><a class="btn btn-primary btn-xs" target="_blank" href="https://unifique-clone.vercel.app/cobrancas/demonstrativo/VU5Va3pHNnlQYVJRSUNOZVZnb2d6eWxvWCUyRm9nOEFGUUlnRGVHTHp2T240JTNE/">Demonstrativo</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h3 class="ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all" role="tab" id="ui-accordion-accordion-header-4" aria-controls="ui-accordion-accordion-panel-4" aria-selected="false" aria-expanded="true" tabindex="0"><span class="ui-accordion-header-icon ui-icon ui-icon-plus"></span>10/07/2022</h3>
+            <div class="table-responsive ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-accordion-accordion-panel-4" aria-labelledby="ui-accordion-accordion-header-4" role="tabpanel" aria-hidden="true" style="display: none;">
+                <table class="table table-hover table-striped table-bordered">
+                    <tbody>
+                        <tr>
+                            <th colspan="5">Boleto - Santander</th>
+                        </tr>
+                        <tr>
+                            <th>Vencimento</th>
+                            <th>Valor</th>
+                            <th>Data Pgto</th>
+                            <th>Valor Pgto</th>
+                            <th>&nbsp;</th>
+                        </tr>
+                        <tr>
+                            <td>10/07/2022</td>
+                            <td>R$ 150,50</td>
+                            <td>08/07/2022</td>
+                            <td>R$ 150,50</td>
+                            <td><a class="btn btn-primary btn-xs" target="_blank" href="https://unifique-clone.vercel.app/cobrancas/demonstrativo/Y2NoRSUyRjRvYXZDenVISGhoeSUyQkpwbUhWZ1JqUHJsZG5EeiUyQllVMWw4bU8zRSUzRA==/">Demonstrativo</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h3 class="ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all" role="tab" id="ui-accordion-accordion-header-5" aria-controls="ui-accordion-accordion-panel-5" aria-selected="false" aria-expanded="true" tabindex="0"><span class="ui-accordion-header-icon ui-icon ui-icon-plus"></span>10/06/2022</h3>
+            <div class="table-responsive ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-accordion-accordion-panel-5" aria-labelledby="ui-accordion-accordion-header-5" role="tabpanel" aria-hidden="true" style="display: none;">
+                <table class="table table-hover table-striped table-bordered">
+                    <tbody>
+                        <tr>
+                            <th colspan="5">D�bito - CECRED / AILOS</th>
+                        </tr>
+                        <tr>
+                            <th>Vencimento</th>
+                            <th>Valor</th>
+                            <th>Data Pgto</th>
+                            <th>Valor Pgto</th>
+                            <th>&nbsp;</th>
+                        </tr>
+                        <tr>
+                            <td>10/06/2022</td>
+                            <td>Cortesia</td>
+                            <td></td>
+                            <td></td>
+                            <td><a class="btn btn-primary btn-xs" target="_blank" href="https://unifique-clone.vercel.app/cobrancas/demonstrativo/aEVkS0htTXBwMjdHUVZhODhWUyUyRnBqbTVSZHo4VWZlYVpraUllWmxVVmh3JTNE/">Demonstrativo</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h3 class="ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all" role="tab" id="ui-accordion-accordion-header-6" aria-controls="ui-accordion-accordion-panel-6" aria-selected="false" aria-expanded="true" tabindex="0"><span class="ui-accordion-header-icon ui-icon ui-icon-plus"></span>10/06/2022</h3>
+            <div class="table-responsive ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-accordion-accordion-panel-6" aria-labelledby="ui-accordion-accordion-header-6" role="tabpanel" aria-hidden="true" style="display: none;">
+                <table class="table table-hover table-striped table-bordered">
+                    <tbody>
+                        <tr>
+                            <th colspan="5">Boleto - Santander</th>
+                        </tr>
+                        <tr>
+                            <th>Vencimento</th>
+                            <th>Valor</th>
+                            <th>Data Pgto</th>
+                            <th>Valor Pgto</th>
+                            <th>&nbsp;</th>
+                        </tr>
+                        <tr>
+                            <td>10/06/2022</td>
+                            <td>R$ 145,19</td>
+                            <td>02/06/2022</td>
+                            <td>R$ 145,19</td>
+                            <td><a class="btn btn-primary btn-xs" target="_blank" href="https://unifique-clone.vercel.app/cobrancas/demonstrativo/a0tPcU03JTJGSTJHODBmZWQ4TzZtVWc0WmolMkZmWSUyQkhYbHg1OUdLdzg5OVNRWSUzRA==/">Demonstrativo</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h3 class="ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all" role="tab" id="ui-accordion-accordion-header-7" aria-controls="ui-accordion-accordion-panel-7" aria-selected="false" aria-expanded="true" tabindex="0"><span class="ui-accordion-header-icon ui-icon ui-icon-plus"></span>10/05/2022</h3>
+            <div class="table-responsive ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-accordion-accordion-panel-7" aria-labelledby="ui-accordion-accordion-header-7" role="tabpanel" aria-hidden="true" style="display: none;">
+                <table class="table table-hover table-striped table-bordered">
+                    <tbody>
+                        <tr>
+                            <th colspan="5">D�bito - CECRED / AILOS</th>
+                        </tr>
+                        <tr>
+                            <th>Vencimento</th>
+                            <th>Valor</th>
+                            <th>Data Pgto</th>
+                            <th>Valor Pgto</th>
+                            <th>&nbsp;</th>
+                        </tr>
+                        <tr>
+                            <td>10/05/2022</td>
+                            <td>Cortesia</td>
+                            <td></td>
+                            <td></td>
+                            <td><a class="btn btn-primary btn-xs" target="_blank" href="https://unifique-clone.vercel.app/cobrancas/demonstrativo/d2pNY3BkM3VLelhoJTJGQ1NsUHRKTXFWMUdGdUxLQVNvR0syOGclMkZlTkNqaDAlM0Q=/">Demonstrativo</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h3 class="ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all" role="tab" id="ui-accordion-accordion-header-8" aria-controls="ui-accordion-accordion-panel-8" aria-selected="false" aria-expanded="true" tabindex="0"><span class="ui-accordion-header-icon ui-icon ui-icon-plus"></span>10/05/2022</h3>
+            <div class="table-responsive ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-accordion-accordion-panel-8" aria-labelledby="ui-accordion-accordion-header-8" role="tabpanel" aria-hidden="true" style="display: none;">
+                <table class="table table-hover table-striped table-bordered">
+                    <tbody>
+                        <tr>
+                            <th colspan="5">Boleto - Santander</th>
+                        </tr>
+                        <tr>
+                            <th>Vencimento</th>
+                            <th>Valor</th>
+                            <th>Data Pgto</th>
+                            <th>Valor Pgto</th>
+                            <th>&nbsp;</th>
+                        </tr>
+                        <tr>
+                            <td>10/05/2022</td>
+                            <td>R$ 191,34</td>
+                            <td>05/05/2022</td>
+                            <td>R$ 191,34</td>
+                            <td><a class="btn btn-primary btn-xs" target="_blank" href="https://unifique-clone.vercel.app/cobrancas/demonstrativo/d0pXcSUyQmpra2Jmd3JKWHdWUUZGWiUyQmdCNVFmVXJWOUN2eVdndzcwWVZNcjglM0Q=/">Demonstrativo</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h3 class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-accordion-accordion-header-9" aria-controls="ui-accordion-accordion-panel-9" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-plus"></span>10/04/2022</h3>
+            <div class="table-responsive ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-accordion-accordion-panel-9" aria-labelledby="ui-accordion-accordion-header-9" role="tabpanel" aria-hidden="true" style="display: none;">
+                <table class="table table-hover table-striped table-bordered">
+                    <tbody>
+                        <tr>
+                            <th colspan="5">D�bito - CECRED / AILOS</th>
+                        </tr>
+                        <tr>
+                            <th>Vencimento</th>
+                            <th>Valor</th>
+                            <th>Data Pgto</th>
+                            <th>Valor Pgto</th>
+                            <th>&nbsp;</th>
+                        </tr>
+                        <tr>
+                            <td>10/04/2022</td>
+                            <td>Cortesia</td>
+                            <td></td>
+                            <td></td>
+                            <td><a class="btn btn-primary btn-xs" target="_blank" href="https://unifique-clone.vercel.app/cobrancas/demonstrativo/OERSTW5HcG5sMEtXcTBJcmF4RWtrRzYxaUVRc3doRUV3JTJCVW9zR3VuZVowJTNE/">Demonstrativo</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h3 class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-accordion-accordion-header-10" aria-controls="ui-accordion-accordion-panel-10" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-plus"></span>10/04/2022</h3>
+            <div class="table-responsive ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-accordion-accordion-panel-10" aria-labelledby="ui-accordion-accordion-header-10" role="tabpanel" aria-hidden="true" style="display: none;">
+                <table class="table table-hover table-striped table-bordered">
+                    <tbody>
+                        <tr>
+                            <th colspan="5">Boleto - Santander</th>
+                        </tr>
+                        <tr>
+                            <th>Vencimento</th>
+                            <th>Valor</th>
+                            <th>Data Pgto</th>
+                            <th>Valor Pgto</th>
+                            <th>&nbsp;</th>
+                        </tr>
+                        <tr>
+                            <td>10/04/2022</td>
+                            <td>R$ 132,17</td>
+                            <td>04/04/2022</td>
+                            <td>R$ 132,17</td>
+                            <td><a class="btn btn-primary btn-xs" target="_blank" href="https://unifique-clone.vercel.app/cobrancas/demonstrativo/QXZ2M1Z1TE1DSjdiTlZVY2w1NkN5T2ticWVPNHREeUIzWU1VbVFobmZpdyUzRA==/">Demonstrativo</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h3 class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-accordion-accordion-header-11" aria-controls="ui-accordion-accordion-panel-11" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-plus"></span>10/03/2022</h3>
+            <div class="table-responsive ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-accordion-accordion-panel-11" aria-labelledby="ui-accordion-accordion-header-11" role="tabpanel" aria-hidden="true" style="display: none;">
+                <table class="table table-hover table-striped table-bordered">
+                    <tbody>
+                        <tr>
+                            <th colspan="5">D�bito - CECRED / AILOS</th>
+                        </tr>
+                        <tr>
+                            <th>Vencimento</th>
+                            <th>Valor</th>
+                            <th>Data Pgto</th>
+                            <th>Valor Pgto</th>
+                            <th>&nbsp;</th>
+                        </tr>
+                        <tr>
+                            <td>10/03/2022</td>
+                            <td>Cortesia</td>
+                            <td></td>
+                            <td></td>
+                            <td><a class="btn btn-primary btn-xs" target="_blank" href="https://unifique-clone.vercel.app/cobrancas/demonstrativo/MmwlMkJ2OGNuWTlQeUlWMVEzU2MyNG5JbllxN2xta2MyWTVWZ2NNMFQxUXJZJTNE/">Demonstrativo</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h3 class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-accordion-accordion-header-12" aria-controls="ui-accordion-accordion-panel-12" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-plus"></span>10/03/2022</h3>
+            <div class="table-responsive ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-accordion-accordion-panel-12" aria-labelledby="ui-accordion-accordion-header-12" role="tabpanel" aria-hidden="true" style="display: none;">
+                <table class="table table-hover table-striped table-bordered">
+                    <tbody>
+                        <tr>
+                            <th colspan="5">Boleto - Santander</th>
+                        </tr>
+                        <tr>
+                            <th>Vencimento</th>
+                            <th>Valor</th>
+                            <th>Data Pgto</th>
+                            <th>Valor Pgto</th>
+                            <th>&nbsp;</th>
+                        </tr>
+                        <tr>
+                            <td>10/03/2022</td>
+                            <td>R$ 136,51</td>
+                            <td>04/03/2022</td>
+                            <td>R$ 136,51</td>
+                            <td><a class="btn btn-primary btn-xs" target="_blank" href="https://unifique-clone.vercel.app/cobrancas/demonstrativo/UURkMkYxQ0RMaVY3aUVlJTJCYVhhdUZOSkVCeDRDbWQyMGVOT2dlN1QxSmFBJTNE/">Demonstrativo</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h3 class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-accordion-accordion-header-13" aria-controls="ui-accordion-accordion-panel-13" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-plus"></span>10/02/2022</h3>
+            <div class="table-responsive ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-accordion-accordion-panel-13" aria-labelledby="ui-accordion-accordion-header-13" role="tabpanel" aria-hidden="true" style="display: none;">
+                <table class="table table-hover table-striped table-bordered">
+                    <tbody>
+                        <tr>
+                            <th colspan="5">D�bito - CECRED / AILOS</th>
+                        </tr>
+                        <tr>
+                            <th>Vencimento</th>
+                            <th>Valor</th>
+                            <th>Data Pgto</th>
+                            <th>Valor Pgto</th>
+                            <th>&nbsp;</th>
+                        </tr>
+                        <tr>
+                            <td>10/02/2022</td>
+                            <td>Cortesia</td>
+                            <td></td>
+                            <td></td>
+                            <td><a class="btn btn-primary btn-xs" target="_blank" href="https://unifique-clone.vercel.app/cobrancas/demonstrativo/UW8wQ0haZzNnWk9SdW5nMiUyQnlDSWIxMHdpcHpQZTd3V0UwVkZMczBtQVpNJTNE/">Demonstrativo</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h3 class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-accordion-accordion-header-14" aria-controls="ui-accordion-accordion-panel-14" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-plus"></span>10/02/2022</h3>
+            <div class="table-responsive ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-accordion-accordion-panel-14" aria-labelledby="ui-accordion-accordion-header-14" role="tabpanel" aria-hidden="true" style="display: none;">
+                <table class="table table-hover table-striped table-bordered">
+                    <tbody>
+                        <tr>
+                            <th colspan="5">Boleto - Santander</th>
+                        </tr>
+                        <tr>
+                            <th>Vencimento</th>
+                            <th>Valor</th>
+                            <th>Data Pgto</th>
+                            <th>Valor Pgto</th>
+                            <th>&nbsp;</th>
+                        </tr>
+                        <tr>
+                            <td>10/02/2022</td>
+                            <td>R$ 146,28</td>
+                            <td>11/02/2022</td>
+                            <td>R$ 149,26</td>
+                            <td><a class="btn btn-primary btn-xs" target="_blank" href="https://unifique-clone.vercel.app/cobrancas/demonstrativo/U3lzSm1QOSUyQjUlMkZWSWtpbEZHaXo3ZUdHeURMa3VHT0F1MEhZaUU0dlZXdEElM0Q=/">Demonstrativo</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h3 class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-accordion-accordion-header-15" aria-controls="ui-accordion-accordion-panel-15" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-plus"></span>10/01/2022</h3>
+            <div class="table-responsive ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-accordion-accordion-panel-15" aria-labelledby="ui-accordion-accordion-header-15" role="tabpanel" aria-hidden="true" style="display: none;">
+                <table class="table table-hover table-striped table-bordered">
+                    <tbody>
+                        <tr>
+                            <th colspan="5">D�bito - CECRED / AILOS</th>
+                        </tr>
+                        <tr>
+                            <th>Vencimento</th>
+                            <th>Valor</th>
+                            <th>Data Pgto</th>
+                            <th>Valor Pgto</th>
+                            <th>&nbsp;</th>
+                        </tr>
+                        <tr>
+                            <td>10/01/2022</td>
+                            <td>Cortesia</td>
+                            <td></td>
+                            <td></td>
+                            <td><a class="btn btn-primary btn-xs" target="_blank" href="https://unifique-clone.vercel.app/cobrancas/demonstrativo/VmNPSk5mWmpSUjBHajE0MUZTbE9MeEVkNTA0TWduTWJ5OTRGaDhnMWJqOCUzRA==/">Demonstrativo</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h3 class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-accordion-accordion-header-16" aria-controls="ui-accordion-accordion-panel-16" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-plus"></span>10/01/2022</h3>
+            <div class="table-responsive ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-accordion-accordion-panel-16" aria-labelledby="ui-accordion-accordion-header-16" role="tabpanel" aria-hidden="true" style="display: none;">
+                <table class="table table-hover table-striped table-bordered">
+                    <tbody>
+                        <tr>
+                            <th colspan="5">Boleto - Santander</th>
+                        </tr>
+                        <tr>
+                            <th>Vencimento</th>
+                            <th>Valor</th>
+                            <th>Data Pgto</th>
+                            <th>Valor Pgto</th>
+                            <th>&nbsp;</th>
+                        </tr>
+                        <tr>
+                            <td>10/01/2022</td>
+                            <td>R$ 158,55</td>
+                            <td>05/01/2022</td>
+                            <td>R$ 158,55</td>
+                            <td><a class="btn btn-primary btn-xs" target="_blank" href="https://unifique-clone.vercel.app/cobrancas/demonstrativo/cFZQR3Zzd0VlRllXTk1aY2t1YU5WVmdGN1NPYUJMRmtLZ1AyVSUyRlFRZjh3JTNE/">Demonstrativo</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h3 class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-accordion-accordion-header-17" aria-controls="ui-accordion-accordion-panel-17" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-plus"></span>10/12/2021</h3>
+            <div class="table-responsive ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-accordion-accordion-panel-17" aria-labelledby="ui-accordion-accordion-header-17" role="tabpanel" aria-hidden="true" style="display: none;">
+                <table class="table table-hover table-striped table-bordered">
+                    <tbody>
+                        <tr>
+                            <th colspan="5">D�bito - CECRED / AILOS</th>
+                        </tr>
+                        <tr>
+                            <th>Vencimento</th>
+                            <th>Valor</th>
+                            <th>Data Pgto</th>
+                            <th>Valor Pgto</th>
+                            <th>&nbsp;</th>
+                        </tr>
+                        <tr>
+                            <td>10/12/2021</td>
+                            <td>Cortesia</td>
+                            <td></td>
+                            <td></td>
+                            <td><a class="btn btn-primary btn-xs" target="_blank" href="https://unifique-clone.vercel.app/cobrancas/demonstrativo/cUQybTFDU2R2eXVSN2lvdDZjQUtrVDdsem1OOG9QWWc2RGlwaGU1VjNUUSUzRA==/">Demonstrativo</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h3 class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-accordion-accordion-header-18" aria-controls="ui-accordion-accordion-panel-18" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-plus"></span>10/12/2021</h3>
+            <div class="table-responsive ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-accordion-accordion-panel-18" aria-labelledby="ui-accordion-accordion-header-18" role="tabpanel" aria-hidden="true" style="display: none;">
+                <table class="table table-hover table-striped table-bordered">
+                    <tbody>
+                        <tr>
+                            <th colspan="5">Boleto - Santander</th>
+                        </tr>
+                        <tr>
+                            <th>Vencimento</th>
+                            <th>Valor</th>
+                            <th>Data Pgto</th>
+                            <th>Valor Pgto</th>
+                            <th>&nbsp;</th>
+                        </tr>
+                        <tr>
+                            <td>10/12/2021</td>
+                            <td>R$ 142,64</td>
+                            <td>17/12/2021</td>
+                            <td>R$ 145,82</td>
+                            <td><a class="btn btn-primary btn-xs" target="_blank" href="https://unifique-clone.vercel.app/cobrancas/demonstrativo/Sm00WHNUJTJGQWYlMkZDdWZCbFR6RVBvdHBlRFBmQVJwa2xMcjduciUyQm5va0U4dyUzRA==/">Demonstrativo</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h3 class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-accordion-accordion-header-19" aria-controls="ui-accordion-accordion-panel-19" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-plus"></span>10/11/2021</h3>
+            <div class="table-responsive ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-accordion-accordion-panel-19" aria-labelledby="ui-accordion-accordion-header-19" role="tabpanel" aria-hidden="true" style="display: none;">
+                <table class="table table-hover table-striped table-bordered">
+                    <tbody>
+                        <tr>
+                            <th colspan="5">D�bito - CECRED / AILOS</th>
+                        </tr>
+                        <tr>
+                            <th>Vencimento</th>
+                            <th>Valor</th>
+                            <th>Data Pgto</th>
+                            <th>Valor Pgto</th>
+                            <th>&nbsp;</th>
+                        </tr>
+                        <tr>
+                            <td>10/11/2021</td>
+                            <td>Cortesia</td>
+                            <td></td>
+                            <td></td>
+                            <td><a class="btn btn-primary btn-xs" target="_blank" href="https://unifique-clone.vercel.app/cobrancas/demonstrativo/QThKYnR5bm1pcDVMRENJJTJCMk5QbUJUTEdtbXNyZTBBekVKa0E1TjAyNWQ0JTNE/">Demonstrativo</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h3 class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-accordion-accordion-header-20" aria-controls="ui-accordion-accordion-panel-20" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-plus"></span>10/11/2021</h3>
+            <div class="table-responsive ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-accordion-accordion-panel-20" aria-labelledby="ui-accordion-accordion-header-20" role="tabpanel" aria-hidden="true" style="display: none;">
+                <table class="table table-hover table-striped table-bordered">
+                    <tbody>
+                        <tr>
+                            <th colspan="5">Boleto - Santander</th>
+                        </tr>
+                        <tr>
+                            <th>Vencimento</th>
+                            <th>Valor</th>
+                            <th>Data Pgto</th>
+                            <th>Valor Pgto</th>
+                            <th>&nbsp;</th>
+                        </tr>
+                        <tr>
+                            <td>10/11/2021</td>
+                            <td>R$ 158,27</td>
+                            <td>03/11/2021</td>
+                            <td>R$ 158,27</td>
+                            <td><a class="btn btn-primary btn-xs" target="_blank" href="https://unifique-clone.vercel.app/cobrancas/demonstrativo/VTNNMGQlMkJrJTJCdWglMkJRdHd0SmFvZ1FoSHM1TkRLQ2lVa1djMktzNUpCQVlhcyUzRA==/">Demonstrativo</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h3 class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-accordion-accordion-header-21" aria-controls="ui-accordion-accordion-panel-21" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-plus"></span>10/10/2021</h3>
+            <div class="table-responsive ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-accordion-accordion-panel-21" aria-labelledby="ui-accordion-accordion-header-21" role="tabpanel" aria-hidden="true" style="display: none;">
+                <table class="table table-hover table-striped table-bordered">
+                    <tbody>
+                        <tr>
+                            <th colspan="5">D�bito - CECRED / AILOS</th>
+                        </tr>
+                        <tr>
+                            <th>Vencimento</th>
+                            <th>Valor</th>
+                            <th>Data Pgto</th>
+                            <th>Valor Pgto</th>
+                            <th>&nbsp;</th>
+                        </tr>
+                        <tr>
+                            <td>10/10/2021</td>
+                            <td>Cortesia</td>
+                            <td></td>
+                            <td></td>
+                            <td><a class="btn btn-primary btn-xs" target="_blank" href="https://unifique-clone.vercel.app/cobrancas/demonstrativo/OGlVJTJGa3Vqb25wNkpwUFZTaFEzJTJCZE9HR3R6MHdVYzViWm14Wk9abnpBQzAlM0Q=/">Demonstrativo</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h3 class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-accordion-accordion-header-22" aria-controls="ui-accordion-accordion-panel-22" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-plus"></span>10/10/2021</h3>
+            <div class="table-responsive ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-accordion-accordion-panel-22" aria-labelledby="ui-accordion-accordion-header-22" role="tabpanel" aria-hidden="true" style="display: none;">
+                <table class="table table-hover table-striped table-bordered">
+                    <tbody>
+                        <tr>
+                            <th colspan="5">Boleto - Santander</th>
+                        </tr>
+                        <tr>
+                            <th>Vencimento</th>
+                            <th>Valor</th>
+                            <th>Data Pgto</th>
+                            <th>Valor Pgto</th>
+                            <th>&nbsp;</th>
+                        </tr>
+                        <tr>
+                            <td>10/10/2021</td>
+                            <td>R$ 141,38</td>
+                            <td>07/10/2021</td>
+                            <td>R$ 141,38</td>
+                            <td><a class="btn btn-primary btn-xs" target="_blank" href="https://unifique-clone.vercel.app/cobrancas/demonstrativo/UGdTWmIlMkJ2VkhTSlVSNWk2WVBJNmVYcDI2V25jYjY0eEtUQXBjZyUyRnViJTJCTSUzRA==/">Demonstrativo</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h3 class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-accordion-accordion-header-23" aria-controls="ui-accordion-accordion-panel-23" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-plus"></span>10/09/2021</h3>
+            <div class="table-responsive ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-accordion-accordion-panel-23" aria-labelledby="ui-accordion-accordion-header-23" role="tabpanel" aria-hidden="true" style="display: none;">
+                <table class="table table-hover table-striped table-bordered">
+                    <tbody>
+                        <tr>
+                            <th colspan="5">D�bito - CECRED / AILOS</th>
+                        </tr>
+                        <tr>
+                            <th>Vencimento</th>
+                            <th>Valor</th>
+                            <th>Data Pgto</th>
+                            <th>Valor Pgto</th>
+                            <th>&nbsp;</th>
+                        </tr>
+                        <tr>
+                            <td>10/09/2021</td>
+                            <td>Cortesia</td>
+                            <td></td>
+                            <td></td>
+                            <td><a class="btn btn-primary btn-xs" target="_blank" href="https://unifique-clone.vercel.app/cobrancas/demonstrativo/aTVLSGlNNDczV0RsN2tCcnkxVWY5QUloYkNoZDFSJTJCV2dBJTJCV21qd0ExR0ElM0Q=/">Demonstrativo</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h3 class="ui-accordion-header ui-helper-reset ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-accordion-accordion-header-24" aria-controls="ui-accordion-accordion-panel-24" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-plus"></span>10/09/2021</h3>
+            <div class="table-responsive ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" id="ui-accordion-accordion-panel-24" aria-labelledby="ui-accordion-accordion-header-24" role="tabpanel" aria-hidden="true" style="display: none;">
+                <table class="table table-hover table-striped table-bordered">
+                    <tbody>
+                        <tr>
+                            <th colspan="5">Boleto - Santander</th>
+                        </tr>
+                        <tr>
+                            <th>Vencimento</th>
+                            <th>Valor</th>
+                            <th>Data Pgto</th>
+                            <th>Valor Pgto</th>
+                            <th>&nbsp;</th>
+                        </tr>
+                        <tr>
+                            <td>10/09/2021</td>
+                            <td>R$ 139,34</td>
+                            <td>08/09/2021</td>
+                            <td>R$ 139,34</td>
+                            <td><a class="btn btn-primary btn-xs" target="_blank" href="https://unifique-clone.vercel.app/cobrancas/demonstrativo/YiUyQlN3anNoJTJCbTFlJTJGS0VWOFUlMkJiYjAxbUZ0VUNjWG5qZnhUUTg2TG5DRzY4JTNE/">Demonstrativo</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="alert alert-warning">Para visualizar cobrancas anteriores <a href="https://unifique-clone.vercel.app/cobrancas/pagas/todas/" onclick="registraLog(cobrancasAnteriores)" class="current">clique aqui</a></div>
+    </div>
+    <!-- /.container -->
+
+    <!-- FrameModal -->
+    <div class="modal fade bs-example-modal-lg" id="frameModal" tabindex="-1" role="dialog" aria-labelledby="frameModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+                    <a href="https://unifique-clone.vercel.app/cobrancas/pagas/#" class="close help">?</a>
+                    <h4 class="modal-title" id="frameModalLabel"></h4>
+                </div>
+                <div class="modal-body">
+                </div>
+                <div class="modal-footer">
+                    <div id="loadingProgressG">
+                        <div class="loadingText">Carregando aguarde...</div>
+                        <div id="loadingProgressG_1" class="loadingProgressG"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /FrameModal -->
+
+    <!-- Modal -->
+    <div class="modal fade bs-example-modal-lg" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+                    <button type="button">?</button>
+                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                </div>
+                <div class="modal-body">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <a href="https://api.whatsapp.com/send?phone=554733800800&amp;text=Ol%C3%A1" class="float whats" target="_blank">
+        <i class="fa fa-whatsapp my-float" style="font-size:15px"></i> Clique aqui para falar conosco
+        <p> por WhatsApp </p>
+    </a> -->
+
+    <div class="backstretch" style="left: 0px; top: 0px; overflow: hidden; margin: 0px; padding: 0px; height: 1099px; width: 1259px; z-index: -999999; position: fixed;"></div>
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+<div class="container">
+	
+	<h2>Salvar reserva</h2>
+
+	<div [ngClass]="classesCss" role="alert" *ngIf="mensagem">
+		<span [ngSwitch]="mensagem.tipo">
+			<strong *ngSwitchCase="'danger'">Erro!</strong>
+			<strong *ngSwitchCase="'warning'">Alerta!</strong>
+			<strong *ngSwitchCase="'success'">Sucesso!</strong>
+			<strong *ngSwitchDefault>Informação!!</strong>
+		</span>  				
+		{{ mensagem.texto }}
+	</div>
+	
+	<form (ngSubmit)="onSubmit()" #reservaForm="ngForm" novalidate>
+
+		<div [ngClass]="getFormGroupClass(local.valid, local.pristine)">
+			<label for="local" class="form-control-label">Local</label>
+			<select [(ngModel)]="reserva.local.id" (ngModelChange)="onChangeLocal($event)"
+				[ngClass]="getFormControlClass(local.valid, local.pristine)"
+				required
+				#local="ngModel"
+				name="local">				
+				<option *ngFor="let l of locais" [ngValue]="l.id">{{l.descricao}}</option>
+			</select>
+			<div class="form-control-feedback" [hidden]="local.valid || local.pristine">O campo local é obrigatório</div>
+		</div>
+
+		<div [ngClass]="getFormGroupClass(sala.valid, sala.pristine)">
+			<label for="sala" class="form-control-label">Sala</label>
+			<select [(ngModel)]="reserva.sala.id"
+				[ngClass]="getFormControlClass(sala.valid, sala.pristine)"
+				required
+				#sala="ngModel"
+				name="sala">				
+				<option *ngFor="let s of salas" [ngValue]="s.id">{{s.descricao}}</option>
+			</select>
+			<div class="form-control-feedback" [hidden]="sala.valid || sala.pristine">O campo sala é obrigatório</div>
+		</div>
+		
+		<div [ngClass]="getFormGroupClass(dataHoraInicio.valid, dataHoraInicio.pristine)">
+			<label for="dataHoraInicio" class="form-control-label">Data Hora Início</label>
+			<input type="datetime-local" placeholder="Insira a data hora início"
+				[ngClass]="getFormControlClass(dataHoraInicio.valid, dataHoraInicio.pristine)"
+				required
+				#dataHoraInicio="ngModel"
+				name="dataHoraInicio"
+				[(ngModel)]="reserva.dataHoraInicio"/>
+			<div class="form-control-feedback" [hidden]="dataHoraInicio.valid || dataHoraInicio.pristine">O campo data hora início é obrigatório</div>
+		</div>
+
+		<div [ngClass]="getFormGroupClass(dataHoraFim.valid, dataHoraFim.pristine)">
+			<label for="dataHoraFim" class="form-control-label">Data Hora Fim</label>
+			<input type="datetime-local" placeholder="Insira a data hora fim"
+				[ngClass]="getFormControlClass(dataHoraFim.valid, dataHoraFim.pristine)"
+				required
+				#dataHoraFim="ngModel"
+				name="dataHoraFim"
+				[(ngModel)]="reserva.dataHoraFim"/>
+			<div class="form-control-feedback" [hidden]="dataHoraFim.valid || dataHoraFim.pristine">O campo data hora fim é obrigatório</div>
+		</div>
+
+		<div [ngClass]="getFormGroupClass(responsavel.valid, responsavel.pristine)">
+			<label for="responsavel" class="form-control-label">Responsável</label>
+			<input type="text" placeholder="Insira o responsável"
+				[ngClass]="getFormControlClass(responsavel.valid, responsavel.pristine)"
+				required
+				#responsavel="ngModel"
+				name="responsavel"
+				[(ngModel)]="reserva.responsavel"/>
+			<div class="form-control-feedback" [hidden]="responsavel.valid || responsavel.pristine">O campo responsavel é obrigatório</div>
+		</div>		
+
+		<div>
+			<label for="cafe" class="form-control-label">Café?</label>
+			<input type="checkbox"		
+				#cafe="ngModel"
+				name="cafe"
+				[(ngModel)]="reserva.cafe"/>			
+		</div>
+
+		<div [ngClass]="getFormGroupClass(quantidadePessoas.valid, quantidadePessoas.pristine)">
+			<label for="quantidadePessoas" class="form-control-label">Quantidade de Pessoas</label>
+			<input type="number" placeholder="Insira a quantidade de pessoas"
+				[ngClass]="getFormControlClass(quantidadePessoas.valid, quantidadePessoas.pristine)"				
+				[required]="reserva.cafe"
+				#quantidadePessoas="ngModel"
+				name="quantidadePessoas"				
+				[(ngModel)]="reserva.quantidadePessoas"/>		
+			<div class="form-control-feedback" [hidden]="quantidadePessoas.valid || quantidadePessoas.pristine">O campo quantidade de pessoas é obrigatório</div>
+		</div>
+
+		<div [ngClass]="getFormGroupClass(descricao.valid, descricao.pristine)">
+			<label for="descricao" class="form-control-label">Descrição</label>
+			<input type="text" placeholder="Insira a descrição"
+				[ngClass]="getFormControlClass(descricao.valid, descricao.pristine)"
+				required
+				#descricao="ngModel"
+				name="descricao"
+				[(ngModel)]="reserva.descricao"/>		
+			<div class="form-control-feedback" [hidden]="descricao.valid || descricao.pristine">O campo descrição é obrigatório</div>
+		</div>
+		
+		<button type="submit" class="btn btn-success" [disabled]="!reservaForm.form.valid">Salvar</button>
+		<a class="btn btn-secondary" (click)="goBack()">Voltar</a>
+	</form>	
+		
+</div>

@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desenvolvimento - Tech</title>
+    <link rel="stylesheet" href="css/alunos.css">
+    <link rel="stylesheet" href="css/exercises.css">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+</head>
+
+<body onload="loadDados()">
+    <div class="container-principal">
+        <!-- Inclui o Menu Unico Atraves de JavaScript -->
+        <div include-html-menu="menu.html"></div>
+        <div class="container">
+            <div class="lista-exercicio">
+                <ul>
+                    <li><button onclick="loadDados('202101')">202101</button>Dados Rio do Sul</li>
+                    <li><button onclick="loadDados('202102')">202102</button>Dados Rio do Sul</li>
+                    <li><button onclick="loadDados('202103')">202103</button>Dados Rio do Sul</li>
+                    <li><button onclick="loadDados('202104')">202104</button>Dados Rio do Sul</li>
+                    <li><button onclick="loadDados('202105')">202105</button>Dados Rio do Sul</li>
+                    <li><button onclick="callApiAuxilios()">Teste AJAX</button>Teste AJAX</li>
+                </ul>
+            </div>
+
+            <div id="alert" class="alert alert-primary" role="alert" style="display: none;">
+                This is a primary alert—check it out!
+            </div>
+
+            <table class="container-table">
+                <thead>
+                    <tr>
+                        <th class="containerTable-lblTitle">Mes</th>
+                        <th class="containerTable-lblTitle">Parcela</th>
+                        <th class="containerTable-lblTitle">Nome</th>
+                        <th class="containerTable-lblTitle">Valor</th>
+                        <th class="containerTable-lblTitle">NIS</th>
+                    </tr>
+                </thead>
+                <tbody class="containerTable-body">
+                    <!--PREENCHIDO ATRAVES DE JAVASCRIPT!!!-->
+                </tbody>
+            </table>
+        </div>
+        <div class="container" id="root"></div>
+    </div>
+</body>
+
+<script>
+    function loadDados(mes) {
+
+        // chama a api em JAVA
+        callApiJAVA();
+
+        // chama a api em php
+        // callApiAuxilios("GET", "auxilios", mes);
+
+        // chama a api gov br
+        // callApiGovBr();
+    }
+
+    function callApiGovBr() {
+
+
+        var url = "https://api.portaldatransparencia.gov.br/api-de-dados/auxilio-emergencial-beneficiario-por-municipio";
+
+        const mes = 202101;
+
+        var params = "?codigoIbge=4214805&mesAno=" + mes + "&pagina=1";
+
+
+        url = url + params;
+
+        var token = "e87c65b7590a28a987705526d3812c4a&LOADBALANCERPKSTRING";
+        var token = "e87c65b7590a28a987705526d3812c4a";
+
+        let body = document.querySelector(".containerTable-body");
+
+        const status = "dados";
+
+        const status_exercise = "status_separate_exercises";
+        const nova_lista = "Dados Mês:" + mes;
+        body.innerHTML += `<tr>
+                                <td class="containerTable-lblValue ` + status_exercise + `">` + nova_lista + `</td>
+                                <td class="containerTable-lblValue ` + status_exercise + `">` + nova_lista + `</td>
+                                <td class="containerTable-lblValue ` + status_exercise + `">` + nova_lista + `</td>
+                                <td class="containerTable-lblValue ` + status_exercise + `">` + nova_lista + `</td>
+                                <td class="containerTable-lblValue ` + status_exercise + `">` + nova_lista + `</td>
+                        </tr>`;
+
+
+        fetch(url, {
+                headers: {
+                    "Accept": "application/vnd.github.v3+json",
+                    "chave-api-dados": token
+                }
+            })
+            // Converting the response to a JSON object
+            .then(response => response.json())
+            .then(data => {
+                var codigo = 1;
+                var link_github = 1;
+                var nome = 1;
+                var data_status = 1;
+                var observacao = 1;
+
+
+                data.forEach(function(value, key) {
+
+                    const beneficiario = value.beneficiario;
+                    var mes = value.mesDisponibilizacao;
+                    var numeroParcela = value.numeroParcela;
+                    var valor = value.valor;
+
+                    var nis = beneficiario.nis;
+                    var nome = beneficiario.nome;
+
+
+                    body.innerHTML += `<tr>
+                                    <td class="containerTable-lblValue ` + status + ` center">` + mes + `</td>
+                                    <td class="containerTable-lblValue ` + status + `">` + numeroParcela + `</td>
+                                    <td class="containerTable-lblValue ` + status + `">` + nome + `</td>
+                                    <td class="containerTable-lblValue ` + status + ` center">` + valor + `</td>
+                                    <td class="containerTable-lblValue ` + status + `">` + nis + `</td>
+                                </tr>`;
+                });
+
+                console.log(data);
+            });
+    }
+
+    async function callApiAuxilios(method, port, param) {
+        if (port == undefined) {
+            port = "ping";
+        }
+
+        // const cors_url = "https://cors-anywhere.herokuapp.com/";
+
+        // Heroku Gelvazio
+        const cors_url = "https://corsvalidate.herokuapp.com/";
+
+        // Define a url
+        const url = cors_url + "https://apisenac2022.herokuapp.com/api.php/" + port;
+
+
+        if (param != undefined) {
+
+            // var myForm = document.getElementById('myForm');
+            // formData = new FormData(myForm);
+
+            var formData = new FormData(form)
+
+            formData.append('username', 'Chris');
+        }
+
+        if (method == undefined) {
+            method = "GET";
+        }
+
+        var content = "Hello World";
+
+        var myInit = {
+            method: method,
+            headers: getHeaders(),
+            mode: 'cors',
+            cache: 'default'
+        };
+
+        var body = "";
+        if (method == "POST") {
+            body = {
+                "user": "Jhon Doe"
+            };
+
+            myInit = {
+                method: method,
+                headers: getHeaders(),
+                mode: 'cors',
+                cache: 'default',
+                body: body
+            };
+        }
+
+
+        const promise = await fetch(url, myInit)
+            // Converting the response to a JSON object
+            .then(response => response.json())
+            .then(data => {
+                var data = JSON.stringify(data);
+
+                data = JSON.parse(data);
+
+                console.log(data);
+            })
+            .catch(function(error) {
+                console.log('There has been a ' +
+                    'problem with your fetch operation: ' + error.message);
+            });
+    }
+
+    function getHeaders01() {
+        return new Headers({
+            "HTTP_TOTAL_ROUTE_TIME": "0",
+            //"HTTP_X_REQUEST_START": "1660344692353",
+            "HTTP_CONNECT_TIME": "0",
+            "HTTP_VIA": "1.1 vegur",
+            "HTTP_X_FORWARDED_PORT": "443",
+            "HTTP_X_FORWARDED_PROTO": "https",
+            "HTTP_X_FORWARDED_FOR": "186.209.28.244",
+            //"HTTP_X_REQUEST_ID": "2e7f4001-e2ed-4697-9daf-d69ce94b1b6a",
+            "HTTP_ACCEPT_LANGUAGE": "pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7,la;q=0.6,it;q=0.5,sl;q=0.4,gl;q=0.3,pl;q=0.2,es;q=0.1,zh-CN;q=0.1,zh;q=0.1",
+            "HTTP_ACCEPT_ENCODING": "gzip, deflate, br",
+            "HTTP_SEC_FETCH_DEST": "document",
+            "HTTP_SEC_FETCH_USER": "?1",
+            "HTTP_SEC_FETCH_MODE": "navigate",
+            "HTTP_SEC_FETCH_SITE": "none",
+            "HTTP_ACCEPT": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+            "HTTP_USER_AGENT": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36",
+            "HTTP_UPGRADE_INSECURE_REQUESTS": "1",
+            "HTTP_SEC_CH_UA_PLATFORM": "\"Windows\"",
+            "HTTP_SEC_CH_UA_MOBILE": "?0",
+            "HTTP_SEC_CH_UA": "\"Chromium\";v=\"104\", \" Not A;Brand\";v=\"99\", \"Google Chrome\";v=\"104\"",
+            "HTTP_CACHE_CONTROL": "max-age=0",
+            //"HTTP_CONNECTION": "close",
+            "HTTP_HOST": "apisenac2022.herokuapp.com",
+            "Accept": "Application/json",
+            "chave-api-dados": "15455",
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Credentials": true
+        });
+    }
+
+    function getHeaders() {
+        return new Headers({
+            //"Access-Control-Allow-Origin": "http://127.0.0.1:5500/indexTeste.html",
+            "Access-Control-Allow-Methods": "POST, GET, OPTIONS",
+            "Access-Control-Allow-Headers": "X-PINGOTHER, Content-Type",
+            "Access-Control-Max-Age": "86400",
+            "HTTP_HOST": "apisenac2022.herokuapp.com",
+            "Accept": "Application/json",
+            "chave-api-dados": "15455",
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Credentials": true,
+            "Content-Type": "Application/json"
+        });
+    }
+
+    function callApiAjax() {
+        let url = "https://apisenac2022.herokuapp.com/api.php/auxilios";
+
+        url = "https://apisenac2022.herokuapp.com/api.php/ping";
+
+        const option = {
+            url: url
+        };
+
+        jQuery.ajaxPrefilter(function(options) {
+            if (options.crossDomain && jQuery.support.cors) {
+                options.url = 'https://cors-anywhere.herokuapp.com/' + options.url;
+            }
+        });
+
+        jQuery.ajax({
+                url: "https://fiddle.jshell.net/favicon.png",
+                beforeSend: function(xhr) {
+                    xhr.overrideMimeType("text/plain; charset=x-user-defined");
+                }
+            })
+            .done(function(ret) {
+
+                //alert("success");
+
+                console.log(ret);
+
+            }).fail(function(error) {
+                // debugger;
+
+                let body = document.querySelector("#alert");
+
+                // mostra a tag de alertas
+                //                 $("#alert").show();
+
+
+                const message = error.responseText;
+
+                alerts(message);
+
+
+                //alert("error" + error.responseText);
+            }).always(function() {
+                //alert("complete");
+            });
+
+
+        // var jqxhr = $.ajax("example.php")
+        //     .done(function(ret) {
+        //         alert("success");
+        //         console.log(ret);
+        //     })
+        //     .fail(function() {
+        //         alert("error");
+        //     })
+        //     .always(function() {
+        //         alert("complete");
+        //     });
+
+        // // Perform other work here ...
+
+        // // Set another completion function for the request above
+        // jqxhr.always(function() {
+        //     alert("second complete");
+        // });
+
+
+    }
+
+    function alerts(message) {
+        // alertas bootstrap
+        // https://getbootstrap.com/docs/4.0/components/alerts/
+
+        const alerts = `
+            <div>
+                <div class="alert alert-primary" role="alert">
+                    This is a primary alert—check it out!Message: ${ message }
+                </div>
+
+                <div class="alert alert-secondary" role="alert">
+                    This is a secondary alert—check it out!Message: ${ message }
+                </div>
+
+                <div class="alert alert-success" role="alert">
+                    This is a success alert—check it out!Message: ${ message }
+                </div>
+
+                <div class="alert alert-danger" role="alert">
+                    This is a danger alert—check it out!Message: ${ message }
+                </div>
+
+                <div class="alert alert-warning" role="alert">
+                    This is a warning alert—check it out!Message: ${ message }
+                </div>
+
+                <div class="alert alert-info" role="alert">
+                    This is a info alert—check it out!Message: ${ message }
+                </div>
+
+                <div class="alert alert-light" role="alert">
+                    This is a light alert—check it out!Message: ${ message }
+                </div>
+
+                <div class="alert alert-dark" role="alert">
+                    This is a dark alert—check it out!Message: ${ message }
+                </div>;
+            </div>`;
+
+        let body = document.querySelector("#alert");
+
+        // mostra a tag de alertas
+        $("#alert").show();
+
+        body.innerHTML = alerts;
+
+    }
+
+    function callApiXmlHttpRequest(host) {
+
+        var cors_api_host = 'cors-anywhere.herokuapp.com';
+        var cors_api_url = 'https://' + cors_api_host + '/';
+        var slice = [].slice;
+        // var origin = window.location.protocol + '/' + window.location.host;
+        var origin = window.location.protocol + '/' + host;
+
+        var open = XMLHttpRequest.prototype.open;
+
+        XMLHttpRequest.prototype.open = function() {
+            var args = slice.call(arguments);
+            var targetOrigin = /^https?:\/\/([^\/]+)/i.exec(args[1]);
+            if (targetOrigin && targetOrigin[0].toLowerCase() !== origin &&
+                targetOrigin[1] !== cors_api_host) {
+                args[1] = cors_api_url + args[1];
+            }
+            return open.apply(this, args);
+        };
+    }
+
+    async function callApiJAVA(method, port, param) {
+        if (port == undefined) {
+            port = "ping";
+        }
+
+        // const cors_url = "https://cors-anywhere.herokuapp.com/";
+
+        // Heroku Gelvazio
+
+        // Define a url - ONLINE
+        // const cors_url = "https://corsvalidate.herokuapp.com/";
+        // const url = cors_url + "https://spring-web-api-dio.herokuapp.com/" + port;
+
+        // Define a url LOCAL
+        const cors_url = "http://localhost:3000/";
+        const url = cors_url + "http://localhost:8080/" + port;
+
+
+        if (param != undefined) {
+
+            // var myForm = document.getElementById('myForm');
+            // formData = new FormData(myForm);
+
+            var formData = new FormData(form)
+
+            formData.append('username', 'Chris');
+        }
+
+        if (method == undefined) {
+            method = "GET";
+        }
+
+        var content = "Hello World";
+
+        var myInit = {
+            method: method,
+            headers: getHeaders(),
+            mode: 'cors',
+            cache: 'default'
+        };
+
+        var body = "";
+        if (method == "POST") {
+            body = {
+                "user": "Jhon Doe"
+            };
+
+            myInit = {
+                method: method,
+                headers: getHeaders(),
+                mode: 'cors',
+                cache: 'default',
+                body: body
+            };
+        }
+
+        const promise = await fetch(url, myInit)
+            // Converting the response to a JSON object
+            .then(response => response.json())
+            .then(data => {
+                // debugger;
+
+                var data = JSON.stringify(data);
+
+                data = JSON.parse(data);
+
+                console.log(data);
+            })
+            .catch(function(error) {
+                console.log('There has been a ' +
+                    'problem with your fetch operation: ' + error.message);
+            });
+    }
+</script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.js" defer></script>
+
+</html>

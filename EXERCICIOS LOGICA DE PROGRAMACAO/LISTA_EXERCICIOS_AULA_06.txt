@@ -1,0 +1,27 @@
+[LISTA DE EXERCICIOS GENERICOS
+#Exercicio 01
+Escreva um algoritmo que leia um numero inteiro e informe se ele é par ou impar.
+
+#Exercicio 02
+Faca um algoritmo que leia o horario de entrada e horario de saida de um funcionario,e escreva quanto tempo
+ele ficou na empresa conforme a seguir:
+HORA MINUTO                      HORA MINUTO
+14  : 15                          18  :  30
+RESULTADO:255 MINUTOS             04  :  15
+
+#Exercicio 03
+Faca um algoritmo que calcule a area de um retanfulo e de um triangulo e informe qual o maior.
+
+#Exercicio 04
+Faca um algoritmo que calcule o resultado da seguinte equação: (x elevado ao 3)+(2 com x elevado a 2)+6.
+
+#Exercicio 05
+Voce acaba de ser contratado pelo RH de uma empresa para efetuar o calculo de INSS e IR dos funcionarios.
+ Seu chefe ao identificar que voce faz o curso de sistemas de informação
+ obrigou voce a pesquisar a tabela do IR e do INSS do mes de junho de 2012, e com base nesta fazer um algoritmo para calcular o salario liquido ,o valor do INSS,e o valor do IR de 1 funcionario.
+Como entrada é fornecido o nome e o salario brutodo funcionario
+Salario={Salario bruto-(Salario bruto*INSS)}*IR;
+
+entrou 23 e saiu as 2:15 da manha
+
+ficou 3 horas na empresa e 15 min

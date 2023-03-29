@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    width: 100%;
+    font-family: 'Lato', sans-serif;
+    background-color: rgba(243, 241, 241, 0.919);
+}
+
+.nav-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    width: 100%; 
+    position: fixed;
+    background-color: white;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.91);
+    z-index: 999;
+    
+}
+
+.nav-title h1{
+    margin-left: .8rem;
+    cursor: pointer;
+}
+
+.nav-button ul{
+    display: flex;
+    padding: 1rem;
+}
+
+.nav-button li{
+    margin-left: .7rem;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.content{
+    text-align: center;
+}
+
+.section-one{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../img/photo-one.jpg");  
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 550px;
+    text-align: center;
+    opacity: 0.8;
+}
+
+.section-one h2{
+    padding: 2rem;
+    background-color: rgba(97, 97, 97, 0.8);
+    font-size: 28px;
+    color: rgb(252, 251, 255);
+    letter-spacing: 5px;
+    font-weight: 400;
+}
+
+h2{
+    padding-right: 1rem;
+}
+
+section{
+    margin-bottom: 3rem;
+}
+
+section h3 {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+}
+
+section  p{
+    line-height: 30px;
+    font-size: 16px;
+    text-align: justify;
+    margin: 0 3%;
+}
+
+
+.section-two{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../img/photo-two.jpg");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 550px;
+    text-align: center;
+    opacity: 0.7;
+}
+
+.section-two h2{
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.91);
+    font-size: 28px;
+    color: rgb(252, 251, 255);
+    font-weight: 400;
+    letter-spacing: 5px;
+}
+
+.section-three{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../img/photo-three.jpg");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 450px;
+    text-align: center;
+    opacity: 0.7;
+}
+.section-three h2{
+    padding: 2rem;
+    background-color: rgba(97, 97, 97, 0.8);
+    font-size: 28px;
+    color: rgb(252, 251, 255);
+    letter-spacing: 5px;
+    font-weight: 400;
+}
+
+
+.section-four{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../img/photo-four.jpg");  
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 450px;
+    text-align: center;
+    opacity: 0.7;
+}
+
+.section-four h2{
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.91);
+    font-size: 28px;
+    color: rgb(252, 251, 255);
+    letter-spacing: 5px;
+    font-weight: 400;
+}
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.91);
+    font-size: 15px;
+    color: white;
+}
+footer a {
+    letter-spacing: 2px;
+    color: white;
+}
+i .fa-linkedin{
+    font-size: 35px;
+}
+
+/* transições da página */
+
+h1::after{
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    background-color: rgb(92, 92, 92);
+    transition: .5s ease-out;
+}
+h1:hover::after{
+    width: 100%;
+}
+
+.nav-button li::after{
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    background-color: rgb(92, 92, 92);
+    transition: .5s ease-out;
+}
+
+.nav-button li:hover::after{
+    width: 100%;
+}

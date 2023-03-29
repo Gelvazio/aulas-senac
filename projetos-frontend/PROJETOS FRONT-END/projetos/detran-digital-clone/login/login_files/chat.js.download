@@ -1,0 +1,12 @@
+jQuery(document).ready(function( $ ){
+	$('#chatbot-floating-button').click(function() {
+            $('.chatbot-floating-button').toggleClass('zmdi-comment-outline');
+            $('.chatbot-floating-button').toggleClass('zmdi-close');
+            $('.chatbot-floating-button').toggleClass('chatbot-is-active');
+            $('.chatbot-floating-button').toggleClass('chatbot-is-visible');
+            $('#chatbot-floating-button').toggleClass('chatbot-is-float');
+            $('.chatbot-window').toggleClass('chatbot-is-visible');
+            // $('.chatbot-window').css('display', 'block');
+            $('.chatbot-button').toggleClass('chatbot-is-visible');
+	});
+});

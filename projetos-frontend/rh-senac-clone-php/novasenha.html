@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login RH Senac</title>
+    <link rel="stylesheet" href="css/login.css">
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<style>
+
+    .title {
+        text-align: center;
+    }
+    .forms .form-content .title:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 3px;
+        width: 100%;
+        background: #7d2ae8;
+    }
+
+    .container {
+        width: 400px;
+    }
+
+    .form-content .login-form, .form-content {
+        width:100%;
+    }
+
+</style>
+<body>
+    <div class="container">
+        <div class="forms">
+            <div class="form-content">
+                <div class="login-form">
+                    <div class="title">Reset senha</div>
+                    <div class="input-boxes">
+                        <div class="input-box">
+                            <i class="fas fa-envelope"></i>
+                            <input type="text"
+                                placeholder="Entre com seu email" name="login-email" id="login-email" value="gelvazio@gmail.com" required>
+                        </div>
+                        <div class="input-box">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" placeholder="Entre com sua nova senha" name="login-senha" id="login-senha" required>
+                        </div>
+                        <div class="input-box">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" placeholder="Confirme a nova senha" name="login-senha2" id="login-senha2" required>
+                        </div>
+                        <div class="button input-box">
+                            <input type="submit" value="Confirmar Alteração" onclick="resetsenha()">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="js/api.js" defer></script>
+<script src="js/login.js" defer></script>
+</html>

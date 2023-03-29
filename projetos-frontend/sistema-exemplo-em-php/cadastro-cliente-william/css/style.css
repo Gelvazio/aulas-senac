@@ -1,0 +1,51 @@
+:root{
+  font-size: 62.5%;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+table{
+  border: 1px solid black;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: collapse;
+  width: 700px;
+  height: 250px;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+th{
+  background-color: red;
+  color: white;
+  border: 1px solid black;
+}
+
+td{
+  border: 1px solid black;
+  text-align: center;
+}
+
+td:nth-child(1){
+  border-top: none;
+}
+
+.a-insert{
+  text-decoration: none;
+  font-size: 2.2rem;
+}
+
+header {
+  height: 100px;
+  background-color: #0a0e14;
+  color: white;
+}
+
